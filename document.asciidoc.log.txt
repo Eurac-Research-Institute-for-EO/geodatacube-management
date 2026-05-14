@@ -1,0 +1,418 @@
+= Best Practice for OGC GeoDataCube Management
+:comment: ### Document type; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
+:doctype: best-practice
+:comment: ### Language of the document; mandatory. Specified in two-letter code: "en" for English, "fr" for French
+:language: en
+:comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
+:status: swg-draft
+:comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
+:committee: technical
+:comment: ### Draft status, enables display of reviewer notes; remove if final document. Value provided conforms the exact iteration of the document in x.y format
+:draft: 1.0.0
+:comment: ### Internal reference number; mandatory
+:docnumber: YY-999
+:comment: ### Date on which the standard was updated; mandatory
+:received-date: 2026-05-14
+:comment: ### Date on which the standard was approved by the issuing authority; mandatory
+:issued-date: XXXX-XX-XX
+:comment: ### Date on which the standard was published; mandatory
+:published-date: XXXX-XX-XX
+:comment: ### Author one
+:fullname: Alexander Jacob
+:comment: ### Author two
+:fullname_2: Juraj Zvolenský
+:comment: ### Author three
+:fullname_3: Yuvraj Bhagwan Adagale
+:comment: ### Role of the authors; mandatory
+:role: editor
+:comment: ### Comma delimited keywords; mandatory
+:keywords: ogcdoc, OGC document, best practice, GeoDataCubes
+:comment: ### Semicolon-delimited list of the submitting organizations; mandatory
+:submitting-organizations: Eurac Research; Organization two; Organization three
+:comment: ### Metanorma flavor; mandatory
+:mn-document-class: ogc
+:comment: ### Desired output formats; mandatory
+:mn-output-extensions: html,pdf
+:comment: ### Enable local relaton cache for quick inclusion of prefetched references; optional. For further information, visit: https://www.metanorma.org/author/ref/document-attributes/#caches, https://www.metanorma.org/author/topics/building/reference-lookup/#lookup-result-caching
+:local-cache-only:
+:comment: ### URI to which the PDF version of this standard is published; optional
+:pdf-uri: ./document.pdf
+:comment: ### URI to which the XML version of this standard is published; optional
+:comment: ### Version number; optional. Dot-delimited, preferably with this structure <version number>.<minor version number>
+:edition: 1.0
+
+////
+Make sure to complete each included document
+////
+
+////
+== Keywords
+
+Keywords inserted here automatically by Metanorma
+////
+
+
+.Preface
+
+[NOTE]
+====
+Insert Preface Text here. Give OGC specific commentary: describe the technical content, reason for document, history of the document and precursors, and plans for future work.
+
+There are two ways to specify the Preface: "simple clause" or "full clasuse"
+
+If the Preface does not contain subclauses, it is considered a simple preface clause. This one is entered as text after the `.Preface` label and must be placed between the AsciiDoc document attributes and the first AsciiDoc section title. It should not be give a section title of its own.
+
+If the Preface contains subclauses, it needs to be encoded as a full preface clause. This one is recognized as a full Metanorma AsciiDoc section with te title "Preface", i.e. `== Preface`. (Simple preface content can also be encoded like full preface.)
+
+====
+
+////
+*OGC Declaration*
+////
+
+////
+[THIS TEXT IS ALREADY ADDED AUTOMATICALLY IN THE FRONTISPIECE OF ALL OGC DOUCMENTS]
+
+Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
+
+Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
+////
+
+////
+NOTE: Uncomment ISO section if necessary
+
+*ISO Declaration*
+
+ISO (the International Organization for Standardization) is a worldwide federation of national standards bodies (ISO member bodies). The work of preparing International Standards is normally carried out through ISO technical committees. Each member body interested in a subject for which a technical committee has been established has the right to be represented on that committee. International organizations, governmental and non-governmental, in liaison with ISO, also take part in the work. ISO collaborates closely with the International Electrotechnical Commission (IEC) on all matters of electrotechnical standardization.
+
+International Standards are drafted in accordance with the rules given in the ISO/IEC Directives, Part 2.
+
+The main task of technical committees is to prepare International Standards. Draft International Standards adopted by the technical committees are circulated to the member bodies for voting. Publication as an International Standard requires approval by at least 75 % of the member bodies casting a vote.
+
+Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. ISO shall not be held responsible for identifying any or all such patent rights.
+////
+
+[abstract]
+== Abstract
+
+<Insert Abstract Text here>
+
+[.preface]
+== Security Considerations
+
+//If no security considerations have been made for this Standard, use the following text.
+
+No security considerations have been made for this Standard.
+
+////
+If security considerations have been made for this Standard, follow the examples found in IANA or IETF documents. Please see the following example.
+
+“VRRP is designed for a range of internetworking environments that may employ different security policies. The protocol includes several authentication methods ranging from no authentication, simple clear text passwords, and strong authentication using IP Authentication with MD5 HMAC. The details on each approach including possible attacks and recommended environments follows.
+
+Independent of any authentication type VRRP includes a mechanism (setting TTL=255, checking on receipt) that protects against VRRP packets being injected from another remote network. This limits most vulnerabilities to local attacks.
+NOTE: The security measures discussed in the following sections only provide various kinds of authentication. No confidentiality is provided at all. This should be explicitly described as outside the scope....”
+////
+
+////
+== Submitting organizations
+
+Submitting organisations added automatically by Metanorma from document attributes
+////
+
+[.preface]
+== Submitters
+All questions regarding this submission should be directed to the editor or the submitters:
+
+
+|===
+|Name |Affiliation |OGC member
+
+|Alexander Jacob | Eurac Research | Yes
+|Juraj Zvolenský | Eurac Research | Yes
+|Yuvraj Bhagwan Adagale | Eurac Research | Yes
+|===
+
+
+[.preface]
+== Contributors
+
+//This clause is optional.
+
+Additional contributors to this Standard include the following:
+
+Individual name(s), Organization
+
+[NOTE]
+====
+If you need to place any further sections in the preface area
+use the `[.preface]` attribute.
+====
+
+== Scope
+[NOTE]
+====
+Insert Scope text here. Give the subject of the document and the aspects of that scope covered by the document.
+====
+
+== Conformance
+This Best Practice defines XXXX.
+
+Requirements for N standardization target types are considered:
+
+* AAAA
+* BBBB
+
+Conformance with this Best Practice shall be checked using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.
+
+In order to conform to this OGC® interface Best Practice, a software implementation shall choose to implement:
+
+* Any one of the conformance levels specified in Annex A (normative).
+* Any one of the Distributed Computing Platform profiles specified in Annexes TBD through TBD (normative).
+
+All requirements-classes and conformance-classes described in this document are owned by the documents(s) identified.
+
+[bibliography]
+== References
+
+The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
+
+[NOTE]
+====
+Insert References here. If there are no references, leave this section empty.
+
+References are to follow the Springer LNCS style, with the exception that optional information may be appended to references: DOIs are added after the date and web resource references may include an access date at the end of the reference in parentheses. See examples from Springer and OGC below.
+====
+
+* [[[Smith81,Identification of Common Molecular Subsequences]]],
+_Identification of Common Molecular Subsequences_.
+Smith, T.F., Waterman, M.S., J. Mol. Biol. 147, 195–197 (1981)
+
+* [[[May06,ZIB Structure Prediction Pipeline]]],
+_ZIB Structure Prediction Pipeline: Composing a Complex Biological Workflow through Web Services_.
+May, P., Ehrlich, H.C., Steinke, T. In: Nagel, W.E., Walter,
+W.V., Lehner, W. (eds.) Euro-Par 2006. LNCS, vol. 4128, pp. 1148–1158. Springer,
+Heidelberg (2006)
+
+* [[[Grid,The Grid]]], _The Grid: Blueprint for a New Computing Infrastructure._,
+Foster, I., Kesselman, C.. Morgan Kaufmann, San Francisco (1999).
+
+* [[[Czajkowski01,Grid Information Services for Distributed Resource Sharing]]],
+_Grid Information Services for Distributed Resource Sharing._
+Czajkowski, K., Fitzgerald, S., Foster, I., Kesselman, C. In: 10th IEEE International Symposium on High
+Performance Distributed Computing, pp. 181–184. IEEE Press, New York (2001)
+
+* [[[Foster02,The Physiology of the Grid]]],
+_The Physiology of the Grid: an Open Grid Services Architecture for Distributed Systems Integration._
+Foster, I., Kesselman, C., Nick, J., Tuecke, S. Technical report, Global Grid Forum (2002)
+
+* [[[NCBI,NCBI]]], _National Center for Biotechnology Information_, link:++http://www.ncbi.nlm.nih.gov++[]
+
+* [[[ISO19101-1,ISO 19101-1:2014]]], Geographic information -- Reference model -- Part 1: Fundamentals
+
+* [[[ISO19115-1,ISO 19115-1:2014]]], _Geographic information -- Metadata -- Part 1: Fundamentals_
+
+* [[[ISO19157,ISO 19157:2013]]], _Geographic information -- Data quality_
+
+* [[[ISO19139,ISO 19139:2007]]], _Geographic information -- Metadata -- XML schema implementation_
+
+* [[[ISO19115-3,ISO 19115-3]]], _Geographic information -- Metadata -- Part 3: XML schemas_ (2016)
+
+* [[[OGC15-097,OGC 15-097]]], _OGC Geospatial User Feedback Standard: Conceptual Model_ (2016)
+
+* [[[OGC12-019,OGC 12-019]]], _OGC City Geography Markup Language (CityGML) Encoding Standard_ (2012)
+
+* [[[OGC14-005r3,OGC 14-005r3]]], _OGC IndoorGML_ (2014)
+
+* [[[OGC06121r9,OGC 06-121r9]]], _OGC Web Service Common Implementation Specification_, April 7, 2010. link:++http://portal.opengeospatial.org/files/?artifact_id=38867++[]
+
+== Terms and definitions
+
+
+////
+Note that the initial notice about terms ("This document uses the terms defined in OGC Policy Directive 49...")
+is inserted automatically by Metanorma using the agreed standardised language, and you should not enter it here.
+////
+
+=== example term
+
+term used for exemplary purposes
+
+[.source]
+<<ISO19101-1>>
+
+NOTE: An example note.
+
+[example]
+Here's an example of an example term.
+
+== Conventions
+
+This sections provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.
+
+=== Identifiers
+The normative provisions in this document are denoted by the URI
+
+`http://www.opengis.net/spec/{standard}/{m.n}`
+
+All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
+
+[obligation=informative]
+== Clauses not Containing Normative Material
+
+Paragraph
+
+=== Clauses not containing normative material sub-clause 1
+
+Paragraph
+
+=== Clauses not containing normative material sub-clause 2
+
+== Clause containing normative material
+
+Paragraph
+
+=== Requirement Class A or Requirement A Example
+
+Paragraph – intro text for the requirement class.
+
+Use the following table for Requirements Classes.
+
+////
+[cols="1,4",width="90%"]
+|===
+2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
+2+|http://www.opengis.net/spec/ABCD/m.n/req/req-class-a {set:cellbgcolor:#FFFFFF}
+|Target type |Token
+|Dependency |http://www.example.org/req/blah
+|Dependency |urn:iso:ts:iso:19139:clause:6
+|*Requirement 1* {set:cellbgcolor:#CACCCE} |http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-1 +
+requirement description {set:cellbgcolor:#FFFFFF}
+|*Requirement 2* {set:cellbgcolor:#CACCCE} |http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-2 +
+requirement description {set:cellbgcolor:#FFFFFF}
+
+|*Requirement 3* {set:cellbgcolor:#CACCCE} |http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-3 +
+requirement description
+{set:cellbgcolor:#FFFFFF}
+|===
+////
+
+
+[requirement,type="class",id="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a",obligation="requirement"]
+====
+
+Requirements Class
+
+[dependency]
+--
+* link:++http://www.example.org/req/blah++[]
+* urn:iso:ts:iso:19139:clause:6
+--
+
+[requirement,type="general",id="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-1"]
+======
+requirement description
+======
+
+[requirement,type="general",id="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-2"]
+======
+requirement description
+======
+
+[requirement,type="general",id="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-3"]
+======
+requirement description
+======
+
+====
+
+==== Requirement 1
+
+Paragraph - intro text for the requirement.
+
+Use the following table for Requirements, number sequentially.
+
+[requirement,type="general",id="/req/req-class-a/req-name-1",obligation="requirement"]
+====
+
+Requirement 'shall' statement
+
+====
+
+Dictionary tables for requirements can be added as necessary. Modify the following example as needed.
+
+[width="90%",options="header"]
+|===
+|Names |Definition |Data types and values |Multiplicity and use
+|name 1 |definition of name 1 |float |One or more (mandatory)
+|name 2 |definition of name 2 |character string type, not empty |Zero or one (optional)
+|name 3 |definition of name 3 |GML:: Point PropertyType |One (mandatory)
+|===
+
+////
+add or remove annexes after "A" as necessary
+////
+[appendix]
+== Conformance Class Abstract Test Suite (Normative)
+
+[NOTE]
+Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)
+
+=== Conformance Class A
+
+==== Requirement 1
+[requirement,type="pseudocode",label="/req/req-class-a/req-name-1"]
+=====
+
+[verification,label="/conf/conf-class-a/req-name-1"]
+======
+Test purpose:: Verify that...
+
+Test method:: Inspect...
+======
+
+=====
+
+==== Requirement 2
+
+[appendix]
+:appendix-caption: Annex
+== Title ( {Normative/Informative} )
+
+[NOTE]
+Place other Annex material in sequential annexes beginning with "B" and leave final two annexes for the Revision History and Bibliography
+
+////
+Revision History should be the last annex before the Bibliography
+Bibliography should be the last annex
+////
+[appendix]
+== Revision History
+
+[width="90%",options="header"]
+|===
+|Date |Release |Editor | Primary clauses modified |Description
+|2016-04-28 |0.1 |G. Editor |all |initial version
+|===
+
+[bibliography]
+[[Bibliography]]
+== Bibliography
+
+[NOTE]
+.Example Bibliography (Delete this note).
+===============================================
+The TC has approved Springer LNCS as the official document citation type.
+
+Springer LNCS is widely used in technical and computer science journals and other publications
+
+* For citations in the text please use square brackets and consecutive numbers: [1], [2], [3]
+
+– Actual References:
+
+[n] Journal: Author Surname, A.: Title. Publication Title. Volume number, Issue number, Pages Used (Year Published)
+
+[n] Web: Author Surname, A.: Title, link:++http://Website-Url++[]
+
+===============================================
+
+* [[[OGC2015,OGCTB12]]], _OGC: OGC Testbed 12 Annex B: Architecture_ (2015).

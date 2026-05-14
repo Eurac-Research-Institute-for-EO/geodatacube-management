@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ogc-standard xmlns="https://standards.opengeospatial.org/document">
+<bibdata type="best-practice">
+  <title language="en" format="text/plain">Best Practice for OGC GeoDataCube Management</title>
+  <source type="xml">./document.xml</source>
+  <source type="pdf">./document.pdf</source>
+  <source type="doc">./document.doc</source>
+  <docidentifier type="ogc-external">http://www.opengis.net/doc/BP/moving-features-ext-netCDF/1.0</docidentifier>
+  <docidentifier type="ogc-internal">YY-999</docidentifier>
+  <docnumber>YY-999</docnumber>
+  <date type="published">
+    <on>XXXX-XX-XX</on>
+  </date>
+  <date type="issued">
+    <on>XXXX-XX-XX</on>
+  </date>
+  <date type="received">
+    <on>2026-05-14</on>
+  </date>
+  <edition>1.0</edition>
+  <version>
+    <draft>1.0.0</draft>
+  </version>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>Eurac Research</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>Organization two</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>Organization three</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      <name>
+        <completename>Alexander Jacob</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      <name>
+        <completename>Juraj Zvolenský</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      <name>
+        <completename>Yuvraj Bhagwan Adagale</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>OGC</name>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script><abstract>
+  <p id="_13c87a4b-3e5b-4549-99dd-1f73e211dea1">&lt;Insert Abstract Text here&gt;</p>
+</abstract>
+  <status format="plain">swg-draft</status>
+  <copyright>
+    <from>2026</from>
+    <owner>
+      <organization>
+        <name>OGC</name>
+      </organization>
+    </owner>
+  </copyright>
+  <editorialgroup>
+    <committee>technical</committee>
+  </editorialgroup>
+  <keyword>ogcdoc</keyword>
+  <keyword>OGC document</keyword>
+  <keyword>best practice</keyword>
+  <keyword>GeoDataCubes</keyword>
+</bibdata>
+<preface><abstract id="_abstract">
+  <p id="_b2da6bd7-6278-4bb2-9138-36c97f1356b4">&lt;Insert Abstract Text here&gt;</p>
+</abstract><foreword obligation="informative">
+  <title>Foreword</title>
+  <note id="_6190d3ad-9437-429b-85cf-52ad16f35e56"><p id="_7c550ac9-ae08-4e17-93f3-9fcddd7dc195">Insert Preface Text here. Give OGC specific commentary: describe the technical content, reason for document, history of the document and precursors, and plans for future work.</p>
+<p id="_9cf7f408-fcbc-446e-bdd9-f3351f116f46">There are two ways to specify the Preface: “simple clause” or “full clasuse”</p>
+<p id="_48f25dbc-a789-47f2-baae-55187a5d2f78">If the Preface does not contain subclauses, it is considered a simple preface clause. This one is entered as text after the <tt>.Preface</tt> label and must be placed between the AsciiDoc document attributes and the first AsciiDoc section title. It should not be give a section title of its own.</p>
+<p id="_515b0c1b-16d2-4ae6-9aa7-56f29e9f7ef0">If the Preface contains subclauses, it needs to be encoded as a full preface clause. This one is recognized as a full Metanorma AsciiDoc section with te title “Preface”, i.e. <tt>== Preface</tt>. (Simple preface content can also be encoded like full preface.)</p></note>
+</foreword><submitters id="_submitters"><p id="_58273017-6267-4c9d-a1f7-6ec8a2008c4d">All questions regarding this submission should be directed to the editor or the submitters:</p>
+<table id="_29afc4d5-1d7d-40aa-9eee-f318b23b3354">
+  <thead>
+    <tr>
+      <th align="left">Name</th>
+      <th align="left">Affiliation</th>
+      <th align="left">OGC member</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">Steve Liang</td>
+      <td align="left">University of Calgary, Canada / SensorUp Inc.</td>
+      <td align="left">Yes</td>
+    </tr>
+  </tbody>
+</table></submitters></preface><sections>
+
+<clause id="_security_considerations" obligation="normative">
+  <title>Security Considerations</title>
+  <p id="_3b1fd9f6-20dc-4751-8081-da8551e6d9f0">No security considerations have been made for this Standard.</p>
+</clause>
+
+<clause id="_contributors" obligation="normative"><title>Contributors</title><p id="_c1179b06-f417-476b-8d03-991bc6b6b6a0">Additional contributors to this Standard include the following:</p>
+<p id="_92211181-bdad-4a2f-937d-47b519a627b8">Individual name(s), Organization</p>
+<note id="_addd6195-12fe-4698-a5ec-3cebf20b575c">
+  <p id="_9c4bc419-df12-4086-be7e-8d311bc7a805">If you need to place any further sections in the preface area
+use the <tt>[.preface]</tt> attribute.</p>
+</note></clause>
+<clause id="_scope" obligation="normative">
+  <title>Scope</title>
+  <note id="_8bce853b-9aa0-47bc-8eb0-c70f277441a8">
+  <p id="_0cbaac43-7ecc-4682-9325-452a3ae42e46">Insert Scope text here. Give the subject of the document and the aspects of that scope covered by the document.</p>
+</note>
+</clause>
+<clause id="_conformance" obligation="normative"><title>Conformance</title><p id="_32389446-6e16-423f-a724-2903f439b809">This Best Practice defines XXXX.</p>
+<p id="_aeedd281-4286-4ac9-a5a6-31907ffc9051">Requirements for N standardization target types are considered:</p>
+<ul id="_56aed3d3-6e19-4207-9ed7-92db4e8351e4">
+  <li>
+    <p id="_318a6158-b327-4a06-91e6-86602a5249f7">AAAA</p>
+  </li>
+  <li>
+    <p id="_f4c8d6c5-91f3-470d-8cde-b75b734e25b1">BBBB</p>
+  </li>
+</ul>
+<p id="_fcea625c-9d96-4ccb-a183-4bc11b418a5e">Conformance with this Best Practice shall be checked using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.</p>
+<p id="_361a26e2-fa2c-4411-b784-f556fdfd2ed3">In order to conform to this OGC® interface Best Practice, a software implementation shall choose to implement:</p>
+<ul id="_de10182f-8171-4635-8bec-5e620f862a43">
+  <li>
+    <p id="_264e7535-63e5-472c-9d03-5f82806d3f64">Any one of the conformance levels specified in Annex A (normative).</p>
+  </li>
+  <li>
+    <p id="_6cd16256-d504-4e8b-8117-fdac49142aaa">Any one of the Distributed Computing Platform profiles specified in Annexes TBD through TBD (normative).</p>
+  </li>
+</ul>
+<p id="_bc660410-fa64-4984-b996-ae819e772911">All requirements-classes and conformance-classes described in this document are owned by the documents(s) identified.</p></clause>
+
+<terms id="_terms_and_definitions" obligation="normative">
+  <title>Terms and definitions</title>
+  <term id="_example_term"><preferred>example term</preferred><definition><p id="_aa9211c4-a66b-4b99-8087-83cac11ffad8">term used for exemplary purposes</p></definition>
+
+
+<termnote id="_83ab78f3-52aa-4973-ad28-526094b0599a">
+  <p id="_d4bf3a17-741f-4a17-9eb7-4e0e13e32c0e">An example note.</p>
+</termnote><termexample id="_c9359711-a68d-4bfc-90c4-12f1c6c6194d">
+  <p id="_c46e6340-b3bf-49ea-9af1-c23c7d54b0be">Here’s an example of an example term.</p>
+</termexample><termsource status="identical">
+  <origin bibitemid="ISO19101-1" type="inline" citeas="ISO 19101-1:2014"/>
+</termsource></term>
+</terms>
+<clause id="_conventions" obligation="normative"><title>Conventions</title><p id="_df47505a-3260-48b4-90a9-49b73ad29282">This sections provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.</p>
+<clause id="_identifiers" obligation="normative"><title>Identifiers</title><p id="_09211563-2c87-4d7f-8af2-6018ed93a3bb">The normative provisions in this document are denoted by the URI</p>
+<p id="_342dbcde-8d1b-4d8e-a129-a88167e837a6">
+  <tt>
+    <link target="http://www.opengis.net/spec/{standard}/{m.n}"/>
+  </tt>
+</p>
+<p id="_d5b14f2c-0ccd-41aa-91cb-2117481b9f6d">All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.</p></clause></clause>
+<clause id="_clauses_not_containing_normative_material" obligation="informative"><title>Clauses not Containing Normative Material</title><p id="_8bb38a53-4b94-4a56-8469-cb5642c3c845">Paragraph</p>
+<clause id="_clauses_not_containing_normative_material_sub_clause_1" obligation="informative">
+  <title>Clauses not containing normative material sub-clause 1</title>
+  <p id="_baa9c13b-79e3-4940-80c8-6fe04ac4959b">Paragraph</p>
+</clause>
+<clause id="_clauses_not_containing_normative_material_sub_clause_2" obligation="informative">
+  <title>Clauses not containing normative material sub-clause 2</title>
+</clause></clause>
+<clause id="_clause_containing_normative_material" obligation="normative"><title>Clause containing normative material</title><p id="_f141a56b-27c0-4723-a9a2-dcaa49102da0">Paragraph</p>
+<clause id="_requirement_class_a_or_requirement_a_example" obligation="normative"><title>Requirement Class A or Requirement A Example</title><p id="_7877d78d-9ba3-4333-9dfa-3aaa970c1df2">Paragraph – intro text for the requirement class.</p>
+<p id="_ed540fe3-b669-4332-b226-3ca95fe48530">Use the following table for Requirements Classes.</p>
+<example id="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a"><p id="_4c541321-8920-42ba-ba07-2b2ee9827a14">Requirements Class</p>
+<ul id="_2a321047-c82f-4380-a5cb-509f4b6e2665">
+  <li>
+    <p id="_ba0ff75c-b475-4e56-b55b-268b915c11d9">
+      <link target="http://www.example.org/req/blah"/>
+    </p>
+  </li>
+  <li>
+    <p id="_5614fbe7-b12a-471e-a6db-08ecbe4dd6e8">urn:iso:ts:iso:19139:clause:6</p>
+  </li>
+</ul>
+<example id="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-1">
+  <p id="_75311a8b-2755-4ac2-91e7-0cad2336d1e1">requirement description</p>
+</example>
+<example id="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-2">
+  <p id="_060383ad-4aa7-4e64-9c2e-d7ea80e5b806">requirement description</p>
+</example>
+<example id="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-3">
+  <p id="_d95656ba-b301-49c5-b3ef-fcc9c6695a09">requirement description</p>
+</example></example>
+<clause id="_requirement_1" obligation="normative"><title>Requirement 1</title><p id="_db0bd023-1f70-4d53-b6fe-65ec0953db95">Paragraph - intro text for the requirement.</p>
+<p id="_04d2a521-4856-47c9-bf6f-0328f4b00f9b">Use the following table for Requirements, number sequentially.</p>
+<example id="/req/req-class-a/req-name-1">
+  <p id="_fd4a68f3-8879-4181-95e4-59bff88367da">Requirement ‘shall’ statement</p>
+</example>
+<p id="_5a1555f2-9b72-4ff5-a8c1-57aac848b8d3">Dictionary tables for requirements can be added as necessary. Modify the following example as needed.</p>
+<table id="_24fd5904-c320-44c8-88b3-19f1bc559005">
+  <thead>
+    <tr>
+      <th align="left">Names</th>
+      <th align="left">Definition</th>
+      <th align="left">Data types and values</th>
+      <th align="left">Multiplicity and use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">name 1</td>
+      <td align="left">definition of name 1</td>
+      <td align="left">float</td>
+      <td align="left">One or more (mandatory)</td>
+    </tr>
+    <tr>
+      <td align="left">name 2</td>
+      <td align="left">definition of name 2</td>
+      <td align="left">character string type, not empty</td>
+      <td align="left">Zero or one (optional)</td>
+    </tr>
+    <tr>
+      <td align="left">name 3</td>
+      <td align="left">definition of name 3</td>
+      <td align="left">GML:: Point PropertyType</td>
+      <td align="left">One (mandatory)</td>
+    </tr>
+  </tbody>
+</table></clause></clause></clause>
+
+
+
+</sections><annex id="_conformance_class_abstract_test_suite_normative" obligation="normative"><title>Conformance Class Abstract Test Suite (Normative)</title><note id="_7fe1b011-f935-414c-81d4-2664bf73f6f7">
+  <p id="_ece6a996-7044-4466-9ff5-495dc2e2a4c0">Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)</p>
+</note>
+<clause id="_conformance_class_a" obligation="normative"><title>Conformance Class A</title><clause id="_requirement_1_2" obligation="normative">
+  <title>Requirement 1</title>
+  <example id="_b5ac702a-660c-410a-baa5-85a9d414517f">
+  <example id="_6c8e71f0-15a3-48a8-b772-7027cd7f33a4">
+  <dl id="_23fb9dbe-5012-4821-afd1-5b3256b5a4a0">
+  <dt>Test purpose</dt>
+  <dd>
+    <p id="_bb1c3569-f67e-4a94-bc1b-6dee76759f18">Verify that…​</p>
+  </dd>
+  <dt>Test method</dt>
+  <dd>
+    <p id="_7a7ee11d-a3dc-488d-b2a0-9303453a63d4">Inspect…​</p>
+  </dd>
+</dl>
+</example>
+</example>
+</clause>
+<clause id="_requirement_2" obligation="normative">
+  <title>Requirement 2</title>
+</clause></clause></annex><annex id="_title_normativeinformative" obligation="normative">
+  <title>Title ( {Normative/Informative} )</title>
+  <note id="_1ec534bb-09ab-4504-80e2-a0a5cc40a3be">
+  <p id="_f0fbf004-4816-4d99-8a2b-f712c51db32a">Place other Annex material in sequential annexes beginning with “B” and leave final two annexes for the Revision History and Bibliography</p>
+</note>
+</annex><annex id="_revision_history" obligation="normative">
+  <title>Revision History</title>
+  <table id="_cb6f46ff-9285-466e-bf0d-7fcd210eacb6">
+  <thead>
+    <tr>
+      <th align="left">Date</th>
+      <th align="left">Release</th>
+      <th align="left">Editor</th>
+      <th align="left">Primary clauses modified</th>
+      <th align="left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">2016-04-28</td>
+      <td align="left">0.1</td>
+      <td align="left">G. Editor</td>
+      <td align="left">all</td>
+      <td align="left">initial version</td>
+    </tr>
+  </tbody>
+</table>
+</annex><bibliography><references id="_references" obligation="informative"><title>Normative References</title>
+
+<bibitem id="Smith81">
+  <formattedref format="application/x-isodoc+xml"><em>Identification of Common Molecular Subsequences</em>.
+Smith, T.F., Waterman, M.S., J. Mol. Biol. 147, 195–197 (1981)</formattedref>
+  <docidentifier>Identification of Common Molecular Subsequences</docidentifier>
+</bibitem><bibitem id="May06">
+  <formattedref format="application/x-isodoc+xml"><em>ZIB Structure Prediction Pipeline: Composing a Complex Biological Workflow through Web Services</em>.
+May, P., Ehrlich, H.C., Steinke, T. In: Nagel, W.E., Walter,
+W.V., Lehner, W. (eds.) Euro-Par 2006. LNCS, vol. 4128, pp. 1148–1158. Springer,
+Heidelberg (2006)</formattedref>
+  <docidentifier>ZIB Structure Prediction Pipeline</docidentifier>
+</bibitem><bibitem id="Grid">
+  <formattedref format="application/x-isodoc+xml"><em>The Grid: Blueprint for a New Computing Infrastructure.</em>,
+Foster, I., Kesselman, C.. Morgan Kaufmann, San Francisco (1999).</formattedref>
+  <docidentifier>The Grid</docidentifier>
+</bibitem><bibitem id="Czajkowski01">
+  <formattedref format="application/x-isodoc+xml"><em>Grid Information Services for Distributed Resource Sharing.</em>
+Czajkowski, K., Fitzgerald, S., Foster, I., Kesselman, C. In: 10th IEEE International Symposium on High
+Performance Distributed Computing, pp. 181–184. IEEE Press, New York (2001)</formattedref>
+  <docidentifier>Grid Information Services for Distributed Resource Sharing</docidentifier>
+</bibitem><bibitem id="Foster02">
+  <formattedref format="application/x-isodoc+xml"><em>The Physiology of the Grid: an Open Grid Services Architecture for Distributed Systems Integration.</em>
+Foster, I., Kesselman, C., Nick, J., Tuecke, S. Technical report, Global Grid Forum (2002)</formattedref>
+  <docidentifier>The Physiology of the Grid</docidentifier>
+</bibitem><bibitem id="NCBI">
+  <formattedref format="application/x-isodoc+xml"><em>National Center for Biotechnology Information</em>, <link target="http://www.ncbi.nlm.nih.gov"/></formattedref>
+  <docidentifier>NCBI</docidentifier>
+</bibitem><bibitem id="ISO19101-1" type="standard">
+  <title format="text/plain">Geographic information — Reference model — Part 1: Fundamentals</title>
+  <docidentifier type="ISO">ISO 19101-1:2014</docidentifier>
+  <date type="published">
+    <on>2014</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>ISO</name>
+    </organization>
+  </contributor>
+</bibitem><bibitem id="ISO19115-1" type="standard">
+  <title format="text/plain">Geographic information — Metadata — Part 1: Fundamentals</title>
+  <docidentifier type="ISO">ISO 19115-1:2014</docidentifier>
+  <date type="published">
+    <on>2014</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>ISO</name>
+    </organization>
+  </contributor>
+</bibitem><bibitem id="ISO19157" type="standard">
+  <title format="text/plain">Geographic information — Data quality</title>
+  <docidentifier type="ISO">ISO 19157:2013</docidentifier>
+  <date type="published">
+    <on>2013</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>ISO</name>
+    </organization>
+  </contributor>
+</bibitem><bibitem id="ISO19139" type="standard">
+  <title format="text/plain">Geographic information — Metadata — XML schema implementation</title>
+  <docidentifier type="ISO">ISO 19139:2007</docidentifier>
+  <date type="published">
+    <on>2007</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>ISO</name>
+    </organization>
+  </contributor>
+</bibitem><bibitem id="ISO19115-3" type="standard">
+  <title format="text/plain">Geographic information — Metadata — Part 3: XML schemas (2016)</title>
+  <docidentifier type="ISO">ISO 19115-3</docidentifier>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>ISO</name>
+    </organization>
+  </contributor>
+</bibitem><bibitem id="OGC15-097">
+  <formattedref format="application/x-isodoc+xml"><em>OGC Geospatial User Feedback Standard: Conceptual Model</em> (2016)</formattedref>
+  <docidentifier>OGC 15-097</docidentifier>
+</bibitem><bibitem id="OGC12-019">
+  <formattedref format="application/x-isodoc+xml"><em>OGC City Geography Markup Language (CityGML) Encoding Standard</em> (2012)</formattedref>
+  <docidentifier>OGC 12-019</docidentifier>
+</bibitem><bibitem id="OGC14-005r3">
+  <formattedref format="application/x-isodoc+xml"><em>OGC IndoorGML</em> (2014)</formattedref>
+  <docidentifier>OGC 14-005r3</docidentifier>
+</bibitem><bibitem id="OGC06121r9">
+  <formattedref format="application/x-isodoc+xml"><em>OGC Web Service Common Implementation Specification</em>, April 7, 2010. <link target="http://portal.opengeospatial.org/files/?artifact_id=38867"/></formattedref>
+  <docidentifier>OGC 06-121r9</docidentifier>
+</bibitem></references><references id="Bibliography" obligation="informative"><title>Bibliography</title><note id="_e4fb3bf8-364f-435d-92fc-1f5b365aa43e"><p id="_a341b9fa-3b95-4135-a21c-bcc9818a0184">The TC has approved Springer LNCS as the official document citation type.</p>
+<p id="_c6694e65-56c1-414a-bae1-a58f673b871c">Springer LNCS is widely used in technical and computer science journals and other publications</p>
+
+<p id="_93f67b57-2a95-46e5-acb5-c498ff41cc10">– Actual References:</p>
+<p id="_b03dd12a-d58a-4eee-aa36-cda989b7c4a5">[n] Journal: Author Surname, A.: Title. Publication Title. Volume number, Issue number, Pages Used (Year Published)</p>
+<p id="_89f1bc21-70fc-4c9d-8e8d-d7836c27b03b">[n] Web: Author Surname, A.: Title, <link target="http://Website-Url"/></p></note>
+<bibitem id="OGC2015">
+  <formattedref format="application/x-isodoc+xml"><em>OGC: OGC Testbed 12 Annex B: Architecture</em> (2015).</formattedref>
+  <docidentifier>OGCTB12</docidentifier>
+</bibitem></references></bibliography>
+</ogc-standard>
