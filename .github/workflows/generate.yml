@@ -24,8 +24,8 @@ jobs:
                   docker run --rm \
                     -v "$(pwd)":/metanorma \
                     -w /metanorma \
-                    ribose/metanorma \
-                    "metanorma compile document.adoc"
+                    metanorma/metanorma \
+                    metanorma compile document.adoc --agree-to-terms
 
             - name: Upload generated documents
               uses: actions/upload-artifact@v4

@@ -11,7 +11,7 @@ The recommended way is to run the following, which will generate the output file
 ```sh
 docker run --rm \
   -v "$(pwd)":/metanorma -w /metanorma \
-  ribose/metanorma "metanorma compile --agree-to-terms -t ogc -x xml,html,doc document.adoc"
+  metanorma/metanorma "metanorma compile --agree-to-terms -t ogc -x xml,html,doc document.adoc"
 ```
 
 or if you have installed the tool locally:
