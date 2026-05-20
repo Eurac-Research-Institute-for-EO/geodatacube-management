@@ -60,9 +60,9 @@ Insert Preface Text here. Give OGC specific commentary: describe the technical c
 
 There are two ways to specify the Preface: "simple clause" or "full clasuse"
 
-If the Preface does not contain subclauses, it is considered a simple preface clause. This one is entered as text after the `.Preface` label and must be placed between the AsciiDoc document attributes and the first AsciiDoc section title. It should not be give a section title of its own.
+If the Preface does not contain subclauses, it is considered a simple preface clause. This one is entered as text after the pass:c,q,a,m,p[`.Preface`] label and must be placed between the AsciiDoc document attributes and the first AsciiDoc section title. It should not be give a section title of its own.
 
-If the Preface contains subclauses, it needs to be encoded as a full preface clause. This one is recognized as a full Metanorma AsciiDoc section with te title "Preface", i.e. `== Preface`. (Simple preface content can also be encoded like full preface.)
+If the Preface contains subclauses, it needs to be encoded as a full preface clause. This one is recognized as a full Metanorma AsciiDoc section with te title "Preface", i.e. pass:c,q,a,m,p[`== Preface`]. (Simple preface content can also be encoded like full preface.)
 
 ====
 
@@ -95,7 +95,11 @@ Attention is drawn to the possibility that some of the elements of this document
 [abstract]
 == Abstract
 
-<Insert Abstract Text here>
+The rapidly growing volume of Earth observation data, together with the increasing diversity of data providers, platforms, formats, APIs, and processing environments, makes it difficult for users to consistently discover, access, prepare, and use data for analysis. While metadata standards and catalogues provide an essential foundation for discovery and description, additional guidance is needed on how discovered datasets can be transformed into analysis-ready geodatacubes and managed throughout their use.
+
+This Best Practice provides recommendations for geodatacube management, focusing on the pathways from metadata and data discovery towards usable multidimensional datacubes. It describes how metadata-driven approaches can support the creation, configuration, access, and processing of geodatacubes across heterogeneous infrastructures. Building on previous work, including OGC Testbed 19, the document explores the role of openEO and relevant open-source EOEPCA building blocks as interoperable components for exposing, processing, and managing Earth observation data as geodatacubes.
+
+The goal of this Best Practice is to provide practical guidance for data providers, platform operators, and application developers who need to design geodatacube management systems. It recommends approaches for bridging discovery metadata, data access mechanisms, processing interfaces, and datacube representations in a way that improves interoperability, reproducibility, and usability of Earth observation data.
 
 [.preface]
 == Security Considerations
@@ -138,20 +142,26 @@ All questions regarding this submission should be directed to the editor or the 
 
 //This clause is optional.
 
-Additional contributors to this Standard include the following:
+// Individual name(s), Organization
 
-Individual name(s), Organization
+Alexander Jacob, Eurac Research
+Juraj Zvolenský, Eurac Research
+Yuvraj Bhagwan Adagale, Eurac Research
 
 [NOTE]
 ====
 If you need to place any further sections in the preface area
-use the `[.preface]` attribute.
+use the pass:c,q,a,m,p[`[.preface\]`] attribute.
 ====
 
 == Scope
 [NOTE]
 ====
-Insert Scope text here. Give the subject of the document and the aspects of that scope covered by the document.
+This document specifies a set of best practice recommendations for the management of geospatial data as geodatacubes. The scope of this document is the transition from metadata-driven discovery of Earth observation datasets to their access, organization, processing, and use as multidimensional geodatacubes.
+
+The document provides guidance on the use of metadata records, catalogues, data access information, and processing interfaces to support interoperable geodatacube management. It includes consideration of openEO as an interface for geodatacube access and processing, and considers the use of open-source EOEPCA building blocks as components within geodatacube management architectures.
+
+This document is intended to support implementers of data platforms, processing services, and client applications that need to manage Earth observation data in a datacube-oriented form. It does not define a new standard for geodatacube encoding, metadata, or processing. Instead, it identifies recommended practices for combining existing standards, interfaces, and software components to support consistent and reusable geodatacube workflows.
 ====
 
 == Conformance
@@ -252,7 +262,7 @@ This sections provides details and examples for any conventions used in the docu
 === Identifiers
 The normative provisions in this document are denoted by the URI
 
-`http://www.opengis.net/spec/{standard}/{m.n}`
+pass:c,q,a,m,p[`http://www.opengis.net/spec/{standard}/{m.n}`]
 
 All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
 

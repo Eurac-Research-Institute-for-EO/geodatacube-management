@@ -49,7 +49,11 @@ Attention is drawn to the possibility that some of the elements of this document
 [abstract]
 == Abstract
 
-<Insert Abstract Text here>
+The rapidly growing volume of Earth observation data, together with the increasing diversity of data providers, platforms, formats, APIs, and processing environments, makes it difficult for users to consistently discover, access, prepare, and use data for analysis. While metadata standards and catalogues provide an essential foundation for discovery and description, additional guidance is needed on how discovered datasets can be transformed into analysis-ready geodatacubes and managed throughout their use.
+
+This Best Practice provides recommendations for geodatacube management, focusing on the pathways from metadata and data discovery towards usable multidimensional datacubes. It describes how metadata-driven approaches can support the creation, configuration, access, and processing of geodatacubes across heterogeneous infrastructures. Building on previous work, including OGC Testbed 19, the document explores the role of openEO and relevant open-source EOEPCA building blocks as interoperable components for exposing, processing, and managing Earth observation data as geodatacubes.
+
+The goal of this Best Practice is to provide practical guidance for data providers, platform operators, and application developers who need to design geodatacube management systems. It recommends approaches for bridging discovery metadata, data access mechanisms, processing interfaces, and datacube representations in a way that improves interoperability, reproducibility, and usability of Earth observation data.
 
 [.preface]
 == Security Considerations
@@ -91,8 +95,6 @@ All questions regarding this submission should be directed to the editor or the 
 == Contributors
 
 //This clause is optional.
-
-Additional contributors to this Standard include the following:
 
 Individual name(s), Organization
 

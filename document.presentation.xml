@@ -1,0 +1,1368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="presentation" version="2.9.5" schema-version="v2.1.5" flavor="ogc">
+<bibdata type="standard">
+<title language="en" type="main">Best Practice for OGC GeoDataCube Management</title>
+<uri type="pdf">./document.pdf</uri><docidentifier type="ogc-internal" primary="true">YY-999</docidentifier><docnumber>YY-999</docnumber><date type="published"><on>XXXX-XX-XX</on></date><date type="issued"><on>XXXX-XX-XX</on></date><date type="received"><on>2026-05-14</on></date><contributor><role type="author"/><organization>
+<name>Eurac Research</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>Organization two</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>Organization three</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Alexander Jacob</completename></name>
+</person></contributor><contributor><role type="editor"/><person>
+<name><completename>Juraj Zvolenský</completename></name>
+</person></contributor><contributor><role type="editor"/><person>
+<name><completename>Yuvraj Bhagwan Adagale</completename></name>
+</person></contributor><contributor><role type="author"><description>committee</description></role><organization>
+<name>Open Geospatial Consortium</name>
+<subdivision type="Committee">
+<name>technical</name>
+</subdivision><abbreviation>OGC</abbreviation></organization></contributor><contributor><role type="publisher"/><organization>
+<name>Open Geospatial Consortium</name>
+<abbreviation>OGC</abbreviation><logo type="html-blue"><image src="" mimetype="image/svg+xml"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 1024.8 354.8" preserveaspectratio="xMidYMin slice">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #263bd3;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-1" d="M270.5,73.63l-.36-.21-26.46-15.45-.27-.17-26.56-15.5-.18-.1-26.64-15.55-.09-.05-11.7-6.83c-9.29-5.42-20.77-5.42-30.06,0l-11.71,6.83-.09.05-26.64,15.55-.18.1-26.56,15.5-.26.16-26.47,15.46-.36.21-14.61,8.53c-5.26,3.07-5.26,10.66,0,13.73l14.61,8.53.35.21,26.48,15.46.26.14,26.56,15.51.18.1,26.64,15.55.09.05,11.7,6.83c9.29,5.42,20.78,5.42,30.06,0l11.7-6.83.09-.05,26.64-15.55.18-.1,26.56-15.51.27-.16,26.47-15.45.35-.21,14.61-8.53c5.26-3.07,5.26-10.66,0-13.73l-14.61-8.53ZM216.85,104.53l-.18.1-26.64,15.55-.09.05-19.21,11.22c-4.64,2.71-10.39,2.71-15.03,0l-19.22-11.22-.09-.05-26.64-15.55-.18-.1-20.68-12.07c-2.63-1.53-2.63-5.33,0-6.87l20.68-12.08.18-.09,26.64-15.56.09-.05,19.22-11.22c4.64-2.71,10.39-2.71,15.03,0l19.21,11.22.09.05,26.64,15.56.18.09,20.68,12.08c2.63,1.53,2.63,5.33,0,6.87l-20.68,12.07Z"/>
+    <path class="cls-1" d="M292.88,121.08c7.95-4.64,17.94,1.1,17.94,10.3v37.1c0,2.83-1.5,5.44-3.94,6.87l-16.91,9.87c-2.65,1.55-5.98-.36-5.98-3.43v-20.83c0-1.53-1.66-2.49-2.99-1.72l-23.83,13.91-.35.21-26.47,15.45-.27.17-22.62,13.2c-2.44,1.43-3.94,4.04-3.94,6.87v85.62c0,1.53,1.66,2.49,2.99,1.72l23.57-13.77.27.17v-.32l26.47-15.45.35.21v-.41l24.85-14.51c1.22-.71,1.97-2.02,1.97-3.43v-24.37c0-2.83,1.5-5.44,3.94-6.87l16.91-9.87c2.65-1.55,5.98.37,5.98,3.43v24.29l-.53.31.53.31v23.75c0,4.24-2.25,8.16-5.92,10.3l-20.92,12.21-.43.26-26.38,15.4-.36.22-26.46,15.44-.27.17-26.56,15.5-.18.1-14.68,8.57c-5.3,3.09-11.96-.73-11.96-6.87v-137.67c0-2.83,1.5-5.44,3.94-6.87l22.7-13.25.18-.1,26.56-15.5.27-.17,26.46-15.44.36-.22,26.37-15.4.45-.26,8.89-5.19Z"/>
+    <path class="cls-1" d="M123.05,235.69l.18.09,22.7,13.26c2.44,1.43,3.94,4.04,3.94,6.87v75.23c0,6.14-6.66,9.96-11.96,6.87-29.06-16.97-116.24-67.86-116.24-67.86-3.66-2.14-5.91-6.06-5.91-10.3v-128.46c0-9.21,9.99-14.94,17.94-10.3l8.88,5.18.45.26,26.37,15.4.36.22,26.47,15.45.26.16,26.56,15.5.18.1,22.7,13.25c2.44,1.43,3.94,4.04,3.94,6.87v19.73c0,3.07-3.33,4.98-5.98,3.43l-20.66-12.06-.18-.1-26.56-15.5-.26-.16-26.48-15.46-.35-.21-23.83-13.91c-1.33-.77-2.99.18-2.99,1.72v86.77c0,2.12,1.13,4.08,2.96,5.15l23.86,13.93.35.21,26.48,15.46.26.15,23.57,13.77c1.33.77,2.99-.18,2.99-1.72v-25.47c0-1.41-.75-2.72-1.97-3.43l-20.91-12.2c-2.44-1.43-3.94-4.04-3.94-6.87v-19.72c0-3.07,3.33-4.98,5.98-3.43l20.84,12.17Z"/>
+  </g>
+  <path class="cls-1" d="M460.19,117.51c-21.6,0-37.47-15.77-37.47-36.96s15.87-36.96,37.47-36.96,37.37,15.77,37.37,36.96-15.77,36.96-37.37,36.96ZM485.78,80.55c0-14.64-10.85-25.7-25.59-25.7s-25.59,11.16-25.59,25.7,10.95,25.7,25.59,25.7c14.74-.1,25.59-10.95,25.59-25.7Z"/>
+  <path class="cls-1" d="M539.12,59.97c16.38,0,28.36,12.29,28.36,28.77s-11.98,28.77-28.36,28.77c-7.06,0-13.31-2.46-18.22-6.65v24.98h-11.26V61.2h7.68l2.05,6.76c4.91-5.02,11.88-7.99,19.76-7.99ZM556.01,88.74c0-10.34-7.47-18.02-17.81-18.02s-18.02,7.78-18.02,18.02,7.58,18.02,18.02,18.02,17.81-7.68,17.81-18.02Z"/>
+  <path class="cls-1" d="M631.47,88.85c0,1.33-.1,2.46-.31,3.79h-44.43c1.43,8.91,7.78,14.33,16.79,14.33,6.55,0,11.88-2.97,14.74-7.99h11.88c-4.4,11.57-14.33,18.63-26.62,18.63-16.07,0-28.15-12.49-28.15-28.77s12.18-28.77,28.15-28.77c16.18-.1,27.95,12.8,27.95,28.77ZM587.14,83.42h33.07c-2.05-8.29-8.29-13.21-16.69-13.21s-14.44,5.02-16.38,13.21Z"/>
+  <path class="cls-1" d="M672.42,60.08c12.8,0,20.78,9.62,20.78,23.04v33.07h-11.26v-30.71c0-9.93-4.3-15.25-12.59-15.25s-14.74,6.86-14.74,16.59v29.38h-11.26v-54.98h7.88l2.25,7.68c4.2-5.43,10.95-8.8,18.94-8.8Z"/>
+  <path class="cls-1" d="M495,178.12c-.2,21.81-14.95,37.47-35.83,37.47s-36.34-15.56-36.34-36.96,15.25-36.75,36.04-36.75c17.3,0,31.84,10.85,35.01,26.41h-12.08c-3.07-9.21-11.98-15.15-22.73-15.15-14.33,0-24.47,10.54-24.47,25.49s9.83,25.49,24.47,25.49c11.36,0,20.58-6.45,23.14-16.07h-25.39v-9.93h38.19Z"/>
+  <path class="cls-1" d="M559.29,186.92c0,1.33-.1,2.46-.2,3.79h-44.53c1.43,8.91,7.78,14.33,16.79,14.33,6.55,0,11.88-2.97,14.74-7.99h11.88c-4.4,11.57-14.33,18.63-26.62,18.63-16.07,0-28.15-12.49-28.15-28.77s12.18-28.77,28.15-28.77c16.07-.1,27.95,12.69,27.95,28.77ZM514.96,181.5h33.07c-2.05-8.29-8.29-13.21-16.69-13.21-8.29-.2-14.64,5.02-16.38,13.21Z"/>
+  <path class="cls-1" d="M596.56,215.49c-16.69,0-29.18-12.29-29.18-28.77s12.49-28.77,29.18-28.77,29.28,12.29,29.28,28.77-12.59,28.77-29.28,28.77ZM614.37,186.82c0-10.54-7.47-18.02-17.81-18.02s-17.81,7.47-17.81,18.02,7.47,18.02,17.81,18.02c10.34-.1,17.81-7.58,17.81-18.02Z"/>
+  <path class="cls-1" d="M633.62,196.75h10.95c.2,5.84,5.12,8.8,11.77,8.8,6.04,0,10.75-2.56,10.75-7.17,0-5.22-5.84-6.35-12.59-7.47-9.21-1.54-19.96-3.58-19.96-16.28,0-9.83,8.5-16.59,21.19-16.59s20.99,6.96,21.19,17.61h-10.75c-.31-5.22-4.1-7.99-10.75-7.99-6.25,0-10.14,2.56-10.14,6.65,0,4.81,5.53,5.84,12.18,6.86,9.32,1.54,20.48,3.38,20.48,16.79,0,10.65-8.91,17.61-22.22,17.61-13-.1-21.81-7.47-22.11-18.84Z"/>
+  <path class="cls-1" d="M719.82,158.05c16.48,0,28.36,12.29,28.36,28.77s-12.08,28.77-28.36,28.77c-7.06,0-13.31-2.46-18.22-6.65v24.88h-11.26v-74.53h7.68l2.05,6.76c5.02-5.02,11.88-7.99,19.76-7.99ZM736.71,186.82c0-10.34-7.47-18.02-17.81-18.02s-18.02,7.78-18.02,18.02,7.68,18.02,18.02,18.02,17.81-7.68,17.81-18.02Z"/>
+  <path class="cls-1" d="M814.72,159.28v54.77h-9.01l-1.13-6.76c-4.91,5.02-11.88,7.99-19.86,7.99-16.28,0-28.46-12.29-28.46-28.77s12.18-28.77,28.46-28.77c7.99,0,14.95,3.07,20.07,8.19l1.33-6.86,8.6.2ZM803.46,186.82c0-10.34-7.47-18.02-17.81-18.02s-18.02,7.78-18.02,18.02,7.68,18.02,18.02,18.02c10.24-.2,17.81-7.78,17.81-18.02Z"/>
+  <path class="cls-1" d="M861.41,203.92v10.24h-8.4c-11.98,0-19.45-7.37-19.45-19.55v-25.7h-9.83v-2.25l19.04-20.37h1.95v12.8h16.28v9.73h-16.18v24.78c0,6.65,3.58,10.24,10.24,10.24h6.35v.1Z"/>
+  <path class="cls-1" d="M872.16,139.21h11.67v11.67h-11.67v-11.67ZM872.46,159.28h11.26v54.77h-11.26v-54.77Z"/>
+  <path class="cls-1" d="M954.16,159.28v54.77h-9.01l-1.13-6.76c-4.91,5.02-11.88,7.99-19.96,7.99-16.28,0-28.46-12.29-28.46-28.77s12.18-28.77,28.46-28.77c7.99,0,15.05,3.07,20.07,8.19l1.33-6.86,8.7.2ZM942.9,186.82c0-10.34-7.47-18.02-17.81-18.02s-18.02,7.78-18.02,18.02,7.68,18.02,18.02,18.02c10.34-.2,17.81-7.78,17.81-18.02Z"/>
+  <path class="cls-1" d="M970.23,139.62h11.26v74.53h-11.26v-74.53Z"/>
+  <path class="cls-1" d="M422.82,276.71c0-21.29,15.56-36.75,36.45-36.75,16.79,0,30.3,10.44,33.99,26.52h-11.77c-3.38-9.42-11.67-15.15-22.22-15.15-14.23,0-24.67,10.75-24.67,25.49s10.44,25.49,24.67,25.49c10.85,0,19.25-6.04,22.42-16.18h11.77c-3.79,16.69-17.2,27.44-34.3,27.44-20.78-.1-36.34-15.77-36.34-36.86Z"/>
+  <path class="cls-1" d="M530.11,313.46c-16.69,0-29.28-12.29-29.28-28.77s12.59-28.77,29.28-28.77,29.18,12.29,29.18,28.77c.1,16.59-12.39,28.77-29.18,28.77ZM547.93,284.69c0-10.54-7.47-18.02-17.81-18.02s-17.81,7.47-17.81,18.02,7.47,18.02,17.81,18.02,17.81-7.47,17.81-18.02Z"/>
+  <path class="cls-1" d="M600.45,256.13c12.8,0,20.78,9.62,20.78,23.04v33.07h-11.26v-30.71c0-9.93-4.3-15.25-12.59-15.25s-14.74,6.86-14.74,16.59v29.38h-11.26v-54.87h7.88l2.25,7.68c3.99-5.63,10.75-8.91,18.94-8.91Z"/>
+  <path class="cls-1" d="M632.39,294.83h10.95c.2,5.84,5.12,8.8,11.77,8.8,6.04,0,10.75-2.56,10.75-7.17,0-5.22-5.84-6.35-12.59-7.47-9.21-1.54-19.96-3.58-19.96-16.28,0-9.83,8.5-16.59,21.19-16.59s20.99,6.96,21.19,17.61h-10.75c-.31-5.22-4.1-7.99-10.75-7.99-6.25,0-10.14,2.56-10.14,6.65,0,4.81,5.53,5.84,12.18,6.86,9.32,1.54,20.48,3.38,20.48,16.79,0,10.65-8.91,17.61-22.22,17.61-13.21-.2-21.91-7.47-22.11-18.84Z"/>
+  <path class="cls-1" d="M714.29,313.46c-16.69,0-29.28-12.29-29.28-28.77s12.59-28.77,29.28-28.77,29.18,12.29,29.18,28.77c.1,16.59-12.39,28.77-29.18,28.77ZM732.1,284.69c0-10.54-7.47-18.02-17.81-18.02s-17.81,7.47-17.81,18.02,7.47,18.02,17.81,18.02,17.81-7.47,17.81-18.02Z"/>
+  <path class="cls-1" d="M786.67,256.95v10.65h-5.94c-9.32,0-13.92,5.32-13.92,15.25v29.28h-11.26v-54.77h7.58l1.95,7.47c3.89-5.22,9.32-7.78,16.79-7.78l4.81-.1Z"/>
+  <path class="cls-1" d="M826.29,301.89v10.24h-8.4c-11.98,0-19.35-7.37-19.35-19.55v-25.7h-9.83v-2.25l19.04-20.37h1.95v12.8h16.28v9.73h-16.18v24.78c0,6.65,3.58,10.24,10.24,10.24h6.25v.1Z"/>
+  <path class="cls-1" d="M836.94,237.19h11.67v11.67h-11.67v-11.67ZM837.25,257.26h11.26v54.77h-11.26v-54.77Z"/>
+  <path class="cls-1" d="M863.66,288.99v-31.74h11.26v30.1c0,9.62,5.22,15.25,13.72,15.25s13.62-5.84,13.62-15.25v-30.1h11.26v31.74c0,14.74-9.73,24.47-24.88,24.47s-24.98-9.73-24.98-24.47Z"/>
+  <path class="cls-1" d="M989.69,256.13c11.47,0,19.35,8.8,19.35,21.29v34.81h-11.26v-32.15c0-8.8-3.89-13.82-10.65-13.82-7.27,0-12.8,6.65-12.8,15.97v30.1h-10.85v-32.15c0-8.8-3.79-13.82-10.65-13.82-7.27,0-12.9,6.65-12.9,15.97v30.1h-11.26v-55.08h7.99l1.95,7.17c4.1-5.22,10.34-8.29,17.1-8.29,7.37,0,13.31,3.58,16.38,9.62,3.79-6.14,10.54-9.73,17.61-9.73Z"/>
+</svg></image></logo>
+<logo type="html-white"><image src="" mimetype="image/svg+xml"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 1024.8 354.8" preserveaspectratio="xMidYMin slice">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-1" d="M270.5,73.63l-.36-.21-26.46-15.45-.27-.17-26.56-15.5-.18-.1-26.64-15.55-.09-.05-11.7-6.83c-9.29-5.42-20.77-5.42-30.06,0l-11.71,6.83-.09.05-26.64,15.55-.18.1-26.56,15.5-.26.16-26.47,15.46-.36.21-14.61,8.53c-5.26,3.07-5.26,10.66,0,13.73l14.61,8.53.35.21,26.48,15.46.26.14,26.56,15.51.18.1,26.64,15.55.09.05,11.7,6.83c9.29,5.42,20.78,5.42,30.06,0l11.7-6.83.09-.05,26.64-15.55.18-.1,26.56-15.51.27-.16,26.47-15.45.35-.21,14.61-8.53c5.26-3.07,5.26-10.66,0-13.73l-14.61-8.53ZM216.85,104.53l-.18.1-26.64,15.55-.09.05-19.21,11.22c-4.64,2.71-10.39,2.71-15.03,0l-19.22-11.22-.09-.05-26.64-15.55-.18-.1-20.68-12.07c-2.63-1.53-2.63-5.33,0-6.87l20.68-12.08.18-.09,26.64-15.56.09-.05,19.22-11.22c4.64-2.71,10.39-2.71,15.03,0l19.21,11.22.09.05,26.64,15.56.18.09,20.68,12.08c2.63,1.53,2.63,5.33,0,6.87l-20.68,12.07Z"/>
+    <path class="cls-1" d="M292.88,121.08c7.95-4.64,17.94,1.1,17.94,10.3v37.1c0,2.83-1.5,5.44-3.94,6.87l-16.91,9.87c-2.65,1.55-5.98-.36-5.98-3.43v-20.83c0-1.53-1.66-2.49-2.99-1.72l-23.83,13.91-.35.21-26.47,15.45-.27.17-22.62,13.2c-2.44,1.43-3.94,4.04-3.94,6.87v85.62c0,1.53,1.66,2.49,2.99,1.72l23.57-13.77.27.17v-.32l26.47-15.45.35.21v-.41l24.85-14.51c1.22-.71,1.97-2.02,1.97-3.43v-24.37c0-2.83,1.5-5.44,3.94-6.87l16.91-9.87c2.65-1.55,5.98.37,5.98,3.43v24.29l-.53.31.53.31v23.75c0,4.24-2.25,8.16-5.92,10.3l-20.92,12.21-.43.26-26.38,15.4-.36.22-26.46,15.44-.27.17-26.56,15.5-.18.1-14.68,8.57c-5.3,3.09-11.96-.73-11.96-6.87v-137.67c0-2.83,1.5-5.44,3.94-6.87l22.7-13.25.18-.1,26.56-15.5.27-.17,26.46-15.44.36-.22,26.37-15.4.45-.26,8.89-5.19Z"/>
+    <path class="cls-1" d="M123.05,235.69l.18.09,22.7,13.26c2.44,1.43,3.94,4.04,3.94,6.87v75.23c0,6.14-6.66,9.96-11.96,6.87-29.06-16.97-116.24-67.86-116.24-67.86-3.66-2.14-5.91-6.06-5.91-10.3v-128.46c0-9.21,9.99-14.94,17.94-10.3l8.88,5.18.45.26,26.37,15.4.36.22,26.47,15.45.26.16,26.56,15.5.18.1,22.7,13.25c2.44,1.43,3.94,4.04,3.94,6.87v19.73c0,3.07-3.33,4.98-5.98,3.43l-20.66-12.06-.18-.1-26.56-15.5-.26-.16-26.48-15.46-.35-.21-23.83-13.91c-1.33-.77-2.99.18-2.99,1.72v86.77c0,2.12,1.13,4.08,2.96,5.15l23.86,13.93.35.21,26.48,15.46.26.15,23.57,13.77c1.33.77,2.99-.18,2.99-1.72v-25.47c0-1.41-.75-2.72-1.97-3.43l-20.91-12.2c-2.44-1.43-3.94-4.04-3.94-6.87v-19.72c0-3.07,3.33-4.98,5.98-3.43l20.84,12.17Z"/>
+  </g>
+  <path class="cls-1" d="M460.19,117.51c-21.6,0-37.47-15.77-37.47-36.96s15.87-36.96,37.47-36.96,37.37,15.77,37.37,36.96-15.77,36.96-37.37,36.96ZM485.78,80.55c0-14.64-10.85-25.7-25.59-25.7s-25.59,11.16-25.59,25.7,10.95,25.7,25.59,25.7c14.74-.1,25.59-10.95,25.59-25.7Z"/>
+  <path class="cls-1" d="M539.12,59.97c16.38,0,28.36,12.29,28.36,28.77s-11.98,28.77-28.36,28.77c-7.06,0-13.31-2.46-18.22-6.65v24.98h-11.26V61.2h7.68l2.05,6.76c4.91-5.02,11.88-7.99,19.76-7.99ZM556.01,88.74c0-10.34-7.47-18.02-17.81-18.02s-18.02,7.78-18.02,18.02,7.58,18.02,18.02,18.02,17.81-7.68,17.81-18.02Z"/>
+  <path class="cls-1" d="M631.47,88.85c0,1.33-.1,2.46-.31,3.79h-44.43c1.43,8.91,7.78,14.33,16.79,14.33,6.55,0,11.88-2.97,14.74-7.99h11.88c-4.4,11.57-14.33,18.63-26.62,18.63-16.07,0-28.15-12.49-28.15-28.77s12.18-28.77,28.15-28.77c16.18-.1,27.95,12.8,27.95,28.77ZM587.14,83.42h33.07c-2.05-8.29-8.29-13.21-16.69-13.21s-14.44,5.02-16.38,13.21Z"/>
+  <path class="cls-1" d="M672.42,60.08c12.8,0,20.78,9.62,20.78,23.04v33.07h-11.26v-30.71c0-9.93-4.3-15.25-12.59-15.25s-14.74,6.86-14.74,16.59v29.38h-11.26v-54.98h7.88l2.25,7.68c4.2-5.43,10.95-8.8,18.94-8.8Z"/>
+  <path class="cls-1" d="M495,178.12c-.2,21.81-14.95,37.47-35.83,37.47s-36.34-15.56-36.34-36.96,15.25-36.75,36.04-36.75c17.3,0,31.84,10.85,35.01,26.41h-12.08c-3.07-9.21-11.98-15.15-22.73-15.15-14.33,0-24.47,10.54-24.47,25.49s9.83,25.49,24.47,25.49c11.36,0,20.58-6.45,23.14-16.07h-25.39v-9.93h38.19Z"/>
+  <path class="cls-1" d="M559.29,186.92c0,1.33-.1,2.46-.2,3.79h-44.53c1.43,8.91,7.78,14.33,16.79,14.33,6.55,0,11.88-2.97,14.74-7.99h11.88c-4.4,11.57-14.33,18.63-26.62,18.63-16.07,0-28.15-12.49-28.15-28.77s12.18-28.77,28.15-28.77c16.07-.1,27.95,12.69,27.95,28.77ZM514.96,181.5h33.07c-2.05-8.29-8.29-13.21-16.69-13.21-8.29-.2-14.64,5.02-16.38,13.21Z"/>
+  <path class="cls-1" d="M596.56,215.49c-16.69,0-29.18-12.29-29.18-28.77s12.49-28.77,29.18-28.77,29.28,12.29,29.28,28.77-12.59,28.77-29.28,28.77ZM614.37,186.82c0-10.54-7.47-18.02-17.81-18.02s-17.81,7.47-17.81,18.02,7.47,18.02,17.81,18.02c10.34-.1,17.81-7.58,17.81-18.02Z"/>
+  <path class="cls-1" d="M633.62,196.75h10.95c.2,5.84,5.12,8.8,11.77,8.8,6.04,0,10.75-2.56,10.75-7.17,0-5.22-5.84-6.35-12.59-7.47-9.21-1.54-19.96-3.58-19.96-16.28,0-9.83,8.5-16.59,21.19-16.59s20.99,6.96,21.19,17.61h-10.75c-.31-5.22-4.1-7.99-10.75-7.99-6.25,0-10.14,2.56-10.14,6.65,0,4.81,5.53,5.84,12.18,6.86,9.32,1.54,20.48,3.38,20.48,16.79,0,10.65-8.91,17.61-22.22,17.61-13-.1-21.81-7.47-22.11-18.84Z"/>
+  <path class="cls-1" d="M719.82,158.05c16.48,0,28.36,12.29,28.36,28.77s-12.08,28.77-28.36,28.77c-7.06,0-13.31-2.46-18.22-6.65v24.88h-11.26v-74.53h7.68l2.05,6.76c5.02-5.02,11.88-7.99,19.76-7.99ZM736.71,186.82c0-10.34-7.47-18.02-17.81-18.02s-18.02,7.78-18.02,18.02,7.68,18.02,18.02,18.02,17.81-7.68,17.81-18.02Z"/>
+  <path class="cls-1" d="M814.72,159.28v54.77h-9.01l-1.13-6.76c-4.91,5.02-11.88,7.99-19.86,7.99-16.28,0-28.46-12.29-28.46-28.77s12.18-28.77,28.46-28.77c7.99,0,14.95,3.07,20.07,8.19l1.33-6.86,8.6.2ZM803.46,186.82c0-10.34-7.47-18.02-17.81-18.02s-18.02,7.78-18.02,18.02,7.68,18.02,18.02,18.02c10.24-.2,17.81-7.78,17.81-18.02Z"/>
+  <path class="cls-1" d="M861.41,203.92v10.24h-8.4c-11.98,0-19.45-7.37-19.45-19.55v-25.7h-9.83v-2.25l19.04-20.37h1.95v12.8h16.28v9.73h-16.18v24.78c0,6.65,3.58,10.24,10.24,10.24h6.35v.1Z"/>
+  <path class="cls-1" d="M872.16,139.21h11.67v11.67h-11.67v-11.67ZM872.46,159.28h11.26v54.77h-11.26v-54.77Z"/>
+  <path class="cls-1" d="M954.16,159.28v54.77h-9.01l-1.13-6.76c-4.91,5.02-11.88,7.99-19.96,7.99-16.28,0-28.46-12.29-28.46-28.77s12.18-28.77,28.46-28.77c7.99,0,15.05,3.07,20.07,8.19l1.33-6.86,8.7.2ZM942.9,186.82c0-10.34-7.47-18.02-17.81-18.02s-18.02,7.78-18.02,18.02,7.68,18.02,18.02,18.02c10.34-.2,17.81-7.78,17.81-18.02Z"/>
+  <path class="cls-1" d="M970.23,139.62h11.26v74.53h-11.26v-74.53Z"/>
+  <path class="cls-1" d="M422.82,276.71c0-21.29,15.56-36.75,36.45-36.75,16.79,0,30.3,10.44,33.99,26.52h-11.77c-3.38-9.42-11.67-15.15-22.22-15.15-14.23,0-24.67,10.75-24.67,25.49s10.44,25.49,24.67,25.49c10.85,0,19.25-6.04,22.42-16.18h11.77c-3.79,16.69-17.2,27.44-34.3,27.44-20.78-.1-36.34-15.77-36.34-36.86Z"/>
+  <path class="cls-1" d="M530.11,313.46c-16.69,0-29.28-12.29-29.28-28.77s12.59-28.77,29.28-28.77,29.18,12.29,29.18,28.77c.1,16.59-12.39,28.77-29.18,28.77ZM547.93,284.69c0-10.54-7.47-18.02-17.81-18.02s-17.81,7.47-17.81,18.02,7.47,18.02,17.81,18.02,17.81-7.47,17.81-18.02Z"/>
+  <path class="cls-1" d="M600.45,256.13c12.8,0,20.78,9.62,20.78,23.04v33.07h-11.26v-30.71c0-9.93-4.3-15.25-12.59-15.25s-14.74,6.86-14.74,16.59v29.38h-11.26v-54.87h7.88l2.25,7.68c3.99-5.63,10.75-8.91,18.94-8.91Z"/>
+  <path class="cls-1" d="M632.39,294.83h10.95c.2,5.84,5.12,8.8,11.77,8.8,6.04,0,10.75-2.56,10.75-7.17,0-5.22-5.84-6.35-12.59-7.47-9.21-1.54-19.96-3.58-19.96-16.28,0-9.83,8.5-16.59,21.19-16.59s20.99,6.96,21.19,17.61h-10.75c-.31-5.22-4.1-7.99-10.75-7.99-6.25,0-10.14,2.56-10.14,6.65,0,4.81,5.53,5.84,12.18,6.86,9.32,1.54,20.48,3.38,20.48,16.79,0,10.65-8.91,17.61-22.22,17.61-13.21-.2-21.91-7.47-22.11-18.84Z"/>
+  <path class="cls-1" d="M714.29,313.46c-16.69,0-29.28-12.29-29.28-28.77s12.59-28.77,29.28-28.77,29.18,12.29,29.18,28.77c.1,16.59-12.39,28.77-29.18,28.77ZM732.1,284.69c0-10.54-7.47-18.02-17.81-18.02s-17.81,7.47-17.81,18.02,7.47,18.02,17.81,18.02,17.81-7.47,17.81-18.02Z"/>
+  <path class="cls-1" d="M786.67,256.95v10.65h-5.94c-9.32,0-13.92,5.32-13.92,15.25v29.28h-11.26v-54.77h7.58l1.95,7.47c3.89-5.22,9.32-7.78,16.79-7.78l4.81-.1Z"/>
+  <path class="cls-1" d="M826.29,301.89v10.24h-8.4c-11.98,0-19.35-7.37-19.35-19.55v-25.7h-9.83v-2.25l19.04-20.37h1.95v12.8h16.28v9.73h-16.18v24.78c0,6.65,3.58,10.24,10.24,10.24h6.25v.1Z"/>
+  <path class="cls-1" d="M836.94,237.19h11.67v11.67h-11.67v-11.67ZM837.25,257.26h11.26v54.77h-11.26v-54.77Z"/>
+  <path class="cls-1" d="M863.66,288.99v-31.74h11.26v30.1c0,9.62,5.22,15.25,13.72,15.25s13.62-5.84,13.62-15.25v-30.1h11.26v31.74c0,14.74-9.73,24.47-24.88,24.47s-24.98-9.73-24.98-24.47Z"/>
+  <path class="cls-1" d="M989.69,256.13c11.47,0,19.35,8.8,19.35,21.29v34.81h-11.26v-32.15c0-8.8-3.89-13.82-10.65-13.82-7.27,0-12.8,6.65-12.8,15.97v30.1h-10.85v-32.15c0-8.8-3.79-13.82-10.65-13.82-7.27,0-12.9,6.65-12.9,15.97v30.1h-11.26v-55.08h7.99l1.95,7.17c4.1-5.22,10.34-8.29,17.1-8.29,7.37,0,13.31,3.58,16.38,9.62,3.79-6.14,10.54-9.73,17.61-9.73Z"/>
+</svg></image></logo>
+<logo type="word"><image src="/usr/local/bundle/gems/metanorma-ogc-2.9.5/lib/isodoc/ogc/html/Logos_2026/1_Blue_Logos/OGC-new-logo.png" mimetype="image/png"/></logo>
+</organization></contributor><edition language="">1.0</edition><edition language="en">edition 1.0</edition><version><draft>1.0.0</draft></version><language current="true">en</language><script current="true">Latn</script><abstract><p>The rapidly growing volume of Earth observation data, together with the increasing diversity of data providers, platforms, formats, APIs, and processing environments, makes it difficult for users to consistently discover, access, prepare, and use data for analysis. While metadata standards and catalogues provide an essential foundation for discovery and description, additional guidance is needed on how discovered datasets can be transformed into analysis-ready geodatacubes and managed throughout their use.</p>
+
+<p>This Best Practice provides recommendations for geodatacube management, focusing on the pathways from metadata and data discovery towards usable multidimensional datacubes. It describes how metadata-driven approaches can support the creation, configuration, access, and processing of geodatacubes across heterogeneous infrastructures. Building on previous work, including OGC Testbed 19, the document explores the role of openEO and relevant open-source EOEPCA building blocks as interoperable components for exposing, processing, and managing Earth observation data as geodatacubes.</p>
+
+<p>The goal of this Best Practice is to provide practical guidance for data providers, platform operators, and application developers who need to design geodatacube management systems. It recommends approaches for bridging discovery metadata, data access mechanisms, processing interfaces, and datacube representations in a way that improves interoperability, reproducibility, and usability of Earth observation data.</p>
+</abstract><status><stage language="">swg-draft</stage><stage language="en">Candidate SWG Draft</stage></status><copyright><from>2026</from><owner><organization>
+<name>Open Geospatial Consortium</name>
+<abbreviation>OGC</abbreviation></organization></owner></copyright><keyword>ogcdoc</keyword><keyword>OGC document</keyword><keyword>best practice</keyword><keyword>GeoDataCubes</keyword><ext><doctype>best-practice</doctype><subdoctype>general</subdoctype><flavor>ogc</flavor></ext></bibdata><localized-strings><localized-string key="scope" language="en">Scope</localized-string><localized-string key="symbolsabbrev" language="en">Symbols and abbreviated terms</localized-string><localized-string key="abbrev" language="en">Abbreviated terms</localized-string><localized-string key="symbols" language="en">Symbols</localized-string><localized-string key="table_of_contents" language="en">Contents</localized-string><localized-string key="introduction" language="en">Introduction</localized-string><localized-string key="foreword" language="en">Preface</localized-string><localized-string key="abstract" language="en">Abstract</localized-string><localized-string key="acknowledgements" language="en">Acknowledgements</localized-string><localized-string key="executivesummary" language="en">Executive summary</localized-string><localized-string key="termsdef" language="en">Terms and definitions</localized-string><localized-string key="termsdefsymbolsabbrev" language="en">Terms, definitions, symbols and abbreviated terms</localized-string><localized-string key="termsdefsymbols" language="en">Terms, definitions and symbols</localized-string><localized-string key="termsdefabbrev" language="en">Terms, definitions and abbreviated terms</localized-string><localized-string key="normref" language="en">Normative references</localized-string><localized-string key="bibliography" language="en">Bibliography</localized-string><localized-string key="index" language="en">Index</localized-string><localized-string key="see" language="en">see</localized-string><localized-string key="see_also" language="en">see also</localized-string><localized-string key="preface" language="en">Preface</localized-string><localized-string key="section" language="en">Section</localized-string><localized-string key="clause" language="en">Clause</localized-string><localized-string key="annex" language="en">Annex</localized-string><localized-string key="appendix" language="en">Appendix</localized-string><localized-string key="continued" language="en">continued</localized-string><localized-string key="no_terms_boilerplate" language="en">No terms and definitions are listed in this document.
+</localized-string><localized-string key="internal_terms_boilerplate" language="en">This document uses the terms defined in https://portal.ogc.org/public_ogc/directives/directives.php[OGC Policy Directive 49], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.
+
+This document also uses terms defined in the OGC Standard for Modular specifications (https://portal.opengeospatial.org/files/?artifact_id=34762[OGC 08-131r3]), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.
+
+For the purposes of this document, the following additional terms and definitions apply.
+</localized-string><localized-string key="norm_with_refs_pref" language="en">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</localized-string><localized-string key="norm_empty_pref" language="en">There are no normative references in this document.</localized-string><localized-string key="external_terms_boilerplate" language="en">This document uses the terms defined in https://portal.ogc.org/public_ogc/directives/directives.php[OGC Policy Directive 49], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.
+
+This document also uses terms defined in the OGC Standard for Modular specifications (https://portal.opengeospatial.org/files/?artifact_id=34762[OGC 08-131r3]), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.
+
+For the purposes of this document, the terms and definitions given in % additionally apply.
+</localized-string><localized-string key="internal_external_terms_boilerplate" language="en">This document uses the terms defined in https://portal.ogc.org/public_ogc/directives/directives.php[OGC Policy Directive 49], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.
+
+This document also uses terms defined in the OGC Standard for Modular specifications (https://portal.opengeospatial.org/files/?artifact_id=34762[OGC 08-131r3]), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.
+
+For the purposes of this document, the terms and definitions given in % and the following additionally apply.
+</localized-string><localized-string key="no_information_available" language="en">[NO INFORMATION AVAILABLE]</localized-string><localized-string key="term_defined_in" language="en">(%)</localized-string><localized-string key="binary_and" language="en">%1 <conn>and</conn> %2</localized-string><localized-string key="multiple_and" language="en">%1<enum-comma>,</enum-comma> <conn>and</conn> %2</localized-string><localized-string key="binary_or" language="en">%1 <conn>or</conn> %2</localized-string><localized-string key="multiple_or" language="en">%1<enum-comma>,</enum-comma> <conn>or</conn> %2</localized-string><localized-string key="chain_and" language="en">%1 <conn>and</conn> %2</localized-string><localized-string key="chain_or" language="en">%1 <conn>or</conn> %2</localized-string><localized-string key="chain_from" language="en">%1 <conn>from</conn> %2</localized-string><localized-string key="chain_to" language="en">%1 <conn>to</conn> %2</localized-string><localized-string key="nested_xref" language="en">%1<comma>,</comma> %2</localized-string><localized-string key="list_nested_xref" language="en">%1 %2</localized-string><localized-string key="SpelloutRules" language="en">spellout-ordinal</localized-string><localized-string key="OrdinalRules" language="en">digits-ordinal</localized-string><localized-string key="note" language="en">NOTE</localized-string><localized-string key="note_xref" language="en">Note</localized-string><localized-string key="termnote" language="en">Note % to entry</localized-string><localized-string key="para_xref" language="en">Paragraph</localized-string><localized-string key="list" language="en">List</localized-string><localized-string key="deflist" language="en">Definition List</localized-string><localized-string key="figure" language="en">Figure</localized-string><localized-string key="diagram" language="en">Diagram</localized-string><localized-string key="formula" language="en">Formula</localized-string><localized-string key="inequality" language="en">Formula</localized-string><localized-string key="table" language="en">Table</localized-string><localized-string key="requirement" language="en">Requirement</localized-string><localized-string key="recommendation" language="en">Recommendation</localized-string><localized-string key="permission" language="en">Permission</localized-string><localized-string key="box" language="en">Box</localized-string><localized-string key="no_identifier" language="en">(NO ID)</localized-string><localized-string key="recommendationtest" language="en">Recommendation test</localized-string><localized-string key="requirementtest" language="en">Requirement test</localized-string><localized-string key="permissiontest" language="en">Permission test</localized-string><localized-string key="recommendationclass" language="en">Recommendations class</localized-string><localized-string key="requirementclass" language="en">Requirements class</localized-string><localized-string key="permissionclass" language="en">Permissions class</localized-string><localized-string key="abstracttest" language="en">Abstract test</localized-string><localized-string key="conformanceclass" language="en">Conformance class</localized-string><localized-string key="key" language="en">Key</localized-string><localized-string key="example" language="en">Example</localized-string><localized-string key="example_xref" language="en">Example</localized-string><localized-string key="where" language="en">where</localized-string><localized-string key="where_one" language="en">where</localized-string><localized-string key="wholeoftext" language="en">Whole of text</localized-string><localized-string key="draft_label" language="en">draft</localized-string><localized-string key="inform_annex" language="en">informative</localized-string><localized-string key="norm_annex" language="en">normative</localized-string><localized-string key="modified" language="en">modified</localized-string><localized-string key="adapted" language="en">adapted</localized-string><localized-string key="deprecated" language="en">DEPRECATED</localized-string><localized-string key="source" language="en">SOURCE</localized-string><localized-string key="and" language="en">and</localized-string><localized-string key="all_parts" language="en">All Parts</localized-string><localized-string key="edition_ordinal" language="en">{{ var1 | ordinal_word: '', '' }} edition</localized-string><localized-string key="edition_cardinal" language="en">edition {{ var1 }}</localized-string><localized-string key="edition" language="en">edition</localized-string><localized-string key="version" language="en">version</localized-string><localized-string key="toc_figures" language="en">List of Figures</localized-string><localized-string key="toc_tables" language="en">List of Tables</localized-string><localized-string key="toc_recommendations" language="en">List of Normative Statements</localized-string><localized-string key="month_january" language="en">January</localized-string><localized-string key="month_february" language="en">February</localized-string><localized-string key="month_march" language="en">March</localized-string><localized-string key="month_april" language="en">April</localized-string><localized-string key="month_may" language="en">May</localized-string><localized-string key="month_june" language="en">June</localized-string><localized-string key="month_july" language="en">July</localized-string><localized-string key="month_august" language="en">August</localized-string><localized-string key="month_september" language="en">September</localized-string><localized-string key="month_october" language="en">October</localized-string><localized-string key="month_november" language="en">November</localized-string><localized-string key="month_december" language="en">December</localized-string><localized-string key="obligation" language="en">Obligation</localized-string><localized-string key="admonition.danger" language="en">Danger</localized-string><localized-string key="admonition.warning" language="en">Warning</localized-string><localized-string key="admonition.caution" language="en">Caution</localized-string><localized-string key="admonition.important" language="en">Important</localized-string><localized-string key="admonition.safety_precautions" language="en">Safety Precautions</localized-string><localized-string key="admonition.editorial" language="en">Editorial Note</localized-string><localized-string key="title_prefixes.part" language="en">Part</localized-string><localized-string key="title_prefixes.amendment" language="en">Amendment</localized-string><localized-string key="title_prefixes.corrigendum" language="en">Corrigendum</localized-string><localized-string key="title_prefixes.addendum" language="en">Addendum</localized-string><localized-string key="title_prefixes.supplement" language="en">Supplement</localized-string><localized-string key="title_prefixes.annex" language="en">Annex</localized-string><localized-string key="title_prefixes.appendix" language="en">Appendix</localized-string><localized-string key="locality.section" language="en">Section</localized-string><localized-string key="locality.clause" language="en">Clause</localized-string><localized-string key="locality.part" language="en">Part</localized-string><localized-string key="locality.paragraph" language="en">Paragraph</localized-string><localized-string key="locality.chapter" language="en">Chapter</localized-string><localized-string key="locality.page" language="en">Page</localized-string><localized-string key="locality.table" language="en">Table</localized-string><localized-string key="locality.annex" language="en">Annex</localized-string><localized-string key="locality.figure" language="en">Figure</localized-string><localized-string key="locality.example" language="en">Example</localized-string><localized-string key="locality.note" language="en">Note</localized-string><localized-string key="locality.formula" language="en">Formula</localized-string><localized-string key="grammar_abbrevs.masculine" language="en">m</localized-string><localized-string key="grammar_abbrevs.feminine" language="en">f</localized-string><localized-string key="grammar_abbrevs.neuter" language="en">n</localized-string><localized-string key="grammar_abbrevs.common" language="en">common</localized-string><localized-string key="grammar_abbrevs.singular" language="en">sg</localized-string><localized-string key="grammar_abbrevs.dual" language="en">dual</localized-string><localized-string key="grammar_abbrevs.pl" language="en">pl</localized-string><localized-string key="grammar_abbrevs.isPreposition" language="en">prep</localized-string><localized-string key="grammar_abbrevs.isParticiple" language="en">part</localized-string><localized-string key="grammar_abbrevs.isAdjective" language="en">adj</localized-string><localized-string key="grammar_abbrevs.isAdverb" language="en">adv</localized-string><localized-string key="grammar_abbrevs.isNoun" language="en">noun</localized-string><localized-string key="grammar_abbrevs.isVerb" language="en">verb</localized-string><localized-string key="relatedterms.deprecates" language="en">deprecates</localized-string><localized-string key="relatedterms.supersedes" language="en">supersedes</localized-string><localized-string key="relatedterms.narrower" language="en">narrower</localized-string><localized-string key="relatedterms.broader" language="en">broader</localized-string><localized-string key="relatedterms.equivalent" language="en">equivalent</localized-string><localized-string key="relatedterms.compare" language="en">compare</localized-string><localized-string key="relatedterms.contrast" language="en">contrast</localized-string><localized-string key="relatedterms.see" language="en">see</localized-string><localized-string key="relatedterms.seealso" language="en">see also</localized-string><localized-string key="Clause.sg" language="en">Clause</localized-string><localized-string key="Clause.pl" language="en">Clauses</localized-string><localized-string key="Annex.sg" language="en">Annex</localized-string><localized-string key="Annex.pl" language="en">Annexes</localized-string><localized-string key="Appendix.sg" language="en">Appendix</localized-string><localized-string key="Appendix.pl" language="en">Appendixes</localized-string><localized-string key="Note.sg" language="en">Note</localized-string><localized-string key="Note.pl" language="en">Notes</localized-string><localized-string key="Note_%_to_entry.sg" language="en">Note % to entry</localized-string><localized-string key="Note_%_to_entry.pl" language="en">Notes % to entry</localized-string><localized-string key="List.sg" language="en">List</localized-string><localized-string key="List.pl" language="en">Lists</localized-string><localized-string key="Figure.sg" language="en">Figure</localized-string><localized-string key="Figure.pl" language="en">Figures</localized-string><localized-string key="Formula.sg" language="en">Formula</localized-string><localized-string key="Formula.pl" language="en">Formulas</localized-string><localized-string key="Table.sg" language="en">Table</localized-string><localized-string key="Table.pl" language="en">Tables</localized-string><localized-string key="Requirement.sg" language="en">Requirement</localized-string><localized-string key="Requirement.pl" language="en">Requirements</localized-string><localized-string key="Recommendation.sg" language="en">Recommendation</localized-string><localized-string key="Recommendation.pl" language="en">Recommendations</localized-string><localized-string key="Permission.sg" language="en">Permission</localized-string><localized-string key="Permission.pl" language="en">Permissions</localized-string><localized-string key="Example.sg" language="en">Example</localized-string><localized-string key="Example.pl" language="en">Examples</localized-string><localized-string key="Part.sg" language="en">Part</localized-string><localized-string key="Part.pl" language="en">Parts</localized-string><localized-string key="Section.sg" language="en">Section</localized-string><localized-string key="Section.pl" language="en">Sections</localized-string><localized-string key="Paragraph.sg" language="en">Paragraph</localized-string><localized-string key="Paragraph.pl" language="en">Paragraphs</localized-string><localized-string key="Chapter.sg" language="en">Chapter</localized-string><localized-string key="Chapter.pl" language="en">Chapters</localized-string><localized-string key="Page.sg" language="en">Page</localized-string><localized-string key="Page.pl" language="en">Pages</localized-string><localized-string key="punct.colon" language="en">:</localized-string><localized-string key="punct.comma" language="en">,</localized-string><localized-string key="punct.enum-comma" language="en">,</localized-string><localized-string key="punct.semicolon" language="en">;</localized-string><localized-string key="punct.period" language="en">.</localized-string><localized-string key="punct.close-paren" language="en">)</localized-string><localized-string key="punct.open-paren" language="en">(</localized-string><localized-string key="punct.close-bracket" language="en">]</localized-string><localized-string key="punct.open-bracket" language="en">[</localized-string><localized-string key="punct.question-mark" language="en">?</localized-string><localized-string key="punct.exclamation-mark" language="en">!</localized-string><localized-string key="punct.em-dash" language="en">—</localized-string><localized-string key="punct.en-dash" language="en">–</localized-string><localized-string key="punct.number-en-dash" language="en">–</localized-string><localized-string key="punct.open-quote" language="en">“</localized-string><localized-string key="punct.close-quote" language="en">”</localized-string><localized-string key="punct.open-nested-quote" language="en">‘</localized-string><localized-string key="punct.close-nested-quote" language="en">’</localized-string><localized-string key="punct.ellipse" language="en">…</localized-string><localized-string key="admitted" language="en">ALTERNATIVE</localized-string><localized-string key="submitters" language="en">Submitters</localized-string><localized-string key="contributors_clause" language="en">Contributors</localized-string><localized-string key="dochistory" language="en">Revision history</localized-string><localized-string key="sourcecode" language="en">Listing</localized-string><localized-string key="table_of_figures" language="en">Table of Figures</localized-string><localized-string key="security_empty" language="en">No security considerations have been made for this document.</localized-string><localized-string key="submission_date" language="en">Submission Date</localized-string><localized-string key="approval_date" language="en">Approval Date</localized-string><localized-string key="publication_date" language="en">Publication Date</localized-string><localized-string key="author" language="en">Author</localized-string><localized-string key="editor_full" language="en">Editor</localized-string><localized-string key="contributor" language="en">Contributor</localized-string><localized-string key="stage_dict.draft" language="en">Draft</localized-string><localized-string key="stage_dict.work-item-draft" language="en">Work Item Draft</localized-string><localized-string key="stage_dict.swg-draft" language="en">Candidate SWG Draft</localized-string><localized-string key="stage_dict.oab-review" language="en">Candidate OAB Review Draft</localized-string><localized-string key="stage_dict.public-rfc" language="en">Candidate Public RFC Draft</localized-string><localized-string key="stage_dict.tc-vote" language="en">Candidate TC Vote Draft</localized-string><localized-string key="stage_dict.approved" language="en">Approved</localized-string><localized-string key="stage_dict.published" language="en">Published</localized-string><localized-string key="stage_dict.deprecated" language="en">Deprecated</localized-string><localized-string key="stage_dict.rescinded" language="en">Rescinded</localized-string><localized-string key="stage_dict.retired" language="en">Retired</localized-string><localized-string key="language" language="en">en</localized-string><localized-string key="script" language="en">Latn</localized-string></localized-strings><metanorma-extension><semantic-metadata><stage-published>false</stage-published></semantic-metadata>
+<presentation-metadata><color-admonition-caution>rgb(79, 129, 189)</color-admonition-caution><color-admonition-editor>rgb(79, 129, 189)</color-admonition-editor><color-admonition-important>rgb(79, 129, 189)</color-admonition-important><color-admonition-note>rgb(79, 129, 189)</color-admonition-note><color-admonition-safety-precaution>rgb(79, 129, 189)</color-admonition-safety-precaution><color-admonition-tip>rgb(79, 129, 189)</color-admonition-tip><color-admonition-todo>rgb(79, 129, 189)</color-admonition-todo><color-admonition-warning>rgb(79, 129, 189)</color-admonition-warning><color-background-definition-description>rgb(242, 251, 255)</color-background-definition-description><color-background-definition-term>rgb(215, 243, 255)</color-background-definition-term><color-background-page>rgb(33, 55, 92)</color-background-page><color-background-table-header>rgb(33, 55, 92)</color-background-table-header><color-background-table-row-even>rgb(252, 246, 222)</color-background-table-row-even><color-background-table-row-odd>rgb(254, 252, 245)</color-background-table-row-odd><color-background-term-admitted-label>rgb(223, 236, 249)</color-background-term-admitted-label><color-background-term-deprecated-label>rgb(237, 237, 238)</color-background-term-deprecated-label><color-background-term-preferred-label>rgb(249, 235, 187)</color-background-term-preferred-label><color-background-text-label-legacy>rgb(33, 60, 107)</color-background-text-label-legacy><color-secondary-shade-1>rgb(237, 193, 35)</color-secondary-shade-1><color-secondary-shade-2>rgb(246, 223, 140)</color-secondary-shade-2><color-text>rgb(88, 89, 91)</color-text><color-text-title>rgb(33, 55, 92)</color-text-title><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata><source-highlighter-css>sourcecode table td { padding: 5px; }
+sourcecode table pre { margin: 0; }
+sourcecode, sourcecode .w {
+  color: #444444;
+}
+sourcecode .cp {
+  color: #CC00A3;
+}
+sourcecode .cs {
+  color: #CC00A3;
+}
+sourcecode .c, sourcecode .ch, sourcecode .cd, sourcecode .cm, sourcecode .cpf, sourcecode .c1 {
+  color: #1E90FF;
+}
+sourcecode .kc {
+  color: #C34E00;
+}
+sourcecode .kd {
+  color: #0000FF;
+}
+sourcecode .kr {
+  color: #007575;
+}
+sourcecode .k, sourcecode .kn, sourcecode .kp, sourcecode .kt, sourcecode .kv {
+  color: #0000FF;
+}
+sourcecode .s, sourcecode .sb, sourcecode .sc, sourcecode .ld, sourcecode .sd, sourcecode .s2, sourcecode .se, sourcecode .sh, sourcecode .si, sourcecode .sx, sourcecode .sr, sourcecode .s1, sourcecode .ss {
+  color: #009C00;
+}
+sourcecode .sa {
+  color: #0000FF;
+}
+sourcecode .nb, sourcecode .bp {
+  color: #C34E00;
+}
+sourcecode .nt {
+  color: #0000FF;
+}
+</source-highlighter-css></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_2cd773fc-8495-2dfa-91a1-d57da3fc5833" obligation="normative" semx-id="_2cd773fc-8495-2dfa-91a1-d57da3fc5833">
+<title id="_43b54bc3-f75e-8bd3-105e-2d36faf9d84a" semx-id="_19604a82-a482-3c87-1356-705ef7b11f09">Copyright notice</title><fmt-title depth="1" id="_3f220e08-5d5c-0b52-e4ef-0bb4f39f2aaf"><semx element="title" source="_43b54bc3-f75e-8bd3-105e-2d36faf9d84a">Copyright notice</semx></fmt-title>
+<p id="_f3c4258f-6b29-424c-cd01-337c0e916a04" align="center" semx-id="_f3c4258f-6b29-424c-cd01-337c0e916a04">Copyright © 2026 Open Geospatial Consortium<br/> To obtain additional rights of use, visit <link target="https://www.ogc.org/legal" id="_d0975f32-cda8-2d9d-d661-a69c8dea3b0e"/><semx element="link" source="_d0975f32-cda8-2d9d-d661-a69c8dea3b0e"><fmt-link target="https://www.ogc.org/legal"/></semx></p>
+</clause>
+
+<clause id="_6908548e-204b-56e7-9062-6924cccf2315" obligation="normative" semx-id="_6908548e-204b-56e7-9062-6924cccf2315">
+<title id="_fc7d3dc9-fba1-ac60-7a28-795cd04fc8da" semx-id="_db83e2f6-5841-eaeb-0d35-1277ee9d3f6a">Note</title><fmt-title depth="1" id="_5c97b0d2-00d9-70a5-30e8-79241ff430f1"><semx element="title" source="_fc7d3dc9-fba1-ac60-7a28-795cd04fc8da">Note</semx></fmt-title>
+<p id="_e1d5d5c4-54c3-2761-be2c-22547f01c057" align="left" semx-id="_e1d5d5c4-54c3-2761-be2c-22547f01c057">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+<p id="_02892e94-7b43-630a-129c-d2e0f75ff92b" align="left" semx-id="_02892e94-7b43-630a-129c-d2e0f75ff92b">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+</clause>
+</copyright-statement>
+
+<license-statement>
+
+<clause id="_45f6bdf5-80f3-f775-9740-2adafc90b1f7" obligation="normative" semx-id="_45f6bdf5-80f3-f775-9740-2adafc90b1f7">
+<title id="_cfbd3e37-2447-e167-a5c6-c22d2e02f7d8" semx-id="_3788828e-41fb-3895-6acc-52071643abed">License Agreement</title><fmt-title depth="1" id="_c3962c50-1c63-6f5a-5a8c-a3055acc8d9d"><semx element="title" source="_cfbd3e37-2447-e167-a5c6-c22d2e02f7d8">License Agreement</semx></fmt-title>
+<p id="_772872dd-928c-666f-92c5-676f7f5d3071" semx-id="_772872dd-928c-666f-92c5-676f7f5d3071">Use of this document is subject to the license agreement at <link target="https://www.ogc.org/license" id="_5f2ce0a9-fe6f-0280-8849-4352caa82c70"/><semx element="link" source="_5f2ce0a9-fe6f-0280-8849-4352caa82c70"><fmt-link target="https://www.ogc.org/license"/></semx></p>
+</clause>
+</license-statement>
+
+<legal-statement>
+
+<clause id="_b1b6cc59-441d-8a65-d20d-2d74f7fc9983" obligation="normative" semx-id="_b1b6cc59-441d-8a65-d20d-2d74f7fc9983">
+<title id="_1181feac-36dc-1167-cbc9-55c4cfc8684c" semx-id="_37bc7c72-0d8f-ba1e-c43f-647a0e7edf21">Notice</title><fmt-title depth="1" id="_bae7e45b-898f-00c6-4ace-3cf803be915b"><semx element="title" source="_1181feac-36dc-1167-cbc9-55c4cfc8684c">Notice</semx></fmt-title>
+<p id="_1359566d-89c2-380b-72bb-805915659afc" semx-id="_1359566d-89c2-380b-72bb-805915659afc">This document defines an OGC Best Practice on a particular technology or approach related to an OGC standard. This document is <em>not</em> an OGC Standard and may not be referred to as an OGC Standard. It is subject to change without notice. However, this document is an <em>official</em> position of the OGC membership on this particular technology topic.</p>
+
+<p id="_e8629e34-594d-6076-a18a-23d7b5df19ba" semx-id="_e8629e34-594d-6076-a18a-23d7b5df19ba">Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+</feedback-statement>
+</boilerplate><preface><clause type="toc" id="_13d7055e-30fc-845a-c60e-8972faf092d9" displayorder="1"><fmt-title depth="1" id="_b7371af6-75a1-52fa-2891-5c5f9a06aa7c">Contents</fmt-title></clause>
+<abstract id="_ae04e3ef-99d7-cf5d-7d23-300bdadf5c19" semx-id="_ae04e3ef-99d7-cf5d-7d23-300bdadf5c19" displayorder="2"><title id="_c51f08e5-f95a-09ed-e867-10be652f8308" semx-id="_37c298bf-5619-a5c6-817b-d777b5ead0b1">Abstract</title><fmt-title depth="1" id="_749ba5c6-ce5f-3642-db11-4613c40c12f3"><span class="fmt-caption-label"><semx element="autonum" source="_ae04e3ef-99d7-cf5d-7d23-300bdadf5c19">I</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_c51f08e5-f95a-09ed-e867-10be652f8308">Abstract</semx></fmt-title><fmt-xref-label><semx element="title" source="_ae04e3ef-99d7-cf5d-7d23-300bdadf5c19">Abstract</semx></fmt-xref-label><p id="_06afb1ef-2bad-19e6-8e59-c320b878afcf" semx-id="_06afb1ef-2bad-19e6-8e59-c320b878afcf">The rapidly growing volume of Earth observation data, together with the increasing diversity of data providers, platforms, formats, APIs, and processing environments, makes it difficult for users to consistently discover, access, prepare, and use data for analysis. While metadata standards and catalogues provide an essential foundation for discovery and description, additional guidance is needed on how discovered datasets can be transformed into analysis-ready geodatacubes and managed throughout their use.</p>
+
+<p id="_47d31f49-4e78-46f0-badd-19bceb98b519" semx-id="_47d31f49-4e78-46f0-badd-19bceb98b519">This Best Practice provides recommendations for geodatacube management, focusing on the pathways from metadata and data discovery towards usable multidimensional datacubes. It describes how metadata-driven approaches can support the creation, configuration, access, and processing of geodatacubes across heterogeneous infrastructures. Building on previous work, including OGC Testbed 19, the document explores the role of openEO and relevant open-source EOEPCA building blocks as interoperable components for exposing, processing, and managing Earth observation data as geodatacubes.</p>
+
+<p id="_30b94dce-0e7c-e2b9-2399-63ffa0bed0bc" semx-id="_30b94dce-0e7c-e2b9-2399-63ffa0bed0bc">The goal of this Best Practice is to provide practical guidance for data providers, platform operators, and application developers who need to design geodatacube management systems. It recommends approaches for bridging discovery metadata, data access mechanisms, processing interfaces, and datacube representations in a way that improves interoperability, reproducibility, and usability of Earth observation data.</p>
+</abstract><clause id="_7533afc9-3c7e-544e-2aa6-590ca0713799" type="keywords" displayorder="3">
+<title id="_2aa64cc4-77bd-7a2b-1a90-7fae2dc8001f">Keywords</title><fmt-title depth="1" id="_febab828-4cd5-e6a3-a222-ac3f671a4e90"><span class="fmt-caption-label"><semx element="autonum" source="_7533afc9-3c7e-544e-2aa6-590ca0713799">II</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_2aa64cc4-77bd-7a2b-1a90-7fae2dc8001f">Keywords</semx></fmt-title><fmt-xref-label><semx element="title" source="_7533afc9-3c7e-544e-2aa6-590ca0713799">Keywords</semx></fmt-xref-label>
+<p>The following are keywords to be used by search engines and document catalogues.</p>
+<p>ogcdoc, OGC document, best practice, GeoDataCubes</p></clause>
+<foreword id="_4698e4db-0fcc-59f6-29bd-0633945942b5" obligation="informative" semx-id="_4698e4db-0fcc-59f6-29bd-0633945942b5" displayorder="4">
+<title id="_04089f92-c37a-9245-22f8-d3757a3a37a0" semx-id="_67001cd2-f272-ceff-f849-7a43bc65e67d">Preface</title><fmt-title depth="1" id="_c8fbbfd2-a0f5-87fd-17d6-b6151d2f1f27"><span class="fmt-caption-label"><semx element="autonum" source="_4698e4db-0fcc-59f6-29bd-0633945942b5">III</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_04089f92-c37a-9245-22f8-d3757a3a37a0">Preface</semx></fmt-title><fmt-xref-label><semx element="title" source="_4698e4db-0fcc-59f6-29bd-0633945942b5">Preface</semx></fmt-xref-label>
+<note id="_0ba5b9b2-1621-e339-5eb6-8ffcb9bf9ae8" semx-id="_0ba5b9b2-1621-e339-5eb6-8ffcb9bf9ae8" autonum=""><fmt-name id="_f7ec7726-cc07-0e52-5a01-f346b307b217"><span class="fmt-caption-label"><span class="fmt-element-name">NOTE</span></span><span class="fmt-label-delim">:<tab/></span></fmt-name><fmt-xref-label><span class="fmt-element-name">Note</span></fmt-xref-label><fmt-xref-label container="_4698e4db-0fcc-59f6-29bd-0633945942b5"><span class="fmt-xref-container"><semx element="title" source="_4698e4db-0fcc-59f6-29bd-0633945942b5">Preface</semx></span><span class="fmt-comma">,</span> <span class="fmt-element-name">Note</span></fmt-xref-label><p id="_36ccafc3-00ed-bcf2-417b-3516155e23ee" semx-id="_36ccafc3-00ed-bcf2-417b-3516155e23ee">Insert Preface Text here. Give OGC specific commentary: describe the technical content, reason for document, history of the document and precursors, and plans for future work.</p>
+
+<p id="_dce2d5df-f281-a276-e795-ecdbbc66fde9" semx-id="_dce2d5df-f281-a276-e795-ecdbbc66fde9">There are two ways to specify the Preface: “simple clause” or “full clasuse”</p>
+
+<p id="_bf0a4cff-b8d4-99ef-f988-ae91c26f4e00" semx-id="_bf0a4cff-b8d4-99ef-f988-ae91c26f4e00">If the Preface does not contain subclauses, it is considered a simple preface clause. This one is entered as text after the <tt>.Preface</tt> label and must be placed between the AsciiDoc document attributes and the first AsciiDoc section title. It should not be give a section title of its own.</p>
+
+<p id="_2de06016-75e5-9b09-a88d-781e9da93acf" semx-id="_2de06016-75e5-9b09-a88d-781e9da93acf">If the Preface contains subclauses, it needs to be encoded as a full preface clause. This one is recognized as a full Metanorma AsciiDoc section with te title “Preface”, i.e. <tt>== Preface</tt>. (Simple preface content can also be encoded like full preface.)</p>
+</note>
+</foreword><clause id="_b99a2bd6-1a97-8f41-0bc0-600ae6df3c97" type="security" obligation="informative" semx-id="_b99a2bd6-1a97-8f41-0bc0-600ae6df3c97" displayorder="5">
+<title id="_c116db57-9927-1c2c-176d-ef18bbc079c8" semx-id="_5dcde964-6a03-436c-5204-bca752130682">Security Considerations</title><fmt-title depth="1" id="_91946ae4-e541-3c7a-9123-0ac92d13f019"><span class="fmt-caption-label"><semx element="autonum" source="_b99a2bd6-1a97-8f41-0bc0-600ae6df3c97">IV</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_c116db57-9927-1c2c-176d-ef18bbc079c8">Security Considerations</semx></fmt-title><fmt-xref-label><semx element="title" source="_b99a2bd6-1a97-8f41-0bc0-600ae6df3c97">Security Considerations</semx></fmt-xref-label>
+<p id="_b2512eeb-995a-eabe-4ee2-ae30853fc76e" semx-id="_b2512eeb-995a-eabe-4ee2-ae30853fc76e">No security considerations have been made for this Standard.</p>
+</clause><clause id="_aea6b3be-9695-4163-de40-99e56b7c685d" type="submitting_orgs" displayorder="6">
+<title id="_fbdc40e2-2e8f-be1e-ecc8-ea3c9d8a2855">Submitting Organizations</title><fmt-title depth="1" id="_2998e12d-ea78-b6ca-36be-d1c0365826f8"><span class="fmt-caption-label"><semx element="autonum" source="_aea6b3be-9695-4163-de40-99e56b7c685d">V</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_fbdc40e2-2e8f-be1e-ecc8-ea3c9d8a2855">Submitting Organizations</semx></fmt-title><fmt-xref-label><semx element="title" source="_aea6b3be-9695-4163-de40-99e56b7c685d">Submitting Organizations</semx></fmt-xref-label>
+<p>The following organizations submitted this Document to the Open Geospatial Consortium (OGC):</p>
+ <ul id="_10c7d3d6-c140-ff80-20ae-a686ac883640"><li id="_67739119-f736-351d-9fc1-2ca9eac4ffa2"><fmt-name id="_ffe23623-094c-b5d9-5172-ced3d4718f13"><semx element="autonum" source="_67739119-f736-351d-9fc1-2ca9eac4ffa2">•</semx></fmt-name>Eurac Research</li>
+<li id="_b12aff5f-5e54-6642-a61b-a32c6e160be9"><fmt-name id="_0a7cda49-da4e-f9b4-993c-cdb8182f4ac3"><semx element="autonum" source="_b12aff5f-5e54-6642-a61b-a32c6e160be9">•</semx></fmt-name>Organization two</li>
+<li id="_ba094c5e-0f9d-bc19-cc9f-49e7478ba3d4"><fmt-name id="_fd6ff9e7-ede4-e6e4-7990-d30138315e26"><semx element="autonum" source="_ba094c5e-0f9d-bc19-cc9f-49e7478ba3d4">•</semx></fmt-name>Organization three</li></ul>
+ </clause>
+<clause id="_13c3e311-2b46-d683-741b-df1f01e75516" type="submitters" obligation="informative" semx-id="_13c3e311-2b46-d683-741b-df1f01e75516" displayorder="7">
+<title id="_c5eeeb69-8bbd-3cc2-688c-bb1fb1ce814e" semx-id="_454e8fd9-fbfc-9c82-30fc-9121a2f52315">Submitters</title><fmt-title depth="1" id="_c3348013-9395-6185-7ad9-3462e4e2a58d"><span class="fmt-caption-label"><semx element="autonum" source="_13c3e311-2b46-d683-741b-df1f01e75516">VI</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_c5eeeb69-8bbd-3cc2-688c-bb1fb1ce814e">Submitters</semx></fmt-title><fmt-xref-label><semx element="title" source="_13c3e311-2b46-d683-741b-df1f01e75516">Submitters</semx></fmt-xref-label>
+<p id="_6e1b734b-e32c-864b-59a1-81792b76695c" semx-id="_6e1b734b-e32c-864b-59a1-81792b76695c">All questions regarding this submission should be directed to the editor or the submitters:</p>
+
+<table id="_509507cf-ccd9-d8fc-a93b-f8b5bbd8e68d" unnumbered="true" semx-id="_509507cf-ccd9-d8fc-a93b-f8b5bbd8e68d"><thead><tr id="_deb7a241-b966-477e-d27c-b015614c2860" semx-id="_deb7a241-b966-477e-d27c-b015614c2860"><th id="_b5603a1c-a49f-04c0-f070-75c5bb1f766a" valign="middle" align="left" semx-id="_b5603a1c-a49f-04c0-f070-75c5bb1f766a">Name</th>
+<th id="_cd7f599e-a2be-8762-048b-ced58da32a1d" valign="middle" align="left" semx-id="_cd7f599e-a2be-8762-048b-ced58da32a1d">Affiliation</th>
+<th id="_5ee41492-d123-06b0-388a-032dcd9e1d79" valign="middle" align="left" semx-id="_5ee41492-d123-06b0-388a-032dcd9e1d79">OGC member</th>
+</tr></thead>
+<tbody><tr id="_aaeb6e88-5e59-d216-1312-8e3b997aafe6" semx-id="_aaeb6e88-5e59-d216-1312-8e3b997aafe6"><td id="_0d6d64cd-8b62-80bb-33e8-8da688a90c79" valign="middle" align="left" semx-id="_0d6d64cd-8b62-80bb-33e8-8da688a90c79">Alexander Jacob</td>
+<td id="_2b18e282-e64f-bf67-24af-d24696bdb66d" valign="middle" align="left" semx-id="_2b18e282-e64f-bf67-24af-d24696bdb66d">Eurac Research</td>
+<td id="_6eabb47e-e283-319a-7b67-d2b71393e054" valign="middle" align="left" semx-id="_6eabb47e-e283-319a-7b67-d2b71393e054">Yes</td>
+</tr><tr id="_22316e4f-d1ed-5e56-bbbe-fb65d7395faa" semx-id="_22316e4f-d1ed-5e56-bbbe-fb65d7395faa"><td id="_d88c6d4f-b0c4-cf6e-6505-bb355b57c414" valign="middle" align="left" semx-id="_d88c6d4f-b0c4-cf6e-6505-bb355b57c414">Juraj Zvolenský</td>
+<td id="_dce7048a-a831-926e-be0a-5410ce23ddbc" valign="middle" align="left" semx-id="_dce7048a-a831-926e-be0a-5410ce23ddbc">Eurac Research</td>
+<td id="_e796e6fb-a35b-80d9-2d4c-49d32b91f617" valign="middle" align="left" semx-id="_e796e6fb-a35b-80d9-2d4c-49d32b91f617">Yes</td>
+</tr><tr id="_6ea9eb38-e093-065a-090b-16d6d9385508" semx-id="_6ea9eb38-e093-065a-090b-16d6d9385508"><td id="_3dad9ed1-9e91-8786-c415-eacdd09e6197" valign="middle" align="left" semx-id="_3dad9ed1-9e91-8786-c415-eacdd09e6197">Yuvraj Bhagwan Adagale</td>
+<td id="_a370931f-74f1-8a2e-b82b-4c7c013ef98e" valign="middle" align="left" semx-id="_a370931f-74f1-8a2e-b82b-4c7c013ef98e">Eurac Research</td>
+<td id="_e60e41d6-840f-e5ba-1c77-83ba9c3acb3a" valign="middle" align="left" semx-id="_e60e41d6-840f-e5ba-1c77-83ba9c3acb3a">Yes</td>
+</tr></tbody>
+</table>
+</clause><clause id="_1a761316-e936-4460-fe11-51fa5825e87d" type="contributors" obligation="informative" semx-id="_1a761316-e936-4460-fe11-51fa5825e87d" displayorder="8">
+<title id="_e1b8f04b-90a5-3c87-6dee-11c07b57370c" semx-id="_0089e286-2fd2-cccd-56fa-0d3ecf40c19c">Contributors</title><fmt-title depth="1" id="_f2e059b6-d085-0463-6009-2b596cbb4331"><span class="fmt-caption-label"><semx element="autonum" source="_1a761316-e936-4460-fe11-51fa5825e87d">VII</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_e1b8f04b-90a5-3c87-6dee-11c07b57370c">Contributors</semx></fmt-title><fmt-xref-label><semx element="title" source="_1a761316-e936-4460-fe11-51fa5825e87d">Contributors</semx></fmt-xref-label>
+<p id="_f88518ff-22be-3e45-459d-49e70c5c8aeb" semx-id="_f88518ff-22be-3e45-459d-49e70c5c8aeb">Alexander Jacob, Eurac Research
+Juraj Zvolenský, Eurac Research
+Yuvraj Bhagwan Adagale, Eurac Research<note id="_383f9325-f045-16e4-76e2-df960986871b" semx-id="_383f9325-f045-16e4-76e2-df960986871b" autonum=""><fmt-name id="_81a6372f-8c20-21ce-c309-9460e44a3726"><span class="fmt-caption-label"><span class="fmt-element-name">NOTE</span></span><span class="fmt-label-delim">:<tab/></span></fmt-name><fmt-xref-label><span class="fmt-element-name">Note</span></fmt-xref-label><fmt-xref-label container="_1a761316-e936-4460-fe11-51fa5825e87d"><span class="fmt-xref-container"><semx element="title" source="_1a761316-e936-4460-fe11-51fa5825e87d">Contributors</semx></span><span class="fmt-comma">,</span> <span class="fmt-element-name">Note</span></fmt-xref-label><p id="_003c66b0-ebec-81a9-7bdb-7487d47978a9" semx-id="_003c66b0-ebec-81a9-7bdb-7487d47978a9">If you need to place any further sections in the preface area use the  <tt>[.preface]</tt> attribute.</p>
+</note></p>
+
+
+</clause></preface><sections>
+
+
+
+
+
+
+
+<clause id="_a0ea1226-a6ef-bcd9-f11a-443345e6ac54" type="scope" obligation="normative" semx-id="_a0ea1226-a6ef-bcd9-f11a-443345e6ac54" displayorder="9">
+<title id="_27f24c52-47bf-ede9-a9bc-0030108e9c77" semx-id="_f70b6ff6-6131-0e24-81e1-850dbe94b63d">Scope</title><fmt-title depth="1" id="_a49d63b7-87c4-3bc5-ea2b-e2121f2524d3"><span class="fmt-caption-label"><semx element="autonum" source="_a0ea1226-a6ef-bcd9-f11a-443345e6ac54">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_27f24c52-47bf-ede9-a9bc-0030108e9c77">Scope</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_a0ea1226-a6ef-bcd9-f11a-443345e6ac54">1</semx></fmt-xref-label>
+<note id="_1cb3808f-126e-3134-d7ca-3aa773af036a" semx-id="_1cb3808f-126e-3134-d7ca-3aa773af036a" autonum=""><fmt-name id="_27add3e1-de7d-2a0a-d4f1-719d98a2a743"><span class="fmt-caption-label"><span class="fmt-element-name">NOTE</span></span><span class="fmt-label-delim">:<tab/></span></fmt-name><fmt-xref-label><span class="fmt-element-name">Note</span></fmt-xref-label><fmt-xref-label container="_a0ea1226-a6ef-bcd9-f11a-443345e6ac54"><span class="fmt-xref-container"><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_a0ea1226-a6ef-bcd9-f11a-443345e6ac54">1</semx></span><span class="fmt-comma">,</span> <span class="fmt-element-name">Note</span></fmt-xref-label><p id="_4a7e9508-ec9d-b913-026f-b9f3433d0d38" semx-id="_4a7e9508-ec9d-b913-026f-b9f3433d0d38">This document specifies a set of best practice recommendations for the management of geospatial data as geodatacubes. The scope of this document is the transition from metadata-driven discovery of Earth observation datasets to their access, organization, processing, and use as multidimensional geodatacubes.</p>
+
+<p id="_d16b7741-ffbc-6b1d-2750-210707707c06" semx-id="_d16b7741-ffbc-6b1d-2750-210707707c06">The document provides guidance on the use of metadata records, catalogues, data access information, and processing interfaces to support interoperable geodatacube management. It includes consideration of openEO as an interface for geodatacube access and processing, and considers the use of open-source EOEPCA building blocks as components within geodatacube management architectures.</p>
+
+<p id="_d760477a-c460-3758-5526-3cd3a4231c50" semx-id="_d760477a-c460-3758-5526-3cd3a4231c50">This document is intended to support implementers of data platforms, processing services, and client applications that need to manage Earth observation data in a datacube-oriented form. It does not define a new standard for geodatacube encoding, metadata, or processing. Instead, it identifies recommended practices for combining existing standards, interfaces, and software components to support consistent and reusable geodatacube workflows.</p>
+</note>
+</clause>
+
+<clause id="_0988fca7-0064-651d-cbad-9f9c80ed5b13" type="conformance" obligation="normative" semx-id="_0988fca7-0064-651d-cbad-9f9c80ed5b13" displayorder="10">
+<title id="_953fcc49-8f8f-a6b0-00a8-093278ae69cb" semx-id="_e246d3c1-cf3f-232c-cb69-d9b3793ef60f">Conformance</title><fmt-title depth="1" id="_04936500-2a58-beb0-b140-83db515bda8d"><span class="fmt-caption-label"><semx element="autonum" source="_0988fca7-0064-651d-cbad-9f9c80ed5b13">2</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_953fcc49-8f8f-a6b0-00a8-093278ae69cb">Conformance</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_0988fca7-0064-651d-cbad-9f9c80ed5b13">2</semx></fmt-xref-label>
+<p id="_9bed8102-118c-c6d1-7a4e-90c6dc537370" semx-id="_9bed8102-118c-c6d1-7a4e-90c6dc537370">This Best Practice defines XXXX.</p>
+
+<p id="_d9fe72ea-ca72-b83e-389d-ea30f5827c41" semx-id="_d9fe72ea-ca72-b83e-389d-ea30f5827c41">Requirements for N standardization target types are considered:</p>
+
+<ul id="_5467cfd2-470c-d7a8-cebc-47f3d9ca6d33" semx-id="_5467cfd2-470c-d7a8-cebc-47f3d9ca6d33"><li id="_d91c3a06-045f-896a-c49e-ff54292c02ec"><fmt-name id="_783ca68b-b62d-4a88-ca11-d02fec07a7ef"><semx element="autonum" source="_d91c3a06-045f-896a-c49e-ff54292c02ec">•</semx></fmt-name><p id="_35e83e77-159f-c397-8352-ba65d2d1f1f9" semx-id="_35e83e77-159f-c397-8352-ba65d2d1f1f9">AAAA</p>
+</li>
+<li id="_cdae5136-10ba-a40a-3a05-0a26dfad8e92"><fmt-name id="_edefffcd-95fc-b0d9-a4eb-a1cc286b001d"><semx element="autonum" source="_cdae5136-10ba-a40a-3a05-0a26dfad8e92">•</semx></fmt-name><p id="_c4ed82c0-9cf9-7082-b0f4-a1b921220c4e" semx-id="_c4ed82c0-9cf9-7082-b0f4-a1b921220c4e">BBBB</p>
+</li>
+</ul>
+
+<p id="_76dc9be6-f5a8-8309-75f0-fe7a1a046388" semx-id="_76dc9be6-f5a8-8309-75f0-fe7a1a046388">Conformance with this Best Practice shall be checked using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.</p>
+
+<p id="_5cb037cc-d7cb-812b-6bcf-5c66c0e029ab" semx-id="_5cb037cc-d7cb-812b-6bcf-5c66c0e029ab">In order to conform to this OGC® interface Best Practice, a software implementation shall choose to implement:</p>
+
+<ul id="_38477986-bc30-42f5-e17f-0e054c46714d" semx-id="_38477986-bc30-42f5-e17f-0e054c46714d"><li id="_5f91835b-c237-485b-22d5-410417fc52eb"><fmt-name id="_0338dda5-b01e-f3cb-33b1-af26153bdbc6"><semx element="autonum" source="_5f91835b-c237-485b-22d5-410417fc52eb">•</semx></fmt-name><p id="_a9f1a075-d082-b15a-9cec-6e9639639dba" semx-id="_a9f1a075-d082-b15a-9cec-6e9639639dba">Any one of the conformance levels specified in Annex A (normative).</p>
+</li>
+<li id="_b8622d3b-3c04-9681-4023-9c0d142c2379"><fmt-name id="_d04ceaf7-8ed5-4a9b-84f7-2362ebe19765"><semx element="autonum" source="_b8622d3b-3c04-9681-4023-9c0d142c2379">•</semx></fmt-name><p id="_42ba9e3c-2c69-333e-7cb6-3249deca363d" semx-id="_42ba9e3c-2c69-333e-7cb6-3249deca363d">Any one of the Distributed Computing Platform profiles specified in Annexes TBD through TBD (normative).</p>
+</li>
+</ul>
+
+<p id="_07a0f6ed-9ff4-1172-3450-8e30f19e802b" semx-id="_07a0f6ed-9ff4-1172-3450-8e30f19e802b">All requirements-classes and conformance-classes described in this document are owned by the documents(s) identified.</p>
+</clause>
+
+
+
+<terms id="_eb67b639-667a-3f25-5998-36dc9c1fb94d" obligation="normative" semx-id="_eb67b639-667a-3f25-5998-36dc9c1fb94d" displayorder="12">
+<title id="_59e5fc26-1cc5-8aac-16af-e6c35f9dde7d" semx-id="_dfb2eab2-f980-6365-3c47-81d0eb272962">Terms and definitions</title><fmt-title depth="1" id="_11b130b0-7dc2-0d0c-5995-91dd34539a0e"><span class="fmt-caption-label"><semx element="autonum" source="_eb67b639-667a-3f25-5998-36dc9c1fb94d">4</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_59e5fc26-1cc5-8aac-16af-e6c35f9dde7d">Terms and definitions</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_eb67b639-667a-3f25-5998-36dc9c1fb94d">4</semx></fmt-xref-label><p id="_8c49041f-8363-1e0b-0484-6e1046987489" semx-id="_8c49041f-8363-1e0b-0484-6e1046987489">This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php" id="_8b983160-18d8-6382-e722-4d2bf69ee179">OGC Policy Directive 49</link><semx element="link" source="_8b983160-18d8-6382-e722-4d2bf69ee179"><fmt-link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</fmt-link></semx>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+
+<p id="_7bbae1f8-9cf5-3d71-b33b-b85f9ba4c251" semx-id="_7bbae1f8-9cf5-3d71-b33b-b85f9ba4c251">This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762" id="_99525488-5041-a81e-1f6c-43a8443401a4">OGC 08-131r3</link><semx element="link" source="_99525488-5041-a81e-1f6c-43a8443401a4"><fmt-link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</fmt-link></semx>), also known as the ‘ModSpec’. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+
+<p id="_548e409e-2890-5c36-8c0d-528166f290d6" semx-id="_548e409e-2890-5c36-8c0d-528166f290d6">For the purposes of this document, the following additional terms and definitions apply.</p>
+<term id="term-example-term" anchor="term-example-term" semx-id="_522841c3-f68c-7046-72e6-a7c9495765d2"><fmt-name id="_f6965fef-dd49-edda-a99f-15880dd0fa06"><span class="fmt-caption-label"><semx element="autonum" source="_eb67b639-667a-3f25-5998-36dc9c1fb94d">4</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="term-example-term">1</semx><span class="fmt-autonum-delim">.</span></span></fmt-name><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_eb67b639-667a-3f25-5998-36dc9c1fb94d">4</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="term-example-term">1</semx></fmt-xref-label><preferred id="_de61a4c7-b3fa-c762-bda7-6238f0b0d42e"><expression>
+<name id="_27892ae8-12be-4c97-5176-6a4d77d0e522">example term</name>
+</expression>
+</preferred><fmt-preferred><p><semx element="preferred" source="_de61a4c7-b3fa-c762-bda7-6238f0b0d42e"><strong><semx element="expression/name" source="_27892ae8-12be-4c97-5176-6a4d77d0e522">example term</semx></strong></semx></p></fmt-preferred>
+<definition id="_87267a00-f067-96ce-31db-f09784af584d" semx-id="_87267a00-f067-96ce-31db-f09784af584d"><verbal-definition semx-id="_a0853853-6756-d022-c968-629e7ea9b063" id="_a0853853-6756-d022-c968-629e7ea9b063"><p semx-id="_70d75b6c-d575-b202-e9e9-3b97aaf949a2" original-id="_70d75b6c-d575-b202-e9e9-3b97aaf949a2">term used for exemplary purposes</p></verbal-definition></definition><fmt-definition id="_2a8b514a-5d36-e5a0-b1f3-858090890d9d"><semx element="definition" source="_87267a00-f067-96ce-31db-f09784af584d"><p id="_70d75b6c-d575-b202-e9e9-3b97aaf949a2" semx-id="_70d75b6c-d575-b202-e9e9-3b97aaf949a2">term used for exemplary purposes</p></semx></fmt-definition>
+
+
+
+
+
+
+ <termnote id="_ef298953-a5eb-63d5-e5b3-323595918ce2" semx-id="_ef298953-a5eb-63d5-e5b3-323595918ce2" autonum="1"><fmt-name id="_ef07028b-46b3-8d3b-cead-993e53813357"><span class="fmt-caption-label">Note <semx element="autonum" source="_ef298953-a5eb-63d5-e5b3-323595918ce2">1</semx> to entry</span><span class="fmt-label-delim">: </span></fmt-name><fmt-xref-label><span class="fmt-element-name">Note</span> <semx element="autonum" source="_ef298953-a5eb-63d5-e5b3-323595918ce2">1</semx></fmt-xref-label><fmt-xref-label container="term-example-term"><span class="fmt-xref-container"><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_eb67b639-667a-3f25-5998-36dc9c1fb94d">4</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="term-example-term">1</semx></span><span class="fmt-comma">,</span> <span class="fmt-element-name">Note</span> <semx element="autonum" source="_ef298953-a5eb-63d5-e5b3-323595918ce2">1</semx></fmt-xref-label><p id="_f0837a07-ab01-8d8b-543f-92f8ad34d31f" semx-id="_f0837a07-ab01-8d8b-543f-92f8ad34d31f">An example note.</p>
+</termnote><termexample id="_f756229a-19cf-5452-29a7-bc5df939c3e9" semx-id="_f756229a-19cf-5452-29a7-bc5df939c3e9" autonum=""><fmt-name id="_2610a634-6aec-3c57-0b33-23f59ab5900e"><span class="fmt-caption-label"><span class="fmt-element-name">Example</span></span></fmt-name><fmt-xref-label><span class="fmt-element-name">Example</span></fmt-xref-label><fmt-xref-label container="term-example-term"><span class="fmt-xref-container"><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_eb67b639-667a-3f25-5998-36dc9c1fb94d">4</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="term-example-term">1</semx></span><span class="fmt-comma">,</span> <span class="fmt-element-name">Example</span></fmt-xref-label><p id="_5557d219-5fdd-22a4-3e07-b5fd0f65c0ef" semx-id="_5557d219-5fdd-22a4-3e07-b5fd0f65c0ef">Here’s an example of an example term.</p>
+</termexample><source status="identical" type="authoritative" id="_1c379cae-d505-0b01-6096-ec26ebfc8323"><origin bibitemid="ISO19101-1" type="inline" citeas="ISO 19101-1:2014"/></source><fmt-termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <semx element="source" source="_1c379cae-d505-0b01-6096-ec26ebfc8323"><origin bibitemid="ISO19101-1" type="inline" citeas="ISO 19101-1:2014" id="_878abd3e-4bae-b979-db2c-404068757b56"/><semx element="origin" source="_878abd3e-4bae-b979-db2c-404068757b56"><fmt-xref type="inline" target="ISO19101-1">ISO 19101-1:2014</fmt-xref></semx></semx>]</fmt-termsource></term>
+</terms>
+
+<clause id="_a47f995f-d9fa-f88a-4020-2617fc07487d" obligation="normative" semx-id="_a47f995f-d9fa-f88a-4020-2617fc07487d" displayorder="13">
+<title id="_76275828-045f-b805-5447-e326cb04dfbc" semx-id="_6948b4ae-f705-e7f5-8bc1-a5f5e5f04db2">Conventions</title><fmt-title depth="1" id="_ae9de376-d193-cdd6-67e7-17a1fb2ae19a"><span class="fmt-caption-label"><semx element="autonum" source="_a47f995f-d9fa-f88a-4020-2617fc07487d">5</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_76275828-045f-b805-5447-e326cb04dfbc">Conventions</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_a47f995f-d9fa-f88a-4020-2617fc07487d">5</semx></fmt-xref-label>
+<p id="_87fee229-ff6c-bb90-5546-852478e6f22e" semx-id="_87fee229-ff6c-bb90-5546-852478e6f22e">This sections provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.</p>
+
+<clause id="_59c61b31-e3bc-d456-f2a0-a703d24452b6" obligation="normative" semx-id="_59c61b31-e3bc-d456-f2a0-a703d24452b6">
+<title id="_ca2846d2-6cd3-1b48-c849-1bd60914dec0" semx-id="_9923b864-ae86-80fc-d444-ba5ba017c4b3">Identifiers</title><fmt-title depth="2" id="_2737c42c-69fe-218d-349f-a81fbd06ff0f"><span class="fmt-caption-label"><semx element="autonum" source="_a47f995f-d9fa-f88a-4020-2617fc07487d">5</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_59c61b31-e3bc-d456-f2a0-a703d24452b6">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_ca2846d2-6cd3-1b48-c849-1bd60914dec0">Identifiers</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_a47f995f-d9fa-f88a-4020-2617fc07487d">5</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_59c61b31-e3bc-d456-f2a0-a703d24452b6">1</semx></fmt-xref-label>
+<p id="_900884f4-02e4-3c1c-f316-eef2a2b593b8" semx-id="_900884f4-02e4-3c1c-f316-eef2a2b593b8">The normative provisions in this document are denoted by the URI</p>
+
+<p id="_7197d0e6-f6c2-b54e-3764-dbccf205caa4" semx-id="_7197d0e6-f6c2-b54e-3764-dbccf205caa4"><tt><link target="http://www.opengis.net/spec/{standard}/{m.n}" id="_ce7285ef-6c54-4f49-83a8-4b51d9cc5c3d"/><semx element="link" source="_ce7285ef-6c54-4f49-83a8-4b51d9cc5c3d"><fmt-link target="http://www.opengis.net/spec/{standard}/{m.n}"/></semx></tt></p>
+
+<p id="_f66b306e-eaed-7bb5-c6f2-99b2de1fb591" semx-id="_f66b306e-eaed-7bb5-c6f2-99b2de1fb591">All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.</p>
+</clause>
+</clause>
+
+<clause id="_1e5057ef-315c-a86b-91cb-d44fadcc55c1" obligation="informative" semx-id="_1e5057ef-315c-a86b-91cb-d44fadcc55c1" displayorder="14">
+<title id="_797b042f-e8fb-dd44-5753-3f881e540628" semx-id="_d3878937-56c8-71b6-ca2c-44f891c56584">Clauses not Containing Normative Material</title><fmt-title depth="1" id="_62314145-75c4-abcc-f411-624b6354d633"><span class="fmt-caption-label"><semx element="autonum" source="_1e5057ef-315c-a86b-91cb-d44fadcc55c1">6</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_797b042f-e8fb-dd44-5753-3f881e540628">Clauses not Containing Normative Material</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_1e5057ef-315c-a86b-91cb-d44fadcc55c1">6</semx></fmt-xref-label>
+<p id="_962e92e1-7634-f320-1bd3-908298f3439a" semx-id="_962e92e1-7634-f320-1bd3-908298f3439a">Paragraph</p>
+
+<clause id="_8d493685-3b9b-17d3-a40d-61cb3d70c1a2" obligation="informative" semx-id="_8d493685-3b9b-17d3-a40d-61cb3d70c1a2">
+<title id="_0a15dce6-a8ca-0ed5-e399-0ea44ad864a0" semx-id="_b664a78f-077c-8270-55ef-1829ca7fc26f">Clauses not containing normative material sub-clause 1</title><fmt-title depth="2" id="_1cc8a573-ed6d-6dcb-bcb7-6f8a4191c95c"><span class="fmt-caption-label"><semx element="autonum" source="_1e5057ef-315c-a86b-91cb-d44fadcc55c1">6</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_8d493685-3b9b-17d3-a40d-61cb3d70c1a2">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_0a15dce6-a8ca-0ed5-e399-0ea44ad864a0">Clauses not containing normative material sub-clause 1</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_1e5057ef-315c-a86b-91cb-d44fadcc55c1">6</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_8d493685-3b9b-17d3-a40d-61cb3d70c1a2">1</semx></fmt-xref-label>
+<p id="_4fa9e0be-9126-fb06-da22-8d423e1c7b62" semx-id="_4fa9e0be-9126-fb06-da22-8d423e1c7b62">Paragraph</p>
+</clause>
+
+<clause id="_6e99a882-d577-4a41-7c3e-8819f7aa2cd1" obligation="informative" semx-id="_6e99a882-d577-4a41-7c3e-8819f7aa2cd1">
+<title id="_c62da7c8-91fb-0cf3-79b1-fcca6098500e" semx-id="_6bd6aa75-a376-eca1-79c0-f91dfa148005">Clauses not containing normative material sub-clause 2</title><fmt-title depth="2" id="_876b613a-8490-644e-f191-851a52ed7523"><span class="fmt-caption-label"><semx element="autonum" source="_1e5057ef-315c-a86b-91cb-d44fadcc55c1">6</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_6e99a882-d577-4a41-7c3e-8819f7aa2cd1">2</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_c62da7c8-91fb-0cf3-79b1-fcca6098500e">Clauses not containing normative material sub-clause 2</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_1e5057ef-315c-a86b-91cb-d44fadcc55c1">6</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_6e99a882-d577-4a41-7c3e-8819f7aa2cd1">2</semx></fmt-xref-label>
+</clause>
+</clause>
+
+<clause id="_543b2d13-00e6-1067-0e13-bd6d1179d602" obligation="normative" semx-id="_543b2d13-00e6-1067-0e13-bd6d1179d602" displayorder="15">
+<title id="_bdc00316-06c0-0080-d4fa-bc732286cd7d" semx-id="_8fbf0c69-fefc-a435-7dc9-fda0b41ce547">Clause containing normative material</title><fmt-title depth="1" id="_25000eb6-fbfa-4845-f7df-4766a4541bf5"><span class="fmt-caption-label"><semx element="autonum" source="_543b2d13-00e6-1067-0e13-bd6d1179d602">7</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_bdc00316-06c0-0080-d4fa-bc732286cd7d">Clause containing normative material</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_543b2d13-00e6-1067-0e13-bd6d1179d602">7</semx></fmt-xref-label>
+<p id="_8a76fe16-eece-bc96-96d4-4c12a28a054d" semx-id="_8a76fe16-eece-bc96-96d4-4c12a28a054d">Paragraph</p>
+
+<clause id="_75734a1f-d031-eed8-45ea-333323a5af9a" obligation="normative" semx-id="_75734a1f-d031-eed8-45ea-333323a5af9a">
+<title id="_1f0e2891-65c2-7af2-fe83-756678989848" semx-id="_129f6bc4-e517-56c9-88aa-550ae29ad8dd">Requirement Class A or Requirement A Example</title><fmt-title depth="2" id="_96b0a5a6-bf30-3215-3a0c-88c2742de581"><span class="fmt-caption-label"><semx element="autonum" source="_543b2d13-00e6-1067-0e13-bd6d1179d602">7</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75734a1f-d031-eed8-45ea-333323a5af9a">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_1f0e2891-65c2-7af2-fe83-756678989848">Requirement Class A or Requirement A Example</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_543b2d13-00e6-1067-0e13-bd6d1179d602">7</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75734a1f-d031-eed8-45ea-333323a5af9a">1</semx></fmt-xref-label>
+<p id="_8765d9b8-6d17-6516-9ba1-92e6073932ff" semx-id="_8765d9b8-6d17-6516-9ba1-92e6073932ff">Paragraph – intro text for the requirement class.</p>
+
+<p id="_44e7e99c-79fe-010b-e628-260954e0be47" semx-id="_44e7e99c-79fe-010b-e628-260954e0be47">Use the following table for Requirements Classes.</p>
+
+<requirement id="_5607f4ec-fdc2-462e-9023-3eec10ff68e1" anchor="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a" model="ogc" obligation="requirement" type="class" semx-id="_5fb2e737-907e-4e3f-4766-9c6fdd7bbf45" autonum="1" original-id="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a"><fmt-xref-label><span class="fmt-element-name">Requirements class</span> <semx element="autonum" source="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a">1</semx></fmt-xref-label><description id="_a385509c-572e-4efb-b93e-624562fdd485"><p semx-id="_1afc43cf-5b38-ccb8-692d-f51aa248162a" original-id="_1afc43cf-5b38-ccb8-692d-f51aa248162a">Requirements Class</p><ul semx-id="_9e3961ab-914a-6274-504a-261a9ede7323" original-id="_9e3961ab-914a-6274-504a-261a9ede7323"><li original-id="_2831f695-c690-d486-da23-5cdd062d3cf8"><p semx-id="_9be1d667-bde7-2222-bd87-4b4817e39948" original-id="_9be1d667-bde7-2222-bd87-4b4817e39948"><link target="http://www.example.org/req/blah"/></p>
+</li>
+<li original-id="_a2b92203-2327-fa5d-df1c-d9113f3e1c5c"><p semx-id="_329979dd-44a7-e6fd-0020-09016b4e1c29" original-id="_329979dd-44a7-e6fd-0020-09016b4e1c29">urn:iso:ts:iso:19139:clause:6</p>
+</li>
+</ul></description>
+
+<requirement anchor="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-1" model="ogc" type="general" semx-id="_089e52a6-c6e4-db66-700a-71251ef4d623" autonum="1-1" original-id="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a_req-name-1"> <description id="_e75e8699-e5b4-4563-99d2-e6398cae0521"><p semx-id="_824dee61-58e8-246e-b2e6-72721ce689e0" id="_824dee61-58e8-246e-b2e6-72721ce689e0">requirement description</p></description>
+</requirement>
+
+<requirement anchor="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-2" model="ogc" type="general" semx-id="_6e9452d3-6781-00d4-a8b6-bf81df42109b" autonum="1-2" original-id="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a_req-name-2"> <description id="_8ce31b2d-4f97-482c-b699-1f3f7b1b40b5"><p semx-id="_35875790-a482-8dcc-a330-2e7f4e053b96" id="_35875790-a482-8dcc-a330-2e7f4e053b96">requirement description</p></description>
+</requirement>
+
+<requirement anchor="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-3" model="ogc" type="general" semx-id="_22c999f9-6691-294d-796f-1e4846001c7d" autonum="1-3" original-id="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a_req-name-3"> <description id="_94f2b4f3-22a9-4e26-b921-3b7e3852239c"><p semx-id="_532c42f3-a907-cf94-a57a-68e6ea7d2c9b" id="_532c42f3-a907-cf94-a57a-68e6ea7d2c9b">requirement description</p></description>
+</requirement>
+<fmt-provision id="_e2b39c34-c9fb-cdb7-465c-8e8091383c97"><table id="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a" type="recommendclass" class="modspec"><thead><tr><th scope="colgroup" colspan="2"><p class="RecommendationTitle"><fmt-name id="_8145f48e-9fa3-4b7c-dab1-2051045ab017"><span class="fmt-caption-label"><span class="fmt-element-name">Requirements class</span> <semx element="autonum" source="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a">1</semx></span></fmt-name></p></th></tr></thead>
+<tbody><tr><th>Obligation</th><td>requirement</td></tr><tr><th>Description</th><td><semx element="description" source="_a385509c-572e-4efb-b93e-624562fdd485"><p id="_1afc43cf-5b38-ccb8-692d-f51aa248162a" semx-id="_1afc43cf-5b38-ccb8-692d-f51aa248162a">Requirements Class</p><ul id="_9e3961ab-914a-6274-504a-261a9ede7323" semx-id="_9e3961ab-914a-6274-504a-261a9ede7323"><li id="_5945260d-17ed-b428-9cd3-15edcae0735e"><fmt-name id="_9e221848-32f7-10d2-3cfd-9a7e0e3338a9"><semx element="autonum" source="_5945260d-17ed-b428-9cd3-15edcae0735e">•</semx></fmt-name><p id="_9be1d667-bde7-2222-bd87-4b4817e39948" semx-id="_9be1d667-bde7-2222-bd87-4b4817e39948"><link target="http://www.example.org/req/blah" id="_8da00755-026f-f4f4-18fb-6efac825c78c"/><semx element="link" source="_8da00755-026f-f4f4-18fb-6efac825c78c"><fmt-link target="http://www.example.org/req/blah"/></semx></p>
+</li>
+<li id="_d2bf7711-996c-0df1-f10c-c641540df2c7"><fmt-name id="_854bccf6-52b1-96ad-d3d7-d7ef1dea91e9"><semx element="autonum" source="_d2bf7711-996c-0df1-f10c-c641540df2c7">•</semx></fmt-name><p id="_329979dd-44a7-e6fd-0020-09016b4e1c29" semx-id="_329979dd-44a7-e6fd-0020-09016b4e1c29">urn:iso:ts:iso:19139:clause:6</p>
+</li>
+</ul></semx></td></tr><tr><th>Normative statements</th><td><bookmark id="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a_req-name-1"/><span class="fmt-caption-label"><semx element="autonum" source="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a_req-name-1"><span class="fmt-element-name">Requirement</span> <semx element="autonum" source="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a">1</semx><span class="fmt-autonum-delim">-</span><semx element="autonum" source="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a_req-name-1">1</semx></semx></span> <semx element="description" source="_e75e8699-e5b4-4563-99d2-e6398cae0521">requirement description</semx><br/><bookmark id="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a_req-name-2"/><span class="fmt-caption-label"><semx element="autonum" source="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a_req-name-2"><span class="fmt-element-name">Requirement</span> <semx element="autonum" source="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a">1</semx><span class="fmt-autonum-delim">-</span><semx element="autonum" source="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a_req-name-2">2</semx></semx></span> <semx element="description" source="_8ce31b2d-4f97-482c-b699-1f3f7b1b40b5">requirement description</semx><br/><bookmark id="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a_req-name-3"/><span class="fmt-caption-label"><semx element="autonum" source="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a_req-name-3"><span class="fmt-element-name">Requirement</span> <semx element="autonum" source="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a">1</semx><span class="fmt-autonum-delim">-</span><semx element="autonum" source="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a_req-name-3">3</semx></semx></span> <semx element="description" source="_94f2b4f3-22a9-4e26-b921-3b7e3852239c">requirement description</semx></td></tr></tbody></table></fmt-provision></requirement>
+
+<clause id="_a502a977-3a8a-4b17-e0f6-85a8e7ea9a56" obligation="normative" semx-id="_a502a977-3a8a-4b17-e0f6-85a8e7ea9a56">
+<title id="_f77220da-9e99-2a87-f428-b5dfbe7b35d2" semx-id="_f56ea174-1d77-69e6-4d3a-d5b060ef513a">Requirement 1</title><fmt-title depth="3" id="_0e55afc1-4148-f59c-0766-d5646eb3b737"><span class="fmt-caption-label"><semx element="autonum" source="_543b2d13-00e6-1067-0e13-bd6d1179d602">7</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75734a1f-d031-eed8-45ea-333323a5af9a">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_a502a977-3a8a-4b17-e0f6-85a8e7ea9a56">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_f77220da-9e99-2a87-f428-b5dfbe7b35d2">Requirement 1</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_543b2d13-00e6-1067-0e13-bd6d1179d602">7</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75734a1f-d031-eed8-45ea-333323a5af9a">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_a502a977-3a8a-4b17-e0f6-85a8e7ea9a56">1</semx></fmt-xref-label>
+<p id="_a7886602-a104-0e9f-16d6-08227d189d13" semx-id="_a7886602-a104-0e9f-16d6-08227d189d13">Paragraph — intro text for the requirement.</p>
+
+<p id="_0a9042e8-55b2-719d-ecc3-979d603f9f48" semx-id="_0a9042e8-55b2-719d-ecc3-979d603f9f48">Use the following table for Requirements, number sequentially.</p>
+
+<requirement id="_1468c649-6c84-4254-b150-2ebfb8f32878" anchor="/req/req-class-a/req-name-1" model="ogc" obligation="requirement" type="general" semx-id="_d11e727f-9a84-cfd5-797e-98d4cbc2d0a2" autonum="1" original-id="_req_req-class-a_req-name-1"><fmt-xref-label><span class="fmt-element-name">Requirement</span> <semx element="autonum" source="_req_req-class-a_req-name-1">1</semx></fmt-xref-label> <description id="_eccabfd5-360b-4f06-b7e1-cb344dd6ea5c"><p semx-id="_e96c999e-2ef5-2338-fb76-05765606dd99" original-id="_e96c999e-2ef5-2338-fb76-05765606dd99">Requirement ‘shall’ statement</p></description>
+<fmt-provision id="_0add232c-ae1b-b77a-ec76-73a8d275fe36"><table id="_req_req-class-a_req-name-1" type="recommend" class="modspec"><thead><tr><th scope="colgroup" colspan="2"><p class="RecommendationTitle"><fmt-name id="_0f5d7736-96ad-dba5-40c5-48cadecefc74"><span class="fmt-caption-label"><span class="fmt-element-name">Requirement</span> <semx element="autonum" source="_req_req-class-a_req-name-1">1</semx></span></fmt-name></p></th></tr></thead>
+<tbody><tr><th>Obligation</th><td>requirement</td></tr><tr><th>Statement</th><td><semx element="description" source="_eccabfd5-360b-4f06-b7e1-cb344dd6ea5c"><p id="_e96c999e-2ef5-2338-fb76-05765606dd99" semx-id="_e96c999e-2ef5-2338-fb76-05765606dd99">Requirement ‘shall’ statement</p></semx></td></tr></tbody></table></fmt-provision></requirement>
+
+<p id="_11c2c57b-703c-48a6-33b9-90a4d450d7f6" semx-id="_11c2c57b-703c-48a6-33b9-90a4d450d7f6">Dictionary tables for requirements can be added as necessary. Modify the following example as needed.</p>
+
+<table id="_d8e9e4ba-93aa-3d02-5458-6edeb970a403" width="90%" semx-id="_d8e9e4ba-93aa-3d02-5458-6edeb970a403" autonum="1"><fmt-name id="_0f8a036c-5fcf-285a-80f5-5ad16f161656"><span class="fmt-caption-label"><span class="fmt-element-name">Table</span> <semx element="autonum" source="_d8e9e4ba-93aa-3d02-5458-6edeb970a403">1</semx></span></fmt-name><fmt-xref-label><span class="fmt-element-name">Table</span> <semx element="autonum" source="_d8e9e4ba-93aa-3d02-5458-6edeb970a403">1</semx></fmt-xref-label><thead><tr id="_60fa6022-e143-9919-2239-0808edaf7c01" semx-id="_60fa6022-e143-9919-2239-0808edaf7c01"><th id="_51e663b1-eb26-1d83-5f8b-ae8007fc700e" valign="middle" align="left" semx-id="_51e663b1-eb26-1d83-5f8b-ae8007fc700e">Names</th>
+<th id="_05752b1d-02ca-b69a-1b46-b9fc28be6ede" valign="middle" align="left" semx-id="_05752b1d-02ca-b69a-1b46-b9fc28be6ede">Definition</th>
+<th id="_0b09e0ce-d3f5-5994-e271-d61fc9e425a0" valign="middle" align="left" semx-id="_0b09e0ce-d3f5-5994-e271-d61fc9e425a0">Data types and values</th>
+<th id="_33cf8ae5-7a33-2232-8f59-6cb736367931" valign="middle" align="left" semx-id="_33cf8ae5-7a33-2232-8f59-6cb736367931">Multiplicity and use</th>
+</tr></thead>
+<tbody><tr id="_ca3ba16f-a8ae-b261-feda-498bd9832a1f" semx-id="_ca3ba16f-a8ae-b261-feda-498bd9832a1f"><td id="_5e662194-9fdd-3689-bb2c-d4cb0ab949e7" valign="middle" align="left" semx-id="_5e662194-9fdd-3689-bb2c-d4cb0ab949e7">name 1</td>
+<td id="_4fab82d0-b0f6-99c0-0185-a813a101e55a" valign="middle" align="left" semx-id="_4fab82d0-b0f6-99c0-0185-a813a101e55a">definition of name 1</td>
+<td id="_cfbf592a-cc14-99d3-687a-c81c91b9a981" valign="middle" align="left" semx-id="_cfbf592a-cc14-99d3-687a-c81c91b9a981">float</td>
+<td id="_30343156-d531-7692-557c-2e173be76351" valign="middle" align="left" semx-id="_30343156-d531-7692-557c-2e173be76351">One or more (mandatory)</td>
+</tr><tr id="_f3cbbddd-f0ee-0be2-44d8-74f296a4a406" semx-id="_f3cbbddd-f0ee-0be2-44d8-74f296a4a406"><td id="_3b550ad2-bc23-61c3-3690-5be66a1b6413" valign="middle" align="left" semx-id="_3b550ad2-bc23-61c3-3690-5be66a1b6413">name 2</td>
+<td id="_4923c818-0d87-917b-7295-95e8532e6b32" valign="middle" align="left" semx-id="_4923c818-0d87-917b-7295-95e8532e6b32">definition of name 2</td>
+<td id="_f57de775-c932-9923-e853-e17ecfcde63f" valign="middle" align="left" semx-id="_f57de775-c932-9923-e853-e17ecfcde63f">character string type, not empty</td>
+<td id="_0e146f72-2e6d-fc51-6dac-9f3a3990a9e1" valign="middle" align="left" semx-id="_0e146f72-2e6d-fc51-6dac-9f3a3990a9e1">Zero or one (optional)</td>
+</tr><tr id="_41d2daf4-ad7f-4733-4211-4bf05a57b82e" semx-id="_41d2daf4-ad7f-4733-4211-4bf05a57b82e"><td id="_7c0bb248-b57d-3c50-dbca-ce705a4f2b14" valign="middle" align="left" semx-id="_7c0bb248-b57d-3c50-dbca-ce705a4f2b14">name 3</td>
+<td id="_bb0a52dc-4897-6ccd-dd65-a86eaae37fed" valign="middle" align="left" semx-id="_bb0a52dc-4897-6ccd-dd65-a86eaae37fed">definition of name 3</td>
+<td id="_73f8fdc1-0b16-1f1b-254b-805ae785f4ba" valign="middle" align="left" semx-id="_73f8fdc1-0b16-1f1b-254b-805ae785f4ba">GML:: Point PropertyType</td>
+<td id="_7eb01355-8f11-2b7f-8ea5-e6aaf107cb06" valign="middle" align="left" semx-id="_7eb01355-8f11-2b7f-8ea5-e6aaf107cb06">One (mandatory)</td>
+</tr></tbody>
+</table>
+</clause>
+</clause>
+</clause>
+
+
+
+
+
+
+
+
+<references id="_f6ce66f1-11cc-9f23-0551-489e7406d96f" normative="true" obligation="informative" semx-id="_f6ce66f1-11cc-9f23-0551-489e7406d96f" displayorder="11">
+<title id="_575115e2-c3d2-4d0b-1bc9-89f55f807a53" semx-id="_270c5ee6-077e-f285-ff95-287984a30140">Normative references</title><fmt-title depth="1" id="_4dbbc77f-2ba2-7541-c754-72ef485077fb"><span class="fmt-caption-label"><semx element="autonum" source="_f6ce66f1-11cc-9f23-0551-489e7406d96f">3</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_575115e2-c3d2-4d0b-1bc9-89f55f807a53">Normative references</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_f6ce66f1-11cc-9f23-0551-489e7406d96f">3</semx></fmt-xref-label><p id="_49996d2b-65c1-916b-9bbf-42b933aa0025" semx-id="_49996d2b-65c1-916b-9bbf-42b933aa0025">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+
+
+
+
+<bibitem anchor="Smith81" id="Smith81" semx-id="_52476393-c253-081f-2d3a-afaddb6f924c"><biblio-tag/><formattedref format="application/x-isodoc+xml"><em>Identification of Common Molecular Subsequences</em>.
+Smith, T.F., Waterman, M.S., J. Mol. Biol. 147, 195–197 (1981)</formattedref><docidentifier>Identification of Common Molecular Subsequences</docidentifier><docidentifier scope="biblio-tag">Identification of Common Molecular Subsequences</docidentifier><language>en</language><script>Latn</script></bibitem>
+<bibitem anchor="May06" id="May06" semx-id="_3f7a57cf-f851-512f-7463-037121dcbab9"><biblio-tag/><formattedref format="application/x-isodoc+xml"><em>ZIB Structure Prediction Pipeline: Composing a Complex Biological Workflow through Web Services</em>.
+May, P., Ehrlich, H.C., Steinke, T. In: Nagel, W.E., Walter,
+W.V., Lehner, W. (eds.) Euro-Par 2006. LNCS, vol. 4128, pp. 1148–1158. Springer,
+Heidelberg (2006)</formattedref><docidentifier>ZIB Structure Prediction Pipeline</docidentifier><docidentifier scope="biblio-tag">ZIB Structure Prediction Pipeline</docidentifier><language>en</language><script>Latn</script></bibitem>
+<bibitem anchor="Grid" id="Grid" semx-id="_9d36ffab-0161-ef74-6918-8fac632f217d"><biblio-tag/><formattedref format="application/x-isodoc+xml"><em>The Grid: Blueprint for a New Computing Infrastructure.</em>,
+Foster, I., Kesselman, C.. Morgan Kaufmann, San Francisco (1999).</formattedref><docidentifier>The Grid</docidentifier><docidentifier scope="biblio-tag">The Grid</docidentifier><language>en</language><script>Latn</script></bibitem>
+<bibitem anchor="Czajkowski01" id="Czajkowski01" semx-id="_d10a2f27-fdb9-47f9-0b51-a5612b7b4d31"><biblio-tag/><formattedref format="application/x-isodoc+xml"><em>Grid Information Services for Distributed Resource Sharing.</em> 
+Czajkowski, K., Fitzgerald, S., Foster, I., Kesselman, C. In: 10th IEEE International Symposium on High
+Performance Distributed Computing, pp. 181–184. IEEE Press, New York (2001)</formattedref><docidentifier>Grid Information Services for Distributed Resource Sharing</docidentifier><docidentifier scope="biblio-tag">Grid Information Services for Distributed Resource Sharing</docidentifier><language>en</language><script>Latn</script></bibitem>
+<bibitem anchor="Foster02" id="Foster02" semx-id="_6cd59342-9b43-8497-8469-d8f6f6756716"><biblio-tag/><formattedref format="application/x-isodoc+xml"><em>The Physiology of the Grid: an Open Grid Services Architecture for Distributed Systems Integration.</em> 
+Foster, I., Kesselman, C., Nick, J., Tuecke, S. Technical report, Global Grid Forum (2002)</formattedref><docidentifier>The Physiology of the Grid</docidentifier><docidentifier scope="biblio-tag">The Physiology of the Grid</docidentifier><language>en</language><script>Latn</script></bibitem>
+<bibitem anchor="NCBI" id="NCBI" semx-id="_0d712a3d-adaa-dcd4-109d-6c9bcd715dc3"><biblio-tag/><formattedref format="application/x-isodoc+xml"><em>National Center for Biotechnology Information</em>, <link target="http://www.ncbi.nlm.nih.gov" id="_abc9d5a1-181e-efe7-4f6b-0b75a6774ead"/><semx element="link" source="_abc9d5a1-181e-efe7-4f6b-0b75a6774ead"><fmt-link target="http://www.ncbi.nlm.nih.gov"/></semx></formattedref><docidentifier>NCBI</docidentifier><docidentifier scope="biblio-tag">NCBI</docidentifier><language>en</language><script>Latn</script></bibitem>
+<bibitem id="ISO19101-1" type="standard" schema-version="v1.5.6" anchor="ISO19101-1" semx-id="_c630884b-42da-02a1-c022-2d4d493a0924"><biblio-tag/><formattedref>International Organization for Standardization (committee): ISO 19101-1:2014, <em>Geographic information — Reference model — Part 1: Fundamentals</em>. International Organization for Standardization, Geneva (2014). <fmt-link target="https://www.iso.org/standard/59164.html">https://www.iso.org/standard/59164.html</fmt-link>.</formattedref>
+  <fetched>2026-05-20</fetched>
+  
+<title language="en" script="Latn" type="title-intro" format="text/plain">Geographic information</title>
+
+  
+<title language="en" script="Latn" type="title-main" format="text/plain">Reference model</title>
+
+  
+<title language="en" script="Latn" type="title-part" format="text/plain">Part 1: Fundamentals</title>
+
+  
+<title language="en" script="Latn" type="main" format="text/plain">Geographic information — Reference model — Part 1: Fundamentals</title>
+
+  
+<title language="fr" script="Latn" type="title-intro" format="text/plain">Information géographique</title>
+
+  
+<title language="fr" script="Latn" type="title-main" format="text/plain">Modèle de référence</title>
+
+  
+<title language="fr" script="Latn" type="title-part" format="text/plain">Partie 1: Principes de base</title>
+
+  
+<title language="fr" script="Latn" type="main" format="text/plain">Information géographique — Modèle de référence — Partie 1: Principes de base</title>
+
+  <uri type="src">https://www.iso.org/standard/59164.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:59164:en</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/05/91/59164.detail.rss</uri>
+  <docidentifier type="ISO" primary="true">ISO 19101-1:2014</docidentifier>
+  <docidentifier type="iso-reference">iso-reference ISO 19101-1:2014(E)</docidentifier>
+  <docidentifier type="URN">URN urn:iso:std:iso:19101:-1:stage-90.20</docidentifier><docidentifier scope="biblio-tag">ISO 19101-1:2014</docidentifier>
+  <docnumber>19101</docnumber>
+  <date type="published">
+    <on>2014-11</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <subdivision type="technical-committee" subtype="TC">
+        
+<name>Geographic information/Geomatics</name>
+
+        <identifier id="_d657e749-760c-64f4-7836-589e679cd469">ISO/TC 211</identifier><fmt-identifier><tt><semx element="identifier" source="_d657e749-760c-64f4-7836-589e679cd469">ISO/TC 211</semx></tt></fmt-identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <language>fr</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">ISO 19101-1:2014 defines the reference model for standardization in the field of geographic information. This reference model describes the notion of interoperability and sets forth the fundamentals by which this standardization takes place.
+Although structured in the context of information technology and information technology standards, ISO 19101-1:2014 is independent of any application development method or technology implementation approach.</abstract>
+  <abstract language="fr" script="Latn">l’ISO 19101-1:2014 définit le modèle de référence pour la normalisation dans le domaine de l’information géographique. Ce modèle de référence décrit la notion d’interopérabilité et établit les principes de base sur lesquels s’appuiera la normalisation.
+Bien que l’ISO 19101-1:2014 soit définie dans le contexte des technologies de l’information et des normes s’y rapportant, elle ne dépend d’aucune méthode de développement d’applications, ni d’aucune approche de mise en ?uvre de technologie.</abstract>
+  <status>
+    <stage>90</stage>
+    <substage>20</substage>
+  </status>
+  <copyright>
+    <from>2014</from>
+    <owner>
+      <organization>
+        
+<name>ISO</name>
+
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref>ISO 19101:2002</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 19101:2002</docidentifier>
+    </bibitem>
+
+  </relation>
+  <place>
+    <formattedPlace>Geneva</formattedPlace>
+  </place>
+</bibitem>
+<bibitem id="ISO19115-1" type="standard" schema-version="v1.5.6" anchor="ISO19115-1" semx-id="_a4d3d3c2-95d2-0fe3-b629-821cb9993028"><biblio-tag/><formattedref>International Organization for Standardization (committee): ISO 19115-1:2014, <em>Geographic information — Metadata — Part 1: Fundamentals</em>. International Organization for Standardization, Geneva (2014). <fmt-link target="https://www.iso.org/standard/53798.html">https://www.iso.org/standard/53798.html</fmt-link>.</formattedref>
+  <fetched>2026-05-20</fetched>
+  
+<title language="en" script="Latn" type="title-intro" format="text/plain">Geographic information</title>
+
+  
+<title language="en" script="Latn" type="title-main" format="text/plain">Metadata</title>
+
+  
+<title language="en" script="Latn" type="title-part" format="text/plain">Part 1: Fundamentals</title>
+
+  
+<title language="en" script="Latn" type="main" format="text/plain">Geographic information — Metadata — Part 1: Fundamentals</title>
+
+  
+<title language="fr" script="Latn" type="title-intro" format="text/plain">Information géographique</title>
+
+  
+<title language="fr" script="Latn" type="title-main" format="text/plain">Métadonnées</title>
+
+  
+<title language="fr" script="Latn" type="title-part" format="text/plain">Partie 1: Principes de base</title>
+
+  
+<title language="fr" script="Latn" type="main" format="text/plain">Information géographique — Métadonnées — Partie 1: Principes de base</title>
+
+  <uri type="src">https://www.iso.org/standard/53798.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:53798:en</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/05/37/53798.detail.rss</uri>
+  <docidentifier type="ISO" primary="true">ISO 19115-1:2014</docidentifier>
+  <docidentifier type="iso-reference">iso-reference ISO 19115-1:2014(E)</docidentifier>
+  <docidentifier type="URN">URN urn:iso:std:iso:19115:-1:stage-90.92</docidentifier><docidentifier scope="biblio-tag">ISO 19115-1:2014</docidentifier>
+  <docnumber>19115</docnumber>
+  <date type="published">
+    <on>2014-04</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <subdivision type="technical-committee" subtype="TC">
+        
+<name>Geographic information/Geomatics</name>
+
+        <identifier id="_4b1b3b2c-731d-956b-59bb-a5fd908c629f">ISO/TC 211</identifier><fmt-identifier><tt><semx element="identifier" source="_4b1b3b2c-731d-956b-59bb-a5fd908c629f">ISO/TC 211</semx></tt></fmt-identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <language>fr</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">ISO 19115-1:2014 defines the schema required for describing geographic information and services by means of metadata. It provides information about the identification, the extent, the quality, the spatial and temporal aspects, the content, the spatial reference, the portrayal, distribution, and other properties of digital geographic data and services.
+ISO 19115-1:2014 is applicable to:
+-the cataloguing of all types of resources, clearinghouse activities, and the full description of datasets and services;
+-geographic services, geographic datasets, dataset series, and individual geographic features and feature properties.
+ISO 19115-1:2014 defines:
+-mandatory and conditional metadata sections, metadata entities, and metadata elements;
+-the minimum set of metadata required to serve most metadata applications (data discovery, determining data fitness for use, data access, data transfer, and use of digital data and services);
+-optional metadata elements to allow for a more extensive standard description of resources, if required;
+-a method for extending metadata to fit specialized needs.
+Though ISO 19115-1:2014 is applicable to digital data and services, its principles can be extended to many other types of resources such as maps, charts, and textual documents as well as non-geographic data. Certain conditional metadata elements might not apply to these other forms of data.</abstract>
+  <abstract language="fr" script="Latn">L’ISO 19115-1:2014 définit le schéma requis pour décrire des informations géographiques et des services au moyen de métadonnées. Elle fournit des informations concernant l’identification, l’étendue, la qualité, les aspects spatiaux et temporels, le contenu, la référence spatiale, la représentation des données, la distribution et d’autres propriétés des données géographiques numériques et des services.
+L’ISO 19115-1:2014 est applicable:
+-au catalogage de tous les types de ressources, des activités des centres d’informations et à la description complète des jeux de données et des services,
+-aux services géographiques, jeux de données géographiques, séries de jeux de données, entités géographiques individuelles et propriétés d’entités.
+L’ISO 19115-1:2014 définit:
+-des sections relatives aux métadonnées obligatoires et facultatives, aux entités de métadonnées et aux éléments de métadonnées,
+-le jeu minimal de métadonnées requis pour répondre au besoin de la plupart des applications des métadonnées (la découverte des données, la détermination de l’adéquation des données à une utilisation, l’accès aux données, le transfert des données et l’utilisation des données numériques et des services),
+-les éléments de métadonnées facultatifs pour permettre une description standard plus poussée des ressources, si cela est nécessaire,
+-un procédé d’extension des métadonnées pour s’adapter aux besoins spéciaux.
+L’ISO 19115-1:2014 est applicable aux données numériques et services, ses principes peuvent être étendus à bien d’autres types de ressources telles que les cartes, les graphes et les documents textes, de même qu’à des données non géographiques. Certains éléments de métadonnées conditionnels peuvent ne pas s’appliquer à ces autres formes de données.</abstract>
+  <status>
+    <stage>90</stage>
+    <substage>92</substage>
+  </status>
+  <copyright>
+    <from>2014</from>
+    <owner>
+      <organization>
+        
+<name>ISO</name>
+
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref>ISO 19115:2003</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 19115:2003</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref>ISO 19115:2003/Cor 1:2006</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 19115:2003/Cor 1:2006</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref>ISO/AWI 19115-1</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/AWI 19115-1</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="updates">
+    <bibitem type="standard">
+      <formattedref>ISO 19115-1:2014/Amd 1:2018</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 19115-1:2014/Amd 1:2018</docidentifier>
+      <date type="circulated">
+        <on>2025-03-07</on>
+      </date>
+    </bibitem>
+
+  </relation>
+  <relation type="updates">
+    <bibitem type="standard">
+      <formattedref>ISO 19115-1:2014/Amd 2:2020</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 19115-1:2014/Amd 2:2020</docidentifier>
+      <date type="circulated">
+        <on>2025-03-07</on>
+      </date>
+    </bibitem>
+
+  </relation>
+  <place>
+    <formattedPlace>Geneva</formattedPlace>
+  </place>
+</bibitem>
+<bibitem id="ISO19157" type="standard" schema-version="v1.5.6" anchor="ISO19157" semx-id="_c5d5f223-aa32-c9e2-c728-0b5ebc2da02a"><biblio-tag/><formattedref>International Organization for Standardization (committee): ISO 19157:2013, <em>Geographic information  — Data quality</em>. International Organization for Standardization, Geneva (2013). <fmt-link target="https://www.iso.org/standard/32575.html">https://www.iso.org/standard/32575.html</fmt-link>.</formattedref>
+  <fetched>2026-05-20</fetched>
+  
+<title language="en" script="Latn" type="title-intro" format="text/plain">Geographic information </title>
+
+  
+<title language="en" script="Latn" type="title-main" format="text/plain">Data quality</title>
+
+  
+<title language="en" script="Latn" type="main" format="text/plain">Geographic information  — Data quality</title>
+
+  
+<title language="fr" script="Latn" type="title-intro" format="text/plain">Information géographique</title>
+
+  
+<title language="fr" script="Latn" type="title-main" format="text/plain">Qualité des données</title>
+
+  
+<title language="fr" script="Latn" type="main" format="text/plain">Information géographique — Qualité des données</title>
+
+  <uri type="src">https://www.iso.org/standard/32575.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:32575:en</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/03/25/32575.detail.rss</uri>
+  <docidentifier type="ISO" primary="true">ISO 19157:2013</docidentifier>
+  <docidentifier type="iso-reference">iso-reference ISO 19157:2013(E)</docidentifier>
+  <docidentifier type="URN">URN urn:iso:std:iso:19157:stage-90.92</docidentifier><docidentifier scope="biblio-tag">ISO 19157:2013</docidentifier>
+  <docnumber>19157</docnumber>
+  <date type="published">
+    <on>2013-12</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <subdivision type="technical-committee" subtype="TC">
+        
+<name>Geographic information/Geomatics</name>
+
+        <identifier id="_bdf3fdd0-bb89-8ab2-d2ce-7a7c1bb4b28c">ISO/TC 211</identifier><fmt-identifier><tt><semx element="identifier" source="_bdf3fdd0-bb89-8ab2-d2ce-7a7c1bb4b28c">ISO/TC 211</semx></tt></fmt-identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <language>fr</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">﻿
+ISO 19157:2013 establishes the principles for describing the quality of geographic data. It
+-   defines components for describing data quality;
+-   specifies components and content structure of a register for data quality measures;
+-   describes general procedures for evaluating the quality of geographic data;
+-   establishes principles for reporting data quality.
+ISO 19157:2013 also defines a set of data quality measures for use in evaluating and reporting data quality. It is applicable to data producers providing quality information to describe and assess how well a data set conforms to its product specification and to data users attempting to determine whether or not specific geographic data are of sufficient quality for their particular application.
+ISO 19157:2013 does not attempt to define minimum acceptable levels of quality for geographic data.</abstract>
+  <abstract language="fr" script="Latn">﻿
+L’ISO 19157:2013 établit les principes de description de la qualité des données géographiques. Elle
+-      définit des composants destinés à décrire la qualité de données;
+-      spécifie des composants et la structure du contenu d’un registre de mesures de qualité des données;
+-      décrit des procédures générales d’évaluation de la qualité des données géographique;
+-      pose les principes de la description de la qualité des données dans des rapports.
+L’ISO 19157:2013 définit également un ensemble de mesures de qualité des données destinées à l’évaluation et à la mise en place de rapports sur la qualité de données. Elle s’applique aux producteurs de données fournissant des informations de qualité pour décrire et évaluer la façon dont un jeu de données répond à sa spécification de produit et aux utilisateurs cherchant à déterminer si des données géographiques spécifiques sont ou non de qualité suffisante pour leur application particulière.
+L’ISO 19157:2013 ne cherche pas à définir des niveaux minimums acceptables de qualité en matière de données géographiques.</abstract>
+  <status>
+    <stage>90</stage>
+    <substage>92</substage>
+  </status>
+  <copyright>
+    <from>2013</from>
+    <owner>
+      <organization>
+        
+<name>ISO</name>
+
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref>ISO 19113:2002</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 19113:2002</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref>ISO 19114:2003</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 19114:2003</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref>ISO/TS 19138:2006</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/TS 19138:2006</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="updates">
+    <bibitem type="standard">
+      <formattedref>ISO 19157-1:2023</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 19157-1:2023</docidentifier>
+      <date type="circulated">
+        <on>2023-06-08</on>
+      </date>
+    </bibitem>
+
+  </relation>
+  <relation type="updates">
+    <bibitem type="standard">
+      <formattedref>ISO 19157:2013/Amd 1:2018</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 19157:2013/Amd 1:2018</docidentifier>
+      <date type="circulated">
+        <on>2023-06-08</on>
+      </date>
+    </bibitem>
+
+  </relation>
+  <place>
+    <formattedPlace>Geneva</formattedPlace>
+  </place>
+</bibitem>
+<bibitem anchor="ISO19139" id="ISO19139" type="standard" semx-id="_a21b8f5f-5a6a-c2f2-dab9-506ce5bf70d1"><biblio-tag/><formattedref>ISO: ISO 19139:2007, <em>Geographic information — Metadata — XML schema implementation</em>. ISO (2007).</formattedref>
+<title format="text/plain">Geographic information — Metadata — XML schema implementation</title>
+<docidentifier type="ISO">ISO 19139:2007</docidentifier><docidentifier scope="biblio-tag">ISO 19139:2007</docidentifier><docnumber>19139</docnumber><date type="published"><on>2007</on></date><contributor><role type="publisher"/><organization>
+<name>ISO</name>
+</organization></contributor><language>en</language><script>Latn</script></bibitem>
+<bibitem id="ISO19115-3" type="standard" schema-version="v1.5.6" anchor="ISO19115-3" semx-id="_89d9eabe-c631-63ff-06ad-44f89729721f"><biblio-tag/><formattedref>International Organization for Standardization (committee): ISO 19115-3, <em>Geographic information — Metadata — Part 3: XML schema implementation for fundamental concepts</em>. International Organization for Standardization, Geneva <fmt-link target="https://www.iso.org/standard/80874.html">https://www.iso.org/standard/80874.html</fmt-link>.</formattedref>
+  <fetched>2026-05-20</fetched>
+  
+<title language="en" script="Latn" type="title-intro" format="text/plain">Geographic information</title>
+
+  
+<title language="en" script="Latn" type="title-main" format="text/plain">Metadata</title>
+
+  
+<title language="en" script="Latn" type="title-part" format="text/plain">Part 3: XML schema implementation for fundamental concepts</title>
+
+  
+<title language="en" script="Latn" type="main" format="text/plain">Geographic information — Metadata — Part 3: XML schema implementation for fundamental concepts</title>
+
+  
+<title language="fr" script="Latn" type="title-intro" format="text/plain">Information géographique</title>
+
+  
+<title language="fr" script="Latn" type="title-main" format="text/plain">Métadonnées</title>
+
+  
+<title language="fr" script="Latn" type="title-part" format="text/plain">Partie 3: Mise en oeuvre par des schémas XML</title>
+
+  
+<title language="fr" script="Latn" type="main" format="text/plain">Information géographique — Métadonnées — Partie 3: Mise en oeuvre par des schémas XML</title>
+
+  <uri type="src">https://www.iso.org/standard/80874.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:80874:en</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/08/08/80874.detail.rss</uri>
+  <docidentifier type="ISO" primary="true">ISO 19115-3</docidentifier>
+  <docidentifier type="iso-reference">iso-reference ISO 19115-3(E)</docidentifier>
+  <docidentifier type="URN">URN urn:iso:std:iso:19115:-3:stage-60.60</docidentifier><docidentifier scope="biblio-tag">ISO 19115-3</docidentifier>
+  <docnumber>19115</docnumber>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <subdivision type="technical-committee" subtype="TC">
+        
+<name>Geographic information/Geomatics</name>
+
+        <identifier id="_fb09750e-be55-5b35-8d3e-2aff42453d2e">ISO/TC 211</identifier><fmt-identifier><tt><semx element="identifier" source="_fb09750e-be55-5b35-8d3e-2aff42453d2e">ISO/TC 211</semx></tt></fmt-identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <language>fr</language>
+  <script>Latn</script>
+  <status>
+    <stage>60</stage>
+    <substage>60</substage>
+  </status>
+  <copyright>
+    <from>2023</from>
+    <owner>
+      <organization>
+        
+<name>ISO</name>
+
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref>ISO/TS 19115-3:2016</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/TS 19115-3:2016</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem type="standard">
+      
+<title language="en" script="Latn" type="title-intro" format="text/plain">Geographic information</title>
+
+      
+<title language="en" script="Latn" type="title-main" format="text/plain">Metadata</title>
+
+      
+<title language="en" script="Latn" type="title-part" format="text/plain">Part 3: XML schema implementation for fundamental concepts</title>
+
+      
+<title language="en" script="Latn" type="main" format="text/plain">Geographic information — Metadata — Part 3: XML schema implementation for fundamental concepts</title>
+
+      
+<title language="fr" script="Latn" type="title-intro" format="text/plain">Information géographique</title>
+
+      
+<title language="fr" script="Latn" type="title-main" format="text/plain">Métadonnées</title>
+
+      
+<title language="fr" script="Latn" type="title-part" format="text/plain">Partie 3: Mise en oeuvre par des schémas XML</title>
+
+      
+<title language="fr" script="Latn" type="main" format="text/plain">Information géographique — Métadonnées — Partie 3: Mise en oeuvre par des schémas XML</title>
+
+      <uri type="src">https://www.iso.org/standard/80874.html</uri>
+      <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:80874:en</uri>
+      <uri type="rss">https://www.iso.org/contents/data/standard/08/08/80874.detail.rss</uri>
+      <docidentifier type="ISO" primary="true">ISO 19115-3:2023</docidentifier>
+      <docidentifier type="iso-reference">ISO 19115-3:2023(E)</docidentifier>
+      <docidentifier type="URN">urn:iso:std:iso:19115:-3:stage-60.60</docidentifier>
+      <docnumber>19115</docnumber>
+      <date type="published">
+        <on>2023-08</on>
+      </date>
+      <contributor>
+        <role type="publisher"/>
+        <organization>
+          
+<name>International Organization for Standardization</name>
+
+          <abbreviation>ISO</abbreviation>
+          <uri>www.iso.org</uri>
+        </organization>
+      </contributor>
+      <contributor>
+        <role type="author">
+          <description>committee</description>
+        </role>
+        <organization>
+          
+<name>International Organization for Standardization</name>
+
+          <subdivision type="technical-committee" subtype="TC">
+            
+<name>Geographic information/Geomatics</name>
+
+            <identifier id="_6febd991-26f8-0cbe-fe90-02081ecde805">ISO/TC 211</identifier><fmt-identifier><tt><semx element="identifier" source="_6febd991-26f8-0cbe-fe90-02081ecde805">ISO/TC 211</semx></tt></fmt-identifier>
+          </subdivision>
+          <abbreviation>ISO</abbreviation>
+        </organization>
+      </contributor>
+      <edition>1</edition>
+      <language>en</language>
+      <language>fr</language>
+      <script>Latn</script>
+      <abstract language="en" script="Latn">This document defines an integrated XML implementation of ISO 19115-1 and ISO 19115-2 by defining the following artefacts:
+—     a set of XML schema required to validate metadata instance documents conforming to conceptual model elements defined in ISO 19115-1 and ISO 19115-2; and
+—     a set of ISO/IEC 19757-3 (Schematron) rules that implement validation constraints in the ISO 19115-1 and ISO 19115-2 UML models that are not validated by the XML schema.
+This document describes the procedure used to generate XML schemas from ISO geographic information conceptual models related to metadata. The XML schemas are generated directly from the conceptual UML model (8.5).</abstract>
+      <abstract language="fr" script="Latn">Le présent document définit une implémentation XML intégrée des normes ISO 19115-1 et ISO 19115-2 en précisant les artefacts suivants:
+—     un ensemble de schémas XML requis pour valider les documents d’instance de métadonnées conformes aux éléments de modèle conceptuel définis dans l’ISO 19115-1 et l’ISO 19115-2; et
+—     un ensemble de règles basées sur l’ISO/IEC 19757-3 (Schematron) qui, dans les modèles UML de l’ISO 19115-1 et l’ISO 19115-2, implémentent des contraintes de validation qui ne sont pas validées par le schéma XML.
+Le présent document décrit la procédure utilisée pour générer des schémas XML à partir de modèles ISO conceptuels d’information géographique. Les schémas XML sont générés directement à partir du modèle UML conceptuel (8.5).</abstract>
+      <status>
+        <stage>60</stage>
+        <substage>60</substage>
+      </status>
+      <copyright>
+        <from>2023</from>
+        <owner>
+          <organization>
+            
+<name>ISO</name>
+
+          </organization>
+        </owner>
+      </copyright>
+      <relation type="obsoletes">
+        <bibitem type="standard">
+          <formattedref>ISO/TS 19115-3:2016</formattedref>
+          <docidentifier type="ISO" primary="true">ISO/TS 19115-3:2016</docidentifier>
+        </bibitem>
+
+      </relation>
+      <place>
+        <formattedPlace>Geneva</formattedPlace>
+      </place>
+    </bibitem>
+
+  </relation>
+  <place>
+    <formattedPlace>Geneva</formattedPlace>
+  </place>
+</bibitem>
+<bibitem id="OGC15-097" type="standard" schema-version="v1.5.6" anchor="OGC15-097" semx-id="_957f2540-1b43-8605-3dcf-b6c06592e365"><biblio-tag/><formattedref>Joan Masó, Lucy Bastin, Open Geospatial Consortium: OGC 15-097r1, <em>OGC® Geospatial User Feedback Standard: Conceptual Model</em>. Open Geospatial Consortium (2016). <fmt-link target="http://www.opengis.net/doc/IS/guf-conceptual/1.0.0">http://www.opengis.net/doc/IS/guf-conceptual/1.0.0</fmt-link>.</formattedref>
+  <fetched>2026-05-20</fetched>
+  
+<title language="en" script="Latn" type="title-main">OGC® Geospatial User Feedback Standard: Conceptual Model</title>
+
+  
+<title language="en" script="Latn" type="main">OGC® Geospatial User Feedback Standard: Conceptual Model</title>
+
+  <uri type="src">http://www.opengis.net/doc/IS/guf-conceptual/1.0.0</uri>
+  <uri type="html">https://docs.ogc.org/is/15-097r1/15-097r1.html</uri>
+  <docidentifier type="OGC" primary="true">OGC 15-097r1</docidentifier><docidentifier scope="biblio-tag">OGC 15-097r1</docidentifier>
+  <date type="published">
+    <on>2016-12-22</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Joan Masó</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Lucy Bastin </completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+      <subdivision type="technical-committee">
+        
+<name>technical</name>
+
+      </subdivision>
+      <abbreviation>OGC</abbreviation>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">This standard defines a conceptual Geospatial User Feedback (GUF) data model. Geospatial User Feedback is metadata that is predominantly produced by the consumers of geospatial data products as they use and gain experience with those products. This standard complements existing metadata conventions whereby documents recording dataset characteristics and production workflows are generated by the creator, publisher or curator of a data product. As a part of metadata, the GUF data model reuses some elements of ISO 19115-1:2014 (the updated version of the OGC Abstract Specification Topic 11) but not the general structure. This selective use of ISO metadata elements prioritizes future interoperability with developing ISO metadata models. This standard is designed to be used combination with an encoding standard. Initially an XML encoding following the ISO 19139 encoding rules is specified in a separate OGC implementation standard (OGC 15-098). In the future other encodings may be defined, including examples such as the use of JSON-LD based on parts of schema.org.</abstract>
+</bibitem>
+<bibitem id="OGC12-019" type="standard" schema-version="v1.5.6" anchor="OGC12-019" semx-id="_cccff15e-ffeb-2860-5d78-435d521e3b28"><biblio-tag/><formattedref>Gerhard Gröger, Thomas H. Kolbe, Claus Nagel, Karl-Heinz Häfele, Open Geospatial Consortium: OGC 12-019, <em>OGC City Geography Markup Language (CityGML) Encoding Standard</em>. Open Geospatial Consortium (2012). <fmt-link target="http://www.opengis.net/spec/citygml/2.0">http://www.opengis.net/spec/citygml/2.0</fmt-link>.</formattedref>
+  <fetched>2026-05-20</fetched>
+  
+<title language="en" script="Latn" type="title-main">OGC City Geography Markup Language (CityGML) Encoding Standard</title>
+
+  
+<title language="en" script="Latn" type="main">OGC City Geography Markup Language (CityGML) Encoding Standard</title>
+
+  <uri type="src">http://www.opengis.net/spec/citygml/2.0</uri>
+  <uri type="pdf">https://portal.ogc.org/files/?artifact_id=47842</uri>
+  <docidentifier type="OGC" primary="true">OGC 12-019</docidentifier><docidentifier scope="biblio-tag">OGC 12-019</docidentifier>
+  <date type="published">
+    <on>2012-04-04</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Gerhard Gröger</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Thomas H. Kolbe</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Claus Nagel</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Karl-Heinz Häfele</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+      <subdivision type="technical-committee">
+        
+<name>technical</name>
+
+      </subdivision>
+      <abbreviation>OGC</abbreviation>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">CityGML is an open data model and XML-based format for the storage and exchange of virtual 3D city models. It is an application schema for the Geography Markup Language version 3.1.1 (GML3), the extendible international standard for spatial data exchange issued by the Open Geospatial Consortium (OGC) and the ISO TC211.
+
+The aim of the development of CityGML is to reach a common definition of the basic entities, attributes, and relations of a 3D city model. This is especially important with respect to the cost-effective sustainable maintenance of 3D city models, allowing the reuse of the same data in different application fields. 
+</abstract>
+</bibitem>
+<bibitem id="OGC14-005r3" type="standard" schema-version="v1.5.6" anchor="OGC14-005r3" semx-id="_b1be255f-8980-ad72-e34e-420959b7d7ef"><biblio-tag/><formattedref>Jiyeong Lee, Ki-Joune Li, Sisi Zlatanova, Thomas H. Kolbe, Claus Nagel, Thomas Becker, Open Geospatial Consortium: OGC 14-005r3, <em>OGC® IndoorGML</em>. Open Geospatial Consortium (2014). <fmt-link target="http://www.opengis.net/doc/IS/indoorgml/1.0.0">http://www.opengis.net/doc/IS/indoorgml/1.0.0</fmt-link>.</formattedref>
+  <fetched>2026-05-20</fetched>
+  
+<title language="en" script="Latn" type="title-main">OGC® IndoorGML</title>
+
+  
+<title language="en" script="Latn" type="main">OGC® IndoorGML</title>
+
+  <uri type="src">http://www.opengis.net/doc/IS/indoorgml/1.0.0</uri>
+  <uri type="html">https://docs.ogc.org/is/14-005r3/14-005r3.html</uri>
+  <docidentifier type="OGC" primary="true">OGC 14-005r3</docidentifier><docidentifier scope="biblio-tag">OGC 14-005r3</docidentifier>
+  <date type="published">
+    <on>2014-12-02</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Jiyeong Lee</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Ki-Joune Li</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Sisi Zlatanova</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Thomas H. Kolbe</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Claus Nagel</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Thomas Becker</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+      <subdivision type="technical-committee">
+        
+<name>technical</name>
+
+      </subdivision>
+      <abbreviation>OGC</abbreviation>
+    </organization>
+  </contributor>
+  <edition>3</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">This OGC® IndoorGML standard specifies an open data model and XML schema for indoor spatial information. IndoorGML is an application schema of OGC® GML 3.2.1. While there are several 3D building modelling standards such as CityGML, KML, and IFC, which deal with interior space of buildings from geometric, cartographic, and semantic viewpoints, IndoorGML intentionally focuses on modelling indoor spaces for navigation purposes.</abstract>
+</bibitem>
+<bibitem id="OGC06121r9" type="standard" schema-version="v1.5.6" anchor="OGC06121r9" semx-id="_7987ef61-51c2-1139-2bf3-1bad47a7d981"><biblio-tag/><formattedref>Arliss Whiteside, Jim Greenwood, Open Geospatial Consortium: OGC 06-121r9, <em>OGC Web Service Common Implementation Specification</em>. Open Geospatial Consortium (2010). <fmt-link target="https://portal.ogc.org/files/?artifact_id=38867">https://portal.ogc.org/files/?artifact_id=38867</fmt-link>.</formattedref>
+  <fetched>2026-05-20</fetched>
+  
+<title language="en" script="Latn" type="title-main">OGC Web Service Common Implementation Specification</title>
+
+  
+<title language="en" script="Latn" type="main">OGC Web Service Common Implementation Specification</title>
+
+  <uri type="pdf">https://portal.ogc.org/files/?artifact_id=38867</uri>
+  <docidentifier type="OGC" primary="true">OGC 06-121r9</docidentifier><docidentifier scope="biblio-tag">OGC 06-121r9</docidentifier>
+  <date type="published">
+    <on>2010-04-07</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Arliss Whiteside</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Jim Greenwood </completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+      <subdivision type="technical-committee">
+        
+<name>technical</name>
+
+      </subdivision>
+      <abbreviation>OGC</abbreviation>
+    </organization>
+  </contributor>
+  <edition>9</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">This document specifies many of the aspects that are, or should be, common to all or multiple OGC Web Service (OWS) interface Implementation Standards. These common aspects are primarily some of the parameters and data structures used in operation requests and responses. Of course, each such Implementation Standard must specify the additional aspects of that interface, including specifying all additional parameters and data structures needed in all operation requests and responses.</abstract>
+</bibitem>
+</references></sections><annex id="_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985" obligation="informative" semx-id="_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985" autonum="A" displayorder="16">
+<title id="_91674ae5-db15-ed5f-4c42-fc66479dd437" semx-id="_0ae400d0-fc5b-94a1-586c-a20b12ca10c6">Conformance Class Abstract Test Suite (Normative)</title><fmt-title id="_75747f68-9826-ee43-d31b-9a16752414b9"><strong><span class="fmt-caption-label"><span class="fmt-element-name">Annex</span> <semx element="autonum" source="_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985">A</semx></span></strong><br/><span class="fmt-obligation">(informative)</span><span class="fmt-caption-delim"><br/></span><semx element="title" source="_91674ae5-db15-ed5f-4c42-fc66479dd437"><strong>Conformance Class Abstract Test Suite (Normative)</strong></semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Annex</span> <semx element="autonum" source="_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985">A</semx></fmt-xref-label><variant-title type="toc"><span class="fmt-caption-label"><span class="fmt-element-name">Annex</span> <semx element="autonum" source="_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985">A</semx></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_91674ae5-db15-ed5f-4c42-fc66479dd437">Conformance Class Abstract Test Suite (Normative)</semx></variant-title>
+<note id="_63e4b0a0-3d94-7020-361f-fcac21929de5" semx-id="_63e4b0a0-3d94-7020-361f-fcac21929de5" autonum=""><fmt-name id="_15692019-2e7e-bf15-f430-c4f3c59bba43"><span class="fmt-caption-label"><span class="fmt-element-name">NOTE</span></span><span class="fmt-label-delim">:<tab/></span></fmt-name><fmt-xref-label><span class="fmt-element-name">Note</span></fmt-xref-label><fmt-xref-label container="_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985"><span class="fmt-xref-container"><span class="fmt-element-name">Annex</span> <semx element="autonum" source="_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985">A</semx></span><span class="fmt-comma">,</span> <span class="fmt-element-name">Note</span></fmt-xref-label><p id="_e3b4abfb-677c-1601-a95d-8eb60217c3f8" semx-id="_e3b4abfb-677c-1601-a95d-8eb60217c3f8">Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)</p>
+</note>
+
+<clause id="_53d6449c-2e48-ac95-e5d2-2968cfb51437" obligation="informative" semx-id="_53d6449c-2e48-ac95-e5d2-2968cfb51437" autonum="A.1">
+<title id="_4b78e832-82a3-9892-64c3-2205603ddfe2" semx-id="_e687ec7b-c3e0-9926-7832-77ede3a8f561">Conformance Class A</title><fmt-title depth="2" id="_4176ba97-bd18-242f-012c-e0d9a2d21111"><span class="fmt-caption-label"><semx element="autonum" source="_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985">A</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_53d6449c-2e48-ac95-e5d2-2968cfb51437">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_4b78e832-82a3-9892-64c3-2205603ddfe2">Conformance Class A</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Annex</span> <semx element="autonum" source="_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985">A</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_53d6449c-2e48-ac95-e5d2-2968cfb51437">1</semx></fmt-xref-label>
+<clause id="_5463723a-6da3-c072-380e-14bcd2bb3be2" obligation="informative" semx-id="_5463723a-6da3-c072-380e-14bcd2bb3be2" autonum="A.1.1">
+<title id="_5c703d1b-d5c9-e5c1-92e9-36f3fbc4de52" semx-id="_268b2e9d-d4ef-82ae-9ce9-22b7d7c857a7">Requirement 1</title><fmt-title depth="3" id="_aec323e2-8c11-e224-e80e-83c67da6c110"><span class="fmt-caption-label"><semx element="autonum" source="_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985">A</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_53d6449c-2e48-ac95-e5d2-2968cfb51437">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_5463723a-6da3-c072-380e-14bcd2bb3be2">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_5c703d1b-d5c9-e5c1-92e9-36f3fbc4de52">Requirement 1</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Annex</span> <semx element="autonum" source="_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985">A</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_53d6449c-2e48-ac95-e5d2-2968cfb51437">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_5463723a-6da3-c072-380e-14bcd2bb3be2">1</semx></fmt-xref-label>
+<requirement id="_ccba5e46-e4fe-462c-927b-7c119feea230" model="ogc" type="pseudocode" semx-id="_09df3172-958a-0eac-d5db-7b147f72b360" autonum="A.1" original-id="_09df3172-958a-0eac-d5db-7b147f72b360"><fmt-xref-label><span class="fmt-element-name">Requirement</span> <semx element="autonum" source="_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985">A</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_09df3172-958a-0eac-d5db-7b147f72b360">1</semx></fmt-xref-label><verification exclude="false" id="_29e53c92-7ffd-4aca-953c-3a3e571774a3"><dl semx-id="_abc07fb2-b61f-82f4-f63a-d941fe127d73" id="_abc07fb2-b61f-82f4-f63a-d941fe127d73"><dt>Test purpose</dt>
+<dd semx-id="_717b0bfb-05ea-f2ea-2147-3898084275c9" id="_717b0bfb-05ea-f2ea-2147-3898084275c9"><p semx-id="_9b47992a-3e3e-6a8c-006f-f99752a79621" original-id="_9b47992a-3e3e-6a8c-006f-f99752a79621">Verify that…​</p>
+</dd>
+<dt>Test method</dt>
+<dd semx-id="_bf4f4044-47ad-506e-6485-8402f13149d9" id="_bf4f4044-47ad-506e-6485-8402f13149d9"><p semx-id="_5714806b-fb1c-0196-5982-969ecebd1504" original-id="_5714806b-fb1c-0196-5982-969ecebd1504">Inspect…​</p>
+</dd>
+</dl>
+</verification><fmt-provision id="_6b323931-85a5-8059-b6ee-2fb1ee0fce7a"><table id="_09df3172-958a-0eac-d5db-7b147f72b360" type="recommend" class="modspec"><thead><tr><th scope="colgroup" colspan="2"><p class="RecommendationTitle"><fmt-name id="_a47d6776-a892-1f3b-c4e1-4533ab9bb161"><span class="fmt-caption-label"><span class="fmt-element-name">Requirement</span> <semx element="autonum" source="_09df3172-958a-0eac-d5db-7b147f72b360"><semx element="autonum" source="_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985">A</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_09df3172-958a-0eac-d5db-7b147f72b360">1</semx></semx></span></fmt-name></p></th></tr></thead>
+<tbody><tr><th>Test purpose</th><td><p id="_9b47992a-3e3e-6a8c-006f-f99752a79621" semx-id="_9b47992a-3e3e-6a8c-006f-f99752a79621">Verify that…​</p>
+</td></tr><tr><th>Test method</th><td><p id="_5714806b-fb1c-0196-5982-969ecebd1504" semx-id="_5714806b-fb1c-0196-5982-969ecebd1504">Inspect…​</p>
+</td></tr></tbody></table></fmt-provision></requirement>
+</clause>
+
+<clause id="_c4e12385-3212-590a-0cd4-c5b7597f7af2" obligation="informative" semx-id="_c4e12385-3212-590a-0cd4-c5b7597f7af2" autonum="A.1.2">
+<title id="_ea8eac75-ab81-b14b-aa65-421c21e0cf32" semx-id="_075066f4-4601-5593-8285-65c2832669ca">Requirement 2</title><fmt-title depth="3" id="_7e2b767d-425f-7ced-b6ed-740214d0633e"><span class="fmt-caption-label"><semx element="autonum" source="_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985">A</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_53d6449c-2e48-ac95-e5d2-2968cfb51437">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_c4e12385-3212-590a-0cd4-c5b7597f7af2">2</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_ea8eac75-ab81-b14b-aa65-421c21e0cf32">Requirement 2</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Annex</span> <semx element="autonum" source="_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985">A</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_53d6449c-2e48-ac95-e5d2-2968cfb51437">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_c4e12385-3212-590a-0cd4-c5b7597f7af2">2</semx></fmt-xref-label>
+</clause>
+</clause>
+</annex><annex id="_8e5807f4-e021-3e1e-8161-acf01a2a16bc" obligation="informative" semx-id="_8e5807f4-e021-3e1e-8161-acf01a2a16bc" autonum="B" displayorder="17">
+<title id="_abac7793-b4b4-57ef-c688-d9a10a35cbc2" semx-id="_9bc90dde-9339-e4ee-b51d-1159c1dcc255">Title ( {Normative/Informative} )</title><fmt-title id="_6e98adfe-afaa-29c5-8e60-e4d5360fb606"><strong><span class="fmt-caption-label"><span class="fmt-element-name">Annex</span> <semx element="autonum" source="_8e5807f4-e021-3e1e-8161-acf01a2a16bc">B</semx></span></strong><br/><span class="fmt-obligation">(informative)</span><span class="fmt-caption-delim"><br/></span><semx element="title" source="_abac7793-b4b4-57ef-c688-d9a10a35cbc2"><strong>Title ( {Normative/Informative} )</strong></semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Annex</span> <semx element="autonum" source="_8e5807f4-e021-3e1e-8161-acf01a2a16bc">B</semx></fmt-xref-label><variant-title type="toc"><span class="fmt-caption-label"><span class="fmt-element-name">Annex</span> <semx element="autonum" source="_8e5807f4-e021-3e1e-8161-acf01a2a16bc">B</semx></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_abac7793-b4b4-57ef-c688-d9a10a35cbc2">Title ( {Normative/Informative} )</semx></variant-title>
+<note id="_159a4ec6-3751-b292-9d8b-e31170a42309" semx-id="_159a4ec6-3751-b292-9d8b-e31170a42309" autonum=""><fmt-name id="_7bb051f5-7b63-82da-1b80-58e24a679de8"><span class="fmt-caption-label"><span class="fmt-element-name">NOTE</span></span><span class="fmt-label-delim">:<tab/></span></fmt-name><fmt-xref-label><span class="fmt-element-name">Note</span></fmt-xref-label><fmt-xref-label container="_8e5807f4-e021-3e1e-8161-acf01a2a16bc"><span class="fmt-xref-container"><span class="fmt-element-name">Annex</span> <semx element="autonum" source="_8e5807f4-e021-3e1e-8161-acf01a2a16bc">B</semx></span><span class="fmt-comma">,</span> <span class="fmt-element-name">Note</span></fmt-xref-label><p id="_0e5dcb8f-837e-641a-a3be-7dd168610057" semx-id="_0e5dcb8f-837e-641a-a3be-7dd168610057">Place other Annex material in sequential annexes beginning with “B” and leave final two annexes for the Revision History and Bibliography</p>
+</note>
+</annex><annex id="_86ce8e65-c445-b308-465c-eba6a1493662" obligation="informative" semx-id="_86ce8e65-c445-b308-465c-eba6a1493662" autonum="C" displayorder="18">
+<title id="_bad0813d-a613-a1b6-1df8-e26207fee1ce" semx-id="_ab272052-2676-a3fd-f7aa-88a12ecdd887">Revision History</title><fmt-title id="_c7fa4798-24cd-3f8d-317f-4dacb308f7d4"><strong><span class="fmt-caption-label"><span class="fmt-element-name">Annex</span> <semx element="autonum" source="_86ce8e65-c445-b308-465c-eba6a1493662">C</semx></span></strong><br/><span class="fmt-obligation">(informative)</span><span class="fmt-caption-delim"><br/></span><semx element="title" source="_bad0813d-a613-a1b6-1df8-e26207fee1ce"><strong>Revision History</strong></semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Annex</span> <semx element="autonum" source="_86ce8e65-c445-b308-465c-eba6a1493662">C</semx></fmt-xref-label><variant-title type="toc"><span class="fmt-caption-label"><span class="fmt-element-name">Annex</span> <semx element="autonum" source="_86ce8e65-c445-b308-465c-eba6a1493662">C</semx></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_bad0813d-a613-a1b6-1df8-e26207fee1ce">Revision History</semx></variant-title>
+<table id="_0faf00c7-cf79-9959-f614-3126c05f4ab8" width="90%" semx-id="_0faf00c7-cf79-9959-f614-3126c05f4ab8" autonum="C.1"><fmt-name id="_4e683ca0-5cdf-0f29-3968-4fa0bcfc8792"><span class="fmt-caption-label"><span class="fmt-element-name">Table</span> <semx element="autonum" source="_86ce8e65-c445-b308-465c-eba6a1493662">C</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_0faf00c7-cf79-9959-f614-3126c05f4ab8">1</semx></span></fmt-name><fmt-xref-label><span class="fmt-element-name">Table</span> <semx element="autonum" source="_86ce8e65-c445-b308-465c-eba6a1493662">C</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_0faf00c7-cf79-9959-f614-3126c05f4ab8">1</semx></fmt-xref-label><thead><tr id="_e295cf8c-417f-e642-0ce4-352e31c0fd8b" semx-id="_e295cf8c-417f-e642-0ce4-352e31c0fd8b"><th id="_b397afae-a25e-891b-937d-99c586497283" valign="middle" align="left" semx-id="_b397afae-a25e-891b-937d-99c586497283">Date</th>
+<th id="_a2be7e6d-6c81-6c99-49f8-9468a61cc83f" valign="middle" align="left" semx-id="_a2be7e6d-6c81-6c99-49f8-9468a61cc83f">Release</th>
+<th id="_ed09d515-b1bd-9270-5101-c21a1efd1b63" valign="middle" align="left" semx-id="_ed09d515-b1bd-9270-5101-c21a1efd1b63">Editor</th>
+<th id="_079fad58-5f9f-ec34-341e-de9728c62afb" valign="middle" align="left" semx-id="_079fad58-5f9f-ec34-341e-de9728c62afb">Primary clauses modified</th>
+<th id="_5c52afcc-715d-b89f-e3d6-df82c28edaa5" valign="middle" align="left" semx-id="_5c52afcc-715d-b89f-e3d6-df82c28edaa5">Description</th>
+</tr></thead>
+<tbody><tr id="_f5cbe2d2-afa8-4481-baa8-e6430ebb6e5a" semx-id="_f5cbe2d2-afa8-4481-baa8-e6430ebb6e5a"><td id="_3d9b9f52-9671-c122-a5ef-e82a5b36d060" valign="middle" align="left" semx-id="_3d9b9f52-9671-c122-a5ef-e82a5b36d060">2016-04-28</td>
+<td id="_53e2075a-1f0e-26f5-f236-ac0d16048b50" valign="middle" align="left" semx-id="_53e2075a-1f0e-26f5-f236-ac0d16048b50">0.1</td>
+<td id="_d6845352-fb54-6071-09c3-fe73296d84eb" valign="middle" align="left" semx-id="_d6845352-fb54-6071-09c3-fe73296d84eb">G. Editor</td>
+<td id="_c61bef3b-5365-bafa-6f6e-7c1fc49beab4" valign="middle" align="left" semx-id="_c61bef3b-5365-bafa-6f6e-7c1fc49beab4">all</td>
+<td id="_7e3e1da4-010a-1b3f-4f7c-4ac453ad56a0" valign="middle" align="left" semx-id="_7e3e1da4-010a-1b3f-4f7c-4ac453ad56a0">initial version</td>
+</tr></tbody>
+</table>
+</annex><bibliography><references id="Bibliography" anchor="Bibliography" normative="false" obligation="informative" semx-id="_006b2382-1f4e-4182-d14f-9ddb51298519" displayorder="19">
+<title id="_8e1065aa-c024-9f64-1d01-24406ca61ca6" semx-id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title><fmt-title depth="1" id="_fadc84f6-ca15-fcd1-f06f-4d5cf17f39e0"><semx element="title" source="_8e1065aa-c024-9f64-1d01-24406ca61ca6">Bibliography</semx></fmt-title>
+<note id="_10a323b2-5229-6080-817c-9d678de711c3" semx-id="_10a323b2-5229-6080-817c-9d678de711c3" autonum=""><fmt-name id="_5d6b709b-7da8-e7cb-3280-dc509362d455"><span class="fmt-caption-label"><span class="fmt-element-name">NOTE</span></span><span class="fmt-label-delim">:<tab/></span></fmt-name><fmt-xref-label><span class="fmt-element-name">Note</span></fmt-xref-label><fmt-xref-label container="Bibliography"><span class="fmt-xref-container"><semx element="references" source="Bibliography">Bibliography</semx></span><span class="fmt-comma">,</span> <span class="fmt-element-name">Note</span></fmt-xref-label><p id="_44ee4f84-42f1-dc11-f1be-ccc215fcfcb4" semx-id="_44ee4f84-42f1-dc11-f1be-ccc215fcfcb4">The TC has approved Springer LNCS as the official document citation type.</p>
+
+<p id="_ff7c4e4e-cc44-7de3-a376-8622db4fe0d2" semx-id="_ff7c4e4e-cc44-7de3-a376-8622db4fe0d2">Springer LNCS is widely used in technical and computer science journals and other publications</p>
+
+
+<p id="_46e7f4b6-afcb-f5e5-1d4d-dc83a1b1f70e" semx-id="_46e7f4b6-afcb-f5e5-1d4d-dc83a1b1f70e">– Actual References:</p>
+
+<p id="_b05a8017-4ca6-79cd-d2da-2a4d3d6e1aec" semx-id="_b05a8017-4ca6-79cd-d2da-2a4d3d6e1aec">[n] Journal: Author Surname, A.: Title. Publication Title. Volume number, Issue number, Pages Used (Year Published)</p>
+</note><bibitem anchor="OGC2015" id="OGC2015" semx-id="_eb7a82b2-3893-2d14-1533-4ff3583ee587"><biblio-tag>[1]<tab/></biblio-tag>
+  <formattedref format="application/x-isodoc+xml"><em>OGC: OGC Testbed 12 Annex B: Architecture</em> (2015).</formattedref><docidentifier type="metanorma-ordinal">[1]</docidentifier>
+  <docidentifier>OGCTB12</docidentifier><docidentifier scope="biblio-tag">OGCTB12</docidentifier>
+  <docnumber>12</docnumber>
+  <language>en</language>
+  <script>Latn</script>
+</bibitem>
+
+
+</references></bibliography>
+</metanorma>

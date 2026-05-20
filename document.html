@@ -1,15 +1,6 @@
-<?xml version="1.0"?>
+
 <!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns:epub="http://www.idpf.org/2007/ops">
-  <head><style>
-  <!--
-/*
-    0 CSS RESET
-*/
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+<html lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,10 +12,11 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
+menu, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -40,7 +32,8 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   border: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -55,7 +48,8 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 html, body, div, span, applet, object, iframe,
 p, blockquote,
@@ -70,76 +64,760 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  font-family: "Overpass", sans-serif; }
+  font-family: "Overpass",sans-serif;
+}
 
 code, pre, tt, kbd, samp {
-  font-family: "Space Mono", monospace;
-  font-variant-ligatures: none; }
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+}
 
 code *, pre *, tt *, kbd *, samp * {
-  font-family: "Space Mono", monospace !important;
-  font-variant-ligatures: none; }
+  font-family: "Space Mono",monospace !important;
+  font-variant-ligatures: none;
+}
 
-h1, h2, h3, h4, h5, h6, .h2Annex {
-  font-family: "Overpass", sans-serif; }
+p code, dt code, li code, label code, legend code, caption code, th code, td code,
+p tt, dt tt, li tt, label tt, legend tt, caption tt, th tt, td tt,
+p kbd, dt kbd, li kbd, label kbd, legend kbd, caption kbd, th kbd, td kbd,
+p samp, dt samp, li samp, label samp, legend samp, caption samp, th samp, td samp {
+  font-size: 0.8em;
+}
 
-dl {
-  display: grid;
-  grid-template-columns: max-content auto; }
+sub, sup {
+  font-size: 0.75em;
+}
 
-dt {
-  grid-column-start: 1; }
-
-dd {
-  grid-column-start: 2; }
-
-dd p, dt p {
-  margin-top: 0px; }
-
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
+  display: block;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
-/*
-    1. HTML & Body
-*/
-body {
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Overpass",sans-serif;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Overpass",sans-serif;
+}
+
+blockquote, q {
+  quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+  content: "";
+  content: none;
+}
+
+.h2Annex {
+  font-family: "Overpass",sans-serif;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+dl dt p, dl dd p {
+  margin-top: 0;
+}
+dl dt {
+  grid-column-start: 1;
+}
+dl dd {
+  grid-column-start: 2;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+div.document-stage-band, div.document-type-band {
+  background-color: #333333;
+}
+
+a.TableFootnoteRef, span.TableFootnoteRef,
+a.FootnoteRef, span.FootnoteRef {
+  vertical-align: super;
+}
+
+.addition {
+  color: blue;
+}
+
+.deletion {
+  color: red;
+  text-decoration: line-through;
+}
+
+ruby {
+  ruby-position: over;
+  -webkit-ruby-position: before;
+}
+
+ruby ruby {
+  ruby-position: under;
+  -webkit-ruby-position: after;
+}
+
+/* code highlighting with line numbers */
+table.rouge-line-table td.rouge-gutter {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-right: 1em;
+}
+
+table.rouge-line-table td.rouge-code {
+  -moz-user-select: all;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all;
+}
+
+table.rouge-line-table,
+table.rouge-line-table th,
+table.rouge-line-table td {
+  width: auto;
+  border: none;
   margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+table.rouge-line-table pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;
+  font-size: 100%;
+}
+
+/* header § links */
+a.header {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.header:hover {
+  color: #a53221 !important;
+  background: inherit;
+  box-shadow: none;
+}
+
+a.header:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.anchor {
+  position: absolute;
+  z-index: 1001;
+  width: 1.5ex;
+  margin-left: -1.5ex;
+  display: block;
+  text-decoration: none !important;
+  visibility: hidden;
+  text-align: center;
+  font-weight: 400;
+}
+
+a.anchor::before {
+  content: "§";
+  font-size: 0.85em;
+  display: block;
+  padding-top: 0.1em;
+}
+
+a.anchor:hover {
+  color: #a53221;
+  background: inherit;
+  box-shadow: none;
+}
+
+h1 > a.anchor:hover,
+h2 > a.anchor:hover,
+h3 > a.anchor:hover,
+h4 > a.anchor:hover,
+h5 > a.anchor:hover,
+h6 > a.anchor:hover,
+.inline-header > a.anchor:hover,
+h1:hover > a.anchor,
+h2:hover > a.anchor,
+h3:hover > a.anchor,
+h4:hover > a.anchor,
+h5:hover > a.anchor,
+h6:hover > a.anchor,
+.inline-header:hover > a.anchor {
+  visibility: visible;
+}
+
+/* collapsible snippets: collapsible before hidable */
+.hidable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 3px 0;
+  margin: 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: "▼";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.active:after {
+  content: "▲";
+}
+
+/* collapsible: */
+.collapsible + .hidable {
+  margin-top: 0;
+}
+
+.collapsible:not(.active) + .hidable {
+  overflow: hidden;
+  padding: 0;
+}
+
+.svg-container {
+  width: 100%; /* or any desired width */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+svg {
+  width: 100%;
+  height: auto; /* ← key to maintaining aspect ratio */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+/* style dfn by override in flavor */
+dfn {
+  font-style: inherit;
+}
+
+#standard-band {
+  background-color: #0AC442;
+}
+
+#standard {
+  border-bottom: solid 3px #0AC442;
+}
+
+#directive-band {
+  background-color: #540D6E;
+}
+
+#directive {
+  border-bottom: solid 3px #540D6E;
+}
+
+#guide-band {
+  background-color: #D183C9;
+}
+
+#guide {
+  border-bottom: solid 3px #D183C9;
+}
+
+#specification-band {
+  background-color: #65AFFF;
+}
+
+#specification {
+  border-bottom: solid 3px #65AFFF;
+}
+
+#report-band {
+  background-color: #3A405A;
+}
+
+#report {
+  border-bottom: solid 3px #3A405A;
+}
+
+#amendment-band {
+  background-color: #F26430;
+}
+
+#amendment {
+  border-bottom: solid 3px #F26430;
+}
+
+#corrigendum-band {
+  background-color: #C84630;
+}
+
+#corrigendum {
+  border-bottom: solid 3px #C84630;
+}
+
+#administrative-band {
+  background-color: #BFAE48;
+}
+
+#administrative {
+  border-bottom: solid 3px #BFAE48;
+}
+
+#advisory-band {
+  background-color: #BD9391;
+}
+
+#advisory {
+  border-bottom: solid 3px #BD9391;
+}
+
+#proposal-band {
+  background-color: #39A0ED;
+}
+
+#proposal {
+  border-bottom: solid 3px #39A0ED;
+}
+
+#working-draft-band {
+  background-color: #2D7393;
+}
+
+#working-draft {
+  border-bottom: solid 3px #2D7393;
+}
+
+#committee-draft-band {
+  background-color: #2A6B7C;
+}
+
+#committee-draft {
+  border-bottom: solid 3px #2A6B7C;
+}
+
+#draft-standard-band {
+  background-color: #1C7F7A;
+}
+
+#draft-standard {
+  border-bottom: solid 3px #1C7F7A;
+}
+
+#final-draft-band {
+  background-color: #53C170;
+}
+
+#final-draft {
+  border-bottom: solid 3px #53C170;
+}
+
+#published-band {
+  background-color: #069E2D;
+}
+
+#published {
+  border-bottom: solid 3px #069E2D;
+}
+
+#withdrawn-band {
+  background-color: #004E64;
+}
+
+#withdrawn {
+  border-bottom: solid 3px #004E64;
+}
+
+#cancelled-band {
+  background-color: #2E382E;
+}
+
+#cancelled {
+  border-bottom: solid 3px #2E382E;
+}
+
+.coverpage-maturity, .coverpage-stage {
+  font-family: "Overpass",sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  margin: 0 0 2em 0;
+  text-transform: uppercase;
+}
+
+.icon-svg {
+  width: 100%;
+  color: #5ecf86;
+}
+
+.wrapper-top {
+  background: rgb(0, 51, 91);
+  background: linear-gradient(130deg, rgb(0, 51, 91) 45%, rgb(241, 248, 255) 100%);
+  color: #ffffff;
+  padding: 5em 0;
+  width: 100%;
+}
+
+.wrapper-top-bottom {
+  width: 0;
+  height: 0;
+  border-top: 100px solid #00335b;
+  border-right: 100px solid transparent;
+  position: absolute;
+}
+
+.document-type-band {
+  top: 260px;
+}
+
+.document-stage-band > :first-child {
+  height: 240px;
+}
+
+.coverpage-metadata {
+  margin-top: 35px;
+  padding-top: 15px;
+  margin-right: 25px;
+  border-top: solid 1px white;
+}
+
+.coverpage-metadata,
+.coverpage-alt-formats {
+  font-size: 12px;
+  font-family: "Overpass",sans-serif;
+  margin-left: 1em;
+  text-align: left;
+}
+.coverpage-metadata span,
+.coverpage-alt-formats span {
+  display: block;
+  text-align: left;
+}
+.coverpage-metadata span a,
+.coverpage-alt-formats span a {
+  color: white;
+}
+.coverpage-metadata span a:hover,
+.coverpage-alt-formats span a:hover {
+  text-decoration: underline;
+  background: none;
+  box-shadow: none !important;
+  font-weight: 400;
+}
+.coverpage-metadata .value,
+.coverpage-alt-formats .value {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.coverpage-metadata .label,
+.coverpage-alt-formats .label {
+  font-size: 12px;
+  padding: 0;
+}
+
+.coverpage-alt-formats span {
+  display: inline;
+  text-align: left;
+}
+.coverpage-alt-formats span a {
+  padding-right: 5px;
+}
+
+.coverpage-title {
+  padding-bottom: 0.5em;
+  font-family: "Overpass",sans-serif;
+  font-weight: 100;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.coverpage-title span {
+  font-family: "Overpass",sans-serif;
+  font-size: 1.8em;
+  line-height: 1;
+}
+
+.docstage-box table {
+  width: auto;
+}
+.docstage-box th {
+  background-color: #93c0d6;
+}
+.docstage-box td {
+  vertical-align: top;
+  background-color: #daeef3;
+  padding: 0.5em;
+  border: 0;
+}
+.docstage-box th:first-child {
+  border-radius: 1em 0 0 0;
+}
+.docstage-box th:last-child {
+  border-radius: 0 1em 0 0;
+}
+.docstage-box tr:first-child {
+  border-radius: 0 0 0 1em;
+}
+.docstage-box tr:last-child {
+  border-radius: 0 1em 0 0;
+}
+.docstage-box tr:last-child > td:first-child {
+  border-radius: 0 0 0 1em;
+}
+.docstage-box tr:last-child > td:last-child {
+  border-radius: 0 0 1em 0;
+}
+
+.WordSection11 {
+  padding: 0 2em 0 3em;
+}
+
+.info-section {
+  padding: 0 2em 0 5em;
+}
+
+.prefatory-section {
+  padding: 0 3em 0 6em;
+}
+
+.zzSTDTitle1, .MsoCommentText {
+  display: none;
+}
+
+.coverpage {
+  text-align: center;
+  padding-left: 1.5em;
+}
+
+.coverpage-logo span, .coverpage-tc-name span {
+  font-family: "Overpass",sans-serif;
+  text-transform: none;
+  font-weight: 300;
+  margin-left: 1em;
+}
+
+.coverpage-logo img, .coverpage-logo svg {
+  width: 500px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.coverpage-tc-name {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin: 0.25em 0;
+}
+
+.copyright {
+  padding: 1em;
+  font-size: 0.9em;
+  text-align: left;
+}
+
+/* Document Identity */
+.coverpage-doc-identity {
+  font-size: 2em;
+  line-height: 2em;
+}
+
+.coverpage-title .title-second {
+  display: none;
+}
+
+.coverpage-stage-block {
+  font-family: "Overpass",sans-serif;
+  font-weight: 600;
+  font-size: 1.25em;
+  margin: 2em 0em 2em 0em;
+  text-transform: uppercase;
+}
+
+.authors {
+  margin-top: 2em;
+}
+.authors span {
+  display: block;
+  line-height: 2;
+}
+.authors span.roletag {
+  display: inline-block;
+  font-size: 12px;
+  color: #00335b;
+  background-color: white;
+  padding: 2px 5px;
+  margin-left: 7px;
+  border-radius: 5px;
+}
+
+/* Draft Warning */
+.coverpage-warning {
+  border: #f36f36 solid 2px;
+  color: #f36f36 !important;
+  margin: 1em 2em;
+  color: #2e81c2;
+  padding: 2em 1em 1em 1em;
+  border-radius: 25px;
+}
+.coverpage-warning h1 {
+  font-family: "Overpass",sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+@media print {
+  .document-info, .copyright {
+    page-break-before: always;
+  }
+  .coverpage {
+    height: 23cm;
+  }
+  .info-section {
+    display: none;
+  }
+  .wrapper-top {
+    top: 0;
+    padding-top: 4cm;
+    padding-bottom: 4cm;
+  }
+  .wrapper-top-bottom {
+    margin-top: -5px;
+    display: none;
+  }
+}
+/* For Requirement Test anchors */
+p.RecommendationTitle:hover > a.anchor,
+p.RecommendationTitle > a.anchor:hover,
+p.RecommendationTestTitle:hover > a.anchor,
+p.RecommendationTestTitle > a.anchor:hover {
+  visibility: visible;
+}
+
+table a.anchor {
+  margin-left: -2em;
+}
+
+body {
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
-  color: #1d1d1d;
+  font-size: 16px;
   font-weight: 300;
-  font-size: 15px;
-  line-height: 1.4em;
-  background-color: #ffffff; }
+  line-height: 1.5;
+  color: #00335b;
+  background-color: #f6f8fa;
+}
+body main {
+  margin: 0 3em 0 6em;
+}
+@media screen and (min-width: 768px) {
+  body {
+    padding-left: 360px;
+  }
+}
+@media print {
+  body {
+    padding-left: 0;
+  }
+}
 
-main {
-  margin: 0 3em 0 6em; }
+dl {
+  grid-template-columns: minmax(0, 1fr) 93%;
+}
+dl pre {
+  overflow-x: scroll;
+}
 
-#toc {
-  font-family: "Overpass", sans-serif;
-  font-weight: 400; }
+#toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
+  padding: 5px 10px;
+}
+#toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
+  color: #00335b;
+  text-decoration: none;
+  display: block;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: white;
+}
+#toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
+  padding-left: 30px;
+}
+#toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
+  padding-left: 50px;
+}
+#toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+  padding-left: 70px;
+}
+#toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+  padding-left: 90px;
+}
+#toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+  padding-left: 110px;
+}
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  background: #00335b;
+  box-shadow: inset -5px 0px 10px -5px #00335b !important;
+}
+#toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: white;
+}
+@media print {
+  #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+    background: white;
+    box-shadow: none !important;
+  }
+  #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
+    color: #00335b;
+  }
+  #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+    color: black;
+  }
+}
+#toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
+  font-size: 14px;
+}
+#toc li::before, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li::before {
+  content: " ";
+  display: none;
+}
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  font-weight: 600;
+}
+#toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  background: none;
+  box-shadow: none;
+}
 
-/*
-    2. Responsive navigation layout
-*/
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 100%;
+}
+
 @media screen and (min-width: 768px) {
   nav {
     position: fixed;
@@ -149,9 +827,28 @@ main {
     width: 323px;
     font-size: 0.9em;
     overflow: auto;
-    padding: 0 0 0 45px;
+    padding: 0 0 0 30px;
+    background-color: #f1f8ff;
+  }
+}
+@media print {
+  nav {
+    position: relative;
+    width: auto;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0;
+    margin-right: 0;
+    background-color: white;
+  }
+}
+@media screen and (min-width: 768px) {
+  nav {
     margin-right: 30px;
-    background-color: #f6f6f6; }
+  }
+}
+
+@media screen and (min-width: 768px) {
   #toggle {
     position: fixed;
     height: 100%;
@@ -159,81 +856,78 @@ main {
     background-color: #00335b;
     color: white !important;
     cursor: pointer;
-    z-index: 100; }
+    z-index: 100;
+  }
   #toggle span {
     text-align: center;
     width: 100%;
     position: absolute;
     top: 50%;
-    transform: translate(0, -50%); }
-  .container {
-    padding-left: 360px; }
-  .rule.toc {
-    display: none; }
-  h1.toc-contents {
-    margin-top: 1em; }
-  ul#toc-list {
-    padding: 0;
-    margin: 0; } }
-
+    transform: translate(0, -50%);
+  }
+}
 @media screen and (max-width: 768px) {
-  #toc {
-    padding: 0 1.5em 0 1.5em;
-    overflow: visible; } }
+  #toggle {
+    display: none;
+  }
+}
+@media print {
+  #toggle {
+    display: none;
+  }
+}
 
-@media screen {
-  div.figure > img {
-    width: 100%;
-    height: auto; } }
+.rule {
+  width: 100%;
+  height: 1px;
+  background-color: #00335b;
+  margin: 2em 0;
+}
+@media screen and (min-width: 768px) {
+  .rule.toc {
+    display: none;
+  }
+}
 
-#toc ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
+@media screen and (min-width: 768px) {
+  h1.toc-contents {
+    margin-top: 1em;
+  }
+  ul#toc-list, ul#toc-list > :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    padding: 0;
+    margin: 0;
+  }
+}
+#toc-list ul {
+  margin-bottom: 0.25em;
+}
+#toc-list li {
+  list-style-type: none;
+}
 
-#toc li {
-  padding: 5px 10px; }
-
-#toc a {
-  color: #2e81c2;
-  text-decoration: none;
-  display: block; }
-
-#toc a:hover {
-  color: white; }
-
-#toc .h2 {
-  padding-left: 30px; }
-
-#toc .h3 {
-  padding-left: 50px; }
-
-#toc .toc-active a {
-  color: white; }
-
-#toc .toc-active, #toc li:hover {
-  background: #00335b;
-  box-shadow: inset -5px 0px 10px -5px #00335b !important; }
-
-#toc li:hover a {
-  color: white;
-  background: none;
-  box-shadow: none; }
-
-#toc li a {
-  text-transform: uppercase; }
-
-/*
-    Document types + stages
-*/
-.document-type-band {
-  left: 0;
-  top: 180px;
-  height: 100%;
-  position: fixed;
+figure figcaption {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+figure > img, figure > svg {
+  margin-left: auto;
+  margin-right: auto;
   display: block;
-  z-index: 99;
-  /*box-shadow: -5px 0px 10px #1d1d1d*/ }
+  max-width: 100%;
+  height: auto;
+}
+figure {
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto;
+}
+
+table figure {
+  padding: 0;
+  margin: 0;
+}
 
 .document-stage-band {
   left: 0;
@@ -241,18 +935,14 @@ main {
   height: 100%;
   position: fixed;
   display: block;
-  z-index: 98;
-  box-shadow: -5px 0px 10px #1d1d1d; }
-
-.document-type {
+  z-index: 101;
+  box-shadow: -5px 0px 10px #1d1d1d;
+}
+.document-stage-band > :first-child {
   position: relative;
-  width: 25px; }
-
-.document-stage {
-  position: relative;
-  width: 25px; }
-
-p.document-type, p.document-stage {
+  width: 25px;
+  font-weight: 300;
+  height: 160px;
   color: white;
   text-transform: uppercase;
   font-size: 0.9em;
@@ -261,393 +951,127 @@ p.document-type, p.document-stage {
   margin: 0;
   margin-left: 6px;
   writing-mode: tb-rl;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
   white-space: nowrap;
   display: block;
-  bottom: 0; }
+  bottom: 0;
+}
+@media print {
+  .document-stage-band {
+    display: none;
+  }
+}
 
-p.document-type {
+.document-type-band {
+  left: 0;
+  top: 180px;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 102;
+}
+.document-type-band > :first-child {
+  position: relative;
+  width: 25px;
   font-weight: 400;
-  height: 210px; }
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-type-band {
+    display: none;
+  }
+}
+.document-type-band .document-type {
+  top: 20px;
+}
 
 #governance-band p.document-type {
   font-weight: 400;
-  height: 230px !important; }
+  height: 230px !important;
+}
 
-p.document-stage {
-  font-weight: 300;
-  height: 160px; }
+#standard-band p {
+  height: 135px;
+}
 
-#standard-band {
-  background-color: #0AC442; }
+#proposal-band p {
+  height: 150px;
+}
 
-#standard {
-  border-bottom: solid 3px #0AC442; }
-
-#standard-with-suite-band {
-  background-color: #540D6E; }
-
-#standard-with-suite {
-  border-bottom: solid 3px #540D6E; }
-
-#abstract-specification-band {
-  background-color: #D183C9; }
-
-#abstract-specification {
-  border-bottom: solid 3px #D183C9; }
-
-#community-standard-band {
-  background-color: #65AFFF; }
-
-#community-standard {
-  border-bottom: solid 3px #65AFFF; }
-
-#profile-band {
-  background-color: #3A405A; }
-
-#profile {
-  border-bottom: solid 3px #3A405A; }
-
-#best-practice-band {
-  background-color: #F26430; }
-
-#best-practice {
-  border-bottom: solid 3px #F26430; }
-
-#engineering-report-band {
-  background-color: #C84630; }
-
-#engineering-report {
-  border-bottom: solid 3px #C84630; }
-
-#discussion-paper-band {
-  background-color: #BFAE48; }
-
-#discussion-paper {
-  border-bottom: solid 3px #BFAE48; }
-
-#reference-model-band {
-  background-color: #BD9391; }
-
-#reference-model {
-  border-bottom: solid 3px #BD9391; }
-
-#user-guide-band {
-  background-color: #303633; }
-
-#user-guide {
-  border-bottom: solid 3px #303633; }
-
-#policy-band {
-  background-color: #8BE8CB; }
-
-#policy {
-  border-bottom: solid 3px #8BE8CB; }
-
-#guide-band {
-  background-color: #7EA2AA; }
-
-#guide {
-  border-bottom: solid 3px #7EA2AA; }
-
-#amendment-band {
-  background-color: #888DA7; }
-
-#amendment {
-  border-bottom: solid 3px #888DA7; }
-
-#technical-corrigendum-band {
-  background-color: #9C7A97; }
-
-#technical-corrigendum {
-  border-bottom: solid 3px #9C7A97; }
-
-#administrative-band {
-  background-color: #C4F1BE; }
-
-#administrative {
-  border-bottom: solid 3px #C4F1BE; }
-
-#rfc-band {
-  background-color: #39A0ED; }
-
-#rfc {
-  border-bottom: solid 3px #39A0ED; }
-
-#candidate-band {
-  background-color: #2D7393; }
-
-#candidate {
-  border-bottom: solid 3px #2D7393; }
-
+#standard-band,
 #published-band {
-  background-color: #069E2D; }
+  color: rgb(123, 168, 18);
+}
 
+#standard,
 #published {
-  border-bottom: solid 3px #069E2D; }
+  color: #9ABD48;
+}
 
-#deprecated-band {
-  background-color: #004E64; }
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 
-#deprecated {
-  border-bottom: solid 3px #004E64; }
-
-#retired-band {
-  background-color: #2E382E; }
-
-#retired {
-  border-bottom: solid 3px #2E382E; }
-
-.coverpage-maturity {
-  font-family: "Overpass", sans-serif;
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #00335b;
   font-weight: 400;
-  font-size: 1em;
-  margin: 0 0 2em 0;
-  text-transform: uppercase; }
-
-/*
-    3. TYPOGRAPHY
-*/
-/*
-    3.1 Titles
-*/
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Overpass", sans-serif;
-  color: #00335b;
-  font-weight: 300;
   margin-top: 1.6em;
-  margin-bottom: 0.3em; }
+  margin-bottom: 0.3em;
+}
 
-h1 {
-  font-size: 1.6em;
+h1, .h1 {
+  font-size: 1.8em;
   text-transform: uppercase;
-  margin-top: 2em; }
+  margin-top: 2em;
+}
+h1 #content, .h1 #content {
+  margin-top: 2em;
+}
 
-h1#content {
-  margin-top: 2em; }
-
-h2 {
+h2, .h2 {
   margin-top: 1.3em;
-  font-size: 1.3em;
-  font-weight: 400; }
+  font-size: 1.7em;
+  font-weight: 300;
+}
+h2 p, .h2 p {
+  display: inline;
+}
 
-h3 {
-  margin-top: 1.1em;
-  font-size: 1.1em;
-  font-weight: 100; }
+h3, .h3 {
+  margin-top: 1.3em;
+  font-size: 1.5em;
+  font-weight: 100;
+}
 
-.TermNum, .Terms, .AltTerms {
-  color: #00335b;
-  font-weight: 100; }
-
-h2.TermNum {
-  margin-bottom: 0; }
-
-p.Terms {
-  font-size: 1.1em;
-  line-height: 1.5em;
-  margin: 0; }
-
-p.AltTerms {
-  /*
-    font-style: italic;
-     */
-  font-size: 1.1em;
-  margin: 0; }
-
-/*
-    3.2 Links
-*/
-a, a:visited {
-  text-decoration: none;
-  color: #2e81c2; }
-
-a:hover {
-  color: white;
-  background: #00335b;
-  box-shadow: 3px 0 0 #00335b, -3px 0 0 #00335b;
-  /* padding: 2px 0 2px 0; */ }
-
-::selection {
-  background: #00335b;
-  /* WebKit/Blink Browsers */
-  color: white; }
-
-::-moz-selection {
-  background: #00335b;
-  /* Gecko Browsers */
-  color: white; }
+h4, .h4 {
+  font-size: 1.4em;
+}
 
 .contact-info a:hover {
-  color: #2e81c2;
   text-decoration: underline;
   background: none;
-  box-shadow: 0 0 0 0; }
-
-/*
-    3.3 Lists
-*/
-ul, ol {
-  margin-left: 1.2em; }
-
-ul > li {
-  list-style: none; }
-
-ul > li:before {
-  content: "\2014";
-  display: inline-block;
-  width: 1em;
-  margin-left: -1.2em; }
-
-ul > li p:first-child {
-  display: inline; }
-
-ul > li:first-child {
-  margin-top: 1em; }
-
-#toc-list ul {
-  margin-bottom: 0.25em; }
-
-#toc-list li {
-  list-style-type: none; }
-
-#toc li:before {
-  content: " ";
-  display: none; }
-
-/*
-    3.4 Rules
-*/
-.rule {
-  width: 100%;
-  height: 1px;
-  background-color: #00335b;
-  margin: 2em 0; }
-
-/*
-    3.5 Bibliograhy
-*/
-p.Biblio, p.NormRef {
-  margin-top: 1em;
-  margin-left: 2em; }
-
-/*
-    3.6 Source Code + figures
-*/
-.figure, .Sourcecode {
-  font-family: "Space Mono", monospace;
-  font-variant-ligatures: none;
-  background-color: #f6f6f6;
-  font-size: 0.8em;
-  line-height: 1.6em;
-  padding: 1.5em;
-  margin: 2em 0 1em 0;
-  overflow: auto; }
-
-.FigureTitle {
-  font-weight: 700;
-  font-size: 1em;
-  text-align: center; }
-
-/*
-    3.7 Notes
-*/
-.Note {
-  background-color: #fff495;
-  color: #47430c;
-  padding: 1.2em;
-  margin: 1em 0 1em 0; }
-  .Note p {
-    margin: 0; }
-
-.Admonition {
-  background-color: #ffcccc;
-  color: #47430c;
-  padding: 1.2em;
-  margin: 1em 0 1em 0; }
-  .Admonition p {
-    margin: 0; }
-
-/*
-    3.8 Examples
-*/
-.example {
-  background-color: #e1eef1;
-  padding: 1.2em;
-  margin: 2em 0 1em 0; }
-
-.example .example-title {
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 0; }
-
-.recommend {
-  background-color: #ccffcc;
-  padding: 1.2em;
-  margin: 2em 0 1em 0; }
-
-/*
-    3.9 Tables
-*/
-table {
-  border-collapse: collapse;
-  width: 100%;
-  font-weight: 300;
-  margin: 1em 0 2em 0;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 2em; }
-
-table, th, td {
-  border: 1px solid black;
-  font-size: 0.95em; }
-
-td, th {
-  padding: 1em; }
-
-td.header {
-  font-weight: 400; }
-
-p.TableTitle {
-  text-align: center;
-  margin-top: 2.5em;
-  font-weight: 400; }
-
-/*
-  3.10 Footnotes
-*/
-a.footnote-number {
-  vertical-align: super;
-  font-size: 0.8em; }
-
-.footnote {
-  font-size: 0.9em; }
-
-/*
-    3.11 Blockquotes
-*/
-.Quote {
-  background-color: #f6f6f6;
-  font-style: italic;
-  width: 80%;
-  padding: 1.5em;
-  margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto; }
-
-/*
-    3.12 Formulas
-*/
-.formula {
-  background-color: #f6f6f6;
-  padding: 1.5em;
-  margin-top: 2em;
-  text-align: center; }
-
-/*
-    3.13 Contact Info
-*/
+  box-shadow: 0 0 0 0;
+}
+.contact-info a, .contact-info a:hover {
+  color: #00335b;
+}
 .contact-info {
   padding: 2em;
   margin-top: 5em;
@@ -655,173 +1079,392 @@ a.footnote-number {
   text-align: left;
   border: #00335b solid 2px;
   color: #00335b !important;
-  border-radius: 25px; }
-
-.contact-info a,
-.contact-info a:hover {
-  color: #00335b; }
-
+  border-radius: 25px;
+}
 .contact-info p, .contact-info a {
-  font-family: "Space Mono", monospace;
+  font-family: "Space Mono",monospace;
   font-variant-ligatures: none;
-  font-weight: 400; }
-
-.contact-info .name {
+  font-weight: 400;
+}
+.contact-info #boilerplate-name {
   font-weight: 700;
   font-size: 1.2em;
-  margin-bottom: 0; }
-
-.contact-info .address {
+  margin-bottom: 0;
+}
+.contact-info #boilerplate-address {
   font-size: 1em;
   line-height: 1.3em;
-  margin-top: 0; }
+  margin-top: 0;
+}
 
-/*
-    Keywords
-*/
-span.keyword {
-  font-weight: 600; }
+ul, ol {
+  margin-left: 1.2em;
+}
 
-/*
-    Paragraphs
-*/
-p {
-  margin-top: 1em;
-  margin-bottom: 1em; }
-
-h2 p {
-  display: inline; }
-
-/*
-    4.0 Page header
-*/
-/*
-    4.1 Top Logo
-*/
-.icon-svg {
-  width: 100%;
-  color: #5ecf86; }
-
-.wrapper-top {
-  background: linear-gradient(135deg, #00335b, #00335b, #93c0d6);
-  color: #ffffff;
-  padding: 2em 0;
-  width: 100%; }
-
-.wrapper-top-bottom {
-  width: 0;
-  height: 0;
-  border-top: 100px solid #00335b;
-  border-right: 100px solid transparent;
-  position: absolute; }
-
-.coverpage-metadata,
-.coverpage-alt-formats {
-  line-height: 1.5em;
-  padding: 0 1em 1em 1em;
-  text-align: right; }
-
-.coverpage-metadata > span {
-  display: block;
-  text-align: right; }
-
-.coverpage-alt-formats > span {
+ul > li {
+  list-style: none;
+}
+ul > li::before {
+  content: "—";
   display: inline-block;
-  text-align: right; }
+  width: 1em;
+  margin-left: -1em;
+}
+ul > li p:first-child {
+  display: inline;
+}
+ul > li:first-child {
+  margin-top: 1em;
+}
 
-.coverpage-metadata a,
-.coverpage-alt-formats a,
-.coverpage-metadata a:visited,
-.coverpage-alt-formats a:visited {
-  color: #fff;
-  text-decoration: underline; }
+ul ul > li:first-child {
+  margin-top: 0;
+}
 
-.coverpage-title {
-  padding-bottom: 0.5em;
-  font-family: "Overpass", sans-serif;
-  font-size: 2.3em;
-  line-height: 1.5em;
-  font-weight: 100;
-  padding-left: 1em;
-  padding-right: 1em;
-  text-transform: uppercase; }
+ol ul > li:first-child {
+  margin-top: 0;
+}
 
-.WordSection11 {
-  padding: 0 2em 0 3em; }
-
-.info-section {
-  padding: 0 2em 0 5em; }
-
-.prefatory-section {
-  padding: 0 3em 0 6em; }
-
-.zzSTDTitle1, .MsoCommentText {
-  display: none; }
-
-.coverpage {
-  text-align: center;
-  padding-left: 1.5em; }
-
-.coverpage-logo span, .coverpage-tc-name span {
-  font-family: "Overpass", sans-serif;
-  text-transform: none;
-  font-weight: 300; }
-
-.coverpage-tc-name {
-  font-size: 1.2em;
-  line-height: 1.2em;
-  margin: 0.25em 0; }
-
-/*
-    4.2 Document Identity
-*/
-.coverpage-doc-identity {
-  line-height: 2em; }
-
-.coverpage-title .title-second {
-  display: none; }
-
-.coverpage-stage-block {
-  font-family: "Overpass", sans-serif;
+span.keyword {
   font-weight: 600;
-  font-size: 1.25em;
-  margin: 2em 0em 2em 0em;
-  text-transform: uppercase; }
+}
 
-/*
-    4.3 Draft Warning
-*/
-.coverpage-warning {
-  border: #f36f36 solid 2px;
-  color: #f36f36 !important;
-  margin: 1em 2em;
-  color: #2e81c2;
-  padding: 2em 1em 1em 1em;
-  border-radius: 25px; }
-
-.coverpage-warning .title {
-  font-family: "Overpass", sans-serif;
+/* Tables */
+table {
+  width: 100%;
   font-weight: 300;
-  text-transform: uppercase;
-  font-size: 1.2em; }
-
-/*
-    4.4 Copyright
-*/
-.copyright {
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em;
+}
+table, table th, table td {
+  border: 1px solid black;
+  font-size: 0.95em;
+}
+table th, table td {
   padding: 1em;
-  font-size: 0.9em;
-  text-align: left; }
+}
+table td.header {
+  font-weight: 400;
+}
+table table.plain, table table.plain th, table table.plain td {
+  border: none !important;
+  font-size: 0.95em;
+}
+table {
+  /*color: #010d16;*/
+}
+table thead tr th {
+  background-color: #5d99d6;
+}
+table td, table th {
+  padding: 1em;
+}
+table td.header {
+  font-weight: 400;
+}
 
-/*  .copyright .name, .copyright .address {color: #2e81c2;} */
+.docstage-box table,
+.docstage-box table th,
+.docstage-box table td {
+  border: none;
+}
+
+table.modspec {
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em;
+}
+table.modspec, table.modspec th, table.modspec td {
+  border: none !important;
+  font-size: 0.95em;
+}
+table.modspec th, table.modspec td {
+  padding: 1em;
+}
+table.modspec td.header {
+  font-weight: 400;
+}
+table.modspec table.plain, table.modspec table.plain th, table.modspec table.plain td {
+  border: none !important;
+  font-size: 0.95em;
+}
+table.modspec {
+  color: #010d16;
+}
+table.modspec tr:nth-child(even) {
+  background: #ffffff;
+}
+table.modspec tr:nth-child(odd) {
+  background: #ffffff;
+}
+table.modspec thead tr th {
+  background-color: #5d99d6;
+}
+table.modspec td, table.modspec th {
+  padding: 1em;
+}
+table.modspec td.header {
+  font-weight: 400;
+}
+
+td > p:first-child, th > p:first-child {
+  margin-top: 0em;
+}
+
+td > p:last-child, th > p:last-child {
+  margin-bottom: 0em;
+}
+
+table > caption {
+  text-align: center;
+  margin-top: 2.5em;
+  font-weight: 400;
+}
+
+/* Terms */
+.TermNum {
+  font-weight: 300;
+}
+
+.TermNum, .Terms, .AltTerms {
+  color: #00335b;
+  font-family: "Overpass",sans-serif;
+}
+
+h2.TermNum {
+  margin-bottom: 0;
+}
+
+p.AltTerms {
+  font-size: 24px;
+  margin-top: 1em;
+}
+
+span.AdmittedLabel, span.DeprecatedLabel {
+  color: #00335b;
+  background-color: #CFE2F3;
+  font-size: 70%;
+  vertical-align: top;
+}
+
+/* Links, selection */
+a, a:visited {
+  text-decoration: none;
+  color: #2e81c2;
+}
+
+a:hover {
+  color: #00335b;
+  background: #39CCCC;
+  box-shadow: 3px 0 0 #39CCCC, -3px 0 0 #39CCCC;
+}
+
+*::selection {
+  background: #39CCCC;
+  color: #00335b;
+}
+
+*::-moz-selection {
+  background: #39CCCC;
+  color: #00335b;
+}
+
+/* Bibliograhy */
+p.Biblio, p.NormRef, div.Biblio, div.NormRef {
+  margin-top: 1em;
+  margin-left: 2em;
+}
+
+.Biblio.note, .Biblio.Note, .NormRef.note, .NormRef.Note {
+  margin-left: 3em;
+}
+
+/* Blocks */
+.SourceTitle, figcaption, summary {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.ListTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+  text-align: left;
+}
+
+pre, .sourcecode {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+  background-color: #f7f7f7;
+  font-size: 0.8em;
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow-y: auto;
+  overflow-x: scroll;
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+}
+
+.Admonition .AdmonitionTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+.Admonition {
+  padding: 1em 1.2em 1.2em 1.2em;
+  margin: 1em 0 1em 0;
+  background-color: #fcad88;
+  border-top: 10px solid #eb5a06;
+  color: #290404;
+}
+.Admonition.AdmonitionImportant {
+  background-color: #f58cff;
+  color: #5d1364;
+  border-top: 10px solid #9503a8;
+}
+.Admonition.AdmonitionWarning {
+  background-color: #ff989d;
+  color: #270204;
+  border-top: 10px solid #e4010c;
+}
+.Admonition p, .Admonition.AdmonitionImportant p, .Admonition.AdmonitionWarning p {
+  margin: 0;
+}
+
+figure, pre, .pseudocode, .sourcecode {
+  background-color: #e1eef1;
+  color: #424242;
+  font-size: 0.8em;
+}
+
+.Note {
+  background-color: #fff8bb;
+  color: #7d760b;
+  padding: 1.2em;
+  margin: 1em 0 1em 0;
+}
+.Note p {
+  margin: 0;
+}
+
+.example {
+  background-color: #e1eef1;
+  color: #424242;
+  padding: 1.2em;
+  margin: 2em 0 1em 0;
+  padding-left: 2em;
+}
+.example .example-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-left: -1.5em;
+}
+.example pre, .example .pseudocode {
+  background: none;
+}
+
+.Quote {
+  background-color: #e1eef1;
+  font-style: italic;
+  width: 80%;
+  padding: 1.5em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formula {
+  background-color: #f6f6f6;
+  padding: 1.5em;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.recommend .RecommendationTitle, .recommendtest .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.require .RecommendationTitle, .requiretest .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.permission .RecommendationTitle, .permissiontest .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.RecommendationTestTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
 /*
-    5.0 Other styles
+.recommend {
+  &, .example_label {
+    background-color: #f8ffbd;
+  }
+  .example_label {
+    font-weight: bold;
+  }
+}
+
+.permission {
+  &, .example_label {
+    background-color: #cdfdbe;
+  }
+  .example_label {
+    font-weight: bold;
+  }
+}
+
+.require {
+  &, .example_label {
+    background-color: #d3e6ff;
+  }
+  .example_label {
+    font-weight: bold;
+  }
+}
 */
-/*
-To top button
-*/
+.recommend .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.require .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.permission .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+tbody td.recommend p.RecommendationTitle, tbody td.recommend p.RecommendationTitle, tbody td.recommend p.RecommendationTitle {
+  font-weight: normal;
+  text-align: left;
+}
+
 #myBtn {
-  font-family: "Space Mono", monospace;
+  font-family: "Space Mono",monospace;
   font-variant-ligatures: none;
   display: none;
   position: fixed;
@@ -831,116 +1474,156 @@ To top button
   font-size: 12px;
   border: none;
   outline: none;
-  background-color: #1f8ca0;
+  background-color: #00335b;
   opacity: 0.15;
   color: white;
   cursor: pointer;
   padding: 10px 15px 10px 15px;
   border-radius: 4px;
-  text-transform: uppercase; }
-
+}
 #myBtn:hover {
-  opacity: 1; }
+  opacity: 1;
+}
+@media print {
+  #myBtn {
+    display: none;
+  }
+}
 
 a.anchorjs-link:hover {
   background: none;
   color: #2e81c2;
-  box-shadow: none; }
+  box-shadow: none;
+}
 
 @page {
-  margin: 2cm 1cm; }
-
+  margin: 2cm 1cm;
+}
 @media print {
-  .document-info, nav, .copyright, .prefatory-section {
-    page-break-before: always; }
-  nav {
-    page-break-after: always; }
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
     page-break-after: avoid;
-    margin-top: 1.2em; }
-  .note, .figure, .Sourcecode, table {
-    page-break-inside: avoid; }
-  .info-section {
-    display: none; }
-  .coverpage {
-    height: 23cm; }
-  .wrapper-top {
-    top: 0;
-    padding-top: 4cm;
-    padding-bottom: 4cm; }
-  .wrapper-top-bottom {
-    margin-top: -5px; }
-  #toggle, .document-stage-band,
-  .document-type-band, button#myBtn {
-    display: none; }
-  button#myBtn {
-    background-color: white; }
-  .container {
-    padding-left: 0; }
-  nav {
-    position: relative;
-    width: auto;
-    font-size: 0.9em;
-    overflow: auto;
-    padding: 0;
-    margin-right: 0;
-    background-color: white; }
-  #toc .toc-active a {
-    color: #4D7EA5; }
-  #toc .toc-active, #toc li:hover {
-    background: white;
-    box-shadow: none !important; }
-  #toc li:hover a {
-    color: black; }
-  h1.content {
-    margin-top: 2em;
-    line-height: 2.5em; }
-  h1 {
+    margin-top: 1.2em;
+  }
+  h1, .h1 {
     font-size: 1.5em;
-    line-height: 1.5; }
-  h2 {
-    font-size: 1.2em; }
-  h3 {
-    font-size: 1em; }
+    line-height: 1.5;
+  }
+  h1.content, .h1.content {
+    margin-top: 2em;
+    line-height: 2.5em;
+  }
+  h2, .h2 {
+    font-size: 1.2em;
+  }
+  h3, .h3 {
+    font-size: 1em;
+  }
+  .prefatory-section {
+    page-break-before: always;
+  }
+  .note, .pseudocode {
+    page-break-inside: avoid;
+  }
   .Note {
     background-color: #fff495;
     color: #47430c;
     padding: 5px;
-    margin: 2em 0 1em 0; }
+    margin: 2em 0 1em 0;
+  }
   .Note p {
-    padding: 0 5px 0 5px; }
+    padding: 0 5px 0 5px;
+  }
   nav {
-    line-height: 1; }
-  .wrapper-top-bottom {
-    display: none; } }
+    line-height: 1;
+  }
+}
+/* Footnotes */
+a.footnote-number {
+  vertical-align: super;
+  font-size: 0.8em;
+}
 
--->
-</style><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />      <title>Best Practice for OGC GeoDataCube Management</title>
+.footnote {
+  font-size: 0.9em;
+}
+
+span.fmt-hi {
+  background-color: yellow;
+}
+</style><style>pre.sourcecode table td { padding: 5px; }
+pre.sourcecode table pre { margin: 0; }
+pre.sourcecode, pre.sourcecode .w {
+  color: #444444;
+}
+pre.sourcecode .cp {
+  color: #CC00A3;
+}
+pre.sourcecode .cs {
+  color: #CC00A3;
+}
+pre.sourcecode .c, pre.sourcecode .ch, pre.sourcecode .cd, pre.sourcecode .cm, pre.sourcecode .cpf, pre.sourcecode .c1 {
+  color: #1E90FF;
+}
+pre.sourcecode .kc {
+  color: #C34E00;
+}
+pre.sourcecode .kd {
+  color: #0000FF;
+}
+pre.sourcecode .kr {
+  color: #007575;
+}
+pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
+  color: #0000FF;
+}
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .ld, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+  color: #009C00;
+}
+pre.sourcecode .sa {
+  color: #0000FF;
+}
+pre.sourcecode .nb, pre.sourcecode .bp {
+  color: #C34E00;
+}
+pre.sourcecode .nt {
+  color: #0000FF;
+}
+</style><title>Best Practice for OGC GeoDataCube Management</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--TOC script import-->
 <script type="text/javascript" src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
+<script type="text/javascript">function toclevel() { return "h1:not(:empty):not(.TermNum):not(.noTOC),h2:not(:empty):not(.TermNum):not(.noTOC)";}
+</script>
 
 <!--Google fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Teko:300,400,500" rel="stylesheet" />
+
 <!--Font awesome import for the link icon-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
 <style class="anchorjs"></style>
-</head>
-  <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
-    <div class="title-section"><div class="document-stage-band" id="swg draft-band">
-    <p class="document-stage">Swg Draft</p>
+<meta name="keywords" content="ogcdoc, OGC document, best practice, GeoDataCubes" /><meta name="DC.subject" lang="en" content="ogcdoc, OGC document, best practice, GeoDataCubes" xml:lang="en" /><meta name="description" content="The rapidly growing volume of Earth observation data, together with the increasing diversity of data providers, platforms, formats, APIs, and processing environments, makes it difficult for users to consistently discover, access, prepare, and use data for analysis. While metadata standards and catalogues provide an essential foundation for discovery and description, additional guidance is needed on how discovered datasets can be transformed into analysis-ready geodatacubes and managed throughout their use. This Best Practice provides recommendations for geodatacube management, focusing on the pathways from metadata and data discovery towards usable multidimensional datacubes. It describes how metadata-driven approaches can support the creation, configuration, access, and processing of geodatacubes across heterogeneous infrastructures. Building on previous work, including OGC Testbed 19, the document explores the role of openEO and relevant open-source EOEPCA building blocks as interoperable components for exposing, processing, and managing Earth observation data as geodatacubes. The goal of this Best Practice is to provide practical guidance for data providers, platform operators, and application developers who need to design geodatacube management systems. It recommends approaches for bridging discovery metadata, data access mechanisms, processing interfaces, and datacube representations in a way that improves interoperability, reproducibility, and usability of Earth observation data." />
+<meta name="DC.description" lang="en" content="The rapidly growing volume of Earth observation data, together with the increasing diversity of data providers, platforms, formats, APIs, and processing environments, makes it difficult for users to consistently discover, access, prepare, and use data for analysis. While metadata standards and catalogues provide an essential foundation for discovery and description, additional guidance is needed on how discovered datasets can be transformed into analysis-ready geodatacubes and managed throughout their use. This Best Practice provides recommendations for geodatacube management, focusing on the pathways from metadata and data discovery towards usable multidimensional datacubes. It describes how metadata-driven approaches can support the creation, configuration, access, and processing of geodatacubes across heterogeneous infrastructures. Building on previous work, including OGC Testbed 19, the document explores the role of openEO and relevant open-source EOEPCA building blocks as interoperable components for exposing, processing, and managing Earth observation data as geodatacubes. The goal of this Best Practice is to provide practical guidance for data providers, platform operators, and application developers who need to design geodatacube management systems. It recommends approaches for bridging discovery metadata, data access mechanisms, processing interfaces, and datacube representations in a way that improves interoperability, reproducibility, and usability of Earth observation data." xml:lang="en" /><meta name="DC.title" lang="en" content="Best Practice for OGC GeoDataCube Management" xml:lang="en" /><link rel="profile" href="http://dublincore.org/documents/2008/08/04/dc-html/" />
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DC.language" content="en" />
+<meta name="DC.rights" lang="en" content="CC-BY-4.0" xml:lang="en" />
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+<link rel="DCTERMS.license" href="https://www.ogc.org/license" />
+</head><body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container"><div class="title-section"><div class="document-stage-band" id="swg-draft-band">
+    <p class="document-stage">Candidate SWG Draft</p>
 </div>
 
-<div class="document-type-band" id="best practice-band">
+<div class="document-type-band" id="best-practice-band">
     <p class="document-type">OGC Best Practice</p>
 </div>
 
 
 
-  <div id="toggle"> <span>&#x2022;</span> </div>
+  <div id="toggle"> <span>•</span> </div>
 
   <header>
 
@@ -949,30 +1632,6 @@ a.anchorjs-link:hover {
     <div class="wrapper-top">
 
   <div class="coverpage-doc-identity">
-    <div class="coverpage-metadata">
-      <span>Submission Date: 2026-05-14</span>
-      <span>Approval Date: XXXX-XX-XX</span>
-      <span>Publication Date: XXXX-XX-XX</span>
-      <span>External identifier of this OGC&#xAE; document: <span class="docnumber"></span></span>
-      <span>Internal identifier of this OGC&#xAE; document: <span class="docnumber">YY-999</span></span>
-      
-      
-      
-      <span>Editor: Alexander Jacob, Juraj Zvolensk&#xFD;, Yuvraj Bhagwan Adagale</span>
-      
-    </div>
-
-    
-    <div class="coverpage-alt-formats">
-      <span>Additional Formats: </span>
-      
-      
-      <span><a href="./document.pdf"><i class="far fa-file-pdf"></i>PDF</a></span>
-      
-      
-      
-    </div>
-    
 
     <div class="coverpage-title">
       <span class="title-first">Best Practice for OGC GeoDataCube Management</span>
@@ -981,12 +1640,93 @@ a.anchorjs-link:hover {
   </div>
 
   <div class="coverpage-logo">
-    <span>Open Geospatial Consortium 2026</span>
+    <span><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 1024.8 354.8" preserveaspectratio="xMidYMin slice">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-1" d="M270.5,73.63l-.36-.21-26.46-15.45-.27-.17-26.56-15.5-.18-.1-26.64-15.55-.09-.05-11.7-6.83c-9.29-5.42-20.77-5.42-30.06,0l-11.71,6.83-.09.05-26.64,15.55-.18.1-26.56,15.5-.26.16-26.47,15.46-.36.21-14.61,8.53c-5.26,3.07-5.26,10.66,0,13.73l14.61,8.53.35.21,26.48,15.46.26.14,26.56,15.51.18.1,26.64,15.55.09.05,11.7,6.83c9.29,5.42,20.78,5.42,30.06,0l11.7-6.83.09-.05,26.64-15.55.18-.1,26.56-15.51.27-.16,26.47-15.45.35-.21,14.61-8.53c5.26-3.07,5.26-10.66,0-13.73l-14.61-8.53ZM216.85,104.53l-.18.1-26.64,15.55-.09.05-19.21,11.22c-4.64,2.71-10.39,2.71-15.03,0l-19.22-11.22-.09-.05-26.64-15.55-.18-.1-20.68-12.07c-2.63-1.53-2.63-5.33,0-6.87l20.68-12.08.18-.09,26.64-15.56.09-.05,19.22-11.22c4.64-2.71,10.39-2.71,15.03,0l19.21,11.22.09.05,26.64,15.56.18.09,20.68,12.08c2.63,1.53,2.63,5.33,0,6.87l-20.68,12.07Z"></path>
+    <path class="cls-1" d="M292.88,121.08c7.95-4.64,17.94,1.1,17.94,10.3v37.1c0,2.83-1.5,5.44-3.94,6.87l-16.91,9.87c-2.65,1.55-5.98-.36-5.98-3.43v-20.83c0-1.53-1.66-2.49-2.99-1.72l-23.83,13.91-.35.21-26.47,15.45-.27.17-22.62,13.2c-2.44,1.43-3.94,4.04-3.94,6.87v85.62c0,1.53,1.66,2.49,2.99,1.72l23.57-13.77.27.17v-.32l26.47-15.45.35.21v-.41l24.85-14.51c1.22-.71,1.97-2.02,1.97-3.43v-24.37c0-2.83,1.5-5.44,3.94-6.87l16.91-9.87c2.65-1.55,5.98.37,5.98,3.43v24.29l-.53.31.53.31v23.75c0,4.24-2.25,8.16-5.92,10.3l-20.92,12.21-.43.26-26.38,15.4-.36.22-26.46,15.44-.27.17-26.56,15.5-.18.1-14.68,8.57c-5.3,3.09-11.96-.73-11.96-6.87v-137.67c0-2.83,1.5-5.44,3.94-6.87l22.7-13.25.18-.1,26.56-15.5.27-.17,26.46-15.44.36-.22,26.37-15.4.45-.26,8.89-5.19Z"></path>
+    <path class="cls-1" d="M123.05,235.69l.18.09,22.7,13.26c2.44,1.43,3.94,4.04,3.94,6.87v75.23c0,6.14-6.66,9.96-11.96,6.87-29.06-16.97-116.24-67.86-116.24-67.86-3.66-2.14-5.91-6.06-5.91-10.3v-128.46c0-9.21,9.99-14.94,17.94-10.3l8.88,5.18.45.26,26.37,15.4.36.22,26.47,15.45.26.16,26.56,15.5.18.1,22.7,13.25c2.44,1.43,3.94,4.04,3.94,6.87v19.73c0,3.07-3.33,4.98-5.98,3.43l-20.66-12.06-.18-.1-26.56-15.5-.26-.16-26.48-15.46-.35-.21-23.83-13.91c-1.33-.77-2.99.18-2.99,1.72v86.77c0,2.12,1.13,4.08,2.96,5.15l23.86,13.93.35.21,26.48,15.46.26.15,23.57,13.77c1.33.77,2.99-.18,2.99-1.72v-25.47c0-1.41-.75-2.72-1.97-3.43l-20.91-12.2c-2.44-1.43-3.94-4.04-3.94-6.87v-19.72c0-3.07,3.33-4.98,5.98-3.43l20.84,12.17Z"></path>
+  </g>
+  <path class="cls-1" d="M460.19,117.51c-21.6,0-37.47-15.77-37.47-36.96s15.87-36.96,37.47-36.96,37.37,15.77,37.37,36.96-15.77,36.96-37.37,36.96ZM485.78,80.55c0-14.64-10.85-25.7-25.59-25.7s-25.59,11.16-25.59,25.7,10.95,25.7,25.59,25.7c14.74-.1,25.59-10.95,25.59-25.7Z"></path>
+  <path class="cls-1" d="M539.12,59.97c16.38,0,28.36,12.29,28.36,28.77s-11.98,28.77-28.36,28.77c-7.06,0-13.31-2.46-18.22-6.65v24.98h-11.26V61.2h7.68l2.05,6.76c4.91-5.02,11.88-7.99,19.76-7.99ZM556.01,88.74c0-10.34-7.47-18.02-17.81-18.02s-18.02,7.78-18.02,18.02,7.58,18.02,18.02,18.02,17.81-7.68,17.81-18.02Z"></path>
+  <path class="cls-1" d="M631.47,88.85c0,1.33-.1,2.46-.31,3.79h-44.43c1.43,8.91,7.78,14.33,16.79,14.33,6.55,0,11.88-2.97,14.74-7.99h11.88c-4.4,11.57-14.33,18.63-26.62,18.63-16.07,0-28.15-12.49-28.15-28.77s12.18-28.77,28.15-28.77c16.18-.1,27.95,12.8,27.95,28.77ZM587.14,83.42h33.07c-2.05-8.29-8.29-13.21-16.69-13.21s-14.44,5.02-16.38,13.21Z"></path>
+  <path class="cls-1" d="M672.42,60.08c12.8,0,20.78,9.62,20.78,23.04v33.07h-11.26v-30.71c0-9.93-4.3-15.25-12.59-15.25s-14.74,6.86-14.74,16.59v29.38h-11.26v-54.98h7.88l2.25,7.68c4.2-5.43,10.95-8.8,18.94-8.8Z"></path>
+  <path class="cls-1" d="M495,178.12c-.2,21.81-14.95,37.47-35.83,37.47s-36.34-15.56-36.34-36.96,15.25-36.75,36.04-36.75c17.3,0,31.84,10.85,35.01,26.41h-12.08c-3.07-9.21-11.98-15.15-22.73-15.15-14.33,0-24.47,10.54-24.47,25.49s9.83,25.49,24.47,25.49c11.36,0,20.58-6.45,23.14-16.07h-25.39v-9.93h38.19Z"></path>
+  <path class="cls-1" d="M559.29,186.92c0,1.33-.1,2.46-.2,3.79h-44.53c1.43,8.91,7.78,14.33,16.79,14.33,6.55,0,11.88-2.97,14.74-7.99h11.88c-4.4,11.57-14.33,18.63-26.62,18.63-16.07,0-28.15-12.49-28.15-28.77s12.18-28.77,28.15-28.77c16.07-.1,27.95,12.69,27.95,28.77ZM514.96,181.5h33.07c-2.05-8.29-8.29-13.21-16.69-13.21-8.29-.2-14.64,5.02-16.38,13.21Z"></path>
+  <path class="cls-1" d="M596.56,215.49c-16.69,0-29.18-12.29-29.18-28.77s12.49-28.77,29.18-28.77,29.28,12.29,29.28,28.77-12.59,28.77-29.28,28.77ZM614.37,186.82c0-10.54-7.47-18.02-17.81-18.02s-17.81,7.47-17.81,18.02,7.47,18.02,17.81,18.02c10.34-.1,17.81-7.58,17.81-18.02Z"></path>
+  <path class="cls-1" d="M633.62,196.75h10.95c.2,5.84,5.12,8.8,11.77,8.8,6.04,0,10.75-2.56,10.75-7.17,0-5.22-5.84-6.35-12.59-7.47-9.21-1.54-19.96-3.58-19.96-16.28,0-9.83,8.5-16.59,21.19-16.59s20.99,6.96,21.19,17.61h-10.75c-.31-5.22-4.1-7.99-10.75-7.99-6.25,0-10.14,2.56-10.14,6.65,0,4.81,5.53,5.84,12.18,6.86,9.32,1.54,20.48,3.38,20.48,16.79,0,10.65-8.91,17.61-22.22,17.61-13-.1-21.81-7.47-22.11-18.84Z"></path>
+  <path class="cls-1" d="M719.82,158.05c16.48,0,28.36,12.29,28.36,28.77s-12.08,28.77-28.36,28.77c-7.06,0-13.31-2.46-18.22-6.65v24.88h-11.26v-74.53h7.68l2.05,6.76c5.02-5.02,11.88-7.99,19.76-7.99ZM736.71,186.82c0-10.34-7.47-18.02-17.81-18.02s-18.02,7.78-18.02,18.02,7.68,18.02,18.02,18.02,17.81-7.68,17.81-18.02Z"></path>
+  <path class="cls-1" d="M814.72,159.28v54.77h-9.01l-1.13-6.76c-4.91,5.02-11.88,7.99-19.86,7.99-16.28,0-28.46-12.29-28.46-28.77s12.18-28.77,28.46-28.77c7.99,0,14.95,3.07,20.07,8.19l1.33-6.86,8.6.2ZM803.46,186.82c0-10.34-7.47-18.02-17.81-18.02s-18.02,7.78-18.02,18.02,7.68,18.02,18.02,18.02c10.24-.2,17.81-7.78,17.81-18.02Z"></path>
+  <path class="cls-1" d="M861.41,203.92v10.24h-8.4c-11.98,0-19.45-7.37-19.45-19.55v-25.7h-9.83v-2.25l19.04-20.37h1.95v12.8h16.28v9.73h-16.18v24.78c0,6.65,3.58,10.24,10.24,10.24h6.35v.1Z"></path>
+  <path class="cls-1" d="M872.16,139.21h11.67v11.67h-11.67v-11.67ZM872.46,159.28h11.26v54.77h-11.26v-54.77Z"></path>
+  <path class="cls-1" d="M954.16,159.28v54.77h-9.01l-1.13-6.76c-4.91,5.02-11.88,7.99-19.96,7.99-16.28,0-28.46-12.29-28.46-28.77s12.18-28.77,28.46-28.77c7.99,0,15.05,3.07,20.07,8.19l1.33-6.86,8.7.2ZM942.9,186.82c0-10.34-7.47-18.02-17.81-18.02s-18.02,7.78-18.02,18.02,7.68,18.02,18.02,18.02c10.34-.2,17.81-7.78,17.81-18.02Z"></path>
+  <path class="cls-1" d="M970.23,139.62h11.26v74.53h-11.26v-74.53Z"></path>
+  <path class="cls-1" d="M422.82,276.71c0-21.29,15.56-36.75,36.45-36.75,16.79,0,30.3,10.44,33.99,26.52h-11.77c-3.38-9.42-11.67-15.15-22.22-15.15-14.23,0-24.67,10.75-24.67,25.49s10.44,25.49,24.67,25.49c10.85,0,19.25-6.04,22.42-16.18h11.77c-3.79,16.69-17.2,27.44-34.3,27.44-20.78-.1-36.34-15.77-36.34-36.86Z"></path>
+  <path class="cls-1" d="M530.11,313.46c-16.69,0-29.28-12.29-29.28-28.77s12.59-28.77,29.28-28.77,29.18,12.29,29.18,28.77c.1,16.59-12.39,28.77-29.18,28.77ZM547.93,284.69c0-10.54-7.47-18.02-17.81-18.02s-17.81,7.47-17.81,18.02,7.47,18.02,17.81,18.02,17.81-7.47,17.81-18.02Z"></path>
+  <path class="cls-1" d="M600.45,256.13c12.8,0,20.78,9.62,20.78,23.04v33.07h-11.26v-30.71c0-9.93-4.3-15.25-12.59-15.25s-14.74,6.86-14.74,16.59v29.38h-11.26v-54.87h7.88l2.25,7.68c3.99-5.63,10.75-8.91,18.94-8.91Z"></path>
+  <path class="cls-1" d="M632.39,294.83h10.95c.2,5.84,5.12,8.8,11.77,8.8,6.04,0,10.75-2.56,10.75-7.17,0-5.22-5.84-6.35-12.59-7.47-9.21-1.54-19.96-3.58-19.96-16.28,0-9.83,8.5-16.59,21.19-16.59s20.99,6.96,21.19,17.61h-10.75c-.31-5.22-4.1-7.99-10.75-7.99-6.25,0-10.14,2.56-10.14,6.65,0,4.81,5.53,5.84,12.18,6.86,9.32,1.54,20.48,3.38,20.48,16.79,0,10.65-8.91,17.61-22.22,17.61-13.21-.2-21.91-7.47-22.11-18.84Z"></path>
+  <path class="cls-1" d="M714.29,313.46c-16.69,0-29.28-12.29-29.28-28.77s12.59-28.77,29.28-28.77,29.18,12.29,29.18,28.77c.1,16.59-12.39,28.77-29.18,28.77ZM732.1,284.69c0-10.54-7.47-18.02-17.81-18.02s-17.81,7.47-17.81,18.02,7.47,18.02,17.81,18.02,17.81-7.47,17.81-18.02Z"></path>
+  <path class="cls-1" d="M786.67,256.95v10.65h-5.94c-9.32,0-13.92,5.32-13.92,15.25v29.28h-11.26v-54.77h7.58l1.95,7.47c3.89-5.22,9.32-7.78,16.79-7.78l4.81-.1Z"></path>
+  <path class="cls-1" d="M826.29,301.89v10.24h-8.4c-11.98,0-19.35-7.37-19.35-19.55v-25.7h-9.83v-2.25l19.04-20.37h1.95v12.8h16.28v9.73h-16.18v24.78c0,6.65,3.58,10.24,10.24,10.24h6.25v.1Z"></path>
+  <path class="cls-1" d="M836.94,237.19h11.67v11.67h-11.67v-11.67ZM837.25,257.26h11.26v54.77h-11.26v-54.77Z"></path>
+  <path class="cls-1" d="M863.66,288.99v-31.74h11.26v30.1c0,9.62,5.22,15.25,13.72,15.25s13.62-5.84,13.62-15.25v-30.1h11.26v31.74c0,14.74-9.73,24.47-24.88,24.47s-24.98-9.73-24.98-24.47Z"></path>
+  <path class="cls-1" d="M989.69,256.13c11.47,0,19.35,8.8,19.35,21.29v34.81h-11.26v-32.15c0-8.8-3.89-13.82-10.65-13.82-7.27,0-12.8,6.65-12.8,15.97v30.1h-10.85v-32.15c0-8.8-3.79-13.82-10.65-13.82-7.27,0-12.9,6.65-12.9,15.97v30.1h-11.26v-55.08h7.99l1.95,7.17c4.1-5.22,10.34-8.29,17.1-8.29,7.37,0,13.31,3.58,16.38,9.62,3.79-6.14,10.54-9.73,17.61-9.73Z"></path>
+</svg></span>
   </div>
 
+  <!--
   <div class="coverpage-tc-name">
     <span>Technical</span>
   </div>
+  -->
+
+  <div class="authors">
+    
+    
+    
+
+    
+    
+    <span>Alexander Jacob <span class="roletag">Editor</span></span>
+    
+    <span>Juraj Zvolenský <span class="roletag">Editor</span></span>
+    
+    <span>Yuvraj Bhagwan Adagale <span class="roletag">Editor</span></span>
+    
+    
+  </div>
+
+    <div class="coverpage-metadata">
+      <span class="label">Submission Date: </span> <span class="value">2026-05-14</span>
+      <span class="label">Approval Date: </span> <span class="value">XXXX-XX-XX</span>
+      <span class="label">Publication Date: </span> <span class="value">XXXX-XX-XX</span>
+      <span class="label">External identifier of this OGC® document: <span class="docnumber value"></span></span>
+      <span class="label">Internal identifier of this OGC® document: <span class="docnumber value">YY-999</span></span>
+      
+      
+    </div>
+
+    <div class="coverpage-alt-formats">
+      
+      <span class="label">Version: </span> <span class="value">1.0</span><br />
+      
+    
+      <span class="label">Additional Formats: </span>
+      
+      
+      <span class="value"><a href="./document.pdf"><i class="far fa-file-pdf"></i>PDF</a></span>
+      
+      
+      </div>
+    
+    </div>
+
   </div>
 
     <div class="wrapper-top-bottom"></div>
@@ -997,484 +1737,331 @@ a.anchorjs-link:hover {
   </div>
 
   <div class="coverpage-stage-block">
-    <p><span class="coverpage-maturity" id="swg-draft">Swg Draft</span></p>
+    <p><span class="coverpage-maturity" id="swg-draft">Candidate SWG Draft</span></p>
+  </div>
 </div>
 
-
-
-
-
-
-
-
-
-
   <div class="coverpage-warning">
-    <span class="title">Warning</span>
-    <p class="content">This document defines an OGC Best Practices on a particular technology or approach related to an OGC standard. This document is <i>not</i> an OGC Standard and may not be referred to as an OGC Standard. It is subject to change without notice. However, this document is an <i>official</i> position of the OGC membership on this particular technology topic.
-    </p>
+    <div class="boilerplate-legal">
+
+<div id="_b1b6cc59-441d-8a65-d20d-2d74f7fc9983"><h1 class="IntroTitle"><a class="anchor" href="#_b1b6cc59-441d-8a65-d20d-2d74f7fc9983"></a><a class="header" href="#_b1b6cc59-441d-8a65-d20d-2d74f7fc9983">Notice</a></h1>
+
+<p id="_1359566d-89c2-380b-72bb-805915659afc">This document defines an OGC Best Practice on a particular technology or approach related to an OGC standard. This document is <i>not</i> an OGC Standard and may not be referred to as an OGC Standard. It is subject to change without notice. However, this document is an <i>official</i> position of the OGC membership on this particular technology topic.</p>
+
+<p id="_e8629e34-594d-6076-a18a-23d7b5df19ba">Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.</p>
+</div>
+</div>
  </div>
+         
 
 
-
-
-
-  <div class="coverpage-warning">
-    <span class="title">Warning for Drafts</span>
-
-    <p class="content">
-    This document is not a OGC Standard. It is distributed for review and
-    comment, and is subject to change without notice and may not be referred to as
-    a Standard.</p>
-    <p class="content">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium Inc. shall not be held responsible for identifying any or all such patent rights.
-    </p>
-    <p class="content">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
-    </p>
-  </div>
-
+<div class="docstage-box">
+  <table>
+    <tr><td>Document number:</td><td>YY-999</td></tr>
+    <tr><td>Document type:</td><td>OGC Best Practice</td></tr>
+    <tr><td align="right">Document subtype:</td><td align="right">General</td></tr>
+    <tr><td align="right">Document stage:</td><td align="right">Candidate SWG Draft</td></tr>
+    <tr><td align="right">Document language:</td><td align="right">English</td></tr>
+  </table>
+</div>
 
 <div class="info-section">
 <div class="copyright">
-  <p class="year">
-    &#xA9; 2026 Open Geospatial Consortium
-  </p>
+  <div class="boilerplate-copyright">
 
-  <p class="message">
-    All rights reserved. Unless otherwise specified, no part of this
-    publication may be reproduced or utilized otherwise in any form or by any
-    means, electronic or mechanical, including photocopying, or posting on the
-    internet or an intranet, without prior written permission. Permission can
-    be requested from the address below.
+<div id="_2cd773fc-8495-2dfa-91a1-d57da3fc5833"><h1 class="IntroTitle"><a class="anchor" href="#_2cd773fc-8495-2dfa-91a1-d57da3fc5833"></a><a class="header" href="#_2cd773fc-8495-2dfa-91a1-d57da3fc5833">Copyright notice</a></h1>
 
-    To obtain additional rights of use, visit <a href="http://www.opengeospatial.org/legal/">http://www.opengeospatial.org/legal/</a>.
-  </p>
+<p id="_f3c4258f-6b29-424c-cd01-337c0e916a04" style="text-align:center;">Copyright © 2026 Open Geospatial Consortium<br /> To obtain additional rights of use, visit <a href="https://www.ogc.org/legal">https://www.ogc.org/legal</a></p>
+</div>
 
-<div class="contact-info">
-  <p class="name">Open Geospatial Consortium</p>
-  <p class="address">
-    35 Main Street<br />
-    Suite 5<br />
-    Wayland<br />
-    MA, 01778<br />
-    United States of America<br />
-    <br />
-    <a href="mailto:copyright@opengeospatial.org">copyright@opengeospatial.org</a><br />
-    <a href="www.opengeospatial.org">www.opengeospatial.org</a>
-  </p>
+<div id="_6908548e-204b-56e7-9062-6924cccf2315"><h1 class="IntroTitle"><a class="anchor" href="#_6908548e-204b-56e7-9062-6924cccf2315"></a><a class="header" href="#_6908548e-204b-56e7-9062-6924cccf2315">Note</a></h1>
+
+<p id="_e1d5d5c4-54c3-2761-be2c-22547f01c057" style="text-align:left;">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+<p id="_02892e94-7b43-630a-129c-d2e0f75ff92b" style="text-align:left;">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+</div>
 </div>
 </div>
 
 <div class="rule"></div>
 </div>
-  </div>
+  </header>
+</div><br /><div class="prefatory-section"><div class="license">
+  <div class="boilerplate-license">
 
+<div id="_45f6bdf5-80f3-f775-9740-2adafc90b1f7"><h1 class="IntroTitle"><a class="anchor" href="#_45f6bdf5-80f3-f775-9740-2adafc90b1f7"></a><a class="header" href="#_45f6bdf5-80f3-f775-9740-2adafc90b1f7">License Agreement</a></h1>
 
-
-</div></header>
-      <p>&#xA0;</p>
-    </div>
-    <br />
-    <div class="prefatory-section"><div class="license">
-<p><b>License Agreement</b></p>
-
-<p>Permission is hereby granted by the Open Geospatial
-Consortium, ("Licensor"), free of charge and subject to the terms set
-forth below, to any person obtaining a copy of this Intellectual Property and
-any associated documentation, to deal in the Intellectual Property without
-restriction (except as set forth below), including without limitation the
-rights to implement, use, copy, modify, merge, publish, distribute, and/or
-sublicense copies of the Intellectual Property, and to permit persons to whom
-the Intellectual Property is furnished to do so, provided that all copyright notices
-on the intellectual property are retained intact and that each person to whom
-the Intellectual Property is furnished agrees to the terms of this Agreement.</p>
-
-<p>If you modify the Intellectual Property, all copies of
-the modified Intellectual Property must include, in addition to the above
-copyright notice, a notice that the Intellectual Property includes
-modifications that have not been approved or adopted by LICENSOR.</p>
-
-<p>THIS LICENSE IS A COPYRIGHT LICENSE ONLY, AND DOES NOT
-CONVEY ANY RIGHTS UNDER ANY PATENTS THAT MAY BE IN FORCE ANYWHERE IN THE WORLD.</p>
-
-<p>THE INTELLECTUAL PROPERTY IS PROVIDED "AS
-IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
-LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
-AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. THE COPYRIGHT HOLDER OR HOLDERS
-INCLUDED IN THIS NOTICE DO NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE
-INTELLECTUAL PROPERTY WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE
-INTELLECTUAL PROPERTY WILL BE UNINTERRUPTED OR ERROR FREE. ANY USE OF THE
-INTELLECTUAL PROPERTY SHALL BE MADE ENTIRELY AT THE USER&#x2019;S OWN RISK. IN NO
-EVENT SHALL THE COPYRIGHT HOLDER OR ANY CONTRIBUTOR OF INTELLECTUAL PROPERTY
-RIGHTS TO THE INTELLECTUAL PROPERTY BE LIABLE FOR ANY CLAIM, OR ANY DIRECT,
-SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING
-FROM ANY ALLEGED INFRINGEMENT OR ANY LOSS OF USE, DATA OR PROFITS, WHETHER IN
-AN ACTION OF CONTRACT, NEGLIGENCE OR UNDER ANY OTHER LEGAL THEORY, ARISING OUT
-OF OR IN CONNECTION WITH THE IMPLEMENTATION, USE, COMMERCIALIZATION OR
-PERFORMANCE OF THIS INTELLECTUAL PROPERTY.</p>
-
-<p>This license is effective until terminated. You may
-terminate it at any time by destroying the Intellectual Property together with
-all copies in any form. The license will also terminate if you fail to comply
-with any term or condition of this Agreement. Except as provided in the
-following sentence, no such termination of this license shall require the
-termination of any third party end-user sublicense to the Intellectual Property
-which is in force as of the date of notice of such termination. In addition,
-should the Intellectual Property, or the operation of the Intellectual
-Property, infringe, or in <span class="SpellE">LICENSOR&#x2019;s</span> sole opinion be
-likely to infringe, any patent, copyright, trademark or other right of a third
-party, you agree that LICENSOR, in its sole discretion, may terminate this
-license without any compensation or liability to you, your licensees or any
-other party. You agree upon termination of any kind to destroy or cause to be
-destroyed the Intellectual Property together with all copies in any form,
-whether held by you or by any third party.</p>
-
-<p>Except as contained in this notice, the name of
-LICENSOR or of any other holder of a copyright in all or part of the Intellectual
-Property shall not be used in advertising or otherwise to promote the sale, use
-or other dealings in this Intellectual Property without prior written
-authorization of LICENSOR or such copyright holder. LICENSOR is and shall at
-all times be the sole entity that may authorize you or any third party to use
-certification marks, trademarks or other special designations to indicate
-compliance with any LICENSOR standards or specifications. This Agreement is
-governed by the laws of the Commonwealth of Massachusetts. The application to
-this Agreement of the United Nations Convention on Contracts for the
-International Sale of Goods is hereby expressly excluded. In the event any
-provision of this Agreement shall be deemed unenforceable, void or invalid, such
-provision shall be modified so as to make it valid and enforceable, and as so
-modified the entire Agreement shall remain in full force and effect. No
-decision, action or inaction by LICENSOR shall be construed to be a waiver of
-any rights or remedies available to it.</p>
+<p id="_772872dd-928c-666f-92c5-676f7f5d3071">Use of this document is subject to the license agreement at <a href="https://www.ogc.org/license">https://www.ogc.org/license</a></p>
+</div>
+</div>
 
 
 
 </div>
 
 <nav>
-  <h1 id="content">Contents</h1>
-  <div id="toc"></div>
+  <div id="toc"><h1 class="IntroTitle"><a class="anchor" href="#_13d7055e-30fc-845a-c60e-8972faf092d9"></a><a class="header" href="#_13d7055e-30fc-845a-c60e-8972faf092d9">Contents</a></h1><ul><li class="h1"><a href="#_ae04e3ef-99d7-cf5d-7d23-300bdadf5c19">      
+  
+  I.  Abstract
+</a></li>
+<li class="h1"><a href="#_7533afc9-3c7e-544e-2aa6-590ca0713799">      
+  
+  II.  Keywords
+</a></li>
+<li class="h1"><a href="#_4698e4db-0fcc-59f6-29bd-0633945942b5">      
+  
+  III.  Preface
+</a></li>
+<li class="h1"><a href="#_b99a2bd6-1a97-8f41-0bc0-600ae6df3c97">      
+  
+  IV.  Security Considerations
+</a></li>
+<li class="h1"><a href="#_aea6b3be-9695-4163-de40-99e56b7c685d">      
+  
+  V.  Submitting Organizations
+</a></li>
+<li class="h1"><a href="#_13c3e311-2b46-d683-741b-df1f01e75516">      
+  
+  VI.  Submitters
+</a></li>
+<li class="h1"><a href="#_1a761316-e936-4460-fe11-51fa5825e87d">      
+  
+  VII.  Contributors
+</a></li>
+<li class="h1"><a href="#_a0ea1226-a6ef-bcd9-f11a-443345e6ac54">      
+  
+  1.  Scope
+</a></li>
+<li class="h1"><a href="#_0988fca7-0064-651d-cbad-9f9c80ed5b13">      
+  
+  2.  Conformance
+</a></li>
+<li class="h1"><a href="#_a42bf24d-2792-40c4-a631-80af13a8a059">      3.  Normative references</a></li>
+<li class="h1"><a href="#_eb67b639-667a-3f25-5998-36dc9c1fb94d">      
+  
+  4.  Terms and definitions
+</a></li>
+<li class="h1"><a href="#_a47f995f-d9fa-f88a-4020-2617fc07487d">      
+  
+  5.  Conventions
+</a></li>
+<li class="h2"><a href="#_59c61b31-e3bc-d456-f2a0-a703d24452b6">      
+  
+  5.1.  Identifiers
+</a></li>
+<li class="h1"><a href="#_1e5057ef-315c-a86b-91cb-d44fadcc55c1">      
+  
+  6.  Clauses not Containing Normative Material
+</a></li>
+<li class="h2"><a href="#_8d493685-3b9b-17d3-a40d-61cb3d70c1a2">      
+  
+  6.1.  Clauses not containing normative material sub-clause 1
+</a></li>
+<li class="h2"><a href="#_6e99a882-d577-4a41-7c3e-8819f7aa2cd1">      
+  
+  6.2.  Clauses not containing normative material sub-clause 2
+</a></li>
+<li class="h1"><a href="#_543b2d13-00e6-1067-0e13-bd6d1179d602">      
+  
+  7.  Clause containing normative material
+</a></li>
+<li class="h2"><a href="#_75734a1f-d031-eed8-45ea-333323a5af9a">      
+  
+  7.1.  Requirement Class A or Requirement A Example
+</a></li>
+<li class="h1"><a href="#_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985">      Annex A  Conformance Class Abstract Test Suite (Normative)</a></li>
+<li class="h2"><a href="#_53d6449c-2e48-ac95-e5d2-2968cfb51437">      
+  
+  A.1.  Conformance Class A
+</a></li>
+<li class="h1"><a href="#_8e5807f4-e021-3e1e-8161-acf01a2a16bc">      Annex B  Title ( {Normative/Informative} )</a></li>
+<li class="h1"><a href="#_86ce8e65-c445-b308-465c-eba6a1493662">      Annex C  Revision History</a></li>
+<li class="h1"><a href="#_f12551ef-95fc-41be-9488-ace5cd789448">      Bibliography</a></li></ul></div>
 
 </nav>
 
 
 <div class="rule toc"></div>
+</div><br /><main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button><div class="authority">
 
-      <p>&#xA0;</p>
-    </div>
-    <br />
-    <main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-      <br />
-      <div id="_abstract">
-        <h1 class="AbstractTitle">i.&#xA0; Abstract</h1>
-        <p id="_8234237b-5e77-4259-8e3c-4a590caee859">&lt;Insert Abstract Text here&gt;</p>
-      </div>
-      <div class="Section3">
-        <h1 class="IntroTitle">ii.&#xA0; Keywords</h1>
-        <p>The following are keywords to be used by search engines and document catalogues.</p>
-        <p>ogcdoc, OGC document, best practice, GeoDataCubes</p>
-      </div>
-      <br />
-      <div>
-        <h1 class="ForewordTitle">iii.&#xA0; Preface</h1>
-        <div id="_5d9b072f-7410-4c5d-bc0f-0178b781b55e" class="Note">
-          <p><span class="note_label">NOTE</span>&#xA0; Insert Preface Text here. Give OGC specific commentary: describe the technical content, reason for document, history of the document and precursors, and plans for future work.</p>
-          <p id="_d03513ed-2589-48b2-bb08-6c3a25307e87">There are two ways to specify the Preface: &#x201C;simple clause&#x201D; or &#x201C;full clasuse&#x201D;</p>
-          <p id="_9c1952fa-4f15-4ea5-b45f-519f0d31ed80">If the Preface does not contain subclauses, it is considered a simple preface clause. This one is entered as text after the <tt>.Preface</tt> label and must be placed between the AsciiDoc document attributes and the first AsciiDoc section title. It should not be give a section title of its own.</p>
-          <p id="_f720d11d-9ab6-4c7e-9da3-3abc8c1240c4">If the Preface contains subclauses, it needs to be encoded as a full preface clause. This one is recognized as a full Metanorma AsciiDoc section with te title &#x201C;Preface&#x201D;, i.e. <tt>== Preface</tt>. (Simple preface content can also be encoded like full preface.)</p>
-        </div>
-      </div>
-      <div class="Section3">
-        <h1 class="IntroTitle">iv.&#xA0; Submitting Organizations</h1>
-        <p>The following organizations submitted this Document to the Open Geospatial Consortium (OGC):</p>
-        <ul>
-          <li>Eurac Research</li>
-          <li>Organization two</li>
-          <li>Organization three</li>
-        </ul>
-      </div>
-      <div class="Section3">
-        <h1 class="IntroTitle">v.&#xA0; Submitters</h1>
-        <p id="_bf1fa892-87df-48f2-9156-f698098fa930">All questions regarding this submission should be directed to the editor or the submitters:</p>
-        <p class="TableTitle" align="center">Table 1</p>
-        <table id="_f55d981a-c7d5-49e7-9159-c552ad44865d" class="MsoISOTable" border="1" cellspacing="0" cellpadding="0">
-          <thead>
-            <tr>
-              <th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Name</th>
-              <th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Affiliation</th>
-              <th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">OGC member</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Alexander Jacob</td>
-              <td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Eurac Research</td>
-              <td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Yes</td>
-            </tr>
-            <tr>
-              <td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Juraj Zvolensk&#xFD;</td>
-              <td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Eurac Research</td>
-              <td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td>
-            </tr>
-            <tr>
-              <td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">Yuvraj Bhagwan Adagale</td>
-              <td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">Eurac Research</td>
-              <td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">Yes</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="zzSTDTitle1">Best Practice for OGC GeoDataCube Management</p>
-      <div id="_scope">
-        <h1>1.&#xA0; Scope</h1>
-        <div id="_cc24aeab-565d-4450-aa61-48a40582d2b5" class="Note">
-          <p><span class="note_label">NOTE</span>&#xA0; Insert Scope text here. Give the subject of the document and the aspects of that scope covered by the document.</p>
-        </div>
-      </div>
-      <div>
-        <h1>2.&#xA0; Normative references</h1>
-        <p>The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
-        <p id="Smith81" class="NormRef">Identification of Common Molecular Subsequences, <i>Identification of Common Molecular Subsequences</i>.
-Smith, T.F., Waterman, M.S., J. Mol. Biol. 147, 195&#x2013;197 (1981)</p>
-        <p id="May06" class="NormRef">ZIB Structure Prediction Pipeline, <i>ZIB Structure Prediction Pipeline: Composing a Complex Biological Workflow through Web Services</i>.
+
+
+
+
+<div class="boilerplate-feedback">
+
+</div>
+</div><br /><br /><div id="_ae04e3ef-99d7-cf5d-7d23-300bdadf5c19"><h1 class="AbstractTitle" id="_e9f84c35-1081-4fa7-83fc-7bd0c3a1e947"><a class="anchor" href="#_ae04e3ef-99d7-cf5d-7d23-300bdadf5c19"></a><a class="header" href="#_ae04e3ef-99d7-cf5d-7d23-300bdadf5c19">I.  Abstract</a></h1><p id="_06afb1ef-2bad-19e6-8e59-c320b878afcf">The rapidly growing volume of Earth observation data, together with the increasing diversity of data providers, platforms, formats, APIs, and processing environments, makes it difficult for users to consistently discover, access, prepare, and use data for analysis. While metadata standards and catalogues provide an essential foundation for discovery and description, additional guidance is needed on how discovered datasets can be transformed into analysis-ready geodatacubes and managed throughout their use.</p><p id="_47d31f49-4e78-46f0-badd-19bceb98b519">This Best Practice provides recommendations for geodatacube management, focusing on the pathways from metadata and data discovery towards usable multidimensional datacubes. It describes how metadata-driven approaches can support the creation, configuration, access, and processing of geodatacubes across heterogeneous infrastructures. Building on previous work, including OGC Testbed 19, the document explores the role of openEO and relevant open-source EOEPCA building blocks as interoperable components for exposing, processing, and managing Earth observation data as geodatacubes.</p><p id="_30b94dce-0e7c-e2b9-2399-63ffa0bed0bc">The goal of this Best Practice is to provide practical guidance for data providers, platform operators, and application developers who need to design geodatacube management systems. It recommends approaches for bridging discovery metadata, data access mechanisms, processing interfaces, and datacube representations in a way that improves interoperability, reproducibility, and usability of Earth observation data.</p></div><div class="Section3" id="_7533afc9-3c7e-544e-2aa6-590ca0713799"><h1 class="IntroTitle" id="_ec45a58c-0bb1-42f5-98ab-ec2f9296c031"><a class="anchor" href="#_7533afc9-3c7e-544e-2aa6-590ca0713799"></a><a class="header" href="#_7533afc9-3c7e-544e-2aa6-590ca0713799">II.  Keywords</a></h1><p>The following are keywords to be used by search engines and document catalogues.</p><p>ogcdoc, OGC document, best practice, GeoDataCubes</p></div><br /><div id="_4698e4db-0fcc-59f6-29bd-0633945942b5"><h1 class="ForewordTitle" id="_ddd56c6e-b572-496d-b10b-823b96f76897"><a class="anchor" href="#_4698e4db-0fcc-59f6-29bd-0633945942b5"></a><a class="header" href="#_4698e4db-0fcc-59f6-29bd-0633945942b5">III.  Preface</a></h1><div id="_0ba5b9b2-1621-e339-5eb6-8ffcb9bf9ae8" class="Note"><p><span class="note_label">NOTE:  </span>Insert Preface Text here. Give OGC specific commentary: describe the technical content, reason for document, history of the document and precursors, and plans for future work.</p><p id="_dce2d5df-f281-a276-e795-ecdbbc66fde9">There are two ways to specify the Preface: “simple clause” or “full clasuse”</p><p id="_bf0a4cff-b8d4-99ef-f988-ae91c26f4e00">If the Preface does not contain subclauses, it is considered a simple preface clause. This one is entered as text after the <tt>.Preface</tt> label and must be placed between the AsciiDoc document attributes and the first AsciiDoc section title. It should not be give a section title of its own.</p><p id="_2de06016-75e5-9b09-a88d-781e9da93acf">If the Preface contains subclauses, it needs to be encoded as a full preface clause. This one is recognized as a full Metanorma AsciiDoc section with te title “Preface”, i.e. <tt>== Preface</tt>. (Simple preface content can also be encoded like full preface.)</p></div></div><div class="Section3" id="_b99a2bd6-1a97-8f41-0bc0-600ae6df3c97"><h1 class="IntroTitle" id="_125ef236-4ddb-4b85-aba3-78536fd811fe"><a class="anchor" href="#_b99a2bd6-1a97-8f41-0bc0-600ae6df3c97"></a><a class="header" href="#_b99a2bd6-1a97-8f41-0bc0-600ae6df3c97">IV.  Security Considerations</a></h1><p id="_b2512eeb-995a-eabe-4ee2-ae30853fc76e">No security considerations have been made for this Standard.</p></div><div class="Section3" id="_aea6b3be-9695-4163-de40-99e56b7c685d"><h1 class="IntroTitle" id="_61711139-a6ea-4f67-86f2-54937baac85d"><a class="anchor" href="#_aea6b3be-9695-4163-de40-99e56b7c685d"></a><a class="header" href="#_aea6b3be-9695-4163-de40-99e56b7c685d">V.  Submitting Organizations</a></h1><p>The following organizations submitted this Document to the Open Geospatial Consortium (OGC):</p><div class="ul_wrap"><ul id="_10c7d3d6-c140-ff80-20ae-a686ac883640"><li id="_67739119-f736-351d-9fc1-2ca9eac4ffa2">Eurac Research</li>
+<li id="_b12aff5f-5e54-6642-a61b-a32c6e160be9">Organization two</li>
+<li id="_ba094c5e-0f9d-bc19-cc9f-49e7478ba3d4">Organization three</li></ul></div></div><div class="Section3" id="_13c3e311-2b46-d683-741b-df1f01e75516"><h1 class="IntroTitle" id="_fbdeb3fa-1168-4924-987e-c4a1a06a88a9"><a class="anchor" href="#_13c3e311-2b46-d683-741b-df1f01e75516"></a><a class="header" href="#_13c3e311-2b46-d683-741b-df1f01e75516">VI.  Submitters</a></h1><p id="_6e1b734b-e32c-864b-59a1-81792b76695c">All questions regarding this submission should be directed to the editor or the submitters:</p><table id="_509507cf-ccd9-d8fc-a93b-f8b5bbd8e68d" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><thead><tr><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Name</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Affiliation</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">OGC member</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Alexander Jacob</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Eurac Research</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Juraj Zvolenský</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Eurac Research</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Yuvraj Bhagwan Adagale</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Eurac Research</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Yes</td></tr></tbody></table></div><div class="Section3" id="_1a761316-e936-4460-fe11-51fa5825e87d"><h1 class="IntroTitle" id="_8a349976-e990-4296-b0d0-394dad00dc97"><a class="anchor" href="#_1a761316-e936-4460-fe11-51fa5825e87d"></a><a class="header" href="#_1a761316-e936-4460-fe11-51fa5825e87d">VII.  Contributors</a></h1><p id="_f88518ff-22be-3e45-459d-49e70c5c8aeb">Alexander Jacob, Eurac Research
+Juraj Zvolenský, Eurac Research
+Yuvraj Bhagwan Adagale, Eurac Research</p><div id="_383f9325-f045-16e4-76e2-df960986871b" class="Note"><p><span class="note_label">NOTE:  </span>If you need to place any further sections in the preface area use the  <tt>[.preface]</tt> attribute.</p></div></div><div id="_a0ea1226-a6ef-bcd9-f11a-443345e6ac54"><h1 id="_0689df65-349c-48a1-aee1-d27d4ff9bb51"><a class="anchor" href="#_a0ea1226-a6ef-bcd9-f11a-443345e6ac54"></a><a class="header" href="#_a0ea1226-a6ef-bcd9-f11a-443345e6ac54">1.  Scope</a></h1><div id="_1cb3808f-126e-3134-d7ca-3aa773af036a" class="Note"><p><span class="note_label">NOTE:  </span>This document specifies a set of best practice recommendations for the management of geospatial data as geodatacubes. The scope of this document is the transition from metadata-driven discovery of Earth observation datasets to their access, organization, processing, and use as multidimensional geodatacubes.</p><p id="_d16b7741-ffbc-6b1d-2750-210707707c06">The document provides guidance on the use of metadata records, catalogues, data access information, and processing interfaces to support interoperable geodatacube management. It includes consideration of openEO as an interface for geodatacube access and processing, and considers the use of open-source EOEPCA building blocks as components within geodatacube management architectures.</p><p id="_d760477a-c460-3758-5526-3cd3a4231c50">This document is intended to support implementers of data platforms, processing services, and client applications that need to manage Earth observation data in a datacube-oriented form. It does not define a new standard for geodatacube encoding, metadata, or processing. Instead, it identifies recommended practices for combining existing standards, interfaces, and software components to support consistent and reusable geodatacube workflows.</p></div></div><div id="_0988fca7-0064-651d-cbad-9f9c80ed5b13"><h1 id="_322c7686-b717-4893-b84a-a92c8129c0bf"><a class="anchor" href="#_0988fca7-0064-651d-cbad-9f9c80ed5b13"></a><a class="header" href="#_0988fca7-0064-651d-cbad-9f9c80ed5b13">2.  Conformance</a></h1><p id="_9bed8102-118c-c6d1-7a4e-90c6dc537370">This Best Practice defines XXXX.</p><p id="_d9fe72ea-ca72-b83e-389d-ea30f5827c41">Requirements for N standardization target types are considered:</p><div class="ul_wrap"><ul id="_5467cfd2-470c-d7a8-cebc-47f3d9ca6d33"><li id="_d91c3a06-045f-896a-c49e-ff54292c02ec"><p id="_35e83e77-159f-c397-8352-ba65d2d1f1f9">AAAA</p>
+</li>
+<li id="_cdae5136-10ba-a40a-3a05-0a26dfad8e92"><p id="_c4ed82c0-9cf9-7082-b0f4-a1b921220c4e">BBBB</p>
+</li>
+</ul></div><p id="_76dc9be6-f5a8-8309-75f0-fe7a1a046388">Conformance with this Best Practice shall be checked using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.</p><p id="_5cb037cc-d7cb-812b-6bcf-5c66c0e029ab">In order to conform to this OGC® interface Best Practice, a software implementation shall choose to implement:</p><div class="ul_wrap"><ul id="_38477986-bc30-42f5-e17f-0e054c46714d"><li id="_5f91835b-c237-485b-22d5-410417fc52eb"><p id="_a9f1a075-d082-b15a-9cec-6e9639639dba">Any one of the conformance levels specified in Annex A (normative).</p>
+</li>
+<li id="_b8622d3b-3c04-9681-4023-9c0d142c2379"><p id="_42ba9e3c-2c69-333e-7cb6-3249deca363d">Any one of the Distributed Computing Platform profiles specified in Annexes TBD through TBD (normative).</p>
+</li>
+</ul></div><p id="_07a0f6ed-9ff4-1172-3450-8e30f19e802b">All requirements-classes and conformance-classes described in this document are owned by the documents(s) identified.</p></div><div><h1 id="_a42bf24d-2792-40c4-a631-80af13a8a059">3.  Normative references</h1>
+<p id="_49996d2b-65c1-916b-9bbf-42b933aa0025">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+
+
+
+
+<p id="Smith81" class="NormRef"><i>Identification of Common Molecular Subsequences</i>.
+Smith, T.F., Waterman, M.S., J. Mol. Biol. 147, 195–197 (1981)</p>
+<p id="May06" class="NormRef"><i>ZIB Structure Prediction Pipeline: Composing a Complex Biological Workflow through Web Services</i>.
 May, P., Ehrlich, H.C., Steinke, T. In: Nagel, W.E., Walter,
-W.V., Lehner, W. (eds.) Euro-Par 2006. LNCS, vol. 4128, pp. 1148&#x2013;1158. Springer,
+W.V., Lehner, W. (eds.) Euro-Par 2006. LNCS, vol. 4128, pp. 1148–1158. Springer,
 Heidelberg (2006)</p>
-        <p id="Grid" class="NormRef">The Grid, <i>The Grid: Blueprint for a New Computing Infrastructure.</i>,
+<p id="Grid" class="NormRef"><i>The Grid: Blueprint for a New Computing Infrastructure.</i>,
 Foster, I., Kesselman, C.. Morgan Kaufmann, San Francisco (1999).</p>
-        <p id="Czajkowski01" class="NormRef">Grid Information Services for Distributed Resource Sharing, <i>Grid Information Services for Distributed Resource Sharing.</i>
+<p id="Czajkowski01" class="NormRef"><i>Grid Information Services for Distributed Resource Sharing.</i>
 Czajkowski, K., Fitzgerald, S., Foster, I., Kesselman, C. In: 10th IEEE International Symposium on High
-Performance Distributed Computing, pp. 181&#x2013;184. IEEE Press, New York (2001)</p>
-        <p id="Foster02" class="NormRef">The Physiology of the Grid, <i>The Physiology of the Grid: an Open Grid Services Architecture for Distributed Systems Integration.</i>
+Performance Distributed Computing, pp. 181–184. IEEE Press, New York (2001)</p>
+<p id="Foster02" class="NormRef"><i>The Physiology of the Grid: an Open Grid Services Architecture for Distributed Systems Integration.</i>
 Foster, I., Kesselman, C., Nick, J., Tuecke, S. Technical report, Global Grid Forum (2002)</p>
-        <p id="NCBI" class="NormRef">NCBI, <i>National Center for Biotechnology Information</i>, <a href="http://www.ncbi.nlm.nih.gov">http://www.ncbi.nlm.nih.gov</a></p>
-        <p id="ISO19101-1" class="NormRef">ISO 19101-1:2014, <i>Geographic information&#x2009;&#x2014;&#x2009;Reference model&#x2009;&#x2014;&#x2009;Part 1: Fundamentals</i></p>
-        <p id="ISO19115-1" class="NormRef">ISO 19115-1:2014, <i>Geographic information&#x2009;&#x2014;&#x2009;Metadata&#x2009;&#x2014;&#x2009;Part 1: Fundamentals</i></p>
-        <p id="ISO19157" class="NormRef">ISO 19157:2013, <i>Geographic information&#x2009;&#x2014;&#x2009;Data quality</i></p>
-        <p id="ISO19139" class="NormRef">ISO 19139:2007, <i>Geographic information&#x2009;&#x2014;&#x2009;Metadata&#x2009;&#x2014;&#x2009;XML schema implementation</i></p>
-        <p id="ISO19115-3" class="NormRef">ISO 19115-3, <i>Geographic information&#x2009;&#x2014;&#x2009;Metadata&#x2009;&#x2014;&#x2009;Part 3: XML schemas (2016)</i></p>
-        <p id="OGC15-097" class="NormRef">OGC 15-097, <i>OGC Geospatial User Feedback Standard: Conceptual Model</i> (2016)</p>
-        <p id="OGC12-019" class="NormRef">OGC 12-019, <i>OGC City Geography Markup Language (CityGML) Encoding Standard</i> (2012)</p>
-        <p id="OGC14-005r3" class="NormRef">OGC 14-005r3, <i>OGC IndoorGML</i> (2014)</p>
-        <p id="OGC06121r9" class="NormRef">OGC 06-121r9, <i>OGC Web Service Common Implementation Specification</i>, April 7, 2010. <a href="http://portal.opengeospatial.org/files/?artifact_id=38867">http://portal.opengeospatial.org/files/?artifact_id=38867</a></p>
-      </div>
-      <div id="_terms_and_definitions"><h1>3.&#xA0; Terms and definitions</h1><p>For the purposes of this document,
-    the following terms and definitions apply.</p>
-<h2 class="TermNum" id="_example_term">4.1&#xA0;<p class="Terms" style="text-align:left;">example term</p></h2><p id="_9ea6fc24-c577-47e8-bea2-785d9b990a30">term used for exemplary purposes</p>
+<p id="NCBI" class="NormRef"><i>National Center for Biotechnology Information</i>, <a href="http://www.ncbi.nlm.nih.gov">http://www.ncbi.nlm.nih.gov</a></p>
+<p id="ISO19101-1" class="NormRef">International Organization for Standardization (committee): ISO 19101-1:2014, <i>Geographic information — Reference model — Part 1: Fundamentals</i>. International Organization for Standardization, Geneva (2014). <a href="https://www.iso.org/standard/59164.html">https://www.iso.org/standard/59164.html</a>.</p>
+<p id="ISO19115-1" class="NormRef">International Organization for Standardization (committee): ISO 19115-1:2014, <i>Geographic information — Metadata — Part 1: Fundamentals</i>. International Organization for Standardization, Geneva (2014). <a href="https://www.iso.org/standard/53798.html">https://www.iso.org/standard/53798.html</a>.</p>
+<p id="ISO19157" class="NormRef">International Organization for Standardization (committee): ISO 19157:2013, <i>Geographic information  — Data quality</i>. International Organization for Standardization, Geneva (2013). <a href="https://www.iso.org/standard/32575.html">https://www.iso.org/standard/32575.html</a>.</p>
+<p id="ISO19139" class="NormRef">ISO: ISO 19139:2007, <i>Geographic information — Metadata — XML schema implementation</i>. ISO (2007).</p>
+<p id="ISO19115-3" class="NormRef">International Organization for Standardization (committee): ISO 19115-3, <i>Geographic information — Metadata — Part 3: XML schema implementation for fundamental concepts</i>. International Organization for Standardization, Geneva <a href="https://www.iso.org/standard/80874.html">https://www.iso.org/standard/80874.html</a>.</p>
+<p id="OGC15-097" class="NormRef">Joan Masó, Lucy Bastin, Open Geospatial Consortium: OGC 15-097r1, <i>OGC® Geospatial User Feedback Standard: Conceptual Model</i>. Open Geospatial Consortium (2016). <a href="http://www.opengis.net/doc/IS/guf-conceptual/1.0.0">http://www.opengis.net/doc/IS/guf-conceptual/1.0.0</a>.</p>
+<p id="OGC12-019" class="NormRef">Gerhard Gröger, Thomas H. Kolbe, Claus Nagel, Karl-Heinz Häfele, Open Geospatial Consortium: OGC 12-019, <i>OGC City Geography Markup Language (CityGML) Encoding Standard</i>. Open Geospatial Consortium (2012). <a href="http://www.opengis.net/spec/citygml/2.0">http://www.opengis.net/spec/citygml/2.0</a>.</p>
+<p id="OGC14-005r3" class="NormRef">Jiyeong Lee, Ki-Joune Li, Sisi Zlatanova, Thomas H. Kolbe, Claus Nagel, Thomas Becker, Open Geospatial Consortium: OGC 14-005r3, <i>OGC® IndoorGML</i>. Open Geospatial Consortium (2014). <a href="http://www.opengis.net/doc/IS/indoorgml/1.0.0">http://www.opengis.net/doc/IS/indoorgml/1.0.0</a>.</p>
+<p id="OGC06121r9" class="NormRef">Arliss Whiteside, Jim Greenwood, Open Geospatial Consortium: OGC 06-121r9, <i>OGC Web Service Common Implementation Specification</i>. Open Geospatial Consortium (2010). <a href="https://portal.ogc.org/files/?artifact_id=38867">https://portal.ogc.org/files/?artifact_id=38867</a>.</p>
+</div><div id="_eb67b639-667a-3f25-5998-36dc9c1fb94d"><h1 id="_dd2262c9-41d1-4d34-b3f9-a6c86c44e432"><a class="anchor" href="#_eb67b639-667a-3f25-5998-36dc9c1fb94d"></a><a class="header" href="#_eb67b639-667a-3f25-5998-36dc9c1fb94d">4.  Terms and definitions</a></h1>
+<p id="_8c49041f-8363-1e0b-0484-6e1046987489">This document uses the terms defined in <a href="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</a>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+
+<p id="_7bbae1f8-9cf5-3d71-b33b-b85f9ba4c251">This document also uses terms defined in the OGC Standard for Modular specifications (<a href="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</a>), also known as the ‘ModSpec’. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+
+<p id="_548e409e-2890-5c36-8c0d-528166f290d6">For the purposes of this document, the following additional terms and definitions apply.</p>
+<div id="term-example-term"><h2 class="TermNum" style="text-align:left;" id="_3d06ef3c-b76a-4856-b778-9ef909e8492d"><a class="anchor" href="#term-example-term"></a><a class="header" href="#term-example-term">4.1. <b>
+  <dfn>example term</dfn>
+</b></a></h2></div>
+<p id="_70d75b6c-d575-b202-e9e9-3b97aaf949a2">term used for exemplary purposes</p>
 
 
-<div class="Note"><p>Note 1 to entry: An example note.</p></div><table id="_715599d9-bcb9-4817-945f-4df6eb57dbee" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE</td><td valign="top" class="example">
-  <p id="_abefc609-68c2-410a-ad4d-018f42a5d0b9" class="example">Here&#x2019;s an example of an example term.</p>
-</td></tr></table><p>[SOURCE: <a href="#ISO19101-1">ISO 19101-1:2014</a>]</p></div>
-      <div id="_security_considerations">
-        <h1>5.&#xA0; Security Considerations</h1>
-        <p id="_342567fe-dde6-49d6-bf48-a37eb2d34e13">No security considerations have been made for this Standard.</p>
-      </div>
-      <div id="_contributors">
-        <h1>6.&#xA0; Contributors</h1>
-        <p id="_c244c352-a16d-4636-b4f9-1586fcaf4070">Additional contributors to this Standard include the following:</p>
-        <p id="_ed597e73-b67c-4222-9101-45809c38ce1a">Individual name(s), Organization</p>
-        <div id="_b5c722d5-7100-4239-9c49-d07e8f903906" class="Note">
-          <p><span class="note_label">NOTE</span>&#xA0; If you need to place any further sections in the preface area
-use the <tt>[.preface]</tt> attribute.</p>
-        </div>
-      </div>
-      <div id="_conformance">
-        <h1>7.&#xA0; Conformance</h1>
-        <p id="_e3559bfd-00ed-4ca6-be3a-b6857d20fc03">This Best Practice defines XXXX.</p>
-        <p id="_a68e431e-b4a5-40f5-a48b-4fed187092c9">Requirements for N standardization target types are considered:</p>
-        <ul id="_51405d80-c985-48f9-a543-3ec0293e9217">
-  <li>
-    <p id="_14a64bbc-154e-4ce7-87a2-e4ebd04af35b">AAAA</p>
-  </li>
-  <li>
-    <p id="_f726b9dd-1c71-4a85-8763-fc8a478f27a6">BBBB</p>
-  </li>
-</ul>
-        <p id="_fe462935-0212-4ee6-961b-5ac56a25cb97">Conformance with this Best Practice shall be checked using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.</p>
-        <p id="_41fea24a-11fe-4359-a0e4-b0d457732237">In order to conform to this OGC&#xAE; interface Best Practice, a software implementation shall choose to implement:</p>
-        <ul id="_9cff9487-5b2f-4c35-b096-d207f47dd1ff">
-  <li>
-    <p id="_521c5f01-acf0-44c2-ba0a-0da806e49926">Any one of the conformance levels specified in Annex A (normative).</p>
-  </li>
-  <li>
-    <p id="_d081200b-1b74-4180-adcb-ddaac8139366">Any one of the Distributed Computing Platform profiles specified in Annexes TBD through TBD (normative).</p>
-  </li>
-</ul>
-        <p id="_2fd94192-9eb4-4f30-b73c-459da09fab56">All requirements-classes and conformance-classes described in this document are owned by the documents(s) identified.</p>
-      </div>
-      <div id="_conventions">
-        <h1>8.&#xA0; Conventions</h1>
-        <p id="_ac97da5e-4012-40c3-ae1d-508852d59e14">This sections provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.</p>
-        <div id="_identifiers"><h2>8.1. Identifiers</h2><p id="_05faa1dd-7ae6-45c0-b40d-f3ebd2638727">The normative provisions in this document are denoted by the URI</p>
-<p id="_f53bcf63-ac9a-4981-aca8-54f2aab982fa">
-  <tt>
-    <a href="http://www.opengis.net/spec/{standard}/{m.n}">http://www.opengis.net/spec/{standard}/{m.n}</a>
-  </tt>
-</p>
-<p id="_7284d2d5-6be8-47d6-9af6-8b60be534a45">All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.</p></div>
-      </div>
-      <div id="_clauses_not_containing_normative_material">
-        <h1>9.&#xA0; Clauses not Containing Normative Material</h1>
-        <p id="_ec1b5b66-6ba5-4420-a04f-cc02d41c27e8">Paragraph</p>
-        <div id="_clauses_not_containing_normative_material_sub_clause_1"><h2>9.1. Clauses not containing normative material sub-clause 1</h2>
 
-  <p id="_bc686a19-2c1a-4159-8e94-a42552430e94">Paragraph</p>
+
+
+
+ <div id="_ef298953-a5eb-63d5-e5b3-323595918ce2" class="Note"><p><span class="termnote_label">Note 1 to entry: </span>An example note.</p></div><p class="SourceTitle" style="text-align:center;">Example</p><div id="_f756229a-19cf-5452-29a7-bc5df939c3e9" class="example"><p id="_5557d219-5fdd-22a4-3e07-b5fd0f65c0ef">Here’s an example of an example term.</p>
+</div><p>[<b>SOURCE:</b> <a href="#ISO19101-1">ISO 19101-1:2014</a>]</p>
+</div><div id="_a47f995f-d9fa-f88a-4020-2617fc07487d"><h1 id="_65bc4bbd-0b39-42cb-8f62-f8bd22163500"><a class="anchor" href="#_a47f995f-d9fa-f88a-4020-2617fc07487d"></a><a class="header" href="#_a47f995f-d9fa-f88a-4020-2617fc07487d">5.  Conventions</a></h1><p id="_87fee229-ff6c-bb90-5546-852478e6f22e">This sections provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.</p><div id="_59c61b31-e3bc-d456-f2a0-a703d24452b6"><h2 id="_dc435b14-7482-4909-a029-5dbc1e6ab566"><a class="anchor" href="#_59c61b31-e3bc-d456-f2a0-a703d24452b6"></a><a class="header" href="#_59c61b31-e3bc-d456-f2a0-a703d24452b6">5.1.  Identifiers</a></h2>
+
+<p id="_900884f4-02e4-3c1c-f316-eef2a2b593b8">The normative provisions in this document are denoted by the URI</p>
+
+<p id="_7197d0e6-f6c2-b54e-3764-dbccf205caa4"><tt><a href="http://www.opengis.net/spec/{standard}/{m.n}">http://www.opengis.net/spec/{standard}/{m.n}</a></tt></p>
+
+<p id="_f66b306e-eaed-7bb5-c6f2-99b2de1fb591">All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.</p>
+</div></div><div id="_1e5057ef-315c-a86b-91cb-d44fadcc55c1"><h1 id="_62cf57f4-a301-4289-a052-5b01e0d95c0c"><a class="anchor" href="#_1e5057ef-315c-a86b-91cb-d44fadcc55c1"></a><a class="header" href="#_1e5057ef-315c-a86b-91cb-d44fadcc55c1">6.  Clauses not Containing Normative Material</a></h1><p id="_962e92e1-7634-f320-1bd3-908298f3439a">Paragraph</p><div id="_8d493685-3b9b-17d3-a40d-61cb3d70c1a2"><h2 id="_b41d59ef-e975-471e-980e-6e7b91c5a634"><a class="anchor" href="#_8d493685-3b9b-17d3-a40d-61cb3d70c1a2"></a><a class="header" href="#_8d493685-3b9b-17d3-a40d-61cb3d70c1a2">6.1.  Clauses not containing normative material sub-clause 1</a></h2>
+
+<p id="_4fa9e0be-9126-fb06-da22-8d423e1c7b62">Paragraph</p>
+</div><div id="_6e99a882-d577-4a41-7c3e-8819f7aa2cd1"><h2 id="_4ece6add-a6be-4f66-b68d-bddbb700c60f"><a class="anchor" href="#_6e99a882-d577-4a41-7c3e-8819f7aa2cd1"></a><a class="header" href="#_6e99a882-d577-4a41-7c3e-8819f7aa2cd1">6.2.  Clauses not containing normative material sub-clause 2</a></h2>
+
+</div></div><div id="_543b2d13-00e6-1067-0e13-bd6d1179d602"><h1 id="_a7dadd21-a239-49df-9d9a-21cbdb99c7e4"><a class="anchor" href="#_543b2d13-00e6-1067-0e13-bd6d1179d602"></a><a class="header" href="#_543b2d13-00e6-1067-0e13-bd6d1179d602">7.  Clause containing normative material</a></h1><p id="_8a76fe16-eece-bc96-96d4-4c12a28a054d">Paragraph</p><div id="_75734a1f-d031-eed8-45ea-333323a5af9a"><h2 id="_6d2938ec-6ce2-4198-848c-dccff275f3ad"><a class="anchor" href="#_75734a1f-d031-eed8-45ea-333323a5af9a"></a><a class="header" href="#_75734a1f-d031-eed8-45ea-333323a5af9a">7.1.  Requirement Class A or Requirement A Example</a></h2>
+
+<p id="_8765d9b8-6d17-6516-9ba1-92e6073932ff">Paragraph – intro text for the requirement class.</p>
+
+<p id="_44e7e99c-79fe-010b-e628-260954e0be47">Use the following table for Requirements Classes.</p>
+
+<div class="require" id="_5607f4ec-fdc2-462e-9023-3eec10ff68e1"><table id="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#http___www.opengis.net_spec_ABCD_m.n_req_req-class-a"></a><a class="header" href="#http___www.opengis.net_spec_ABCD_m.n_req_req-class-a">Requirements class 1</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Obligation</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">requirement</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Description</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_1afc43cf-5b38-ccb8-692d-f51aa248162a">Requirements Class</p><div class="ul_wrap"><ul id="_9e3961ab-914a-6274-504a-261a9ede7323"><li id="_5945260d-17ed-b428-9cd3-15edcae0735e"><p id="_9be1d667-bde7-2222-bd87-4b4817e39948"><a href="http://www.example.org/req/blah">http://www.example.org/req/blah</a></p>
+</li>
+<li id="_d2bf7711-996c-0df1-f10c-c641540df2c7"><p id="_329979dd-44a7-e6fd-0020-09016b4e1c29">urn:iso:ts:iso:19139:clause:6</p>
+</li>
+</ul></div></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Normative statements</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a id="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a_req-name-1"></a>Requirement 1-1 requirement description<br /><a id="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a_req-name-2"></a>Requirement 1-2 requirement description<br /><a id="http___www.opengis.net_spec_ABCD_m.n_req_req-class-a_req-name-3"></a>Requirement 1-3 requirement description</td></tr></tbody></table></div>
+
+<div id="_a502a977-3a8a-4b17-e0f6-85a8e7ea9a56"><h3><a class="anchor" href="#_a502a977-3a8a-4b17-e0f6-85a8e7ea9a56"></a><a class="header" href="#_a502a977-3a8a-4b17-e0f6-85a8e7ea9a56">7.1.1.  Requirement 1</a></h3>
+
+<p id="_a7886602-a104-0e9f-16d6-08227d189d13">Paragraph — intro text for the requirement.</p>
+
+<p id="_0a9042e8-55b2-719d-ecc3-979d603f9f48">Use the following table for Requirements, number sequentially.</p>
+
+<div class="require" id="_1468c649-6c84-4254-b150-2ebfb8f32878"><table id="_req_req-class-a_req-name-1" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#_req_req-class-a_req-name-1"></a><a class="header" href="#_req_req-class-a_req-name-1">Requirement 1</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Obligation</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">requirement</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_e96c999e-2ef5-2338-fb76-05765606dd99">Requirement ‘shall’ statement</p></td></tr></tbody></table></div>
+
+<p id="_11c2c57b-703c-48a6-33b9-90a4d450d7f6">Dictionary tables for requirements can be added as necessary. Modify the following example as needed.</p>
+
+<table id="_d8e9e4ba-93aa-3d02-5458-6edeb970a403" class="MsoISOTable" style="border-width:1px;border-spacing:0;width:90%;"><caption>Table 1</caption><thead><tr><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Names</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Definition</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Data types and values</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Multiplicity and use</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">name 1</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">definition of name 1</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">float</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">One or more (mandatory)</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">name 2</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">definition of name 2</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">character string type, not empty</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Zero or one (optional)</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">name 3</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">definition of name 3</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">GML:: Point PropertyType</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">One (mandatory)</td></tr></tbody></table>
 </div>
-        <div id="_clauses_not_containing_normative_material_sub_clause_2"><h2>9.2. Clauses not containing normative material sub-clause 2</h2>
+</div></div><br /><div id="_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985" class="Section3"><h1 class="Annex" id="_247f0db9-fa50-4f78-b86a-f97ffe12b748"><a class="anchor" href="#_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985"></a><a class="header" href="#_8a270ec8-ee8b-5fc5-87a3-a4d9ebeff985"><b>Annex A</b><br />(informative)<br /><b>Conformance Class Abstract Test Suite (Normative)</b></a></h1><p style="display:none;" class="variant-title-toc">Annex A  Conformance Class Abstract Test Suite (Normative)</p><div id="_63e4b0a0-3d94-7020-361f-fcac21929de5" class="Note"><p><span class="note_label">NOTE:  </span>Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)</p></div><div id="_53d6449c-2e48-ac95-e5d2-2968cfb51437"><h2 id="_c3cf0f7e-37cc-4ff2-aaee-91b154932f3c"><a class="anchor" href="#_53d6449c-2e48-ac95-e5d2-2968cfb51437"></a><a class="header" href="#_53d6449c-2e48-ac95-e5d2-2968cfb51437">A.1.  Conformance Class A</a></h2>
+
+<div id="_5463723a-6da3-c072-380e-14bcd2bb3be2"><h3><a class="anchor" href="#_5463723a-6da3-c072-380e-14bcd2bb3be2"></a><a class="header" href="#_5463723a-6da3-c072-380e-14bcd2bb3be2">A.1.1.  Requirement 1</a></h3>
+
+<div class="require" id="_ccba5e46-e4fe-462c-927b-7c119feea230"><table id="_09df3172-958a-0eac-d5db-7b147f72b360" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#_09df3172-958a-0eac-d5db-7b147f72b360"></a><a class="header" href="#_09df3172-958a-0eac-d5db-7b147f72b360">Requirement A.1</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Test purpose</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_9b47992a-3e3e-6a8c-006f-f99752a79621">Verify that…​</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Test method</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_5714806b-fb1c-0196-5982-969ecebd1504">Inspect…​</p>
+</td></tr></tbody></table></div>
+</div>
+
+<div id="_c4e12385-3212-590a-0cd4-c5b7597f7af2"><h3><a class="anchor" href="#_c4e12385-3212-590a-0cd4-c5b7597f7af2"></a><a class="header" href="#_c4e12385-3212-590a-0cd4-c5b7597f7af2">A.1.2.  Requirement 2</a></h3>
 
 </div>
-      </div>
-      <div id="_clause_containing_normative_material">
-        <h1>10.&#xA0; Clause containing normative material</h1>
-        <p id="_a2b78f51-d41a-48ab-82d1-74d0e8df9cf6">Paragraph</p>
-        <div id="_requirement_class_a_or_requirement_a_example"><h2>10.1. Requirement Class A or Requirement A Example</h2><p id="_b1a814e7-a6f3-436c-9692-d5512489d9fc">Paragraph &#x2013; intro text for the requirement class.</p>
-<p id="_6bad32f4-4f59-415f-849b-ac5081642771">Use the following table for Requirements Classes.</p>
-<table id="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  1</td><td valign="top" class="example"><p id="_43f0ede9-ce99-4e1a-95b4-d47bb3cb304e" class="example">Requirements Class</p>
-<ul id="_925ff76d-db5d-46a7-9af7-293e048a0270">
-  <li>
-    <p id="_e2f32cc8-41fb-4da1-8220-bbc13d5392d3" class="example">
-      <a href="http://www.example.org/req/blah">http://www.example.org/req/blah</a>
-    </p>
-  </li>
-  <li>
-    <p id="_40f7b308-43b6-42d2-9700-1902b92f4bd9" class="example">urn:iso:ts:iso:19139:clause:6</p>
-  </li>
-</ul>
-<table id="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-1" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  2</td><td valign="top" class="example">
-  <p id="_b4ad51c8-9fc7-4389-9c3f-986979267c07" class="example">requirement description</p>
-</td></tr></table>
-<table id="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-2" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  3</td><td valign="top" class="example">
-  <p id="_e496e5f6-a905-406e-9ce4-e43c7ab2f701" class="example">requirement description</p>
-</td></tr></table>
-<table id="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-3" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  4</td><td valign="top" class="example">
-  <p id="_2d9540d8-3d2d-4fbe-8dfe-900d1a508555" class="example">requirement description</p>
-</td></tr></table></td></tr></table>
-<div id="_requirement_1"><h3>10.1.1. Requirement 1</h3><p id="_e36377fd-a12b-4bef-84b2-78c9e1bfee70">Paragraph - intro text for the requirement.</p>
-<p id="_a66ed850-b353-4685-a6b9-4065331e726a">Use the following table for Requirements, number sequentially.</p>
-<table id="/req/req-class-a/req-name-1" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE</td><td valign="top" class="example">
-  <p id="_ab55426f-cded-42d3-aa76-6fd6dabf3b25" class="example">Requirement &#x2018;shall&#x2019; statement</p>
-</td></tr></table>
-<p id="_faea6935-9203-4d75-8e69-37c43a244d57">Dictionary tables for requirements can be added as necessary. Modify the following example as needed.</p>
-<p class="TableTitle" align="center">Table 1</p><table id="_62fc5cf2-1175-4bb4-bdee-d0f9b07189cb" class="MsoISOTable" border="1" cellspacing="0" cellpadding="0"><thead><tr><th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Names</th><th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Definition</th><th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Data types and values</th><th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Multiplicity and use</th></tr></thead><tbody><tr><td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">name 1</td><td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">definition of name 1</td><td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">float</td><td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">One or more (mandatory)</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">name 2</td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">definition of name 2</td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">character string type, not empty</td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Zero or one (optional)</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">name 3</td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">definition of name 3</td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">GML:: Point PropertyType</td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">One (mandatory)</td></tr></tbody></table></div></div>
-      </div>
-      <br />
-      <div id="_conformance_class_abstract_test_suite_normative" class="Section3">
-        <h1 class="Annex"><b>Annex A</b><br />(normative)<br /><b>Conformance Class Abstract Test Suite (Normative)</b></h1>
-        <div id="_021db3a6-6afb-49bf-9ab9-75140a59cb84" class="Note">
-          <p><span class="note_label">NOTE</span>&#xA0; Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)</p>
-        </div>
-        <div id="_conformance_class_a"><h2>A.1. Conformance Class A</h2><div id="_requirement_1_2"><h3>A.1.1. Requirement 1</h3>
+</div></div><br /><div id="_8e5807f4-e021-3e1e-8161-acf01a2a16bc" class="Section3"><h1 class="Annex" id="_c2f45f7a-636b-4af4-b005-0b3f87841376"><a class="anchor" href="#_8e5807f4-e021-3e1e-8161-acf01a2a16bc"></a><a class="header" href="#_8e5807f4-e021-3e1e-8161-acf01a2a16bc"><b>Annex B</b><br />(informative)<br /><b>Title ( {Normative/Informative} )</b></a></h1><p style="display:none;" class="variant-title-toc">Annex B  Title ( {Normative/Informative} )</p><div id="_159a4ec6-3751-b292-9d8b-e31170a42309" class="Note"><p><span class="note_label">NOTE:  </span>Place other Annex material in sequential annexes beginning with “B” and leave final two annexes for the Revision History and Bibliography</p></div></div><br /><div id="_86ce8e65-c445-b308-465c-eba6a1493662" class="Section3"><h1 class="Annex" id="_00dbad1f-32a0-45b6-b9de-2819a7923382"><a class="anchor" href="#_86ce8e65-c445-b308-465c-eba6a1493662"></a><a class="header" href="#_86ce8e65-c445-b308-465c-eba6a1493662"><b>Annex C</b><br />(informative)<br /><b>Revision History</b></a></h1><p style="display:none;" class="variant-title-toc">Annex C  Revision History</p><table id="_0faf00c7-cf79-9959-f614-3126c05f4ab8" class="MsoISOTable" style="border-width:1px;border-spacing:0;width:90%;"><caption>Table C.1</caption><thead><tr><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Date</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Release</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Editor</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Primary clauses modified</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Description</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">2016-04-28</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">0.1</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">G. Editor</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">all</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">initial version</td></tr></tbody></table></div><br /><div><h1 class="Section3" id="_f12551ef-95fc-41be-9488-ace5cd789448">Bibliography</h1>
 
-  <table id="_85e5a4da-11e9-4caf-b954-3071f6ced18c" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  1</td><td valign="top" class="example">
-  <table id="_1bd27b3e-586c-4416-8806-93064c33466f" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  2</td><td valign="top" class="example">
-  <dl id="_f22b8be4-1366-4967-8f30-c1a454041951"><dt><p class="example">Test purpose</p></dt><dd>
-    <p id="_974a7e2a-714a-4b7e-9ede-b5fdce214699" class="example">Verify that&#x2026;&#x200B;</p>
-  </dd><dt><p class="example">Test method</p></dt><dd>
-    <p id="_1a688fc2-11b6-443a-a85e-cd493460df25" class="example">Inspect&#x2026;&#x200B;</p>
-  </dd></dl>
-</td></tr></table>
-</td></tr></table>
-</div>
-<div id="_requirement_2"><h3>A.1.2. Requirement 2</h3>
+<div id="_10a323b2-5229-6080-817c-9d678de711c3" class="Note"><p><span class="note_label">NOTE:  </span>The TC has approved Springer LNCS as the official document citation type.</p><p id="_ff7c4e4e-cc44-7de3-a376-8622db4fe0d2">Springer LNCS is widely used in technical and computer science journals and other publications</p><p id="_46e7f4b6-afcb-f5e5-1d4d-dc83a1b1f70e">– Actual References:</p><p id="_b05a8017-4ca6-79cd-d2da-2a4d3d6e1aec">[n] Journal: Author Surname, A.: Title. Publication Title. Volume number, Issue number, Pages Used (Year Published)</p></div><p id="OGC2015" class="Biblio">[1]  <i>OGC: OGC Testbed 12 Annex B: Architecture</i> (2015).</p>
 
-</div></div>
-      </div>
-      <br />
-      <div id="_title_normativeinformative" class="Section3">
-        <h1 class="Annex"><b>Annex B</b><br />(normative)<br /><b>Title ( {Normative/Informative} )</b></h1>
-        <div id="_942f7d20-a70b-4c43-b76f-6ef28714a893" class="Note">
-          <p><span class="note_label">NOTE</span>&#xA0; Place other Annex material in sequential annexes beginning with &#x201C;B&#x201D; and leave final two annexes for the Revision History and Bibliography</p>
-        </div>
-      </div>
-      <br />
-      <div id="_revision_history" class="Section3">
-        <h1 class="Annex"><b>Annex C</b><br />(normative)<br /><b>Revision History</b></h1>
-        <p class="TableTitle" align="center">Table C.1</p>
-        <table id="_26b72735-5959-4e5a-a579-20ecebb7088b" class="MsoISOTable" border="1" cellspacing="0" cellpadding="0">
-          <thead>
-            <tr>
-              <th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Date</th>
-              <th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Release</th>
-              <th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Editor</th>
-              <th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Primary clauses modified</th>
-              <th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">2016-04-28</td>
-              <td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">0.1</td>
-              <td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">G. Editor</td>
-              <td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">all</td>
-              <td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">initial version</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <br />
-      <div>
-        <h1 class="Section3">Bibliography</h1>
-        <div id="_4140ea72-30cd-4e71-b87b-571120927303" class="Note">
-          <p><span class="note_label">NOTE</span>&#xA0; The TC has approved Springer LNCS as the official document citation type.</p>
-          <p id="_62e3e33d-1175-4f07-b093-13cbaed591a2">Springer LNCS is widely used in technical and computer science journals and other publications</p>
-          <p id="_732945db-35ed-4443-8b3a-f9e950719e5a">&#x2013; Actual References:</p>
-          <p id="_4fe58bd7-7d04-4148-8f29-4c8477195e08">[n] Journal: Author Surname, A.: Title. Publication Title. Volume number, Issue number, Pages Used (Year Published)</p>
-          <p id="_7ba03e53-4d8f-44a9-a07f-248e246449cf">[n] Web: Author Surname, A.: Title, <a href="http://Website-Url">http://Website-Url</a></p>
-        </div>
-        <p id="OGC2015" class="Biblio">[1]&#xA0; OGCTB12, <i>OGC: OGC Testbed 12 Annex B: Architecture</i> (2015).</p>
-      </div>
-    </main>
-  <script type="text/x-mathjax-config">
+
+</div></main><script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    asciimath2jax: {
-      delimiters: [['(#(', ')#)']]
-    }
- });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_HTMLorMML"></script>
-<script>
-    //TOC generation
-      $('#toc').toc({
-          'selectors': 'h1,h2:not(.TermNum)', //elements to use as headings
-          'container': 'main', //element to find all selectors in
-          'smoothScrolling': true, //enable or disable smooth scrolling on click
-          'prefix': 'toc', //prefix for anchor tags and class names
-          'onHighlight': function(el) {}, //called when a new section is highlighted 
-          'highlightOnScroll': true, //add class to heading that is currently in focus
-          'highlightOffset': 100, //offset to trigger the next headline
-          'anchorName': function(i, heading, prefix) { //custom function for anchor name
-              return prefix+i;
-          },
-          'headerText': function(i, heading, $heading) { //custom function building the header-item text
-              return $heading.text();
-          },
-      'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
-        return $heading[0].tagName.toLowerCase();
+    "HTML-CSS": {
+      preferredFont: "STIX",
+      linebreaks: {
+        automatic: true,
+        width: "container"  // or specify something like "90%"/"30em"
       }
-      });
-      
+    },
+    MathML: {
+      linebreaks: {
+        automatic: true
+      }
+    },
+    asciimath2jax: { delimiters: [['(#(', ')#)']] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
+  <script>
+    $("#toc").on('click', 'li', function(e) {
+    $(this).parent().find('li.toc-active').removeClass('toc-active');
+    $(this).addClass('toc-active');
+});
   </script>
 
-<script>
-  //TOC toggle animation
-$('#toggle').on('click', function(){
-    if( $('nav').is(':visible') ) {
-        $('nav').animate({ 'left': '-353px' }, 'slow', function(){
-            $('nav').hide();
+  <script>
+    //TOC toggle animation
+    (function() {
+      const jqNav = $('nav');
+      const jqBody = $('body');
+      const jqToggle = $('#toggle');
+      const animationSpeed = 'slow';
+
+      jqToggle.on('click', function() {
+        const isNavVisible = jqNav.is(':visible');
+        const fullNavWidth = jqNav.outerWidth();
+        const navLeft = isNavVisible ? '-' + fullNavWidth + 'px' : '0px';
+        const bodyMarginLeft = isNavVisible ? '0px' : fullNavWidth + 'px';
+
+        // Stop current animations
+        jqNav.stop(true, true);
+        jqBody.stop(true, true);
+
+        if(!isNavVisible) {
+            jqNav.show();
+        }
+        jqNav.animate({'left': navLeft}, animationSpeed, function() {
+          if(isNavVisible) {jqNav.hide()}
         });
-        $('.container').animate({ 'padding-left': '31px' }, 'slow');
-    }
-    else {
-        $('nav').show();
-        $('nav').animate({ 'left': '0px' }, 'slow');
-        $('.container').animate({ 'padding-left': '360px' }, 'slow');
-    }
-});
-</script>
+        jqBody.animate({'marginLeft': bodyMarginLeft}, animationSpeed);
+
+      });
+    })();
+  </script>
 
 <script>
     // Scroll to top button
     window.onscroll = function() {scrollFunction()};
-    
+
     function scrollFunction() {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             document.getElementById("myBtn").style.display = "block";
@@ -1482,7 +2069,7 @@ $('#toggle').on('click', function(){
             document.getElementById("myBtn").style.display = "none";
         }
     }
-    
+
     // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
         document.body.scrollTop = 0;
@@ -1490,26 +2077,178 @@ $('#toggle').on('click', function(){
     }
     </script>
 
-  <script>
-/**
- * AnchorJS - v4.1.0 - 2017-09-20
- * https://github.com/bryanbraun/anchorjs
- * Copyright (c) 2017 Bryan Braun; Licensed MIT
- */
-!function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function e(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64}function t(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}function i(){if(null===document.head.querySelector("style.anchorjs")){var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"], style'))?document.head.appendChild(e):document.head.insertBefore(e,A),e.sheet.insertRule(" .anchorjs-link {   opacity: 0;   text-decoration: none;   -webkit-font-smoothing: antialiased;   -moz-osx-font-smoothing: grayscale; }",e.sheet.cssRules.length),e.sheet.insertRule(" *:hover > .anchorjs-link, .anchorjs-link:focus  {   opacity: 1; }",e.sheet.cssRules.length),e.sheet.insertRule(" [data-anchorjs-icon]::after {   content: attr(data-anchorjs-icon); }",e.sheet.cssRules.length),e.sheet.insertRule(' @font-face {   font-family: "anchorjs-icons";   src: url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype"); }',e.sheet.cssRules.length)}}this.options=A||{},this.elements=[],e(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var n,o,s,a,r,c,h,l,u,d,f,p=[];if(e(this.options),"touch"===(f=this.options.visible)&&(f=this.isTouchDevice()?"always":"hover"),A||(A="h2, h3, h4, h5, h6"),0===(n=t(A)).length)return this;for(i(),o=document.querySelectorAll("[id]"),s=[].map.call(o,function(A){return A.id}),r=0;r<n.length;r++)if(this.hasAnchorJSLink(n[r]))p.push(r);else{if(n[r].hasAttribute("id"))a=n[r].getAttribute("id");else if(n[r].hasAttribute("data-anchor-id"))a=n[r].getAttribute("data-anchor-id");else{u=l=this.urlify(n[r].textContent),h=0;do{void 0!==c&&(u=l+"-"+h),c=s.indexOf(u),h+=1}while(-1!==c);c=void 0,s.push(u),n[r].setAttribute("id",u),a=u}a.replace(/-/g," "),(d=document.createElement("a")).className="anchorjs-link "+this.options.class,d.href="#"+a,d.setAttribute("aria-label",this.options.ariaLabel),d.setAttribute("data-anchorjs-icon",this.options.icon),"always"===f&&(d.style.opacity="1"),""===this.options.icon&&(d.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(d.style.lineHeight="inherit")),"left"===this.options.placement?(d.style.position="absolute",d.style.marginLeft="-1em",d.style.paddingRight="0.5em",n[r].insertBefore(d,n[r].firstChild)):(d.style.paddingLeft="0.375em",n[r].appendChild(d))}for(r=0;r<p.length;r++)n.splice(p[r]-r,1);return this.elements=this.elements.concat(n),this},this.remove=function(A){for(var e,i,n=t(A),o=0;o<n.length;o++)(i=n[o].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(n[o]))&&this.elements.splice(e,1),n[o].removeChild(i));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){var t=/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\]/g;return this.options.truncate||e(this.options),A.trim().replace(/\'/gi,"").replace(t,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&(" "+A.firstChild.className+" ").indexOf(" anchorjs-link ")>-1,t=A.lastChild&&(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ")>-1;return e||t||!1}}});  </script>
+<script>
+/*
+  $(document).ready(function() {
+	  $('[id^=toc]').each(function ()
+	  {
+	     var currentToc = $(this);
+       var url = window.location.href;
+            currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "'></a>");
+	  });
+});
+*/
+</script>
 
   <script>
-  $(document).ready(function() {
-          $('[id^=toc]').each(function ()
-          {
-             var currentToc = $(this);
-       var url = window.location.href;
-             currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "' </a>");
-          });
+    document.querySelectorAll('*|svg a').forEach(function(item) {
+      var loc = item.getAttribute('href');
+      if (loc !== null && loc.startsWith('#')) {
+  item.setAttribute('href', location.pathname + loc);
+      }
 });
+  </script>
+
+
+<script>
+
+// jQuery Inline Footnotes v1.0.3
+// Copyright (c) 2011 Vesa Vänskä, released under the MIT License.
+
+// Generated by CoffeeScript 1.6.1
+(function() {
+
+  (function($) {
+    $.inlineFootnote = function(el, options) {
+      var _this = this;
+      this.el = $(el);
+      this.el.data("inlineFootnote", this);
+      this.initialize = function() {
+        this.options = $.extend({}, $.inlineFootnote.defaultOptions, options);
+        this.footnoteId = this.el.attr("href").match(/#(.*)/)[1];
+        if (this.footnoteId) {
+          this.el.mouseenter(this.openBox);
+          return $("body").mousemove(this.closeBox);
+        }
+      };
+      this.openBox = function(event) {
+        var footnoteContent, linkOffset;
+        if (!_this.box) {
+          footnoteContent = $("[id='" + _this.footnoteId + "']").children().filter(":not('" + _this.options.hideFromContent + "')");
+          linkOffset = _this.el.offset();
+          _this.box = $("<div ></div>", {
+            id: _this.options.boxId,
+            html: footnoteContent.clone().find(_this.options.hideFromContent).remove().end(),
+            css: {
+              position: "absolute",
+              top: linkOffset.top,
+              left: linkOffset.left + _this.el.outerWidth()
+            }
+          }).appendTo("body");
+          return _this.positionBox();
+        }
+      };
+      this.closeBox = function(event) {
+        if (_this.box) {
+          if (_this.isHoveringFootnote(event)) {
+            clearTimeout(_this.closeTimeout);
+            return _this.closeTimeout = null;
+          } else {
+            if (!_this.closeTimeout) {
+              return _this.closeTimeout = setTimeout((function() {
+                _this.box.remove();
+                return _this.box = null;
+              }), _this.options.hideDelay);
+            }
+          }
+        }
+      };
+      this.isHoveringFootnote = function(event) {
+        return this.box.is(event.target) || $(event.target).closest(this.box).length > 0 || event.target === this.el[0];
+      };
+      this.positionBox = function() {
+        var boxHorizontalPadding, boxLeft, boxWidth, linkLeftOffset, windowWidth;
+        boxHorizontalPadding = parseInt(this.box.css("padding-left")) + parseInt(this.box.css("padding-right"));
+        linkLeftOffset = this.el.offset().left;
+        windowWidth = $(window).width();
+        if ((windowWidth / 2) > linkLeftOffset) {
+          boxLeft = linkLeftOffset + 20;
+          boxWidth = windowWidth - boxLeft - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+        } else {
+          boxWidth = linkLeftOffset - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+          boxLeft = linkLeftOffset - boxWidth - this.options.boxMargin * 2;
+        }
+        return this.box.css({
+          width: boxWidth,
+          left: boxLeft
+        });
+      };
+      return this.initialize();
+    };
+    $.inlineFootnote.defaultOptions = {
+      boxMargin: 20,
+      hideDelay: 200,
+      hideFromContent: "[rel=footnote]",
+      maximumBoxWidth: 500,
+      boxId: "footnote_box"
+    };
+    return $.fn.inlineFootnote = function(options) {
+      return this.each(function() {
+        return new $.inlineFootnote(this, options);
+      });
+    };
+  })(jQuery);
+
+}).call(this);
+</script>
+
+<script>
+      $(function() {
+        $("[rel=footnote]").inlineFootnote();
+        });
+</script>
+  <script>
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+//
+// AnchorJS - v4.2.2 - 2020-04-20
+// https://www.bryanbraun.com/anchorjs/
+// Copyright (c) 2020 Bryan Braun; Licensed MIT
+//
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+!function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function f(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.base=A.hasOwnProperty("base")?A.base:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64,A.titleText=A.hasOwnProperty("titleText")?A.titleText:""}function p(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}this.options=A||{},this.elements=[],f(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var e,t,i,n,o,s,a,r,c,h,l,u,d=[];if(f(this.options),"touch"===(l=this.options.visible)&&(l=this.isTouchDevice()?"always":"hover"),0===(e=p(A=A||"h2, h3, h4, h5, h6")).length)return this;for(!function(){if(null!==document.head.querySelector("style.anchorjs"))return;var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"],style'))?document.head.appendChild(e):document.head.insertBefore(e,A);e.sheet.insertRule(".anchorjs-link{opacity:0;text-decoration:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}",e.sheet.cssRules.length),e.sheet.insertRule(":hover>.anchorjs-link,.anchorjs-link:focus{opacity:1}",e.sheet.cssRules.length),e.sheet.insertRule("[data-anchorjs-icon]::after{content:attr(data-anchorjs-icon)}",e.sheet.cssRules.length),e.sheet.insertRule('@font-face{font-family:anchorjs-icons;src:url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype")}',e.sheet.cssRules.length)}(),t=document.querySelectorAll("[id]"),i=[].map.call(t,function(A){return A.id}),o=0;o<e.length;o++)if(this.hasAnchorJSLink(e[o]))d.push(o);else{if(e[o].hasAttribute("id"))n=e[o].getAttribute("id");else if(e[o].hasAttribute("data-anchor-id"))n=e[o].getAttribute("data-anchor-id");else{for(c=r=this.urlify(e[o].textContent),a=0;void 0!==s&&(c=r+"-"+a),a+=1,-1!==(s=i.indexOf(c)););s=void 0,i.push(c),e[o].setAttribute("id",c),n=c}(h=document.createElement("a")).className="anchorjs-link "+this.options.class,h.setAttribute("aria-label",this.options.ariaLabel),h.setAttribute("data-anchorjs-icon",this.options.icon),this.options.titleText&&(h.title=this.options.titleText),u=document.querySelector("base")?window.location.pathname+window.location.search:"",u=this.options.base||u,h.href=u+"#"+n,"always"===l&&(h.style.opacity="1"),""===this.options.icon&&(h.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(h.style.lineHeight="inherit")),"left"===this.options.placement?(h.style.position="absolute",h.style.marginLeft="-1em",h.style.paddingRight="0.5em",e[o].insertBefore(h,e[o].firstChild)):(h.style.paddingLeft="0.375em",e[o].appendChild(h))}for(o=0;o<d.length;o++)e.splice(d[o]-o,1);return this.elements=this.elements.concat(e),this},this.remove=function(A){for(var e,t,i=p(A),n=0;n<i.length;n++)(t=i[n].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(i[n]))&&this.elements.splice(e,1),i[n].removeChild(t));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){return this.options.truncate||f(this.options),A.trim().replace(/\'/gi,"").replace(/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&-1<(" "+A.firstChild.className+" ").indexOf(" anchorjs-link "),t=A.lastChild&&-1<(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ");return e||t||!1}}});
+// @license-end
+  </script>
+    <script>
   anchors.options = {
   placement: 'left'
 };
 anchors.add('h1, h2, h3, h4');
-</script></body>
+</script>
+
+<script>
+// use .collapsible element to toggle visibility of element following it
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+
+<script>
+const activeBtns = document.querySelectorAll('.collapsible.active')
+
+// check if there are any active buttons, and open the content for each of them as default
+if (activeBtns.length) {
+    activeBtns.forEach(btn => {
+        const content = btn.nextElementSibling
+        content.style.maxHeight = content.scrollHeight + 'px'
+    })
+}
+</script>
+
 </html>

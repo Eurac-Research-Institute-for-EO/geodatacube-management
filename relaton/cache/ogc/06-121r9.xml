@@ -1,8 +1,8 @@
-<bibdata type="standard" schema-version="v1.2.9">
-  <fetched>2026-05-14</fetched>
-  <title type="title-main" format="text/plain" language="en" script="Latn">OGC Web Service Common Implementation Specification</title>
-  <title type="main" format="text/plain" language="en" script="Latn">OGC Web Service Common Implementation Specification</title>
-  <uri type="pdf">https://docs.ogc.org/is/06-121r9/06-121r9/pdf</uri>
+<bibdata type="standard" schema-version="v1.5.6">
+  <fetched>2026-05-20</fetched>
+  <title language="en" script="Latn" type="title-main">OGC Web Service Common Implementation Specification</title>
+  <title language="en" script="Latn" type="main">OGC Web Service Common Implementation Specification</title>
+  <uri type="pdf">https://portal.ogc.org/files/?artifact_id=38867</uri>
   <docidentifier type="OGC" primary="true">06-121r9</docidentifier>
   <date type="published">
     <on>2010-04-07</on>
@@ -29,15 +29,25 @@
       <name>Open Geospatial Consortium</name>
     </organization>
   </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+      <subdivision type="technical-committee">
+        <name>technical</name>
+      </subdivision>
+      <abbreviation>OGC</abbreviation>
+    </organization>
+  </contributor>
   <edition>9</edition>
   <language>en</language>
   <script>Latn</script>
-  <abstract format="text/plain" language="en" script="Latn">This document specifies many of the aspects that are, or should be, common to all or multiple OGC Web Service (OWS) interface Implementation Standards. These common aspects are primarily some of the parameters and data structures used in operation requests and responses. Of course, each such Implementation Standard must specify the additional aspects of that interface, including specifying all additional parameters and data structures needed in all operation requests and responses.</abstract>
-  <ext schema-version="v1.0.1">
+  <abstract language="en" script="Latn">This document specifies many of the aspects that are, or should be, common to all or multiple OGC Web Service (OWS) interface Implementation Standards. These common aspects are primarily some of the parameters and data structures used in operation requests and responses. Of course, each such Implementation Standard must specify the additional aspects of that interface, including specifying all additional parameters and data structures needed in all operation requests and responses.</abstract>
+  <ext schema-version="v1.1.2">
     <doctype>standard</doctype>
     <subdoctype>implementation</subdoctype>
-    <editorialgroup>
-      <committee>technical</committee>
-    </editorialgroup>
+    <flavor>ogc</flavor>
   </ext>
 </bibdata>
