@@ -142,11 +142,7 @@ All questions regarding this submission should be directed to the editor or the 
 
 //This clause is optional.
 
-// Individual name(s), Organization
-
-Alexander Jacob, Eurac Research
-Juraj Zvolenský, Eurac Research
-Yuvraj Bhagwan Adagale, Eurac Research
+Individual name(s), Organization
 
 [NOTE]
 ====
@@ -266,16 +262,215 @@ pass:c,q,a,m,p[`http://www.opengis.net/spec/{standard}/{m.n}`]
 
 All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
 
+=== Abbreviations
+
+API Application Programming Interface
+
+COG Cloud Optimized GeoTIFF
+
+CWL Common Workflow Language
+
+EO Earth Observation
+
+EP Exploitation Platform
+
+GDAL Geospatial Data Abstraction Library
+
+JSON JavaScript Object Notation
+
+OGC Open Geospatial Consortium
+
+OS Operating System
+
+REST Representational State Transfer
+
+SAFE Standard Archive Format for Europe
+
+SNAP Sentinel Application Platform toolbox
+
+STAC SpatioTemporal Asset Catalog
+
+TBD To Be Determined
+
+TIFF Tagged Image File Format
+
+URL Uniform Resource Locator
+
+YAML YAML Ain’t Markup Language
+
 [obligation=informative]
-== Clauses not Containing Normative Material
+== Informative overview
 
-Paragraph
+This clause provides an informative overview of the role of a GeoDataCube Management System, the main architectural building blocks that can support such a system, and example usage scenarios. The purpose is to establish the context for the best practice recommendations provided later in this document.
 
-=== Clauses not containing normative material sub-clause 1
+The approach described in this Best Practice is based on the principle that a dedicated GeoDataCube-specific API is not required in order to manage and use geospatial data as datacubes. Instead, existing standards, APIs, metadata models, data access mechanisms, and processing interfaces can be combined as reusable building blocks. This building block approach supports interoperability while allowing implementations to select components that match their operational environment.
 
-Paragraph
+The scenarios and architectural considerations in this clause are loosely based on the GeoDataCube concepts explored in OGC Testbed 19 and are aligned with the initial objectives of the OGC GeoDataCube Standards Working Group. The emphasis is on practical pathways from metadata discovery to data access, datacube representation, processing, and publication of derived results.
 
-=== Clauses not containing normative material sub-clause 2
+=== GeoDataCube Management System
+
+A GeoDataCube Management System is a set of services, software components, metadata records, data access mechanisms, and processing capabilities that allow users and applications to discover, access, organize, process, and reuse geospatial data as multidimensional datacubes.
+
+In this document, a GeoDataCube Management System is understood as an integration pattern rather than as a single monolithic software system or API. Such a system can combine catalogue services, identity and access management, storage systems, data access interfaces, datacube access services, processing APIs, workspaces, and publication mechanisms.
+
+A GeoDataCube Management System commonly supports the following high-level capabilities:
+
+* discovery of relevant Earth observation and geospatial datasets through metadata catalogues;
+* interpretation of metadata records and online assets as inputs to datacube creation;
+* access to source data through machine-actionable links, APIs, or storage interfaces;
+* representation of source data as virtual or materialized geodatacubes;
+* execution of processing workflows over datacubes;
+* publication of results with sufficient metadata and provenance to enable reuse;
+* integration with authentication, authorization, workspace, and storage services.
+
+The central concern of such a system is the transition from metadata to usable datacubes. Metadata records describe what data exists, where it is located, what it represents, and how it may be accessed. A GeoDataCube Management System uses that information to make the data available for analysis through datacube-oriented interfaces and processing environments.
+
+=== From metadata to geodatacubes
+
+Metadata catalogues are an essential starting point for geodatacube management. They enable users and systems to discover collections, products, scenes, assets, and derived results. However, discovery metadata alone is not sufficient for analysis. Additional information is required to determine how data can be accessed, combined, aligned, processed, and represented as a multidimensional datacube.
+
+A typical metadata-to-geodatacube pathway includes the following steps:
+
+. discover a dataset, collection, or set of assets through a catalogue;
+. inspect metadata describing spatial extent, temporal extent, variables, bands, coordinate reference systems, resolution, format, licensing, and access constraints;
+. identify the online assets or service endpoints that provide access to the data;
+. determine whether the assets can be exposed directly as a virtual datacube or whether transformation is required;
+. apply any necessary harmonization, such as reprojection, resampling, band mapping, masking, or unit conversion;
+. expose the resulting logical datacube through a datacube access or processing interface;
+. execute processing workflows and capture provenance for derived outputs;
+. publish results back to a catalogue or workspace as reusable assets.
+
+This pathway may be implemented in different ways depending on the underlying storage system, data format, processing platform, and user requirements. For example, some systems may expose cloud-optimized assets directly as virtual datacubes, while others may materialize data into chunked multidimensional formats such as Zarr or NetCDF for repeated access and scalable processing.
+
+=== Reusable building block approach
+
+Geodatacube management can be considered as an integration of reusable building blocks. Each building block addresses a specific concern, such as identity management, resource discovery, data access, processing, or workspace management. This approach avoids the need for a single GeoDataCube-specific API and allows implementations to build on existing OGC standards, community standards, and open-source software components.
+
+The building block approach has the following advantages:
+
+* it allows systems to reuse existing catalogue, access, and processing interfaces;
+* it separates logical datacube management from physical storage formats;
+* it supports multiple data access patterns, including direct object storage access, APIs, and service-based access;
+* it allows processing interfaces such as openEO and OGC API - Processes to coexist;
+* it supports federation across platforms and providers;
+* it enables gradual adoption by existing infrastructures.
+
+A building block may be implemented by different software components in different infrastructures. For example, resource discovery may be provided through OGC API - Records, STAC API, OpenSearch, or other catalogue interfaces. Processing may be provided through openEO, OGC API - Processes, Common Workflow Language execution environments, or platform-specific execution services.
+
+=== EOEPCA building blocks
+
+The Earth Observation Exploitation Platform Common Architecture (EOEPCA) provides an open-source reference architecture and set of building blocks for Earth observation exploitation platforms. These building blocks are relevant to GeoDataCube management because they address common platform capabilities required to move from data discovery to processing and reuse.
+
+.EOEPCA building blocks relevant to GeoDataCube management
+[cols="1,3",options="header"]
+|===
+|Building block |Role in GeoDataCube management
+
+|Identity and Access Management
+|Provides authentication, authorization, user management, and access control for platform services, catalogues, data assets, processing resources, and workspaces.
+
+|Resource Discovery
+|Supports catalogue-based discovery of Earth observation data and related resources using interfaces such as OGC Catalogue Service for the Web, OGC API - Records, STAC, and OpenSearch.
+
+|Data Access
+|Provides interfaces to geospatial data assets stored or referenced by the platform. This may include access to object storage, online assets, APIs, file-based archives, or other data services.
+
+|Datacube Access
+|Allows users and applications to access and explore multidimensional Earth observation data through datacube-oriented access mechanisms and standard APIs.
+
+|openEO Processing API
+|Provides a datacube-oriented processing API for federated cloud processing of Earth observation data. It enables users to describe processing workflows using process graphs and execute them on compatible backends.
+
+|Workspace
+|Provides self-service environments for data access, algorithm development, collaborative exploration, and management of user or project-specific resources.
+|===
+
+In addition to these building blocks, implementations may integrate workflow execution components based on OGC API - Processes, the Common Workflow Language (CWL), or other processing frameworks. Such components can complement openEO by supporting processing models that are not primarily datacube-oriented or that require packaging existing applications and command-line tools.
+
+=== Role of openEO
+
+openEO is a community standard and API for processing Earth observation data as datacubes. It provides a common abstraction for loading collections, filtering data in space and time, selecting bands, applying processes, executing batch jobs, and retrieving or publishing results.
+
+Within a GeoDataCube Management System, openEO can serve as the primary user-facing processing interface for datacube workflows. It is particularly relevant where users need to interact with Earth observation data as multidimensional datacubes and where interoperability across processing backends is required.
+
+The role of openEO in this Best Practice is not to replace metadata catalogues, storage systems, or all processing interfaces. Instead, openEO is positioned as a processing layer that can consume catalogue-described collections and expose them through a datacube processing model. Other processing approaches, including OGC API - Processes and CWL-based execution, may be used alongside openEO where appropriate.
+
+openEO is particularly relevant in the European Earth observation ecosystem, where it is used or considered by major platforms and initiatives. Its adoption by strong user communities, including platforms such as Copernicus Data Space Ecosystem, Destination Earth, and related cloud processing environments, makes it a practical candidate for interoperable datacube processing.
+
+=== Data formats, storage, and access patterns
+
+GeoDataCube management systems need to operate across a wide range of formats, storage technologies, and access patterns. Source data may be provided as files, object storage assets, service endpoints, or platform-managed collections. Common examples include Cloud Optimized GeoTIFF, Zarr, NetCDF, SAFE archives, and other geospatial formats.
+
+Cloud-optimized and chunked formats are particularly relevant for scalable datacube access. Cloud Optimized GeoTIFF can support efficient access to tiled raster assets over HTTP or object storage. Zarr can support multidimensional chunked arrays that are well suited to cloud-native datacube processing. NetCDF remains important for many scientific and atmospheric datasets.
+
+A GeoDataCube Management System can avoid assuming that all data must be converted to a single physical format by distinguishing between the logical datacube presented to users and the physical layout of the source or derived assets. In some cases, a virtual datacube over existing assets is sufficient. In other cases, materializing a datacube into an optimized storage layout may be justified for performance, repeated access, machine learning workflows, or large-scale analysis.
+
+Emerging access patterns, including artificial intelligence training workflows and Discrete Global Grid Systems, may place additional requirements on data layout, sampling, tiling, chunking, and metadata. These considerations can be addressed by implementation-specific profiles or operational guidance rather than by defining a new general-purpose GeoDataCube API.
+
+=== Example usage scenarios
+
+This section introduces three example scenarios that illustrate different levels of integration between discovery, access, processing, and workspace capabilities. These scenarios are informative and are not intended to prescribe a single architecture.
+
+.Summary of example GeoDataCube management scenarios
+[cols="1,2,3",options="header"]
+|===
+|Scenario |Building blocks |Description
+
+|Simple data access
+|Identity and Access Management; Workspace; Resource Discovery
+|A user authenticates to a platform, opens a workspace, discovers relevant datasets through a catalogue, and accesses metadata and online assets for inspection or download.
+
+|Processing via openEO
+|Identity and Access Management; Workspace; Resource Discovery; Data Access; Datacube Access; openEO Processing API
+|A user discovers a collection, loads it as a datacube through openEO, applies spatial and temporal filters, executes a processing graph, and retrieves or publishes the result.
+
+|Processing through application workflows
+|Identity and Access Management; Workspace; Resource Discovery; Data Access; Datacube Access; OGC API - Processes or CWL execution environment
+|A user discovers data and executes a packaged application or workflow, for example through OGC API - Processes or a CWL-based processing component, using catalogue-described assets and platform data access services.
+|===
+
+==== Scenario 1: Simple data access
+
+In the simplest scenario, the user interacts with a platform to discover and access data assets. The user authenticates through the Identity and Access Management component and uses a workspace or portal environment to search available resources through the Resource Discovery component.
+
+The main objective of this scenario is to provide consistent discovery and access to metadata and online assets. The data may not yet be exposed through a datacube processing interface. However, the metadata can contain sufficient information to allow downstream systems or users to understand whether the data can be used as part of a geodatacube workflow.
+
+A simplified component flow is:
+
+[source]
+----
+Identity and Access Management -> Workspace -> Resource Discovery -> Online assets
+----
+
+==== Scenario 2: Processing via openEO
+
+In this scenario, catalogue-described datasets are made available through a datacube-oriented processing interface. The user authenticates, discovers relevant resources, and accesses the selected collection through an openEO backend. The openEO backend uses data access and datacube access components to load the required assets and expose them as a logical datacube.
+
+The user can then define a process graph to filter, transform, aggregate, or otherwise process the datacube. The result may be downloaded, stored in a workspace, or published as a new catalogue resource with provenance metadata.
+
+A simplified component flow is:
+
+[source]
+----
+Identity and Access Management -> Workspace -> Resource Discovery -> Data Access / Datacube Access -> openEO Processing API
+----
+
+==== Scenario 3: Processing through OGC API - Processes or CWL
+
+In this scenario, processing is performed using application-oriented workflows rather than, or in addition to, datacube-oriented openEO process graphs. The user discovers data through the catalogue and executes a packaged process or workflow through a processing component, such as an OGC API - Processes implementation or a CWL-based execution environment.
+
+This scenario is useful where existing algorithms are already packaged as applications, command-line tools, containers, or workflow descriptions. It can complement openEO by supporting processing that does not naturally fit a datacube process graph or that requires specialized application execution.
+
+A simplified component flow is:
+
+[source]
+----
+Identity and Access Management -> Workspace -> Resource Discovery -> Data Access / Datacube Access -> OGC API - Processes / CWL execution
+----
+
+=== Relationship to best practice recommendations
+
+The concepts and scenarios in this clause are informative. They establish the background for the recommendations in the following clauses. The normative part of this document can define which metadata, access, datacube description, processing, provenance, and publication practices are recommended for interoperable GeoDataCube management systems.
 
 == Clause containing normative material
 
