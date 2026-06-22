@@ -197,36 +197,6 @@ _TBD_
 
 A geodatacube management system can be described as a composition of interoperable building blocks. The system connects discovery metadata, data access services, datacube access, processing interfaces, and user workspaces without requiring a new GDC-specific API.
 
-```mermaid
-flowchart TD
-    User[User or client application]
-    IAM[IAM]
-    Workspace[Workspace]
-    Discovery[Resource Discovery]
-    Metadata[Metadata records and catalogues]
-    DataAccess[Data Access]
-    CubeAccess[Datacube Access]
-    Processing[openEO Processing API]
-    ExternalProcessing[OGC API Processes / CWL]
-    Storage[EO data storage]
-    Outputs[Virtual or materialized geodatacubes]
-
-    User --> IAM
-    IAM --> Workspace
-    Workspace --> Discovery
-    Discovery --> Metadata
-    Metadata --> DataAccess
-    Metadata --> CubeAccess
-    DataAccess --> Storage
-    CubeAccess --> Storage
-    Workspace --> Processing
-    Processing --> CubeAccess
-    Processing --> Outputs
-    Workspace --> ExternalProcessing
-    ExternalProcessing --> DataAccess
-    ExternalProcessing --> Outputs
-```
-
 ## GeoDataCube Management System
 
 Earth observation data is increasingly discoverable through catalogues and metadata services, but discovery alone does not make data directly usable as geodatacubes. A user may be able to find a relevant dataset or collection, but still need to determine which assets are available, how those assets can be accessed, how they are organized in storage, which dimensions and measurements they contain, and which processing interfaces can consume them.
