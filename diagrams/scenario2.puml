@@ -1,0 +1,21 @@
+@startuml
+skinparam shadowing false
+actor User
+participant IAM
+participant Workspace
+participant "Resource Discovery" as Discovery
+participant "Data / Datacube Access" as Access
+participant "openEO Processing API" as OpenEO
+participant "Geodatacube outputs" as Output
+
+User -> IAM : Authenticate
+IAM --> User : Access token
+User -> Workspace : Develop processing request
+Workspace -> Discovery : Discover collections
+Discovery --> Workspace : Metadata and collection descriptions
+Workspace -> Access : Resolve data or datacube access
+Workspace -> OpenEO : Submit processing graph
+OpenEO -> Access : Read source data as datacube
+OpenEO -> Output : Produce result
+Output --> Workspace : Result metadata and assets
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+skinparam shadowing false
+actor User
+participant IAM
+participant Workspace
+participant "Resource Discovery" as Discovery
+participant "Data Access" as Data
+
+User -> IAM : Authenticate
+IAM --> User : Access token
+User -> Workspace : Open user environment
+Workspace -> Discovery : Search collections and assets
+Discovery --> Workspace : Metadata and access links
+Workspace -> Data : Access selected assets
+Data --> Workspace : EO data assets
+@enduml

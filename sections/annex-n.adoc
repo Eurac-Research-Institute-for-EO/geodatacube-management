@@ -1,6 +1,13 @@
 [appendix]
 :appendix-caption: Annex
-== Title ( {Normative/Informative} )
+== Additional informative annexes (Informative)
 
-[NOTE]
-Place other Annex material in sequential annexes beginning with "B" and leave final two annexes for the Revision History and Bibliography
+_TBD_
+
+Potential annexes:
+
+* Mapping between EOEPCA building blocks and GDC SWG objectives.
+* Example metadata-to-datacube workflow.
+* Example openEO processing graph.
+* Example CWL integration pattern.
+* Comparison of virtual and materialized datacube approaches.

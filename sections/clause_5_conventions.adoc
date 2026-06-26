@@ -1,46 +1,28 @@
 == Conventions
 
-This sections provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.
-
 === Identifiers
-The normative provisions in this document are denoted by the URI
 
-`http://www.opengis.net/spec/{standard}/{m.n}`
+_TBD_
 
-All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
+=== Abbreviated terms
 
-=== Abbreviations
-
-API Application Programming Interface
-
-COG Cloud Optimized GeoTIFF
-
-CWL Common Workflow Language
-
-EO Earth Observation
-
-EP Exploitation Platform
-
-GDAL Geospatial Data Abstraction Library
-
-JSON JavaScript Object Notation
-
-OGC Open Geospatial Consortium
-
-OS Operating System
-
-REST Representational State Transfer
-
-SAFE Standard Archive Format for Europe
-
-SNAP Sentinel Application Platform toolbox
-
-STAC SpatioTemporal Asset Catalog
-
-TBD To Be Determined
-
-TIFF Tagged Image File Format
-
-URL Uniform Resource Locator
-
-YAML YAML Ain’t Markup Language
+API:: Application Programming Interface
+COG:: Cloud Optimized GeoTIFF
+CWL:: Common Workflow Language
+DGGS:: Discrete Global Grid System
+EO:: Earth Observation
+EP:: Exploitation Platform
+GDC:: GeoDataCube
+GDAL:: Geospatial Data Abstraction Library
+IAM:: Identity and Access Management
+JSON:: JavaScript Object Notation
+OGC:: Open Geospatial Consortium
+OS:: Operating System
+REST:: Representational State Transfer
+SAFE:: Standard Archive Format for Europe
+SNAP:: Sentinel Application Platform toolbox
+STAC:: SpatioTemporal Asset Catalog
+TBD:: To Be Determined
+TIFF:: Tagged Image File Format
+URL:: Uniform Resource Locator
+YAML:: YAML Ain't Markup Language

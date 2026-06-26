@@ -1,6 +1,7 @@
 [appendix]
 == Revision History
 
+.Revision history
 [width="90%",options="header"]
 |===
 |Date |Release |Editor | Primary clauses modified |Description

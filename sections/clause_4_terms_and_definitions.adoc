@@ -1,19 +1,57 @@
 == Terms and definitions
 
-
 ////
 Note that the initial notice about terms ("This document uses the terms defined in OGC Policy Directive 49...")
 is inserted automatically by Metanorma using the agreed standardised language, and you should not enter it here.
 ////
 
-=== example term
+geodatacube::
+  _TBD_
 
-term used for exemplary purposes
+datacube::
+  _TBD_
 
-[.source]
-<<ISO19101-1>>
+Earth observation collection::
+  _TBD_
 
-NOTE: An example note.
+metadata record::
+  _TBD_
 
-[example]
-Here's an example of an example term.
+catalogue::
+  _TBD_
+
+analysis-ready data::
+  _TBD_
+
+spatiotemporal asset::
+  _TBD_
+
+dimension::
+  _TBD_
+
+measure::
+  _TBD_
+
+coordinate reference system::
+  _TBD_
+
+chunking::
+  _TBD_
+
+tiling::
+  _TBD_
+
+processing graph::
+  _TBD_
+
+virtual datacube::
+  _TBD_
+
+materialized datacube::
+  _TBD_
+
+data access service::
+  _TBD_
+
+processing service::
+  _TBD_

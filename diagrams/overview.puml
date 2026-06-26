@@ -1,0 +1,20 @@
+@startuml
+top to bottom direction
+skinparam shadowing false
+skinparam rectangle {
+  BackgroundColor #EEF6FF
+  BorderColor #2C6FB5
+}
+rectangle "Catalogue discovery" as Discovery
+rectangle "Data access" as Access
+rectangle "Datacube construction" as Construction
+rectangle "Analysis and processing" as Processing
+rectangle "Derived product" as Product
+rectangle "Metadata and access publication" as Publication
+
+Discovery --> Access
+Access --> Construction
+Construction --> Processing
+Processing --> Product
+Product --> Publication
+@enduml

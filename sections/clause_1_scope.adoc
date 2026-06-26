@@ -1,9 +1,21 @@
 == Scope
-[NOTE]
-====
+
 This document specifies a set of best practice recommendations for the management of geospatial data as geodatacubes. The scope of this document is the transition from metadata-driven discovery of Earth observation datasets to their access, organization, processing, and use as multidimensional geodatacubes.
 
 The document provides guidance on the use of metadata records, catalogues, data access information, and processing interfaces to support interoperable geodatacube management. It includes consideration of openEO as an interface for geodatacube access and processing, and considers the use of open-source EOEPCA building blocks as components within geodatacube management architectures.
 
 This document is intended to support implementers of data platforms, processing services, and client applications that need to manage Earth observation data in a datacube-oriented form. It does not define a new standard for geodatacube encoding, metadata, or processing. Instead, it identifies recommended practices for combining existing standards, interfaces, and software components to support consistent and reusable geodatacube workflows.
-====
+
+*In scope:*
+
+* Transition from metadata discovery to usable geodatacubes.
+* Management of Earth observation datasets as multidimensional datacubes.
+* Role of catalogue metadata, data access descriptions, and processing interfaces.
+* Recommended use of openEO for datacube access and processing.
+* Possible role of EOEPCA open-source building blocks.
+
+*Out of scope:*
+
+* Defining a new metadata standard.
+* Defining a new file format.
+* Defining a new datacube API.

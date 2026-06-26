@@ -1,0 +1,24 @@
+@startuml
+skinparam shadowing false
+actor User
+participant IAM
+participant Workspace
+participant "Resource Discovery" as Discovery
+participant "Data / Datacube Access" as Access
+participant "openEO" as OpenEO
+participant "OGC API Processes / CWL" as Processes
+participant "Zoo Project DRU" as DRU
+participant "Geodatacube outputs" as Output
+
+User -> IAM : Authenticate
+IAM --> User : Access token
+User -> Workspace : Prepare workflow
+Workspace -> Discovery : Discover source collections
+Discovery --> Workspace : Metadata and access descriptions
+Workspace -> OpenEO : Submit datacube processing graph
+OpenEO -> Processes : Invoke external process
+Processes -> DRU : Execute CWL workflow
+DRU -> Access : Read source data
+DRU -> Output : Publish derived product
+Output --> Workspace : Result metadata and assets
+@enduml

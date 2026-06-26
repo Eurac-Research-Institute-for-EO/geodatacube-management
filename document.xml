@@ -1,405 +1,571 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ogc-standard xmlns="https://standards.opengeospatial.org/document">
-<bibdata type="best-practice">
-  <title language="en" format="text/plain">Best Practice for OGC GeoDataCube Management</title>
-  <source type="xml">./document.xml</source>
-  <source type="pdf">./document.pdf</source>
-  <source type="doc">./document.doc</source>
-  <docidentifier type="ogc-external">http://www.opengis.net/doc/BP/moving-features-ext-netCDF/1.0</docidentifier>
-  <docidentifier type="ogc-internal">YY-999</docidentifier>
-  <docnumber>YY-999</docnumber>
-  <date type="published">
-    <on>XXXX-XX-XX</on>
-  </date>
-  <date type="issued">
-    <on>XXXX-XX-XX</on>
-  </date>
-  <date type="received">
-    <on>2026-05-14</on>
-  </date>
-  <edition>1.0</edition>
-  <version>
-    <draft>1.0.0</draft>
-  </version>
-  <contributor>
-    <role type="author"/>
-    <organization>
-      <name>Eurac Research</name>
-    </organization>
-  </contributor>
-  <contributor>
-    <role type="author"/>
-    <organization>
-      <name>Organization two</name>
-    </organization>
-  </contributor>
-  <contributor>
-    <role type="author"/>
-    <organization>
-      <name>Organization three</name>
-    </organization>
-  </contributor>
-  <contributor>
-    <role type="editor"/>
-    <person>
-      <name>
-        <completename>Alexander Jacob</completename>
-      </name>
-    </person>
-  </contributor>
-  <contributor>
-    <role type="editor"/>
-    <person>
-      <name>
-        <completename>Juraj Zvolenský</completename>
-      </name>
-    </person>
-  </contributor>
-  <contributor>
-    <role type="editor"/>
-    <person>
-      <name>
-        <completename>Yuvraj Bhagwan Adagale</completename>
-      </name>
-    </person>
-  </contributor>
-  <contributor>
-    <role type="publisher"/>
-    <organization>
-      <name>OGC</name>
-    </organization>
-  </contributor>
-  <language>en</language>
-  <script>Latn</script><abstract>
-  <p id="_13c87a4b-3e5b-4549-99dd-1f73e211dea1">&lt;Insert Abstract Text here&gt;</p>
-</abstract>
-  <status format="plain">swg-draft</status>
-  <copyright>
-    <from>2026</from>
-    <owner>
-      <organization>
-        <name>OGC</name>
-      </organization>
-    </owner>
-  </copyright>
-  <editorialgroup>
-    <committee>technical</committee>
-  </editorialgroup>
-  <keyword>ogcdoc</keyword>
-  <keyword>OGC document</keyword>
-  <keyword>best practice</keyword>
-  <keyword>GeoDataCubes</keyword>
-</bibdata>
-<preface><abstract id="_abstract">
-  <p id="_b2da6bd7-6278-4bb2-9138-36c97f1356b4">&lt;Insert Abstract Text here&gt;</p>
-</abstract><foreword obligation="informative">
-  <title>Foreword</title>
-  <note id="_6190d3ad-9437-429b-85cf-52ad16f35e56"><p id="_7c550ac9-ae08-4e17-93f3-9fcddd7dc195">Insert Preface Text here. Give OGC specific commentary: describe the technical content, reason for document, history of the document and precursors, and plans for future work.</p>
-<p id="_9cf7f408-fcbc-446e-bdd9-f3351f116f46">There are two ways to specify the Preface: “simple clause” or “full clasuse”</p>
-<p id="_48f25dbc-a789-47f2-baae-55187a5d2f78">If the Preface does not contain subclauses, it is considered a simple preface clause. This one is entered as text after the <tt>.Preface</tt> label and must be placed between the AsciiDoc document attributes and the first AsciiDoc section title. It should not be give a section title of its own.</p>
-<p id="_515b0c1b-16d2-4ae6-9aa7-56f29e9f7ef0">If the Preface contains subclauses, it needs to be encoded as a full preface clause. This one is recognized as a full Metanorma AsciiDoc section with te title “Preface”, i.e. <tt>== Preface</tt>. (Simple preface content can also be encoded like full preface.)</p></note>
-</foreword><submitters id="_submitters"><p id="_58273017-6267-4c9d-a1f7-6ec8a2008c4d">All questions regarding this submission should be directed to the editor or the submitters:</p>
-<table id="_29afc4d5-1d7d-40aa-9eee-f318b23b3354">
-  <thead>
-    <tr>
-      <th align="left">Name</th>
-      <th align="left">Affiliation</th>
-      <th align="left">OGC member</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">Steve Liang</td>
-      <td align="left">University of Calgary, Canada / SensorUp Inc.</td>
-      <td align="left">Yes</td>
-    </tr>
-  </tbody>
-</table></submitters></preface><sections>
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.5" schema-version="v2.1.5" flavor="ogc">
+<bibdata type="standard">
+<title language="en" type="main">Best Practice for OGC GeoDataCube Management</title>
+<uri type="pdf">./document.pdf</uri><docidentifier type="ogc-internal" primary="true">YY-999</docidentifier><docnumber>YY-999</docnumber><date type="published"><on>2026-06-26</on></date><date type="issued"><on>2026-06-26</on></date><date type="received"><on>2026-05-14</on></date><contributor><role type="author"/><organization>
+<name>Eurac Research</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>Organization two</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>Organization three</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Alexander Jacob</completename></name>
+</person></contributor><contributor><role type="editor"/><person>
+<name><completename>Juraj Zvolenský</completename></name>
+</person></contributor><contributor><role type="editor"/><person>
+<name><completename>Yuvraj Bhagwan Adagale</completename></name>
+</person></contributor><contributor><role type="author"><description>committee</description></role><organization>
+<name>Open Geospatial Consortium</name>
+<subdivision type="Committee">
+<name>technical</name>
+</subdivision><abbreviation>OGC</abbreviation></organization></contributor><contributor><role type="publisher"/><organization>
+<name>Open Geospatial Consortium</name>
+<abbreviation>OGC</abbreviation></organization></contributor><edition>1.0</edition><version><draft>1.0.0</draft></version><language>en</language><script>Latn</script><abstract><p>The rapidly growing volume of Earth observation data, together with the increasing diversity of data providers, platforms, formats, APIs, and processing environments, makes it difficult for users to consistently discover, access, prepare, and use data for analysis. While metadata standards and catalogues provide an essential foundation for discovery and description, additional guidance is needed on how discovered datasets can be transformed into analysis-ready geodatacubes and managed throughout their use.</p>
 
-<clause id="_security_considerations" obligation="normative">
-  <title>Security Considerations</title>
-  <p id="_3b1fd9f6-20dc-4751-8081-da8551e6d9f0">No security considerations have been made for this Standard.</p>
+<p>This Best Practice provides recommendations for geodatacube management, focusing on the pathways from metadata and data discovery towards usable multidimensional datacubes. It describes how metadata-driven approaches can support the creation, configuration, access, and processing of geodatacubes across heterogeneous infrastructures. Building on previous work, including OGC Testbed 19, the document explores the role of openEO and relevant open-source EOEPCA building blocks as interoperable components for exposing, processing, and managing Earth observation data as geodatacubes.</p>
+
+<p>The goal of this Best Practice is to provide practical guidance for data providers, platform operators, and application developers who need to design geodatacube management systems. It recommends approaches for bridging discovery metadata, data access mechanisms, processing interfaces, and datacube representations in a way that improves interoperability, reproducibility, and usability of Earth observation data.</p>
+</abstract><status><stage>draft</stage></status><copyright><from>2026</from><owner><organization>
+<name>Open Geospatial Consortium</name>
+<abbreviation>OGC</abbreviation></organization></owner></copyright><keyword>GeoDataCube</keyword><keyword>GDC</keyword><keyword>OGC</keyword><keyword>best practice</keyword><ext><doctype>best-practice</doctype><subdoctype>general</subdoctype><flavor>ogc</flavor></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>false</stage-published></semantic-metadata>
+<presentation-metadata><document-scheme>2022</document-scheme><color-admonition-caution>rgb(79, 129, 189)</color-admonition-caution><color-admonition-editor>rgb(79, 129, 189)</color-admonition-editor><color-admonition-important>rgb(79, 129, 189)</color-admonition-important><color-admonition-note>rgb(79, 129, 189)</color-admonition-note><color-admonition-safety-precaution>rgb(79, 129, 189)</color-admonition-safety-precaution><color-admonition-tip>rgb(79, 129, 189)</color-admonition-tip><color-admonition-todo>rgb(79, 129, 189)</color-admonition-todo><color-admonition-warning>rgb(79, 129, 189)</color-admonition-warning><color-background-definition-description>rgb(242, 251, 255)</color-background-definition-description><color-background-definition-term>rgb(215, 243, 255)</color-background-definition-term><color-background-page>rgb(33, 55, 92)</color-background-page><color-background-table-header>rgb(33, 55, 92)</color-background-table-header><color-background-table-row-even>rgb(252, 246, 222)</color-background-table-row-even><color-background-table-row-odd>rgb(254, 252, 245)</color-background-table-row-odd><color-background-term-admitted-label>rgb(223, 236, 249)</color-background-term-admitted-label><color-background-term-deprecated-label>rgb(237, 237, 238)</color-background-term-deprecated-label><color-background-term-preferred-label>rgb(249, 235, 187)</color-background-term-preferred-label><color-background-text-label-legacy>rgb(33, 60, 107)</color-background-text-label-legacy><color-secondary-shade-1>rgb(0, 177, 255)</color-secondary-shade-1><color-secondary-shade-2>rgb(0, 177, 255)</color-secondary-shade-2><color-text>rgb(88, 89, 91)</color-text><color-text-title>rgb(33, 55, 92)</color-text-title><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_2cd773fc-8495-2dfa-91a1-d57da3fc5833" obligation="normative">
+<title id="_19604a82-a482-3c87-1356-705ef7b11f09">Copyright notice</title>
+<p id="_f3c4258f-6b29-424c-cd01-337c0e916a04" align="center">Copyright © 2026 Open Geospatial Consortium<br/> To obtain additional rights of use, visit <link target="https://www.ogc.org/legal"/></p>
 </clause>
 
-<clause id="_contributors" obligation="normative"><title>Contributors</title><p id="_c1179b06-f417-476b-8d03-991bc6b6b6a0">Additional contributors to this Standard include the following:</p>
-<p id="_92211181-bdad-4a2f-937d-47b519a627b8">Individual name(s), Organization</p>
-<note id="_addd6195-12fe-4698-a5ec-3cebf20b575c">
-  <p id="_9c4bc419-df12-4086-be7e-8d311bc7a805">If you need to place any further sections in the preface area
-use the <tt>[.preface]</tt> attribute.</p>
-</note></clause>
-<clause id="_scope" obligation="normative">
-  <title>Scope</title>
-  <note id="_8bce853b-9aa0-47bc-8eb0-c70f277441a8">
-  <p id="_0cbaac43-7ecc-4682-9325-452a3ae42e46">Insert Scope text here. Give the subject of the document and the aspects of that scope covered by the document.</p>
-</note>
+<clause id="_6908548e-204b-56e7-9062-6924cccf2315" obligation="normative">
+<title id="_db83e2f6-5841-eaeb-0d35-1277ee9d3f6a">Note</title>
+<p id="_e1d5d5c4-54c3-2761-be2c-22547f01c057" align="left">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+<p id="_02892e94-7b43-630a-129c-d2e0f75ff92b" align="left">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
 </clause>
-<clause id="_conformance" obligation="normative"><title>Conformance</title><p id="_32389446-6e16-423f-a724-2903f439b809">This Best Practice defines XXXX.</p>
-<p id="_aeedd281-4286-4ac9-a5a6-31907ffc9051">Requirements for N standardization target types are considered:</p>
-<ul id="_56aed3d3-6e19-4207-9ed7-92db4e8351e4">
-  <li>
-    <p id="_318a6158-b327-4a06-91e6-86602a5249f7">AAAA</p>
-  </li>
-  <li>
-    <p id="_f4c8d6c5-91f3-470d-8cde-b75b734e25b1">BBBB</p>
-  </li>
+</copyright-statement>
+
+<license-statement>
+
+<clause id="_45f6bdf5-80f3-f775-9740-2adafc90b1f7" obligation="normative">
+<title id="_3788828e-41fb-3895-6acc-52071643abed">License Agreement</title>
+<p id="_772872dd-928c-666f-92c5-676f7f5d3071">Use of this document is subject to the license agreement at <link target="https://www.ogc.org/license"/></p>
+</clause>
+</license-statement>
+
+<legal-statement>
+
+<clause id="_b1b6cc59-441d-8a65-d20d-2d74f7fc9983" obligation="normative">
+<title id="_37bc7c72-0d8f-ba1e-c43f-647a0e7edf21">Notice</title>
+<p id="_1359566d-89c2-380b-72bb-805915659afc">This document defines an OGC Best Practice on a particular technology or approach related to an OGC standard. This document is <em>not</em> an OGC Standard and may not be referred to as an OGC Standard. It is subject to change without notice. However, this document is an <em>official</em> position of the OGC membership on this particular technology topic.</p>
+
+<p id="_e8629e34-594d-6076-a18a-23d7b5df19ba">Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+</feedback-statement>
+</boilerplate><preface><abstract id="_ae04e3ef-99d7-cf5d-7d23-300bdadf5c19"><title id="_37c298bf-5619-a5c6-817b-d777b5ead0b1">Abstract</title><p id="_06afb1ef-2bad-19e6-8e59-c320b878afcf">The rapidly growing volume of Earth observation data, together with the increasing diversity of data providers, platforms, formats, APIs, and processing environments, makes it difficult for users to consistently discover, access, prepare, and use data for analysis. While metadata standards and catalogues provide an essential foundation for discovery and description, additional guidance is needed on how discovered datasets can be transformed into analysis-ready geodatacubes and managed throughout their use.</p>
+
+<p id="_47d31f49-4e78-46f0-badd-19bceb98b519">This Best Practice provides recommendations for geodatacube management, focusing on the pathways from metadata and data discovery towards usable multidimensional datacubes. It describes how metadata-driven approaches can support the creation, configuration, access, and processing of geodatacubes across heterogeneous infrastructures. Building on previous work, including OGC Testbed 19, the document explores the role of openEO and relevant open-source EOEPCA building blocks as interoperable components for exposing, processing, and managing Earth observation data as geodatacubes.</p>
+
+<p id="_30b94dce-0e7c-e2b9-2399-63ffa0bed0bc">The goal of this Best Practice is to provide practical guidance for data providers, platform operators, and application developers who need to design geodatacube management systems. It recommends approaches for bridging discovery metadata, data access mechanisms, processing interfaces, and datacube representations in a way that improves interoperability, reproducibility, and usability of Earth observation data.</p>
+</abstract><foreword id="_ee0489c0-c785-d292-f9a0-d7c0bba23a07" obligation="informative">
+<title id="_67001cd2-f272-ceff-f849-7a43bc65e67d">Preface</title>
+<p id="_a6787181-8d4b-74d3-ee8a-76de3687215a"><em>TBD</em></p>
+</foreword><clause id="_6a512cc0-87ec-88f0-11fa-156327ab6b6c" type="security" obligation="informative">
+<title id="_5dcde964-6a03-436c-5204-bca752130682">Security Considerations</title>
+<p id="_912647ec-1e68-2a17-71c5-2aeb1398cd10"><em>TBD</em></p>
+
+<p id="_c8c9b514-020c-d84a-3de5-d0d98f21064a">Potential topics:</p>
+
+<ul id="_665d0319-2a34-1168-3dd5-c086055c3f02"><li><p id="_65274802-ca9b-ae21-3acc-817c6dc0b307">Authentication and authorization for catalogue, data access, processing, and workspace services.</p>
+</li>
+<li><p id="_19a7b615-003b-759e-70d8-79873aea7931">Access control propagation from discovery metadata to processing workflows.</p>
+</li>
+<li><p id="_2fcff62e-bab8-1971-d855-314d5d20666f">Secure handling of user workspaces, credentials, and derived data products.</p>
+</li>
+<li><p id="_e28209d4-1afc-bbf7-dbf8-68e7d627310f">Auditability and traceability of processing requests and generated datacubes.</p>
+</li>
 </ul>
-<p id="_fcea625c-9d96-4ccb-a183-4bc11b418a5e">Conformance with this Best Practice shall be checked using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.</p>
-<p id="_361a26e2-fa2c-4411-b784-f556fdfd2ed3">In order to conform to this OGC® interface Best Practice, a software implementation shall choose to implement:</p>
-<ul id="_de10182f-8171-4635-8bec-5e620f862a43">
-  <li>
-    <p id="_264e7535-63e5-472c-9d03-5f82806d3f64">Any one of the conformance levels specified in Annex A (normative).</p>
-  </li>
-  <li>
-    <p id="_6cd16256-d504-4e8b-8117-fdac49142aaa">Any one of the Distributed Computing Platform profiles specified in Annexes TBD through TBD (normative).</p>
-  </li>
-</ul>
-<p id="_bc660410-fa64-4984-b996-ae819e772911">All requirements-classes and conformance-classes described in this document are owned by the documents(s) identified.</p></clause>
+</clause><clause id="_f1e62d8b-4f48-2286-22b5-3cd49f5a52bf" type="submitters" obligation="informative">
+<title id="_454e8fd9-fbfc-9c82-30fc-9121a2f52315">Submitters</title>
+<p id="_6e1b734b-e32c-864b-59a1-81792b76695c">All questions regarding this submission should be directed to the editor or the submitters:</p>
 
-<terms id="_terms_and_definitions" obligation="normative">
-  <title>Terms and definitions</title>
-  <term id="_example_term"><preferred>example term</preferred><definition><p id="_aa9211c4-a66b-4b99-8087-83cac11ffad8">term used for exemplary purposes</p></definition>
-
-
-<termnote id="_83ab78f3-52aa-4973-ad28-526094b0599a">
-  <p id="_d4bf3a17-741f-4a17-9eb7-4e0e13e32c0e">An example note.</p>
-</termnote><termexample id="_c9359711-a68d-4bfc-90c4-12f1c6c6194d">
-  <p id="_c46e6340-b3bf-49ea-9af1-c23c7d54b0be">Here’s an example of an example term.</p>
-</termexample><termsource status="identical">
-  <origin bibitemid="ISO19101-1" type="inline" citeas="ISO 19101-1:2014"/>
-</termsource></term>
-</terms>
-<clause id="_conventions" obligation="normative"><title>Conventions</title><p id="_df47505a-3260-48b4-90a9-49b73ad29282">This sections provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.</p>
-<clause id="_identifiers" obligation="normative"><title>Identifiers</title><p id="_09211563-2c87-4d7f-8af2-6018ed93a3bb">The normative provisions in this document are denoted by the URI</p>
-<p id="_342dbcde-8d1b-4d8e-a129-a88167e837a6">
-  <tt>
-    <link target="http://www.opengis.net/spec/{standard}/{m.n}"/>
-  </tt>
-</p>
-<p id="_d5b14f2c-0ccd-41aa-91cb-2117481b9f6d">All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.</p></clause></clause>
-<clause id="_clauses_not_containing_normative_material" obligation="informative"><title>Clauses not Containing Normative Material</title><p id="_8bb38a53-4b94-4a56-8469-cb5642c3c845">Paragraph</p>
-<clause id="_clauses_not_containing_normative_material_sub_clause_1" obligation="informative">
-  <title>Clauses not containing normative material sub-clause 1</title>
-  <p id="_baa9c13b-79e3-4940-80c8-6fe04ac4959b">Paragraph</p>
-</clause>
-<clause id="_clauses_not_containing_normative_material_sub_clause_2" obligation="informative">
-  <title>Clauses not containing normative material sub-clause 2</title>
-</clause></clause>
-<clause id="_clause_containing_normative_material" obligation="normative"><title>Clause containing normative material</title><p id="_f141a56b-27c0-4723-a9a2-dcaa49102da0">Paragraph</p>
-<clause id="_requirement_class_a_or_requirement_a_example" obligation="normative"><title>Requirement Class A or Requirement A Example</title><p id="_7877d78d-9ba3-4333-9dfa-3aaa970c1df2">Paragraph – intro text for the requirement class.</p>
-<p id="_ed540fe3-b669-4332-b226-3ca95fe48530">Use the following table for Requirements Classes.</p>
-<example id="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a"><p id="_4c541321-8920-42ba-ba07-2b2ee9827a14">Requirements Class</p>
-<ul id="_2a321047-c82f-4380-a5cb-509f4b6e2665">
-  <li>
-    <p id="_ba0ff75c-b475-4e56-b55b-268b915c11d9">
-      <link target="http://www.example.org/req/blah"/>
-    </p>
-  </li>
-  <li>
-    <p id="_5614fbe7-b12a-471e-a6db-08ecbe4dd6e8">urn:iso:ts:iso:19139:clause:6</p>
-  </li>
-</ul>
-<example id="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-1">
-  <p id="_75311a8b-2755-4ac2-91e7-0cad2336d1e1">requirement description</p>
-</example>
-<example id="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-2">
-  <p id="_060383ad-4aa7-4e64-9c2e-d7ea80e5b806">requirement description</p>
-</example>
-<example id="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-3">
-  <p id="_d95656ba-b301-49c5-b3ef-fcc9c6695a09">requirement description</p>
-</example></example>
-<clause id="_requirement_1" obligation="normative"><title>Requirement 1</title><p id="_db0bd023-1f70-4d53-b6fe-65ec0953db95">Paragraph - intro text for the requirement.</p>
-<p id="_04d2a521-4856-47c9-bf6f-0328f4b00f9b">Use the following table for Requirements, number sequentially.</p>
-<example id="/req/req-class-a/req-name-1">
-  <p id="_fd4a68f3-8879-4181-95e4-59bff88367da">Requirement ‘shall’ statement</p>
-</example>
-<p id="_5a1555f2-9b72-4ff5-a8c1-57aac848b8d3">Dictionary tables for requirements can be added as necessary. Modify the following example as needed.</p>
-<table id="_24fd5904-c320-44c8-88b3-19f1bc559005">
-  <thead>
-    <tr>
-      <th align="left">Names</th>
-      <th align="left">Definition</th>
-      <th align="left">Data types and values</th>
-      <th align="left">Multiplicity and use</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">name 1</td>
-      <td align="left">definition of name 1</td>
-      <td align="left">float</td>
-      <td align="left">One or more (mandatory)</td>
-    </tr>
-    <tr>
-      <td align="left">name 2</td>
-      <td align="left">definition of name 2</td>
-      <td align="left">character string type, not empty</td>
-      <td align="left">Zero or one (optional)</td>
-    </tr>
-    <tr>
-      <td align="left">name 3</td>
-      <td align="left">definition of name 3</td>
-      <td align="left">GML:: Point PropertyType</td>
-      <td align="left">One (mandatory)</td>
-    </tr>
-  </tbody>
-</table></clause></clause></clause>
-
-
-
-</sections><annex id="_conformance_class_abstract_test_suite_normative" obligation="normative"><title>Conformance Class Abstract Test Suite (Normative)</title><note id="_7fe1b011-f935-414c-81d4-2664bf73f6f7">
-  <p id="_ece6a996-7044-4466-9ff5-495dc2e2a4c0">Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)</p>
-</note>
-<clause id="_conformance_class_a" obligation="normative"><title>Conformance Class A</title><clause id="_requirement_1_2" obligation="normative">
-  <title>Requirement 1</title>
-  <example id="_b5ac702a-660c-410a-baa5-85a9d414517f">
-  <example id="_6c8e71f0-15a3-48a8-b772-7027cd7f33a4">
-  <dl id="_23fb9dbe-5012-4821-afd1-5b3256b5a4a0">
-  <dt>Test purpose</dt>
-  <dd>
-    <p id="_bb1c3569-f67e-4a94-bc1b-6dee76759f18">Verify that…​</p>
-  </dd>
-  <dt>Test method</dt>
-  <dd>
-    <p id="_7a7ee11d-a3dc-488d-b2a0-9303453a63d4">Inspect…​</p>
-  </dd>
-</dl>
-</example>
-</example>
-</clause>
-<clause id="_requirement_2" obligation="normative">
-  <title>Requirement 2</title>
-</clause></clause></annex><annex id="_title_normativeinformative" obligation="normative">
-  <title>Title ( {Normative/Informative} )</title>
-  <note id="_1ec534bb-09ab-4504-80e2-a0a5cc40a3be">
-  <p id="_f0fbf004-4816-4d99-8a2b-f712c51db32a">Place other Annex material in sequential annexes beginning with “B” and leave final two annexes for the Revision History and Bibliography</p>
-</note>
-</annex><annex id="_revision_history" obligation="normative">
-  <title>Revision History</title>
-  <table id="_cb6f46ff-9285-466e-bf0d-7fcd210eacb6">
-  <thead>
-    <tr>
-      <th align="left">Date</th>
-      <th align="left">Release</th>
-      <th align="left">Editor</th>
-      <th align="left">Primary clauses modified</th>
-      <th align="left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">2016-04-28</td>
-      <td align="left">0.1</td>
-      <td align="left">G. Editor</td>
-      <td align="left">all</td>
-      <td align="left">initial version</td>
-    </tr>
-  </tbody>
+<table id="_9fe82267-a998-7a29-239b-1c220997c234" unnumbered="true"><colgroup><col width="33.3333%"/><col width="33.3333%"/><col width="33.3334%"/></colgroup>
+<name id="_5cb9fefd-dd45-fa17-92fa-4f20618d519d">Submitters</name>
+<thead><tr id="_deb7a241-b966-477e-d27c-b015614c2860"><th id="_b5603a1c-a49f-04c0-f070-75c5bb1f766a" valign="middle" align="left">Name</th>
+<th id="_cd7f599e-a2be-8762-048b-ced58da32a1d" valign="middle" align="left">Affiliation</th>
+<th id="_5ee41492-d123-06b0-388a-032dcd9e1d79" valign="middle" align="left">OGC member</th>
+</tr></thead>
+<tbody><tr id="_aaeb6e88-5e59-d216-1312-8e3b997aafe6"><td id="_0d6d64cd-8b62-80bb-33e8-8da688a90c79" valign="middle" align="left">Alexander Jacob</td>
+<td id="_2b18e282-e64f-bf67-24af-d24696bdb66d" valign="middle" align="left">Eurac Research</td>
+<td id="_6eabb47e-e283-319a-7b67-d2b71393e054" valign="middle" align="left">Yes</td>
+</tr><tr id="_22316e4f-d1ed-5e56-bbbe-fb65d7395faa"><td id="_d88c6d4f-b0c4-cf6e-6505-bb355b57c414" valign="middle" align="left">Juraj Zvolenský</td>
+<td id="_dce7048a-a831-926e-be0a-5410ce23ddbc" valign="middle" align="left">Eurac Research</td>
+<td id="_e796e6fb-a35b-80d9-2d4c-49d32b91f617" valign="middle" align="left">Yes</td>
+</tr><tr id="_6ea9eb38-e093-065a-090b-16d6d9385508"><td id="_3dad9ed1-9e91-8786-c415-eacdd09e6197" valign="middle" align="left">Yuvraj Bhagwan Adagale</td>
+<td id="_a370931f-74f1-8a2e-b82b-4c7c013ef98e" valign="middle" align="left">Eurac Research</td>
+<td id="_e60e41d6-840f-e5ba-1c77-83ba9c3acb3a" valign="middle" align="left">Yes</td>
+</tr></tbody>
 </table>
-</annex><bibliography><references id="_references" obligation="informative"><title>Normative References</title>
+</clause><clause id="_87e91b55-c299-d3ae-9208-b4305fc364a1" type="contributors" obligation="informative">
+<title id="_0089e286-2fd2-cccd-56fa-0d3ecf40c19c">Contributors</title>
+<p id="_b74852d1-0a7f-9164-f4fe-0a487d82a23c"><em>TBD</em></p>
+</clause></preface><sections>
 
-<bibitem id="Smith81">
-  <formattedref format="application/x-isodoc+xml"><em>Identification of Common Molecular Subsequences</em>.
-Smith, T.F., Waterman, M.S., J. Mol. Biol. 147, 195–197 (1981)</formattedref>
-  <docidentifier>Identification of Common Molecular Subsequences</docidentifier>
-</bibitem><bibitem id="May06">
-  <formattedref format="application/x-isodoc+xml"><em>ZIB Structure Prediction Pipeline: Composing a Complex Biological Workflow through Web Services</em>.
-May, P., Ehrlich, H.C., Steinke, T. In: Nagel, W.E., Walter,
-W.V., Lehner, W. (eds.) Euro-Par 2006. LNCS, vol. 4128, pp. 1148–1158. Springer,
-Heidelberg (2006)</formattedref>
-  <docidentifier>ZIB Structure Prediction Pipeline</docidentifier>
-</bibitem><bibitem id="Grid">
-  <formattedref format="application/x-isodoc+xml"><em>The Grid: Blueprint for a New Computing Infrastructure.</em>,
-Foster, I., Kesselman, C.. Morgan Kaufmann, San Francisco (1999).</formattedref>
-  <docidentifier>The Grid</docidentifier>
-</bibitem><bibitem id="Czajkowski01">
-  <formattedref format="application/x-isodoc+xml"><em>Grid Information Services for Distributed Resource Sharing.</em>
-Czajkowski, K., Fitzgerald, S., Foster, I., Kesselman, C. In: 10th IEEE International Symposium on High
-Performance Distributed Computing, pp. 181–184. IEEE Press, New York (2001)</formattedref>
-  <docidentifier>Grid Information Services for Distributed Resource Sharing</docidentifier>
-</bibitem><bibitem id="Foster02">
-  <formattedref format="application/x-isodoc+xml"><em>The Physiology of the Grid: an Open Grid Services Architecture for Distributed Systems Integration.</em>
-Foster, I., Kesselman, C., Nick, J., Tuecke, S. Technical report, Global Grid Forum (2002)</formattedref>
-  <docidentifier>The Physiology of the Grid</docidentifier>
-</bibitem><bibitem id="NCBI">
-  <formattedref format="application/x-isodoc+xml"><em>National Center for Biotechnology Information</em>, <link target="http://www.ncbi.nlm.nih.gov"/></formattedref>
-  <docidentifier>NCBI</docidentifier>
-</bibitem><bibitem id="ISO19101-1" type="standard">
-  <title format="text/plain">Geographic information — Reference model — Part 1: Fundamentals</title>
-  <docidentifier type="ISO">ISO 19101-1:2014</docidentifier>
-  <date type="published">
-    <on>2014</on>
-  </date>
-  <contributor>
-    <role type="publisher"/>
-    <organization>
-      <name>ISO</name>
-    </organization>
-  </contributor>
-</bibitem><bibitem id="ISO19115-1" type="standard">
-  <title format="text/plain">Geographic information — Metadata — Part 1: Fundamentals</title>
-  <docidentifier type="ISO">ISO 19115-1:2014</docidentifier>
-  <date type="published">
-    <on>2014</on>
-  </date>
-  <contributor>
-    <role type="publisher"/>
-    <organization>
-      <name>ISO</name>
-    </organization>
-  </contributor>
-</bibitem><bibitem id="ISO19157" type="standard">
-  <title format="text/plain">Geographic information — Data quality</title>
-  <docidentifier type="ISO">ISO 19157:2013</docidentifier>
-  <date type="published">
-    <on>2013</on>
-  </date>
-  <contributor>
-    <role type="publisher"/>
-    <organization>
-      <name>ISO</name>
-    </organization>
-  </contributor>
-</bibitem><bibitem id="ISO19139" type="standard">
-  <title format="text/plain">Geographic information — Metadata — XML schema implementation</title>
-  <docidentifier type="ISO">ISO 19139:2007</docidentifier>
-  <date type="published">
-    <on>2007</on>
-  </date>
-  <contributor>
-    <role type="publisher"/>
-    <organization>
-      <name>ISO</name>
-    </organization>
-  </contributor>
-</bibitem><bibitem id="ISO19115-3" type="standard">
-  <title format="text/plain">Geographic information — Metadata — Part 3: XML schemas (2016)</title>
-  <docidentifier type="ISO">ISO 19115-3</docidentifier>
-  <contributor>
-    <role type="publisher"/>
-    <organization>
-      <name>ISO</name>
-    </organization>
-  </contributor>
-</bibitem><bibitem id="OGC15-097">
-  <formattedref format="application/x-isodoc+xml"><em>OGC Geospatial User Feedback Standard: Conceptual Model</em> (2016)</formattedref>
-  <docidentifier>OGC 15-097</docidentifier>
-</bibitem><bibitem id="OGC12-019">
-  <formattedref format="application/x-isodoc+xml"><em>OGC City Geography Markup Language (CityGML) Encoding Standard</em> (2012)</formattedref>
-  <docidentifier>OGC 12-019</docidentifier>
-</bibitem><bibitem id="OGC14-005r3">
-  <formattedref format="application/x-isodoc+xml"><em>OGC IndoorGML</em> (2014)</formattedref>
-  <docidentifier>OGC 14-005r3</docidentifier>
-</bibitem><bibitem id="OGC06121r9">
-  <formattedref format="application/x-isodoc+xml"><em>OGC Web Service Common Implementation Specification</em>, April 7, 2010. <link target="http://portal.opengeospatial.org/files/?artifact_id=38867"/></formattedref>
-  <docidentifier>OGC 06-121r9</docidentifier>
-</bibitem></references><references id="Bibliography" obligation="informative"><title>Bibliography</title><note id="_e4fb3bf8-364f-435d-92fc-1f5b365aa43e"><p id="_a341b9fa-3b95-4135-a21c-bcc9818a0184">The TC has approved Springer LNCS as the official document citation type.</p>
-<p id="_c6694e65-56c1-414a-bae1-a58f673b871c">Springer LNCS is widely used in technical and computer science journals and other publications</p>
 
-<p id="_93f67b57-2a95-46e5-acb5-c498ff41cc10">– Actual References:</p>
-<p id="_b03dd12a-d58a-4eee-aa36-cda989b7c4a5">[n] Journal: Author Surname, A.: Title. Publication Title. Volume number, Issue number, Pages Used (Year Published)</p>
-<p id="_89f1bc21-70fc-4c9d-8e8d-d7836c27b03b">[n] Web: Author Surname, A.: Title, <link target="http://Website-Url"/></p></note>
-<bibitem id="OGC2015">
-  <formattedref format="application/x-isodoc+xml"><em>OGC: OGC Testbed 12 Annex B: Architecture</em> (2015).</formattedref>
-  <docidentifier>OGCTB12</docidentifier>
-</bibitem></references></bibliography>
-</ogc-standard>
+
+
+
+
+
+<clause id="_7485e7da-bd4c-9f0b-96c5-c421d97e339c" type="scope" obligation="normative">
+<title id="_f70b6ff6-6131-0e24-81e1-850dbe94b63d">Scope</title>
+<p id="_d00706e4-2567-57cd-0f53-7aa0966df081">This document specifies a set of best practice recommendations for the management of geospatial data as geodatacubes. The scope of this document is the transition from metadata-driven discovery of Earth observation datasets to their access, organization, processing, and use as multidimensional geodatacubes.</p>
+
+<p id="_7cb567ca-d04b-43c9-df8c-887fccf1986d">The document provides guidance on the use of metadata records, catalogues, data access information, and processing interfaces to support interoperable geodatacube management. It includes consideration of openEO as an interface for geodatacube access and processing, and considers the use of open-source EOEPCA building blocks as components within geodatacube management architectures.</p>
+
+<p id="_f44e2518-74b7-d634-5004-8aac8708c8ae">This document is intended to support implementers of data platforms, processing services, and client applications that need to manage Earth observation data in a datacube-oriented form. It does not define a new standard for geodatacube encoding, metadata, or processing. Instead, it identifies recommended practices for combining existing standards, interfaces, and software components to support consistent and reusable geodatacube workflows.</p>
+
+<p id="_4c7d7b01-44e3-70cc-7157-2788b41d2e8b"><strong>In scope:</strong></p>
+
+<ul id="_f0055e20-6904-2d57-ac15-2e674c1d4907"><li><p id="_b5869c0c-6a61-5062-e726-8d356d255e7d">Transition from metadata discovery to usable geodatacubes.</p>
+</li>
+<li><p id="_be76494d-e975-49b8-cf0e-2e843b3083fe">Management of Earth observation datasets as multidimensional datacubes.</p>
+</li>
+<li><p id="_8275ec0f-6fd4-ca25-bde6-0ff54edd203f">Role of catalogue metadata, data access descriptions, and processing interfaces.</p>
+</li>
+<li><p id="_c2ab1995-8407-3926-326f-36d76968da6a">Recommended use of openEO for datacube access and processing.</p>
+</li>
+<li><p id="_436d8e23-6669-636c-d79a-09f5b9378273">Possible role of EOEPCA open-source building blocks.</p>
+</li>
+</ul>
+
+<p id="_4c3fc590-6075-8858-b1a4-ce04c368ac9a"><strong>Out of scope:</strong></p>
+
+<ul id="_062f51b9-b62c-3832-b715-7b39f0e8625a"><li><p id="_01556dc6-a61d-40e6-da43-61d294ffa357">Defining a new metadata standard.</p>
+</li>
+<li><p id="_46140228-2a85-2763-de99-983dba10147b">Defining a new file format.</p>
+</li>
+<li><p id="_fba84663-39cd-a9ca-f71e-cd02437137de">Defining a new datacube API.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_59db9612-c38e-b3b4-0ea7-7654597b1570" type="conformance" obligation="normative">
+<title id="_e246d3c1-cf3f-232c-cb69-d9b3793ef60f">Conformance</title>
+<p id="_e5c5d303-693b-e808-0721-b61ec68e7c58"><em>TBD</em></p>
+
+<p id="_44a4bc73-fe03-a2c4-eb51-5ef08104b81b">Potential approach:</p>
+
+<ul id="_04bc170e-9f1b-0599-9973-e84479168a31"><li><p id="_b2bbb979-7e89-259a-ad2d-36f79010ef1d">Define conformance classes for recommended implementation patterns.</p>
+</li>
+<li><p id="_6aea2ccb-7153-971e-9455-eb4d4a94b9ab">Separate provider-side, platform-side, and client-side recommendations.</p>
+</li>
+<li><p id="_d8e4de92-356e-53fc-67cb-44316a62d640">Distinguish mandatory requirements from optional recommendations once the Best Practice is formalized.</p>
+</li>
+</ul>
+</clause>
+
+
+
+<terms id="_de4ce515-5c3a-8c31-d2fe-e21b59ef3600" obligation="normative">
+<title id="_dfb2eab2-f980-6365-3c47-81d0eb272962">Terms and definitions</title><p id="_e5876e78-fa42-efa9-f5ba-a93535689e8d">No terms and definitions are listed in this document.</p>
+<dl id="_8e067e51-0a45-8ef3-f6c6-bd1782160d76"><dt>geodatacube</dt>
+<dd id="_c29aee3a-6313-eb65-8827-d45ab7ae957b"><p id="_e87c4508-f77f-54fd-7c92-fef931a76e67"><em>TBD</em></p>
+</dd>
+<dt>datacube</dt>
+<dd id="_d0d1bdff-bce9-2b96-6cea-a7cb5cae5b4e"><p id="_a389c417-97e9-fe42-53de-7aec02390d32"><em>TBD</em></p>
+</dd>
+<dt>Earth observation collection</dt>
+<dd id="_8cb240ea-5b93-7263-0f47-85b93c36bec9"><p id="_3bc17a93-06c7-79cc-7dd4-a6142cf890ad"><em>TBD</em></p>
+</dd>
+<dt>metadata record</dt>
+<dd id="_fb5201c6-ba0c-0508-c92a-f417c6d27129"><p id="_343520ac-e256-2d64-2591-0614cc639900"><em>TBD</em></p>
+</dd>
+<dt>catalogue</dt>
+<dd id="_35a083a3-cb0e-e87b-772c-bc748a7df0cc"><p id="_837395aa-8261-6238-8132-bafcd117e9de"><em>TBD</em></p>
+</dd>
+<dt>analysis-ready data</dt>
+<dd id="_78082d51-a5e7-e673-8980-c22c37f03440"><p id="_10b76a0b-deff-85d4-0885-0e50b2d9549d"><em>TBD</em></p>
+</dd>
+<dt>spatiotemporal asset</dt>
+<dd id="_39e4e252-8162-559f-0438-99717c0d2943"><p id="_a945879a-7913-f89d-7c06-f18e63e3e02f"><em>TBD</em></p>
+</dd>
+<dt>dimension</dt>
+<dd id="_4f9d68a7-f44e-5583-0f3b-de5cededbd2e"><p id="_f9c3d9e5-731b-d894-8250-03706276b4ce"><em>TBD</em></p>
+</dd>
+<dt>measure</dt>
+<dd id="_9f4f2f37-81a0-b5ab-0f91-eb4c02f126ef"><p id="_5d31282b-e878-1581-5739-c9d8ece2f7be"><em>TBD</em></p>
+</dd>
+<dt>coordinate reference system</dt>
+<dd id="_0ddad324-ee2b-f39d-0b49-e6ac2aceabad"><p id="_a918e2df-235d-39f4-c673-5f7202af8819"><em>TBD</em></p>
+</dd>
+<dt>chunking</dt>
+<dd id="_e3e3d0ab-5425-084b-6b06-34206c89d309"><p id="_a4fa6afa-553d-8f58-37ed-850b54c8e284"><em>TBD</em></p>
+</dd>
+<dt>tiling</dt>
+<dd id="_b20252db-e20d-d7aa-75a3-25f1f6ba3555"><p id="_5b7c49a3-2448-77c0-59d4-ecf02ff0ad4b"><em>TBD</em></p>
+</dd>
+<dt>processing graph</dt>
+<dd id="_2a80fbb8-e8f6-d308-7b2d-2c1887dbab12"><p id="_def3717e-250f-a086-3772-3b0ebd06eab4"><em>TBD</em></p>
+</dd>
+<dt>virtual datacube</dt>
+<dd id="_4a068e5f-1917-5d5c-68d6-fef46e7fe836"><p id="_37d6f0e3-c804-ae1f-9c7d-2b52d504ebb0"><em>TBD</em></p>
+</dd>
+<dt>materialized datacube</dt>
+<dd id="_15b738db-2eb5-4147-beff-4d853efb3c05"><p id="_a17ba936-6ad5-9a3a-51fd-bce18405d3fe"><em>TBD</em></p>
+</dd>
+<dt>data access service</dt>
+<dd id="_8469b48b-8ae3-c5ed-9f4d-2b0018d286d7"><p id="_c278eba4-0352-773a-714b-acd6683f6e9d"><em>TBD</em></p>
+</dd>
+<dt>processing service</dt>
+<dd id="_3ba46639-ceef-bf78-33f5-859bd79f9e48"><p id="_b1da3a04-bb41-b645-ee1e-d01e4b7c5a96"><em>TBD</em></p>
+</dd>
+</dl>
+</terms>
+
+<clause id="_3b5e4dde-e60c-186e-840c-0b90d74ad853" obligation="normative">
+<title id="_6948b4ae-f705-e7f5-8bc1-a5f5e5f04db2">Conventions</title>
+<clause id="_9b26396d-0dcc-9509-c0c5-82b0028eb44f" obligation="normative">
+<title id="_9923b864-ae86-80fc-d444-ba5ba017c4b3">Identifiers</title>
+<p id="_27b2bca4-f895-2398-212c-5a3794b0a734"><em>TBD</em></p>
+</clause>
+
+<definitions id="_d9b1bbca-673d-d5db-41ea-9a1b9ac9f682" type="abbreviated_terms" obligation="normative">
+<title id="_32e29d4b-6207-26d1-09e5-7ab17e052031">Abbreviated terms</title>
+<dl id="_3d365ff7-4c50-ce1d-5a87-d95b5ac0e2b0"><dt anchor="symbol-API" id="_a45af4c5-d078-ef09-2f73-d8824d32644a">API</dt><dd id="_fd5246c9-5710-0a95-bc86-6a5b769d67fc"><p id="_28eedaac-bdbf-cc6f-ca8a-d99fbde45a4f">Application Programming Interface</p>
+</dd>
+<dt anchor="symbol-COG" id="_850d07f8-9d22-b695-631c-513ffb68699c">COG</dt><dd id="_befee31d-9670-aadf-fac0-d357088dbcfc"><p id="_9ddbc0c0-f5e0-6d1c-84ec-db56e84f13ad">Cloud Optimized GeoTIFF</p>
+</dd>
+<dt anchor="symbol-CWL" id="_812ca4e4-527a-cd56-6aef-7f341b88f91a">CWL</dt><dd id="_a83d403f-9586-1898-8f2b-8eaafa10e59d"><p id="_c2599b92-f3c9-255c-bc86-2ccacfd8f759">Common Workflow Language</p>
+</dd>
+<dt anchor="symbol-DGGS" id="_9251af4f-663f-84f7-c314-7debdc481371">DGGS</dt><dd id="_5e0311d6-2a3c-2440-f9b7-8a911d1da1ae"><p id="_d3993080-aaca-308f-049b-aff99751bfd3">Discrete Global Grid System</p>
+</dd>
+<dt anchor="symbol-EO" id="_314e5bce-6cc5-7f14-fa03-361fea26e0cb">EO</dt><dd id="_ab2b72c4-0069-52ce-e392-2de8f9b4e94f"><p id="_929cf1c1-2d6d-4e40-7dd3-aa0430fce40a">Earth Observation</p>
+</dd>
+<dt anchor="symbol-EP" id="_fc2a2e00-7594-b8c7-2c8b-57935c618917">EP</dt><dd id="_04404f2d-6173-2d5c-7186-0f247098019a"><p id="_83f6daf1-15ec-486e-fc30-a3d1b1f0fd9e">Exploitation Platform</p>
+</dd>
+<dt anchor="symbol-GDAL" id="_3f81edb1-ff9e-0634-0e42-257293f71d2d">GDAL</dt><dd id="_21b7ee3f-cf0c-6408-3271-a6ffc0a453d1"><p id="_16dfbbcb-96b3-3cb4-68d5-4d249b21b309">Geospatial Data Abstraction Library</p>
+</dd>
+<dt anchor="symbol-GDC" id="_27e8f198-c048-c327-1022-faad9263152e">GDC</dt><dd id="_e8503673-03c9-8cb0-63fb-cc23a492e020"><p id="_d5d68a5c-ad98-a0ea-0df9-19380bb5ed07">GeoDataCube</p>
+</dd>
+<dt anchor="symbol-IAM" id="_0e1b2525-5de2-d70a-82ca-cd9cefb8a02e">IAM</dt><dd id="_9589cb92-be63-a922-93e0-5c47575ed12d"><p id="_1cde9a58-6e3c-97e3-d7fd-9941a82c72dd">Identity and Access Management</p>
+</dd>
+<dt anchor="symbol-JSON" id="_3a81694d-1e0d-75d3-f04f-187ffbb7f6e7">JSON</dt><dd id="_70a5cb9f-d7c3-94e8-d6f1-e2e362fce820"><p id="_68f7e3ac-d8a0-4595-66e9-809f8cfec72b">JavaScript Object Notation</p>
+</dd>
+<dt anchor="symbol-OGC" id="_1c1ddfe1-35d0-6c20-fc0f-f443b3394f65">OGC</dt><dd id="_f7936259-e193-ed8f-74bf-8ee3643fedbc"><p id="_110570c2-ad6a-aa47-02ab-3958cdbd090d">Open Geospatial Consortium</p>
+</dd>
+<dt anchor="symbol-OS" id="_01e72055-d39f-d96d-05c6-bc02485b7f2d">OS</dt><dd id="_28c30cb3-1f51-785b-129c-c8e21e1e9f9a"><p id="_a54ad690-7801-bb3c-3b23-7a5db7ef756b">Operating System</p>
+</dd>
+<dt anchor="symbol-REST" id="_30bd2f7d-5a81-a20a-68cb-13e8e269cb87">REST</dt><dd id="_199b247d-6355-4901-b8fa-573a8048f8b2"><p id="_01186866-b0ab-e968-5109-0930497c0162">Representational State Transfer</p>
+</dd>
+<dt anchor="symbol-SAFE" id="_67b52086-4c57-b33f-c746-3ed1aa787952">SAFE</dt><dd id="_80a37e96-f2c4-099c-ad5b-4255c5f6f70d"><p id="_7804dbde-4175-7ddf-a972-9fd1c52c54db">Standard Archive Format for Europe</p>
+</dd>
+<dt anchor="symbol-SNAP" id="_fa518a66-88a1-890b-7dfb-1ae7ad528144">SNAP</dt><dd id="_c36f1425-cc88-aaf8-a523-1faaaf31b383"><p id="_d8740bb6-546e-497a-270b-3a0be7e49717">Sentinel Application Platform toolbox</p>
+</dd>
+<dt anchor="symbol-STAC" id="_d23e7c40-501e-651b-28de-721ed86b48f5">STAC</dt><dd id="_0874fff4-df41-8537-d901-9bbded037844"><p id="_4e24fc29-13d5-0044-938c-baaabacfb3e8">SpatioTemporal Asset Catalog</p>
+</dd>
+<dt anchor="symbol-TBD" id="_b33d2119-2a12-b85f-d210-faf3fa2fc000">TBD</dt><dd id="_835c9add-66ab-8da5-660a-bb0a747c16fe"><p id="_14db213f-73f2-4ee6-e7e7-f876e9e5cfa3">To Be Determined</p>
+</dd>
+<dt anchor="symbol-TIFF" id="_4cafb9b8-0ed7-d63a-e64e-905c67f2caa0">TIFF</dt><dd id="_d8a672f9-e080-8b14-be9c-e038ce224b9f"><p id="_d257a8f1-e9b6-883b-58a2-4097143169c4">Tagged Image File Format</p>
+</dd>
+<dt anchor="symbol-URL" id="_fa6f81f7-205e-9a5f-d1b7-e19ce8922e54">URL</dt><dd id="_866d0dc3-8a5b-f4e1-29f5-68e5dae255c9"><p id="_cdd213b8-6f68-db18-9802-459be736747f">Uniform Resource Locator</p>
+</dd>
+<dt anchor="symbol-YAML" id="_b6c5e8a2-693a-525b-b712-eee03af86f5d">YAML</dt><dd id="_feca554a-f687-bf9a-44de-dcd59b48806a"><p id="_05a8134f-f478-79f4-39fc-3f8c518a3b0b">YAML Ain’t Markup Language</p>
+</dd></dl>
+</definitions></clause>
+
+<clause id="_8ee001e4-2392-f727-44a2-ed57b1cffcc7" anchor="informative-overview" obligation="informative">
+<title id="_76fcd0db-99f0-1cd1-68c0-c9e953a947a6">Informative overview</title>
+<clause id="_9140eef0-1648-bc7d-26df-819aaa98784a" obligation="informative">
+<title id="_c3aeed6b-e961-809a-db40-7ad4993cdf63">Components overview</title>
+<p id="_41967fa2-90e0-bbb2-1140-65d01c7970a6">A geodatacube management system can be described as a composition of interoperable building blocks. The system connects discovery metadata, data access services, datacube access, processing interfaces, and user workspaces without requiring a new GDC-specific API.</p>
+</clause>
+
+<clause id="_cdaad9c2-19db-8cf2-d811-5152ed7a74a0" obligation="informative">
+<title id="_066c019d-34a0-6ca4-d8d4-b97718f95e40">GeoDataCube Management System</title>
+<p id="_b81bb253-bab4-5f66-4344-19d9ff2be676">Earth observation data is increasingly discoverable through catalogues and metadata services, but discovery alone does not make data directly usable as geodatacubes. A user may be able to find a relevant dataset or collection, but still need to determine which assets are available, how those assets can be accessed, how they are organized in storage, which dimensions and measurements they contain, and which processing interfaces can consume them.</p>
+
+<p id="_f2b555a2-78e1-cee3-9d9c-a0e3bd64bfd6">In many existing systems, metadata records, asset links, storage layouts, access APIs, datacube abstractions, and processing APIs are managed separately. This creates interoperability gaps between the point where a user discovers data and the point where the same data can be analyzed as a consistent multidimensional geodatacube. Clients and workflows often need provider-specific knowledge to resolve asset locations, interpret grid definitions, handle authentication, or construct processing requests.</p>
+
+<p id="_08f0fbc9-b146-d5d8-cf07-11f4a6cae1da">A geodatacube management system addresses this gap by providing a repeatable path from discovery to use. The system should help users and applications move from catalogue discovery, to data access, to datacube construction, to analysis and processing, and finally to the creation or publication of derived products. The purpose of this Best Practice is not to define a new geodatacube API, but to describe how existing metadata, access, processing, workspace, and storage components can be combined consistently.</p>
+
+<sourcecode id="_f737f73a-7413-1f90-eccb-b83b0a652b8b" lang="plantuml"><name id="_f6fd71f8-67d8-fceb-70eb-f22130829dfb">Catalogue discovery to derived product publication</name><body>@startuml
+top to bottom direction
+skinparam rectangle {
+  BackgroundColor #EEF6FF
+  BorderColor #2C6FB5
+}
+rectangle "Catalogue discovery" as Discovery
+rectangle "Data access" as Access
+rectangle "Datacube construction" as Construction
+rectangle "Analysis and processing" as Processing
+rectangle "Derived product" as Product
+rectangle "Metadata and access publication" as Publication
+
+Discovery --&gt; Access
+Access --&gt; Construction
+Construction --&gt; Processing
+Processing --&gt; Product
+Product --&gt; Publication
+@enduml</body></sourcecode>
+
+
+<clause id="_b0daea00-44fb-0537-ae42-fcc7cce0b8e7" obligation="informative">
+<title id="_4bd186b2-05ff-e8df-b4b3-4ec5a5c2cadb">Conceptual model</title>
+<p id="_7c5b2661-4d2c-e1c2-67fc-36a052f694de">The conceptual model identifies the main information objects and services involved in geodatacube management. These concepts are used throughout the Best Practice to describe how discovery metadata, data assets, processing workflows, and user environments relate to one another.</p>
+
+<table id="_c2bfc326-0b22-fe21-ab3f-9401ec56373f"><colgroup><col width="25%"/><col width="75%"/></colgroup>
+<name id="_53658552-4cd5-5058-4816-bbbaa7a3a52a">Conceptual model</name>
+<thead><tr id="_d5e0d202-0c09-ae2f-072f-7c376deeae42"><th id="_98d6d37c-a442-c7ae-35f3-f10008d7d00e" valign="middle" align="left">Concept</th>
+<th id="_4fe5d9df-bb46-85e1-78c3-cc8ef38d3a36" valign="middle" align="left">Description</th>
+</tr></thead>
+<tbody><tr id="_7674a3da-7399-3f20-7211-00b52a70c654"><td id="_001c47ff-b724-df46-eb89-2af02bf42441" valign="middle" align="left">Dataset / collection</td>
+<td id="_0b981bd5-b820-0ba2-ab60-3f1d3ddd8a0f" valign="middle" align="left">A logical grouping of Earth observation data with common characteristics, such as sensor, processing level, spatial coverage, temporal coverage, or product type. A collection is usually the object discovered first through a catalogue.</td>
+</tr><tr id="_6dc7ec22-9755-4dfa-f6d3-c2575131b4eb"><td id="_072aede9-2d0c-fda9-b39e-87722853fad4" valign="middle" align="left">Asset</td>
+<td id="_edef0879-8d18-7664-e1a0-2e2babd9e22c" valign="middle" align="left">A concrete data resource associated with a dataset, collection, or item. Assets may include raster files, multidimensional arrays, metadata files, quality masks, thumbnails, or other supporting resources.</td>
+</tr><tr id="_597c0864-3f1e-536d-f7c9-920ee326f8ef"><td id="_9b21bd52-2123-dd54-95dd-60305618834a" valign="middle" align="left">Metadata record</td>
+<td id="_a9649c49-7a58-39dd-ccae-8a34b6546f93" valign="middle" align="left">A machine-readable description of a dataset, collection, item, asset, service, or derived product. Metadata records provide discovery information and should include enough detail to support access and datacube construction.</td>
+</tr><tr id="_fec8a529-9844-84dd-df88-085ff8434b2a"><td id="_ee64f6d6-eefe-eecd-83dd-501da40ae5d6" valign="middle" align="left">Geodatacube</td>
+<td id="_bf3d2e2e-fe64-c19f-ff01-112d5b400fff" valign="middle" align="left">A multidimensional organization of geospatial data, typically using spatial, temporal, spectral, or other domain-specific dimensions. A geodatacube provides a structured view of EO data for access, analysis, and processing.</td>
+</tr><tr id="_d5f4f244-c625-4c87-42bf-37a3efb52539"><td id="_5ec08d72-6e4e-2ca0-c9b2-b11b17d83298" valign="middle" align="left">Virtual geodatacube</td>
+<td id="_61d0c456-ba62-24f1-dcf7-6f5869fefeae" valign="middle" align="left">A logical datacube view over one or more existing assets without necessarily creating a new physical copy of the data. A virtual geodatacube is constructed from metadata, access information, and interpretation rules.</td>
+</tr><tr id="_4cdc7b28-bf3a-7e3f-5395-9e550100497e"><td id="_c6ceb4c4-2a99-99c9-3ede-158cbbe6033b" valign="middle" align="left">Materialized geodatacube</td>
+<td id="_4c219e39-b5ad-bc5c-d535-411dbedca640" valign="middle" align="left">A physical datacube product that has been generated and stored in a concrete format, such as Zarr, NetCDF, COG collections, or another cloud-optimized representation. Materialized geodatacubes are useful when repeated access or processing justifies precomputed storage.</td>
+</tr><tr id="_e26c16d1-281b-7677-416a-32dedd17b692"><td id="_1b8f3c61-adb7-f901-7a26-4d1b413ab435" valign="middle" align="left">Datacube view</td>
+<td id="_5e72f715-d7fc-ae8f-e8de-493ef1b938dd" valign="middle" align="left">A user- or application-specific subset, projection, aggregation, or interpretation of a geodatacube. A view may constrain dimensions, bands, spatial extent, temporal extent, resolution, CRS, or processing level.</td>
+</tr><tr id="_57cfddf5-e782-13bc-cc28-e7b07de9586a"><td id="_106f162e-d165-3c0b-2e28-ee8d9ee09d83" valign="middle" align="left">Processing graph</td>
+<td id="_fdddb365-c3de-89a2-97fa-50ebb9a75a0b" valign="middle" align="left">A machine-readable description of analysis or transformation steps applied to input data. Processing graphs are used by systems such as openEO to describe reproducible datacube workflows.</td>
+</tr><tr id="_1089b650-5a74-ef68-0ecf-5fbc2b8f5922"><td id="_ce79586f-42b3-0efc-07a0-54dda6555dc2" valign="middle" align="left">Derived product</td>
+<td id="_c71b7ba5-ec73-5007-c7eb-464d45604ecf" valign="middle" align="left">A new data product produced by processing source data or an existing geodatacube. Derived products should include metadata, provenance, access information, and, where appropriate, links back to the source datasets and processing workflow.</td>
+</tr><tr id="_0ba11940-6f57-72b2-b277-76959a2498a6"><td id="_944acb88-bce1-63a6-e1d9-9fe6f4d675ba" valign="middle" align="left">Workspace</td>
+<td id="_7202bc3e-47c0-0893-0def-8615f2747bdf" valign="middle" align="left">A user or project environment where data can be discovered, accessed, processed, stored, and shared. Workspaces may include notebooks, development environments, temporary storage, workflow execution tools, and collaboration features.</td>
+</tr><tr id="_74375664-efac-158f-af61-1b052fccabc9"><td id="_0bed30e5-9bbf-c6df-eca0-71a6747624f8" valign="middle" align="left">Access policy</td>
+<td id="_e9f25879-3b1e-b183-c3ce-7b156fd13871" valign="middle" align="left">The rules that determine who may discover, access, process, modify, publish, or share datasets, assets, workspaces, processing jobs, and derived products. Access policies should be applied consistently across catalogue, data access, processing, and workspace services.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_cbdc7d0f-39e4-0aec-e747-d869e4a880ec" obligation="informative">
+<title id="_2816db27-fcdd-849b-f850-899358764b79">Management concerns</title>
+<p id="_e0fee5be-db48-ac6d-6db3-68324a5c3224">A geodatacube management system should describe and coordinate the following concerns:</p>
+
+<ul id="_ee557c98-821a-3719-0f35-c6c7c54dcd26"><li><p id="_11f57038-cf06-0557-5b13-d2c1174d00dc">The relationship between metadata discovery and datacube construction.</p>
+</li>
+<li><p id="_5d9498c2-40e4-e7be-d0b8-5e0ec9693017">The distinction between virtual and materialized geodatacubes.</p>
+</li>
+<li><p id="_b58cf653-050a-6cfd-2309-3a73a0d31b15">Data access patterns for cloud-native EO assets.</p>
+</li>
+<li><p id="_2ad2bb2f-7214-943f-d572-858a27f851d7">The role of chunking, tiling, and storage layout.</p>
+</li>
+<li><p id="_9500e7fc-0984-492a-33c0-8a399809c83d">The integration of processing graphs and workflow execution.</p>
+</li>
+<li><p id="_a8612743-0eca-c4c6-0654-1814ab18cc1d">Publication of derived products with metadata, access links, and provenance.</p>
+</li>
+<li><p id="_4503bd21-bb21-e5ef-5e70-687df34c49ec">Interoperability between platforms and user-facing clients.</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<clause id="_aac35906-21c2-fa77-e98a-a7fa9b389bf7" obligation="informative">
+<title id="_2ee8f3c2-95ed-ad29-c167-7bb37e40ea53">Interoperable building blocks</title>
+<p id="_ed0e29c2-509b-0faf-da91-4a7377241c66">The Best Practice should describe how existing building blocks can be assembled into reusable geodatacube workflows.</p>
+
+<table id="_8411a050-a9f8-3569-197d-7aacdd89c2e4"><colgroup><col width="16.6666%"/><col width="33.3333%"/><col width="50.0001%"/></colgroup>
+<name id="_9471d6d1-084d-9e7b-7eef-0283f7c33b60">Interoperable building blocks</name>
+<thead><tr id="_72e52b05-51e9-e65b-57b4-cb19dfdc08d9"><th id="_2c2302da-c3cc-bda4-96fc-f22ca33b468d" valign="middle" align="left">Layer</th>
+<th id="_a3b21312-0907-19ea-77a7-c176785c4c7f" valign="middle" align="left">Candidate building blocks / standards</th>
+<th id="_a8a1239a-86e7-3319-cbd5-9ce5f78dabff" valign="middle" align="left">Purpose</th>
+</tr></thead>
+<tbody><tr id="_8cb0dbfa-3aca-18a4-cf85-4248fabbb1af"><td id="_807d8ee9-5dd7-d55b-6bf5-bbac16e8ae86" valign="middle" align="left">Identity and access</td>
+<td id="_ddf9cb6b-d162-00fe-9bdb-64dd6c494696" valign="middle" align="left">IAM</td>
+<td id="_50d22b77-1993-8f07-076c-5a27b7e10ed9" valign="middle" align="left">Authenticate users and control access to services and assets.</td>
+</tr><tr id="_7182f8ac-e2ab-d84a-f1a5-94bacd7979ab"><td id="_e1708eaa-6027-8c79-9440-5291ad8b269b" valign="middle" align="left">Discovery</td>
+<td id="_186f5fdd-a9ab-322b-f6d6-47d5f2b883b4" valign="middle" align="left">Resource Discovery, OGC CSW, OGC API Records, STAC, OpenSearch</td>
+<td id="_5af95b9f-6990-fcbc-78ec-59bf847481b2" valign="middle" align="left">Find collections, assets, metadata records, and service links.</td>
+</tr><tr id="_9933cf6f-d4f5-c83c-06a7-2bcdfeda7bff"><td id="_744620b2-6a72-0af2-83e8-84474f48bfe3" valign="middle" align="left">Data access</td>
+<td id="_93bd0c69-1615-c233-a9a9-ed56fa721853" valign="middle" align="left">Data Access, OGC APIs, cloud-native asset links</td>
+<td id="_6b277707-812d-1eaa-f2af-c8a1d0fba7a8" valign="middle" align="left">Retrieve source data or expose asset-level access.</td>
+</tr><tr id="_b687d815-a1c0-6596-a25c-470757f55653"><td id="_b85957d7-3a20-5966-8d60-3c374589098d" valign="middle" align="left">Datacube access</td>
+<td id="_6be3706f-b8c1-b12e-8949-25ce33896cb5" valign="middle" align="left">Datacube Access, openEO, relevant multidimensional APIs</td>
+<td id="_f4585301-77ee-cc3b-6291-3a7c3aa97f2f" valign="middle" align="left">Expose EO data in datacube-oriented form.</td>
+</tr><tr id="_fcc37e28-d1c6-9357-95e8-4037ecb4949a"><td id="_ed3a87fb-12e4-b669-6d4f-3b5f550ef7db" valign="middle" align="left">Processing</td>
+<td id="_7ab0a665-3bda-f00c-a73c-3f4f84c9a480" valign="middle" align="left">openEO Processing API, OGC API Processes, CWL</td>
+<td id="_d25e787e-db95-2da8-b456-556d4d5fd475" valign="middle" align="left">Execute processing graphs and workflows.</td>
+</tr><tr id="_dba1a80b-7829-15e8-c73e-44685310e6ae"><td id="_9b0e4552-570d-4b5e-7014-448d2a21b709" valign="middle" align="left">Workspace</td>
+<td id="_86ae6cfd-877e-cd4d-227a-8314be6a82df" valign="middle" align="left">Workspace</td>
+<td id="_80fcd517-5d1a-685b-658b-7617dde94360" valign="middle" align="left">Provide user environments for development, execution, and collaboration.</td>
+</tr><tr id="_c519a9b8-9279-f34c-70d9-58b064a1782d"><td id="_9763caed-7869-50ae-a763-3e6b6a8c4fff" valign="middle" align="left">Storage</td>
+<td id="_ffe34d59-4b26-1acf-f315-79565f1484ca" valign="middle" align="left">Object storage, Zarr, COG, other cloud-optimized formats</td>
+<td id="_30fc8c24-718b-4502-e46b-3b7d8f7736c4" valign="middle" align="left">Store source assets and derived products efficiently.</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_897c5a94-60ca-5a69-f43a-a0de47f64ab2" obligation="informative">
+<title id="_65c473d4-3316-f44e-eb18-76cf9fd6cc3c">Geodatacube Best Practice</title>
+<p id="_c9f01ddc-625a-b6c0-576e-5fe8a20fe889">The scenarios are loosely based on the GDC SWG Testbed 19 conceptual ideas of different levels of use case scenarios.</p>
+
+<clause id="_54402098-bd16-596d-c191-ae09ac7f3e06" obligation="informative">
+<title id="_5fd7d748-0790-4b40-b976-cc1aee5124e6">Scenario summary</title>
+<table id="_16ef0692-0d75-836c-d04a-36a719735f4f"><colgroup><col width="16.6666%"/><col width="33.3333%"/><col width="50.0001%"/></colgroup>
+<name id="_6cf148f7-a077-0784-5077-77253d35096f">Scenario summary</name>
+<thead><tr id="_68a1129c-7753-b335-1a48-e3ff0d6e4989"><th id="_260d81e5-e8b9-7ea6-9472-f05c60d97061" valign="middle" align="left">Scenario</th>
+<th id="_c25c7a35-0137-10f4-cc0a-5a9904f374bf" valign="middle" align="left">Main purpose</th>
+<th id="_3a86e141-d39e-d2eb-7877-c02f87751373" valign="middle" align="left">Typical flow</th>
+</tr></thead>
+<tbody><tr id="_5cda1687-5e19-de91-3a35-efe928e0c9ae"><td id="_667e212f-d2c6-a854-90af-94c0fc40d68f" valign="middle" align="left"><xref target="scenario-1-simple-data-access"><display-text>Scenario 1</display-text></xref></td>
+<td id="_7b38b137-5e3c-c901-734e-890cc9179b20" valign="middle" align="left">Simple data discovery and access.</td>
+<td id="_21eef0d4-12e0-0b73-09ae-522e80a35edd" valign="middle" align="left">IAM → Workspace → Resource Discovery</td>
+</tr><tr id="_1d6cd8c1-d975-e3d2-fa8e-4f054a0c6cc0"><td id="_b0230d88-3de2-b652-ef2c-0c52384f250d" valign="middle" align="left"><xref target="scenario-2-processing-via-openeo"><display-text>Scenario 2</display-text></xref></td>
+<td id="_d0f5d9fa-da68-d39d-09f7-a20fe657bab4" valign="middle" align="left">Datacube processing through openEO.</td>
+<td id="_499cdccf-80de-8803-f105-b99a769d2ec9" valign="middle" align="left">IAM → Workspace → Resource Discovery → Data Access / Datacube Access → openEO</td>
+</tr><tr id="_fd2b871b-e925-5a64-0e58-01f4a49db1f5"><td id="_f0e16e80-5ac8-04cf-5c28-903284fb51f4" valign="middle" align="left"><xref target="scenario-3-processing-via-openeo-using-ogc-api-processes-cwl"><display-text>Scenario 3</display-text></xref></td>
+<td id="_e713506b-d7fc-152e-ffd4-c029cd8c589d" valign="middle" align="left">openEO-based processing that invokes OGC API Processes / CWL workflows.</td>
+<td id="_89cb5492-36ad-18a5-90b9-84f5ebdc6488" valign="middle" align="left">IAM → Workspace → Resource Discovery → Data Access / Datacube Access → OGC API Processes / CWL</td>
+</tr></tbody>
+</table>
+</clause>
+</clause>
+
+<clause id="_9d272560-46e8-d9e0-e4bc-ca8914d8e69c" anchor="scenario-1-simple-data-access" obligation="informative">
+<title id="_11c8cd09-53d7-99e6-d3ef-e55549630aa1">Scenario 1: Simple Data Access</title>
+<p id="_132f3eaf-0dba-3786-ebda-fac128ecf77c">Simple discovery and access to EO data assets through workspace and catalogue services.</p>
+
+<sourcecode id="_52dcd9f6-9f56-8fa8-4fbe-02409812cc7c" lang="plantuml"><name id="_b216cce6-abd4-47e0-3343-18dab01f5422">Scenario 1 sequence</name><body>@startuml
+actor User
+participant IAM
+participant Workspace
+participant "Resource Discovery" as Discovery
+participant "Data Access" as Data
+
+User -&gt; IAM : Authenticate
+IAM --&gt; User : Access token
+User -&gt; Workspace : Open user environment
+Workspace -&gt; Discovery : Search collections and assets
+Discovery --&gt; Workspace : Metadata and access links
+Workspace -&gt; Data : Access selected assets
+Data --&gt; Workspace : EO data assets
+@enduml</body></sourcecode>
+
+</clause>
+
+<clause id="_8ee081fb-5f6e-c0ab-55c3-dd2fc2a61b7c" anchor="scenario-2-processing-via-openeo" obligation="informative">
+<title id="_13060320-5949-86ad-3a49-a4bfa369d5c9">Scenario 2: Processing via openEO</title>
+<p id="_e8ff5fa9-95c9-42a4-8ebc-8dae921137d9">Discovery, datacube access, and processing through openEO.</p>
+
+<sourcecode id="_f2760cb0-e4ab-853b-bade-cdc526759f29" lang="plantuml"><name id="_0baac6fa-d35d-3cd1-6663-62a845982d49">Scenario 2 sequence</name><body>@startuml
+actor User
+participant IAM
+participant Workspace
+participant "Resource Discovery" as Discovery
+participant "Data / Datacube Access" as Access
+participant "openEO Processing API" as OpenEO
+participant "Geodatacube outputs" as Output
+
+User -&gt; IAM : Authenticate
+IAM --&gt; User : Access token
+User -&gt; Workspace : Develop processing request
+Workspace -&gt; Discovery : Discover collections
+Discovery --&gt; Workspace : Metadata and collection descriptions
+Workspace -&gt; Access : Resolve data or datacube access
+Workspace -&gt; OpenEO : Submit processing graph
+OpenEO -&gt; Access : Read source data as datacube
+OpenEO -&gt; Output : Produce result
+Output --&gt; Workspace : Result metadata and assets
+@enduml</body></sourcecode>
+
+</clause>
+
+<clause id="_2edde447-ff39-e876-4be8-bb8991dfe7de" anchor="scenario-3-processing-via-openeo-using-ogc-api-processes-cwl" obligation="informative">
+<title id="_79bdc221-cda4-e519-41d2-1e6b16828883">Scenario 3: Processing via openEO using OGC API Processes / CWL</title>
+<p id="_1974db31-181e-95b0-ef21-e3a45cacb074">Discovery and datacube-oriented processing where openEO workflows are combined with OGC API Processes and CWL-based execution, for example through the Zoo Project DRU.</p>
+
+<sourcecode id="_1b9465d1-729e-1ba9-fb37-36ca2a1cb07e" lang="plantuml"><name id="_fb9616d0-d638-c361-d593-e834f97b101c">Scenario 3 sequence</name><body>@startuml
+actor User
+participant IAM
+participant Workspace
+participant "Resource Discovery" as Discovery
+participant "Data / Datacube Access" as Access
+participant "openEO" as OpenEO
+participant "OGC API Processes / CWL" as Processes
+participant "Zoo Project DRU" as DRU
+participant "Geodatacube outputs" as Output
+
+User -&gt; IAM : Authenticate
+IAM --&gt; User : Access token
+User -&gt; Workspace : Prepare workflow
+Workspace -&gt; Discovery : Discover source collections
+Discovery --&gt; Workspace : Metadata and access descriptions
+Workspace -&gt; OpenEO : Submit datacube processing graph
+OpenEO -&gt; Processes : Invoke external process
+Processes -&gt; DRU : Execute CWL workflow
+DRU -&gt; Access : Read source data
+DRU -&gt; Output : Publish derived product
+Output --&gt; Workspace : Result metadata and assets
+@enduml</body></sourcecode>
+
+</clause>
+</clause>
+
+<clause id="_2d92ce7b-f824-2c0b-afcc-e5e8cd0808ba" obligation="normative">
+<title id="_f2b192b2-8f1f-a90f-c8ea-39ad435c3d90">Best practice recommendations</title>
+<p id="_dfd86a2c-9531-c158-5fcf-80c6f99bd19b"><em>TBD</em></p>
+</clause>
+
+
+
+
+
+
+
+
+</sections><annex id="_3d88328c-e238-0d06-b3fc-5dfd7f18aebc" obligation="informative">
+<title id="_0ae400d0-fc5b-94a1-586c-a20b12ca10c6">Conformance Class Abstract Test Suite (Normative)</title>
+<p id="_bef6bea5-b182-71f0-c468-41365a330c0f"><em>TBD</em></p>
+</annex><annex id="_f9fca327-7e76-4663-7a64-039e3d20ff0d" obligation="informative">
+<title id="_b3c5c8dc-3426-30cb-e77c-151fa3b6ea27">Additional informative annexes (Informative)</title>
+<p id="_a841b85c-44e0-e623-931b-13b4da36277f"><em>TBD</em></p>
+
+<p id="_2594cd34-106d-f535-d7b1-2a8c23d64395">Potential annexes:</p>
+
+<ul id="_d265c65d-6ccb-d9fb-1f7d-0f400a35956b"><li><p id="_ab5df275-ec7a-a586-4260-c3479ba4f9c2">Mapping between EOEPCA building blocks and GDC SWG objectives.</p>
+</li>
+<li><p id="_1f6f4006-a9dd-e8e4-3701-4f9c4e3b7568">Example metadata-to-datacube workflow.</p>
+</li>
+<li><p id="_e2eab077-a57d-2ba3-9372-4a1c7c8262f0">Example openEO processing graph.</p>
+</li>
+<li><p id="_e133cbdc-245b-c04f-c7e2-0637d19698f0">Example CWL integration pattern.</p>
+</li>
+<li><p id="_8f218dbd-ad00-0c47-b089-df5ce067755c">Comparison of virtual and materialized datacube approaches.</p>
+</li>
+</ul>
+</annex><annex id="_8e9ea9fc-4674-ea7c-a175-55f531cd7d31" obligation="informative">
+<title id="_ab272052-2676-a3fd-f7aa-88a12ecdd887">Revision History</title>
+<table id="_74a563b0-a1a4-6282-1d4b-8ffa06aaa475" width="90%">
+<name id="_860e1c72-1d44-4ae5-8353-6f66f7b2e348">Revision history</name>
+<thead><tr id="_e295cf8c-417f-e642-0ce4-352e31c0fd8b"><th id="_b397afae-a25e-891b-937d-99c586497283" valign="middle" align="left">Date</th>
+<th id="_a2be7e6d-6c81-6c99-49f8-9468a61cc83f" valign="middle" align="left">Release</th>
+<th id="_ed09d515-b1bd-9270-5101-c21a1efd1b63" valign="middle" align="left">Editor</th>
+<th id="_079fad58-5f9f-ec34-341e-de9728c62afb" valign="middle" align="left">Primary clauses modified</th>
+<th id="_5c52afcc-715d-b89f-e3d6-df82c28edaa5" valign="middle" align="left">Description</th>
+</tr></thead>
+<tbody><tr id="_f5cbe2d2-afa8-4481-baa8-e6430ebb6e5a"><td id="_3d9b9f52-9671-c122-a5ef-e82a5b36d060" valign="middle" align="left">2016-04-28</td>
+<td id="_53e2075a-1f0e-26f5-f236-ac0d16048b50" valign="middle" align="left">0.1</td>
+<td id="_d6845352-fb54-6071-09c3-fe73296d84eb" valign="middle" align="left">G. Editor</td>
+<td id="_c61bef3b-5365-bafa-6f6e-7c1fc49beab4" valign="middle" align="left">all</td>
+<td id="_7e3e1da4-010a-1b3f-4f7c-4ac453ad56a0" valign="middle" align="left">initial version</td>
+</tr></tbody>
+</table>
+</annex><bibliography><references id="_f53655d3-7537-859b-8212-187429c2fba2" normative="true" obligation="informative">
+<title id="_270c5ee6-077e-f285-ff95-287984a30140">Normative references</title><p id="_a6fdff30-00b4-3e56-d92a-a8d15322a761">There are no normative references in this document.</p>
+<p id="_5714fa07-ce0c-dd63-0774-26e7608f70ae">The normative references for this Best Practice are still to be determined. The following candidate references are expected to be cited in the normative text and will be completed in a later revision:</p>
+
+</references><references id="_1b27a7ba-a8e6-406a-8094-f9d43a77fd81" anchor="Bibliography" normative="false" obligation="informative">
+<title id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title>
+<p id="_a12e54dc-19fe-a5a5-458e-fbe5893505ad"><em>TBD</em></p>
+</references></bibliography>
+</metanorma>

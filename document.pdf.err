@@ -1,2 +1,5 @@
-Content overflows the viewport of an fo:block-container in inline-progression direction by 23521 millipoints. (See position 692:3617)
-Please check the PDF and if necessary, report this issue at the following link: https://github.com/metanorma/mn-native-pdf/issues/new, and attach the XSL-FO file or fragment: '/metanorma/document.pdf.fo.xml'.
+WARNING: Font 'sans-serif,normal,400' (font family 'sans-serif', style 'normal', weight 'normal/400') doesn't exist. Replaced by 'NotoSans-Regular' (/root/.metanorma/fonts/NotoSans-Regular.ttf).
+WARNING: Font 'sans-serif,normal,700' (font family 'sans-serif', style 'normal', weight 'bold/700') doesn't exist. Replaced by 'NotoSans-Bold' (/root/.metanorma/fonts/NotoSans-Bold.ttf).
+WARNING: Font 'sans-serif,italic,400' (font family 'sans-serif', style 'italic', weight 'normal/400') doesn't exist. Replaced by 'NotoSans-Italic' (/root/.metanorma/fonts/NotoSans-Italic.ttf).
+WARNING: Font 'sans-serif,italic,700' (font family 'sans-serif', style 'italic', weight 'bold/700') doesn't exist. Replaced by 'NotoSans-BoldItalic' (/root/.metanorma/fonts/NotoSans-BoldItalic.ttf).
+

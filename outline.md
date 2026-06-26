@@ -25,40 +25,6 @@
 | 19 | [Scenario 3: Processing via openEO using OGC API Processes / CWL](#scenario-3-processing-via-openeo-using-ogc-api-processes--cwl) |
 | 20 | [Annexes](#annexes) |
 
-## Drafting notes
-
-### Key messages
-
-- Core concepts of GeoDataCubes from OGC Testbed 19.
-- The Best Practice should avoid defining a new GDC-specific API.
-- Use a reusable building block approach.
-- Integrate GDC workflows based on building blocks.
-- Include best practices for online assets and recommendations.
-- Recognize openEO as the most advanced data cube processing interface.
-- Integrate other processing approaches via CWL.
-- Reference EOEPCA+ building blocks.
-- Format the document according to the OGC specification template.
-- Reference STAC and openEO as community standards.
-  - Strong user bases include CDSE, DestinE, and ECMWF.
-- Highlight openEO in the EU ecosystem as having high potential.
-- Create the first draft of the document from this outline.
-  - Invite relevant people to contribute.
-  - Align with the GDC SWG charter and its initial objectives.
-  - Justify why a new API is not necessary.
-  - Recommend a system based on open-source technologies.
-  - Match EOEPCA building blocks where possible.
-  - Highlight Zarr, cloud-optimized formats, AI, training, access patterns, storage systems, and DGGS.
-
-### EOEPCA building blocks to reference
-
-| Building block | Role in geodatacube management |
-|---|---|
-| IAM | Authentication and user management. |
-| Resource Discovery | Cataloguing EO data using OGC CSW, OGC API Records, STAC, and OpenSearch. |
-| Data Access | Interfaces to geospatial data assets stored in the platform. |
-| Datacube Access | Access and exploration of multidimensional EO data using standard APIs. |
-| openEO Processing API | Federated cloud data processing. |
-| Workspace | Self-service environments for data access, algorithm development, and collaborative exploration for individuals, teams, and organizations. |
 
 ## Abstract
 
